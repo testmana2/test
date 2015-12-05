@@ -443,16 +443,16 @@
         <location filename="../Project/AddDirectoryDialog.ui" line="108"/>
         <source>&lt;b&gt;Target Directory&lt;/b&gt;
 &lt;p&gt;Select the target directory via a directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;目标文件夹&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;目标文件夹&lt;/b&gt;
 &lt;p&gt;通过文件夹选择对话框选择目标文件夹。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="35"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="74"/>
         <source>&amp;Target Directory:</source>
         <translation>目标文件夹(&amp;T)：</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="45"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="62"/>
         <source>Enter the name of the directory to add</source>
         <translation>输入要添加的文件夹名称</translation>
     </message>
@@ -462,27 +462,27 @@
 &lt;p&gt;Enter the name of the directory to add to the current project.
  You may select it with a dialog by pressing the button to
  the right.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;源文件夹&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;源文件夹&lt;/b&gt;
 &lt;p&gt;输入要添加到当前项目的文件夹名称。 您可以通过点击对话框右边的按钮来
 进行选择。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="58"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="105"/>
         <source>Select, whether a recursive add should be performed</source>
         <translation>如果需要添加子文件夹，选择该选项</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="61"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="108"/>
         <source>&amp;Recurse into subdirectories</source>
         <translation>包含子文件夹(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="68"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="93"/>
         <source>Enter the target directory for the file</source>
         <translation>为文件输入目标文件夹</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="71"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="96"/>
         <source>&lt;b&gt;Target Directory&lt;/b&gt;
 &lt;p&gt;Enter the target directory. You may select it
  with a dialog by pressing the button to the right.&lt;/p&gt;</source>
@@ -494,48 +494,55 @@
         <location filename="../Project/AddDirectoryDialog.ui" line="100"/>
         <source>&lt;b&gt;Source Directory&lt;/b&gt;
 &lt;p&gt;Select the source directory via a directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;源文件夹&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;源文件夹&lt;/b&gt;
 &lt;p&gt;通过文件夹选择对话框选择源文件夹。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="80"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="43"/>
         <source>&amp;Source Directory:</source>
         <translation>源(&amp;S)文件夹：</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="90"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="30"/>
         <source>&amp;File Type:</source>
         <translation>文件(&amp;F)类型：</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.py" line="72"/>
+        <location filename="../Project/AddDirectoryDialog.py" line="66"/>
         <source>Source Files</source>
         <translation>源文件</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.py" line="74"/>
+        <location filename="../Project/AddDirectoryDialog.py" line="68"/>
         <source>Forms Files</source>
         <translation>窗体文件</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.py" line="76"/>
+        <location filename="../Project/AddDirectoryDialog.py" line="70"/>
         <source>Resource Files</source>
         <translation>资源文件</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.py" line="78"/>
+        <location filename="../Project/AddDirectoryDialog.py" line="72"/>
         <source>Interface Files</source>
         <translation>界面文件</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.py" line="80"/>
+        <location filename="../Project/AddDirectoryDialog.py" line="74"/>
         <source>Other Files (*)</source>
         <translation>其它文件 (*)</translation>
     </message>
     <message>
         <location filename="../Project/AddDirectoryDialog.py" line="116"/>
         <source>Select directory</source>
-        <translation>选择文件夹</translation>
+        <translation type="obsolete">选择文件夹</translation>
+    </message>
+    <message>
+        <location filename="../Project/AddDirectoryDialog.ui" line="65"/>
+        <source>&lt;b&gt;Source Directory&lt;/b&gt;
+&lt;p&gt;Enter the name of the directory to add to the current project.
+ You may select it with a dialog by pressing the button to the right.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -556,21 +563,21 @@
         <location filename="../Project/AddFileDialog.ui" line="74"/>
         <source>&lt;b&gt;Source Files&lt;/b&gt;
 &lt;p&gt;Select the source files via a files selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;源文件&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;源文件&lt;/b&gt;
 &lt;p&gt;通过文件选择对话框选择源文件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="29"/>
+        <location filename="../Project/AddFileDialog.ui" line="61"/>
         <source>&amp;Target Directory:</source>
         <translation>目标文件夹(&amp;T)：</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="39"/>
+        <location filename="../Project/AddFileDialog.ui" line="80"/>
         <source>Enter the target directory for the file</source>
         <translation>为文件输入目标文件夹</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="42"/>
+        <location filename="../Project/AddFileDialog.ui" line="83"/>
         <source>&lt;b&gt;Target Directory&lt;/b&gt;
 &lt;p&gt;Enter the target directory. You may select it
  with a dialog by pressing the button to the right.&lt;/p&gt;</source>
@@ -582,18 +589,18 @@
         <location filename="../Project/AddFileDialog.ui" line="82"/>
         <source>&lt;b&gt;Target Directory&lt;/b&gt;
 &lt;p&gt;Select the target directory via a directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;目标文件夹&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;目标文件夹&lt;/b&gt;
 &lt;p&gt;通过文件夹选择对话框选择目标文件夹。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="51"/>
+        <location filename="../Project/AddFileDialog.ui" line="29"/>
         <source>&amp;Source Files:</source>
         <translation>源(&amp;S)文件：</translation>
     </message>
     <message>
         <location filename="../Project/AddFileDialog.ui" line="61"/>
         <source>Enter the name of files to add separated by the path separator</source>
-        <translation>输入要添加的文件名，使用路径分隔符进行分隔</translation>
+        <translation type="obsolete">输入要添加的文件名，使用路径分隔符进行分隔</translation>
     </message>
     <message>
         <location filename="../Project/AddFileDialog.ui" line="64"/>
@@ -601,98 +608,111 @@
 &lt;p&gt;Enter the name of files to add to the current project separated
 by the path separator. You may select them with a dialog by pressing 
 the button to the right.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;源文件&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;源文件&lt;/b&gt;
 &lt;p&gt;输入要添加到当前项目中的文件名，通过路径分隔符进行分隔。
 您可以通过点击对话框右侧的按钮来进行选择。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="92"/>
+        <location filename="../Project/AddFileDialog.ui" line="94"/>
         <source>Select, if the files should be added as sourcecode (overriding automatic detection)</source>
         <translation>如果要使文件作为源代码进行添加（自动检测将失效），选择该选项</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="95"/>
+        <location filename="../Project/AddFileDialog.ui" line="97"/>
         <source>Is source&amp;code files</source>
         <translation>是源代码文件</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="98"/>
+        <location filename="../Project/AddFileDialog.ui" line="100"/>
         <source>Alt+C</source>
         <translation>Alt+C</translation>
     </message>
     <message>
         <location filename="../Project/AddFileDialog.py" line="73"/>
         <source>Select target directory</source>
-        <translation>选择目标文件夹</translation>
+        <translation type="obsolete">选择目标文件夹</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="116"/>
+        <location filename="../Project/AddFileDialog.py" line="94"/>
         <source>Select Files</source>
         <translation>选择文件</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="124"/>
+        <location filename="../Project/AddFileDialog.py" line="102"/>
         <source>Select user-interface files</source>
         <translation>选择用户界面文件</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="132"/>
+        <location filename="../Project/AddFileDialog.py" line="110"/>
         <source>Select resource files</source>
         <translation>选择资源文件</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="140"/>
+        <location filename="../Project/AddFileDialog.py" line="118"/>
         <source>Select source files</source>
         <translation>选择源文件</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="148"/>
+        <location filename="../Project/AddFileDialog.py" line="126"/>
         <source>Select interface files</source>
         <translation>选择界面文件</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="156"/>
+        <location filename="../Project/AddFileDialog.py" line="134"/>
         <source>Select translation files</source>
         <translation>选择翻译文件</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="158"/>
+        <location filename="../Project/AddFileDialog.py" line="136"/>
         <source>All Files (*)</source>
         <translation>所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="159"/>
+        <location filename="../Project/AddFileDialog.py" line="137"/>
         <source>Select files</source>
         <translation>选择文件</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="103"/>
+        <location filename="../Project/AddFileDialog.py" line="81"/>
         <source>Source Files ({0});;Forms Files ({1});;Resource Files ({2});;Interface Files ({3});;Translation Files ({4});;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="122"/>
+        <location filename="../Project/AddFileDialog.py" line="100"/>
         <source>Forms Files ({0})</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="130"/>
+        <location filename="../Project/AddFileDialog.py" line="108"/>
         <source>Resource Files ({0})</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="138"/>
+        <location filename="../Project/AddFileDialog.py" line="116"/>
         <source>Source Files ({0});;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="146"/>
+        <location filename="../Project/AddFileDialog.py" line="124"/>
         <source>Interface Files ({0})</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="154"/>
+        <location filename="../Project/AddFileDialog.py" line="132"/>
         <source>Translation Files ({0})</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Project/AddFileDialog.ui" line="48"/>
+        <source>Enter the name of files to add separated by &quot;;&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Project/AddFileDialog.ui" line="51"/>
+        <source>&lt;b&gt;Source Files&lt;/b&gt;
+&lt;p&gt;Enter the name of files to add to the current project separated
+by &quot;;&quot;. You may select them with a dialog by pressing 
+the button to the right.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1068,7 +1088,7 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>AddProjectDialog</name>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.py" line="80"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="14"/>
         <source>Add Project</source>
         <translation>添加项目</translation>
     </message>
@@ -1088,52 +1108,52 @@ the button to the right.&lt;/p&gt;</source>
         <translation>项目文件(&amp;f)：</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="50"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="59"/>
         <source>Enter the name of the project file</source>
         <translation>输入项目文件名称</translation>
     </message>
     <message>
         <location filename="../MultiProject/AddProjectDialog.ui" line="57"/>
         <source>Select the project file via a file selection dialog</source>
-        <translation>通过文件选择对话框选择项目文件</translation>
+        <translation type="obsolete">通过文件选择对话框选择项目文件</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="64"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="66"/>
         <source>&amp;Description:</source>
         <translation>描述(&amp;D)：</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="77"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="79"/>
         <source>Enter a short description for the project</source>
         <translation>为项目输入简短描述</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.py" line="59"/>
+        <location filename="../MultiProject/AddProjectDialog.py" line="56"/>
         <source>Project Properties</source>
         <translation>项目属性</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.py" line="80"/>
+        <location filename="../MultiProject/AddProjectDialog.py" line="42"/>
         <source>Project Files (*.e4p)</source>
         <translation type="unfinished">项目文件 (*.e4p)</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="110"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="112"/>
         <source>Select to make this project the main project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="113"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="115"/>
         <source>Is &amp;main project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="90"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="92"/>
         <source>&amp;Category:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="100"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="102"/>
         <source>Select a project category</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1532,133 +1552,133 @@ the button to the right.&lt;/p&gt;</source>
         <translation>配置书签文件菜单</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="35"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="75"/>
         <source>Delete the selected entry</source>
         <translation>删除所选入口</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="38"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="78"/>
         <source>&lt;b&gt;Delete&lt;/b&gt;
 &lt;p&gt;Delete the selected entry.&lt;/p&gt;</source>
         <translation>&lt;b&gt;删除&lt;/b&gt;
 &lt;p&gt;删除所选入口。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="42"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="82"/>
         <source>&amp;Delete</source>
         <translation>删除(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="101"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="125"/>
         <source>Alt+D</source>
         <translation>Alt+D</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="71"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="95"/>
         <source>Move up</source>
         <translation>上移</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="74"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="98"/>
         <source>&lt;b&gt;Move Up&lt;/b&gt;
 &lt;p&gt;Move the selected entry up.&lt;/p&gt;</source>
         <translation>&lt;b&gt;上移&lt;/b&gt;&lt;p&gt;向上移动所选入口。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="78"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="102"/>
         <source>&amp;Up</source>
         <translation>向上(&amp;U)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="81"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="105"/>
         <source>Alt+U</source>
         <translation>Alt+U</translation>
     </message>
     <message>
         <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="169"/>
         <source>Select the file via a file selection dialog</source>
-        <translation>通过文件选择对话框选择文件</translation>
+        <translation type="obsolete">通过文件选择对话框选择文件</translation>
     </message>
     <message>
         <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="172"/>
         <source>&lt;b&gt;File&lt;/b&gt;
 &lt;p&gt;Select the file to be bookmarked via a file selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;文件&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;文件&lt;/b&gt;
 &lt;p&gt;通过文件选择对话框选择将要设置书签的文件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="91"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="115"/>
         <source>Move down</source>
         <translation>下移</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="94"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="118"/>
         <source>&lt;b&gt;Move Down&lt;/b&gt;
 &lt;p&gt;Move the selected entry down.&lt;/p&gt;</source>
         <translation>&lt;b&gt;下移&lt;/b&gt;
 &lt;p&gt;向下移动所选入口。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="98"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="122"/>
         <source>&amp;Down</source>
         <translation>向下(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="111"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="35"/>
         <source>Add a new bookmarked file</source>
         <translation>添加一个新的已设置书签的文件</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="114"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="38"/>
         <source>&lt;b&gt;Add&lt;/b&gt;
 &lt;p&gt;Add a new bookmarked file with the value entered below.&lt;/p&gt;</source>
         <translation>&lt;b&gt;添加&lt;/b&gt;
 &lt;p&gt;使用以上输入的值添加一个新的已设置书签的文件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="118"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="42"/>
         <source>&amp;Add</source>
         <translation>添加(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="121"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="45"/>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="128"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="148"/>
         <source>&amp;File:</source>
         <translation>文件(&amp;F)：</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="141"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="55"/>
         <source>Change the value of the selected entry</source>
         <translation>改变所选入口的值</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="144"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="58"/>
         <source>&lt;b&gt;Change&lt;/b&gt;
 &lt;p&gt;Change the value of the selected entry.&lt;/p&gt;</source>
         <translation>&lt;b&gt;改变&lt;/b&gt;
 &lt;p&gt;改变所选入口的值。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="148"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="62"/>
         <source>C&amp;hange</source>
         <translation>改变(&amp;h)</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="151"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="65"/>
         <source>Alt+H</source>
         <translation>Alt+H</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="158"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="167"/>
         <source>Enter the filename of the file</source>
         <translation>输入文件名</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="161"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="170"/>
         <source>&lt;b&gt;File&lt;/b&gt;
 &lt;p&gt;Enter the filename of the bookmarked file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;文件&lt;/b&gt;
@@ -1746,44 +1766,34 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="196"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="187"/>
         <source>Cancel</source>
         <translation type="unfinished">取消</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="94"/>
-        <source>Choose Directory ...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="104"/>
-        <source>Choose File ...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="129"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="103"/>
         <source>&lt;b&gt;Importing from {0}&lt;/b&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="136"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="110"/>
         <source>Finish</source>
         <translation type="unfinished">完成</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="151"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="137"/>
         <source>Error importing bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="145"/>
-        <source>Shows the name of the bookmarks file or directory</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="189"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="180"/>
         <source>Next &gt;</source>
         <translation type="unfinished">下一步 &gt;</translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="141"/>
+        <source>Enter the name of the bookmarks file or directory</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3931,108 +3941,113 @@ the respective line and position.&lt;/p&gt;</source>
         <translation>文件比较</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="41"/>
+        <location filename="../UI/CompareDialog.ui" line="29"/>
         <source>File &amp;1:</source>
         <translation>文件 &amp;1:</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="51"/>
+        <location filename="../UI/CompareDialog.ui" line="48"/>
         <source>Enter the name of the first file</source>
         <translation>输入第一个文件的名称</translation>
     </message>
     <message>
         <location filename="../UI/CompareDialog.ui" line="82"/>
         <source>Press to select the file via a file selection dialog</source>
-        <translation>请通过文件选择对话框选择文件</translation>
+        <translation type="obsolete">请通过文件选择对话框选择文件</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="65"/>
+        <location filename="../UI/CompareDialog.ui" line="55"/>
         <source>File &amp;2:</source>
         <translation>文件 &amp;2:</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="75"/>
+        <location filename="../UI/CompareDialog.ui" line="74"/>
         <source>Enter the name of the second file</source>
         <translation>输入第二个文件的名称</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="151"/>
+        <location filename="../UI/CompareDialog.ui" line="143"/>
         <source>Press to move to the first difference</source>
         <translation>点击移动到第一个不同点</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="161"/>
+        <location filename="../UI/CompareDialog.ui" line="153"/>
         <source>Press to move to the previous difference</source>
         <translation>点击移动到上一个不同点</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="171"/>
+        <location filename="../UI/CompareDialog.ui" line="163"/>
         <source>Press to move to the next difference</source>
         <translation>点击移动到下一个不同点</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="181"/>
+        <location filename="../UI/CompareDialog.ui" line="173"/>
         <source>Press to move to the last difference</source>
         <translation>点击移动到最后一个不同点</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="230"/>
+        <location filename="../UI/CompareDialog.ui" line="222"/>
         <source>Alt+S</source>
         <translation>Alt+S</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="111"/>
+        <location filename="../UI/CompareDialog.py" line="107"/>
         <source>Compare</source>
         <translation>比较</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="113"/>
+        <location filename="../UI/CompareDialog.py" line="109"/>
         <source>Press to perform the comparison of the two files</source>
         <translation>点击比较两个文件</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="253"/>
+        <location filename="../UI/CompareDialog.py" line="249"/>
         <source>Compare Files</source>
         <translation>比较文件</translation>
     </message>
     <message>
         <location filename="../UI/CompareDialog.py" line="448"/>
         <source>Select file to compare</source>
-        <translation>选择要比较的文件</translation>
+        <translation type="obsolete">选择要比较的文件</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="224"/>
+        <location filename="../UI/CompareDialog.ui" line="216"/>
         <source>Select, if the horizontal scrollbars should be synchronized</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="227"/>
+        <location filename="../UI/CompareDialog.ui" line="219"/>
         <source>&amp;Synchronize horizontal scrollbars</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="360"/>
+        <location filename="../UI/CompareDialog.py" line="356"/>
         <source>Total: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="362"/>
+        <location filename="../UI/CompareDialog.py" line="358"/>
         <source>Changed: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="363"/>
+        <location filename="../UI/CompareDialog.py" line="359"/>
         <source>Added: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="364"/>
+        <location filename="../UI/CompareDialog.py" line="360"/>
         <source>Deleted: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="253"/>
+        <location filename="../UI/CompareDialog.py" line="249"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../UI/CompareDialog.ui" line="20"/>
+        <source>Files to be compared:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4831,12 +4846,12 @@ to display the configuration page.</source>
         <translation>请通过文件选择对话框选择 IDL 编译器。</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="43"/>
+        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="46"/>
         <source>Enter the path to the IDL compiler.</source>
         <translation type="unfinished">输入 IDL 编译器路径。</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="50"/>
+        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="53"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the default value (omniidl or omniidl.exe).</source>
         <translation>&lt;b&gt;注意：&lt;/b&gt; 如果该入口为空则使用默认值（omniidl 或 omniidl.exe）。</translation>
     </message>
@@ -6232,52 +6247,52 @@ Not connected
         <translation>调试客户</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="29"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="32"/>
         <source>Enter the path of the Debug Client to be used.  Leave empty to use the default.</source>
         <translation>输入要使用的调试客户路径。为空时使用默认设置。</translation>
     </message>
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="36"/>
         <source>Press to select the Debug Client via a file selection dialog</source>
-        <translation>点击以通过选择对话框选择调试客户</translation>
+        <translation type="obsolete">点击以通过选择对话框选择调试客户</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="46"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="42"/>
         <source>Interpreter for Debug Client</source>
         <translation>调试客户的解释器</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="52"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="51"/>
         <source>Enter the path of the interpreter to be used by the debug client.</source>
         <translation>输入用于调试客户的解释器路径。</translation>
     </message>
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="59"/>
         <source>Press to select the interpreter via a file selection dialog</source>
-        <translation>点击以通过选择对话框选择解释器</translation>
+        <translation type="obsolete">点击以通过选择对话框选择解释器</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="69"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="61"/>
         <source>Environment for Debug Client</source>
         <translation>调试客户端的环境</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="75"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="67"/>
         <source>Select, if the environment of the debug client should be replaced</source>
         <translation>选择是否替换调试客户的环境</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="78"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="70"/>
         <source>Replace Environment</source>
         <translation>替换环境</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="85"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="77"/>
         <source>Enter the environment variables to be set.</source>
         <translation>输入要设定的环境变量。</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="88"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="80"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the debugger. The individual settings must be separate by whitespace and be given in the form &apos;var=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot;&lt;/p&gt;</source>
@@ -6286,143 +6301,143 @@ Not connected
 &lt;p&gt;例如：var1=1 var2=&quot;hello world&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="97"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="89"/>
         <source>Environment:</source>
         <translation>环境：</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="107"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="99"/>
         <source>Select, if the debugger should be run remotely</source>
         <translation>选择是否远程运行调试器</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="110"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="102"/>
         <source>Remote Debugger</source>
         <translation>远程调试器</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="119"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="111"/>
         <source>Select, if path translation for remote debugging should be done</source>
         <translation>选择是否为远程调试进行路径转化</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="122"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="114"/>
         <source>Perform Path Translation</source>
         <translation>执行路径转化</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="131"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="123"/>
         <source>Local Path:</source>
         <translation>本地路径：</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="138"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="130"/>
         <source>Enter the local path</source>
         <translation>输入本地路径：</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="145"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="137"/>
         <source>Enter the remote path</source>
         <translation>输入远程路径</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="152"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="144"/>
         <source>Remote Path:</source>
         <translation>远程路径：</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="162"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="154"/>
         <source>Remote Host:</source>
         <translation>远程主机：</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="169"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="161"/>
         <source>Enter the remote execution command.</source>
         <translation>输入远程执行命令。</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="172"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="164"/>
         <source>&lt;b&gt;Remote Execution&lt;/b&gt;
 &lt;p&gt;Enter the remote execution command (e.g. ssh). This command is used to log into the remote host and execute the remote debugger.&lt;/p&gt;</source>
         <translation>&lt;b&gt;远程执行&lt;/b&gt;
 &lt;p&gt;输入远程执行命令（如：ssh）。该命令用于登录到远程主机中并执行远程调试器。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="180"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="172"/>
         <source>Remote Execution:</source>
         <translation>远程执行：</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="187"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="179"/>
         <source>Enter the hostname of the remote machine.</source>
         <translation>输入远程机的主机名。</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="190"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="182"/>
         <source>&lt;b&gt;Remote Host&lt;/b&gt;
 &lt;p&gt;Enter the hostname of the remote machine.&lt;/p&gt;</source>
         <translation>&lt;b&gt;远程主机&lt;/b&gt;
 &lt;p&gt;输入远程机的主机名。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="201"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="193"/>
         <source>Select, if the debugger should be executed in a console window</source>
         <translation>选择是否在控制台窗口执行调试器</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="204"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="196"/>
         <source>Console Debugger</source>
         <translation>控制台调试器</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="213"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="205"/>
         <source>Console Command:</source>
         <translation>控制器命令：</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="220"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="212"/>
         <source>Enter the console command (e.g. xterm -e)</source>
         <translation>输入控制台命令（如：xtrem -e）</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="223"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="215"/>
         <source>&lt;b&gt;Console Command&lt;/b&gt;
 &lt;p&gt;Enter the console command (e.g. xterm -e). This command is used to open a command window for the debugger.&lt;/p&gt;</source>
         <translation>&lt;b&gt;控制台命令&lt;/b&gt;
 &lt;p&gt;输入控制台命令（如：xterm -e）。该命令用于为调试器打开一个命令窗口。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="237"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="229"/>
         <source>Redirect stdin/stdout/stderr</source>
         <translation>重定向 stdin/stdout/stderr</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="244"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="236"/>
         <source>Select to not set the debug client encoding</source>
         <translation>选择不设定调试客户编码</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="247"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="239"/>
         <source>Don&apos;t set the encoding of the debug client</source>
         <translation>不要设定调试客户的编码</translation>
     </message>
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.py" line="119"/>
         <source>Select interpreter for Debug Client</source>
-        <translation>选择调试客户的解释器</translation>
+        <translation type="obsolete">选择调试客户的解释器</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.py" line="135"/>
+        <location filename="../Project/DebuggerPropertiesDialog.py" line="118"/>
         <source>All Files (*)</source>
         <translation>所有文件 (*)</translation>
     </message>
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.py" line="136"/>
         <source>Select Debug Client</source>
-        <translation>选择调试客户</translation>
+        <translation type="obsolete">选择调试客户</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="234"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="226"/>
         <source>Select to redirect stdin, stdout and stderr of the program being debugged to the eric6 IDE</source>
         <translation type="unfinished">选择对在 Eric4 IDE 中调试的程序的 stdin 、stdout 和 stderr 进行重定向 {5 ?} {6 ?}</translation>
     </message>
@@ -6440,102 +6455,102 @@ Not connected
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="50"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="33"/>
         <source>Press to select the Python3 interpreter via a file selection dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="60"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="56"/>
         <source>Debug Client Type</source>
         <translation type="unfinished">调试客户类型</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="71"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="98"/>
         <source>Enter the path of the Debug Client to be used.  Leave empty to use the default.</source>
         <translation type="unfinished">输入要使用的调试客户路径。为空时使用默认设置。</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="81"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="38"/>
         <source>Press to select the Debug Client via a file selection dialog</source>
         <translation type="unfinished">点击以通过选择对话框选择调试客户</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="90"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="62"/>
         <source>Select the standard debug client</source>
         <translation type="unfinished">选择标准调试客户</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="93"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="65"/>
         <source>Standard</source>
         <translation type="unfinished">标准</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="100"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="82"/>
         <source>Select the custom selected debug client</source>
         <translation type="unfinished">选择自定义选择的调试客户</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="103"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="85"/>
         <source>Custom</source>
         <translation type="unfinished">自定义</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="110"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="72"/>
         <source>Select the multi threaded debug client</source>
         <translation type="unfinished">选择多线程调试客户</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="113"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="75"/>
         <source>Multi Threaded</source>
         <translation type="unfinished">多线程</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="123"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="108"/>
         <source>Source association</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="129"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="114"/>
         <source>Enter the file extensions to be associated with the Python3 debugger separated by a space. They must not overlap with the ones for Python2.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="148"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="133"/>
         <source>Redirect stdin/stdout/stderr</source>
         <translation type="unfinished">重定向 stdin/stdout/stderr</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="155"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="140"/>
         <source>Select to not set the debug client encoding</source>
         <translation type="unfinished">选择不设定调试客户编码</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="158"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="143"/>
         <source>Don&apos;t set the encoding of the debug client</source>
         <translation type="unfinished">不要设定调试客户的编码</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="94"/>
         <source>Select Python interpreter for Debug Client</source>
-        <translation type="unfinished">为调试客户选择 Python 解释器</translation>
+        <translation type="obsolete">为调试客户选择 Python 解释器</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="109"/>
         <source>Select Debug Client</source>
-        <translation type="unfinished">选择调试客户</translation>
+        <translation type="obsolete">选择调试客户</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="109"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="40"/>
         <source>Python Files (*.py *.py3)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="43"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="46"/>
         <source>Enter the path of the Python3 interpreter to be used by the debug client. Leave empty to use the default.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="145"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="130"/>
         <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric6 IDE</source>
         <translation type="unfinished">选择对在 Eric4 IDE 中调试的程序的 stdin 、stdout 和 stderr 进行重定向 {5 ?} {6 ?}</translation>
     </message>
@@ -6553,102 +6568,102 @@ Not connected
         <translation>调试客户的 Python 解释器</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="50"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="33"/>
         <source>Press to select the Python interpreter via a file selection dialog</source>
         <translation>点击以通过文件选择对话框选择 Python 解释器</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="60"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="56"/>
         <source>Debug Client Type</source>
         <translation>调试客户类型</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="71"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="98"/>
         <source>Enter the path of the Debug Client to be used.  Leave empty to use the default.</source>
         <translation>输入要使用的调试客户路径。为空时使用默认设置。</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="81"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="38"/>
         <source>Press to select the Debug Client via a file selection dialog</source>
         <translation>点击以通过选择对话框选择调试客户</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="90"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="62"/>
         <source>Select the standard debug client</source>
         <translation>选择标准调试客户</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="93"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="65"/>
         <source>Standard</source>
         <translation>标准</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="100"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="82"/>
         <source>Select the custom selected debug client</source>
         <translation>选择自定义选择的调试客户</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="103"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="85"/>
         <source>Custom</source>
         <translation>自定义</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="110"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="72"/>
         <source>Select the multi threaded debug client</source>
         <translation>选择多线程调试客户</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="113"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="75"/>
         <source>Multi Threaded</source>
         <translation>多线程</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="148"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="133"/>
         <source>Redirect stdin/stdout/stderr</source>
         <translation>重定向 stdin/stdout/stderr</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="155"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="140"/>
         <source>Select to not set the debug client encoding</source>
         <translation>选择不设定调试客户编码</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="158"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="143"/>
         <source>Don&apos;t set the encoding of the debug client</source>
         <translation>不要设定调试客户的编码</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="94"/>
         <source>Select Python interpreter for Debug Client</source>
-        <translation>为调试客户选择 Python 解释器</translation>
+        <translation type="obsolete">为调试客户选择 Python 解释器</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="109"/>
         <source>Select Debug Client</source>
-        <translation>选择调试客户</translation>
+        <translation type="obsolete">选择调试客户</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="123"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="108"/>
         <source>Source association</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="129"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="114"/>
         <source>Enter the file extensions to be associated with the Python2 debugger separated by a space. They must not overlap with the ones for Python3.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="109"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="40"/>
         <source>Python Files (*.py *.py2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="43"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="46"/>
         <source>Enter the path of the Python interpreter to be used by the debug client.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="145"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="130"/>
         <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric6 IDE</source>
         <translation type="unfinished">选择对在 Eric4 IDE 中调试的程序的 stdin 、stdout 和 stderr 进行重定向 {5 ?} {6 ?}</translation>
     </message>
@@ -6658,37 +6673,37 @@ Not connected
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="17"/>
         <source>&lt;b&gt;Configure Ruby Debugger&lt;/b&gt;</source>
-        <translation>&lt;b&gt;配置 Ruby 调试器&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;配置 Ruby 调试器&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="37"/>
         <source>Ruby Interpreter for Debug Client</source>
-        <translation>调试客户的 Ruby 解释器</translation>
+        <translation type="obsolete">调试客户的 Ruby 解释器</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="43"/>
         <source>Enter the path of the Ruby interpreter to be used by the debug client.</source>
-        <translation>输入调试客户使用的 Ruby 解释器路径</translation>
+        <translation type="obsolete">输入调试客户使用的 Ruby 解释器路径</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="50"/>
         <source>Press to select the Ruby interpreter via a file selection dialog</source>
-        <translation>点击通过文件选择对话框选择 Ruby 解释器</translation>
+        <translation type="obsolete">点击通过文件选择对话框选择 Ruby 解释器</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="63"/>
         <source>Redirect stdin/stdout/stderr</source>
-        <translation>重定向 stdin/stdout/stderr</translation>
+        <translation type="obsolete">重定向 stdin/stdout/stderr</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.py" line="64"/>
         <source>Select Ruby interpreter for Debug Client</source>
-        <translation>为调试客户选择 Ruby 解释器</translation>
+        <translation type="obsolete">为调试客户选择 Ruby 解释器</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="60"/>
         <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric6 IDE</source>
-        <translation type="unfinished">选择对在 Eric4 IDE 中调试的程序的 stdin 、stdout 和 stderr 进行重定向 {5 ?} {6 ?}</translation>
+        <translation type="obsolete">选择对在 Eric4 IDE 中调试的程序的 stdin 、stdout 和 stderr 进行重定向 {5 ?} {6 ?}</translation>
     </message>
 </context>
 <context>
@@ -6712,113 +6727,118 @@ Not connected
         <translation>文件 &amp;1:</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="32"/>
+        <location filename="../UI/DiffDialog.ui" line="41"/>
         <source>Enter the name of the first file</source>
         <translation>输入第一个文件的名称</translation>
     </message>
     <message>
         <location filename="../UI/DiffDialog.ui" line="67"/>
         <source>Press to select the file via a file selection dialog</source>
-        <translation>请通过文件选择对话框选择文件</translation>
+        <translation type="obsolete">请通过文件选择对话框选择文件</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="50"/>
+        <location filename="../UI/DiffDialog.ui" line="52"/>
         <source>File &amp;2:</source>
         <translation>文件 &amp;2:</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="60"/>
+        <location filename="../UI/DiffDialog.ui" line="71"/>
         <source>Enter the name of the second file</source>
         <translation>输入第二个文件的名称</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="82"/>
+        <location filename="../UI/DiffDialog.ui" line="86"/>
         <source>Select to generate a unified diff</source>
         <translation>选择产生统一差异</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="85"/>
+        <location filename="../UI/DiffDialog.ui" line="89"/>
         <source>&amp;Unified Diff</source>
         <translation>统一(&amp;U)差异</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="88"/>
+        <location filename="../UI/DiffDialog.ui" line="92"/>
         <source>Alt+U</source>
         <translation>Alt+U</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="98"/>
+        <location filename="../UI/DiffDialog.ui" line="102"/>
         <source>Select to generate a context diff</source>
         <translation>选择产生上下文差异</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="101"/>
+        <location filename="../UI/DiffDialog.ui" line="105"/>
         <source>Co&amp;ntext Diff</source>
         <translation>上下文(&amp;n)差异</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="104"/>
+        <location filename="../UI/DiffDialog.ui" line="108"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="223"/>
+        <location filename="../UI/DiffDialog.py" line="219"/>
         <source>Compare</source>
         <translation>比较</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="225"/>
+        <location filename="../UI/DiffDialog.py" line="221"/>
         <source>Press to perform the comparison of the two files</source>
         <translation>点击比较两个文件</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="227"/>
+        <location filename="../UI/DiffDialog.py" line="223"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="229"/>
+        <location filename="../UI/DiffDialog.py" line="225"/>
         <source>Save the output to a patch file</source>
         <translation>将输出保存到补丁文件中</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="325"/>
+        <location filename="../UI/DiffDialog.py" line="321"/>
         <source>Save Diff</source>
         <translation>保存差异</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="289"/>
+        <location filename="../UI/DiffDialog.py" line="285"/>
         <source>Patch Files (*.diff)</source>
         <translation>补丁文件 (*.diff)</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="366"/>
+        <location filename="../UI/DiffDialog.py" line="362"/>
         <source>Compare Files</source>
         <translation>比较文件</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="448"/>
+        <location filename="../UI/DiffDialog.py" line="444"/>
         <source>There is no difference.</source>
         <translation>没有差异。</translation>
     </message>
     <message>
         <location filename="../UI/DiffDialog.py" line="467"/>
         <source>Select file to compare</source>
-        <translation>选择要比较的文件</translation>
+        <translation type="obsolete">选择要比较的文件</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="325"/>
+        <location filename="../UI/DiffDialog.py" line="321"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br /&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="366"/>
+        <location filename="../UI/DiffDialog.py" line="362"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="306"/>
+        <location filename="../UI/DiffDialog.py" line="302"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../UI/DiffDialog.ui" line="80"/>
+        <source>Select Diff Kind</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7315,6 +7335,39 @@ Do you want to quit anyway?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
+    </message>
+</context>
+<context>
+    <name>E5ComboPathPicker</name>
+    <message>
+        <location filename="../E5Gui/E5PathPicker.py" line="561"/>
+        <source>Enter Path Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5PathPicker.py" line="558"/>
+        <source>Enter Path Names separated by &apos;;&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5PathPicker.py" line="868"/>
+        <source>Choose a file to open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5PathPicker.py" line="870"/>
+        <source>Choose files to open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5PathPicker.py" line="872"/>
+        <source>Choose a file to save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5PathPicker.py" line="874"/>
+        <source>Choose a directory</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7907,28 +7960,33 @@ whole selection.&lt;/li&gt;
 <context>
     <name>E5PathPicker</name>
     <message>
-        <location filename="../E5Gui/E5PathPicker.py" line="70"/>
+        <location filename="../E5Gui/E5PathPicker.py" line="149"/>
         <source>Enter Path Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../E5Gui/E5PathPicker.py" line="275"/>
+        <location filename="../E5Gui/E5PathPicker.py" line="407"/>
         <source>Choose a file to open</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../E5Gui/E5PathPicker.py" line="277"/>
+        <location filename="../E5Gui/E5PathPicker.py" line="409"/>
         <source>Choose files to open</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../E5Gui/E5PathPicker.py" line="279"/>
+        <location filename="../E5Gui/E5PathPicker.py" line="413"/>
         <source>Choose a file to save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../E5Gui/E5PathPicker.py" line="281"/>
+        <location filename="../E5Gui/E5PathPicker.py" line="415"/>
         <source>Choose a directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5PathPicker.py" line="146"/>
+        <source>Enter Path Names separated by &apos;;&apos;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8413,12 +8471,12 @@ whole selection.&lt;/li&gt;
         <translation type="unfinished">点击查找下一次出现</translation>
     </message>
     <message>
-        <location filename="../E5Gui/E5TextEditSearchWidget.py" line="138"/>
+        <location filename="../E5Gui/E5TextEditSearchWidget.py" line="140"/>
         <source>Find</source>
         <translation type="unfinished">查找</translation>
     </message>
     <message>
-        <location filename="../E5Gui/E5TextEditSearchWidget.py" line="138"/>
+        <location filename="../E5Gui/E5TextEditSearchWidget.py" line="140"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8595,79 +8653,79 @@ whole selection.&lt;/li&gt;
         <translation>编辑断点</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="33"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="148"/>
         <source>Select, whether the breakpoint is enabled</source>
         <translation>选择是否允许断点</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="36"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="151"/>
         <source>Enabled</source>
         <translation>已开启</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="46"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="138"/>
         <source>Select whether this is a temporary breakpoint</source>
         <translation>选择是否为临时断点</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="49"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="141"/>
         <source>Temporary Breakpoint</source>
         <translation>临时断点</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="56"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="39"/>
         <source>Enter the filename of the breakpoint</source>
         <translation>输入断点的文件名</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="72"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="95"/>
         <source>Enter or select a condition for the breakpoint</source>
         <translation>输入或为断点选择一个条件</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="82"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="112"/>
         <source>Enter an ignore count for the breakpoint</source>
         <translation>为断点输入一个忽略计数</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="108"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="53"/>
         <source>Enter the linenumber of the breakpoint</source>
         <translation>输入断点行号</translation>
     </message>
     <message>
         <location filename="../Debugger/EditBreakpointDialog.ui" line="165"/>
         <source>Press to open a file selection dialog</source>
-        <translation>点击打开文件选择对话框</translation>
+        <translation type="obsolete">点击打开文件选择对话框</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="137"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="46"/>
         <source>Linenumber:</source>
         <translation>行号：</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="144"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="23"/>
         <source>Filename:</source>
         <translation>文件名：</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="151"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="82"/>
         <source>Condition:</source>
         <translation>条件：</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="158"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="105"/>
         <source>Ignore Count:</source>
         <translation>忽略计数：</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.py" line="94"/>
+        <location filename="../Debugger/EditBreakpointDialog.py" line="87"/>
         <source>Add Breakpoint</source>
         <translation>添加断点</translation>
     </message>
     <message>
         <location filename="../Debugger/EditBreakpointDialog.py" line="129"/>
         <source>Select filename of the breakpoint</source>
-        <translation>选择断点的文件名</translation>
+        <translation type="obsolete">选择断点的文件名</translation>
     </message>
 </context>
 <context>
@@ -9711,70 +9769,70 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="116"/>
         <source>Enter a file to be added</source>
-        <translation>输入要添加的文件</translation>
+        <translation type="obsolete">输入要添加的文件</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="173"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="39"/>
         <source>Press to select an API file via a selection dialog</source>
         <translation>点击通过选择对话框选择一个 API 文件</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="123"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="129"/>
         <source>Press to select an API file from the list of installed API files</source>
         <translation>点击以从已安装的 AIP 文件列表中选择一个 API 文件</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="197"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="184"/>
         <source>Add from installed APIs</source>
         <translation>从已安装的 API 中添加</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="133"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="139"/>
         <source>Press to select an API file from the list of API files installed by plugins</source>
         <translation>点击以从通过插件安装的 API 文件列表中选择一个 API 文件</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="216"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="203"/>
         <source>Add from Plugin APIs</source>
         <translation>从插件 API 中添加</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="150"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="156"/>
         <source>Press to compile the selected APIs definition</source>
         <translation>点击编译已选 API 定义</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="249"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="236"/>
         <source>Compile APIs</source>
         <translation>编译 API</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="142"/>
         <source>Select API file</source>
-        <translation>选择 API 文件</translation>
+        <translation type="obsolete">选择 API 文件</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="142"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="41"/>
         <source>API File (*.api);;All Files (*)</source>
         <translation>API 文件 (*.api);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="186"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="173"/>
         <source>Select from the list of installed API files</source>
         <translation>选择从已安装的 API 文件列表</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="216"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="203"/>
         <source>Select from the list of API files installed by plugins</source>
         <translation>选择从通过插件安装的 API 文件列表</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="264"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="251"/>
         <source>Cancel compilation</source>
         <translation>取消编译</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="197"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="184"/>
         <source>There are no APIs installed yet. Selection is not available.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11803,75 +11861,75 @@ whole selection.&lt;/li&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="237"/>
         <source>Enter the filename of the personal word list</source>
-        <translation>输个人单词列表的文件名</translation>
+        <translation type="obsolete">输个人单词列表的文件名</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="272"/>
         <source>Select the personal word list file via a file selection dialog</source>
-        <translation>通过文件选择对话框选择个人单词列表</translation>
+        <translation type="obsolete">通过文件选择对话框选择个人单词列表</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="244"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="250"/>
         <source>Personal exclude list file:</source>
         <translation>个人排除列表文件：</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="251"/>
         <source>Enter the filename of the personal exclude list</source>
-        <translation>输入个人排除列表的文件名</translation>
+        <translation type="obsolete">输入个人排除列表的文件名</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="279"/>
         <source>Select the personal exclude list file via a file selection dialog</source>
-        <translation>通过文件选择对话框选择个人排除列表文件</translation>
+        <translation type="obsolete">通过文件选择对话框选择个人排除列表文件</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="258"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="270"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; leave these entries empty to use the default</source>
         <translation>&lt;b&gt;注意：&lt;/b&gt; 当这些条目为空时将使用默认值</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="265"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="277"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; valid for all newly opened editors</source>
         <translation>&lt;b&gt;注意：&lt;/b&gt; 对所有新打开的编辑器有效</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="289"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="287"/>
         <source>Automatic spell checking</source>
         <translation>自动拼写检查</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="295"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="293"/>
         <source>Select to enable spellchecking</source>
         <translation>选择开启拼写检查功能</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="298"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="296"/>
         <source>Automatic spell checking enabled</source>
         <translation>自动拼写检查已开启</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="307"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="305"/>
         <source>Amount of lines to autocheck at once:</source>
         <translation>每次自动检查的行数：</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="314"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="312"/>
         <source>Enter the number of lines to check per go. Higher values increase checking speed but decrease GUI responsivenes</source>
         <translation>输入每次要检查行的数目。提高该值可增加检查速度，但同时会降低 GUI 的响应度</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="115"/>
         <source>Select personal word list</source>
-        <translation>选择个人单词列表</translation>
+        <translation type="obsolete">选择个人单词列表</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="129"/>
         <source>Select personal exclude list</source>
-        <translation>选择个人排除列表</translation>
+        <translation type="obsolete">选择个人排除列表</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="129"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="38"/>
         <source>Dictionary File (*.dic);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13377,139 +13435,139 @@ whole selection.&lt;/li&gt;
         <translation>Eric API 配置</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="25"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="41"/>
         <source>Enter an output filename</source>
         <translation>输入一个输出文件名</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="28"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="44"/>
         <source>&lt;b&gt;Output Filename&lt;/b&gt;&lt;p&gt;Enter the filename of the output file. A &apos;%L&apos; placeholder is replaced by the language of the API file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;输出文件名&lt;/b&gt;&lt;p&gt;键入输出文件的文件名。 “%L”占位符将被 API 文件的语言替换。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="45"/>
         <source>Press to open a file selection dialog</source>
-        <translation>点击打开文件选择对话框</translation>
+        <translation type="obsolete">点击打开文件选择对话框</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="35"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="25"/>
         <source>Output File:</source>
         <translation>输出文件：</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="60"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="59"/>
         <source>Languages</source>
         <translation>语言</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="66"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="65"/>
         <source>Select the languages of the  APIs to generate</source>
         <translation>选择要产生的 API 的语言</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="81"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="80"/>
         <source>Additional source extensions:</source>
         <translation>附加的源扩展：</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="88"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="87"/>
         <source>Enter additional source extensions separated by a comma</source>
         <translation>输入附加的源扩展，用逗号分隔</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="115"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="114"/>
         <source>Select to recurse into subdirectories</source>
         <translation>选择包含子文件夹</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="118"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="117"/>
         <source>Recurse into subdirectories</source>
         <translation>包含子文件夹</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="125"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="124"/>
         <source>Select to include private classes, methods and functions in the API file</source>
         <translation>选择在 API 文件中包含私有类、方法和函数</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="128"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="127"/>
         <source>Include private classes, methods and functions</source>
         <translation>包含私有类、方法和函数</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="139"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="138"/>
         <source>Base package name:</source>
         <translation>基础包名称：</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="146"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="145"/>
         <source>Enter the name of the base package</source>
         <translation>输入基础包的名称</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="157"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="156"/>
         <source>Exclude Files:</source>
         <translation>排除文件：</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="164"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="163"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
         <translation>输入要排除文件的文件名样式，用逗号分隔</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="179"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="178"/>
         <source>Exclude Directories</source>
         <translation>排除文件夹</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="185"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="220"/>
         <source>Enter a directory basename to be ignored</source>
         <translation>输入要忽略的文件夹基本名称</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="192"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="201"/>
         <source>Press to add the entered directory to the list</source>
         <translation>点击将输入的文件夹添加到列表中</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="195"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="204"/>
         <source>Add</source>
         <translation>添加</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="202"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="191"/>
         <source>Press to delete the selected directory from the list</source>
         <translation>点击从列表中删除选中的文件夹</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="205"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="194"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="222"/>
         <source>Press to open a directory selection dialog</source>
-        <translation>点击打开文件夹选择对话框</translation>
+        <translation type="obsolete">点击打开文件夹选择对话框</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="212"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="184"/>
         <source>List of directory basenames to be ignored</source>
         <translation>要忽略的文件夹基本名称列表</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="197"/>
         <source>Select output file</source>
-        <translation>选择输出文件</translation>
+        <translation type="obsolete">选择输出文件</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="197"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="45"/>
         <source>API files (*.api);;All files (*)</source>
         <translation>API 文件 (*.api);;所有文件 (*)</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="228"/>
         <source>Select directory to exclude</source>
-        <translation>选择要排除的文件夹</translation>
+        <translation type="obsolete">选择要排除的文件夹</translation>
     </message>
 </context>
 <context>
@@ -13607,322 +13665,317 @@ whole selection.&lt;/li&gt;
         <translation>通用配置</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="381"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="390"/>
         <source>Output Directory:</source>
         <translation>输出文件夹：</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="390"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="406"/>
         <source>Enter an output directory</source>
         <translation>输入一个输出文件夹</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="400"/>
         <source>Press to open a directory selection dialog</source>
-        <translation>点击打开文件夹选择对话框</translation>
+        <translation type="obsolete">点击打开文件夹选择对话框</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="63"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="62"/>
         <source>Additional source extensions:</source>
         <translation>附加的源扩展：</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="70"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="69"/>
         <source>Enter additional source extensions separated by a comma</source>
         <translation>输入附加的源扩展，用逗号分隔</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="81"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="80"/>
         <source>Select to recurse into subdirectories</source>
         <translation>选择包含子文件夹</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="84"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="83"/>
         <source>Recurse into subdirectories</source>
         <translation>包含子文件夹</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="91"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="90"/>
         <source>Select, if no index files should be generated</source>
         <translation>选择不生成索引文件</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="94"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="93"/>
         <source>Don&apos;t generate index files</source>
         <translation>不生成索引文件</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="121"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="120"/>
         <source>Select to exclude empty modules</source>
         <translation>选择排除空模块</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="124"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="123"/>
         <source>Don&apos;t include empty modules</source>
         <translation>不包含空模块</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="151"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="150"/>
         <source>Exclude Files:</source>
         <translation>排除文件：</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="158"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="157"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
         <translation>输入要排除文件的文件名样式，用逗号分隔</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="167"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="172"/>
         <source>Exclude Directories</source>
         <translation>排除文件夹</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="173"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="220"/>
         <source>Enter a directory basename to be ignored</source>
         <translation>输入要忽略的文件夹基本名称</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="180"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="178"/>
         <source>Press to add the entered directory to the list</source>
         <translation>点击将输入的文件夹添加到列表中</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="183"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="181"/>
         <source>Add</source>
         <translation>添加</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="190"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="188"/>
         <source>Press to delete the selected directory from the list</source>
         <translation>点击从列表中删除选中的文件夹</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="193"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="191"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="200"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="204"/>
         <source>List of directory basenames to be ignored</source>
         <translation>要忽略的文件夹基本名称列表</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="221"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="231"/>
         <source>Style</source>
         <translation>风格</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="227"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="237"/>
         <source>Style Sheet</source>
         <translation>样式表</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="233"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="252"/>
         <source>Enter the filename of a CSS style sheet. Leave empty to use the colours defined below.</source>
         <translation>输入一个 CSS 样式表的文件名。为空则使用以上定义的颜色。</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="243"/>
         <source>Press to open a file selection dialog</source>
-        <translation>点击打开文件选择对话框</translation>
+        <translation type="obsolete">点击打开文件选择对话框</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="253"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="262"/>
         <source>Colours</source>
         <translation>颜色</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="259"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="268"/>
         <source>Press to select the class and function header background colour.</source>
         <translation>点击选择类和函数标题的背景色。</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="262"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="271"/>
         <source>Class/Function Header Background</source>
         <translation>类/函数标题背景</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="269"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="278"/>
         <source>Press to select the class and function header foreground colour.</source>
         <translation>点击选择类和函数标题的前景色。</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="272"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="281"/>
         <source>Class/Function Header Foreground</source>
         <translation>类/函数标题前景</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="279"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="288"/>
         <source>Press to select the level 2 header background colour.</source>
         <translation>点击选择二级标题背景色。</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="282"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="291"/>
         <source>Level 2 Header Background</source>
         <translation>二级标题背景</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="289"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="298"/>
         <source>Press to select the level 2 header foreground colour.</source>
         <translation>点击选择二级标题前景色。</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="292"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="301"/>
         <source>Level 2 Header Foreground</source>
         <translation>二级标题前景</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="299"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="308"/>
         <source>Press to select the level 1 header background colour.</source>
         <translation>点击选择一级标题背景色。</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="302"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="311"/>
         <source>Level 1 Header Background</source>
         <translation>一级标题背景</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="309"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="318"/>
         <source>Press to select the level 1 header foreground colour.</source>
         <translation>点击选择一级标题前景色。</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="312"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="321"/>
         <source>Level 1 Header Foreground</source>
         <translation>一级标题前景</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="319"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="328"/>
         <source>Press to select the body background colour.</source>
         <translation>点击选择主体背景色。</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="322"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="331"/>
         <source>Body Background</source>
         <translation>主体背景</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="329"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="338"/>
         <source>Press to select the body foreground colour.</source>
         <translation>点击选择主体前景色。</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="332"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="341"/>
         <source>Body Foreground</source>
         <translation>主体前景</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="339"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="348"/>
         <source>Press to select the foreground colour of links.</source>
         <translation>点击选择链接的前景色。</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="342"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="351"/>
         <source>Links</source>
         <translation>链接</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="349"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="358"/>
         <source>This shows an example of the selected colours.</source>
         <translation>显示已选颜色的样例。</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="305"/>
         <source>Select output directory</source>
-        <translation>选择输出文件夹</translation>
+        <translation type="obsolete">选择输出文件夹</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="330"/>
         <source>Select directory to exclude</source>
-        <translation>选择要排除的文件夹</translation>
+        <translation type="obsolete">选择要排除的文件夹</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="370"/>
         <source>Select CSS style sheet</source>
-        <translation>选择 CSS 样式表</translation>
+        <translation type="obsolete">选择 CSS 样式表</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="370"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="53"/>
         <source>Style sheet (*.css);;All files (*)</source>
         <translation>样式表 (*.css);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="363"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="372"/>
         <source>QtHelp</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="369"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="378"/>
         <source>Generate QtHelp Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="409"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="413"/>
         <source>Namespace:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="416"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="420"/>
         <source>Enter the namespace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="423"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="427"/>
         <source>Virtual Folder:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="430"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="434"/>
         <source>Enter the name of the virtual folder (must not contain &apos;/&apos;)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="437"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="441"/>
         <source>Filter Name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="444"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="448"/>
         <source>Enter the name of the custom filter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="451"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="455"/>
         <source>Filter Attributes:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="458"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="462"/>
         <source>Enter the filter attributes separated by &apos;:&apos;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="465"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="469"/>
         <source>Title:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="472"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="476"/>
         <source>Enter a short title for the top entry</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="519"/>
-        <source>Select output directory for QtHelp files</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="479"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="483"/>
         <source>Select to generate the QtHelp collection files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="482"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="486"/>
         <source>Generate QtHelp collection files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="56"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="63"/>
         <source>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body style=&quot;background-color:{BodyBgColor};color:{BodyColor}&quot;&gt;&lt;h1 style=&quot;background-color:{Level1HeaderBgColor};color:{Level1HeaderColor}&quot;&gt;Level 1 Header&lt;/h1&gt;&lt;h3 style=&quot;background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}&quot;&gt;Level 2 Header&lt;/h3&gt;&lt;h2 style=&quot;background-color:{CFBgColor};color:{CFColor}&quot;&gt;Class and Function Header&lt;/h2&gt;Standard body text with &lt;a style=&quot;color:{LinkColor}&quot;&gt;some links&lt;/a&gt; embedded.&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -15137,69 +15190,69 @@ whole selection.&lt;/li&gt;
         <translation>目录(&amp;D)树</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="269"/>
+        <location filename="../UI/FindFileDialog.ui" line="270"/>
         <source>Enter the directory to search in</source>
         <translation>输入要搜索的文件夹</translation>
     </message>
     <message>
         <location filename="../UI/FindFileDialog.ui" line="288"/>
         <source>Select the directory via a directory selection dialog</source>
-        <translation>通过文件夹选择对话框选择文件夹</translation>
+        <translation type="obsolete">通过文件夹选择对话框选择文件夹</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="299"/>
+        <location filename="../UI/FindFileDialog.ui" line="279"/>
         <source>Search in open files only </source>
         <translation>仅在打开文件中搜索</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="302"/>
+        <location filename="../UI/FindFileDialog.ui" line="282"/>
         <source>&amp;Open files only</source>
         <translation>仅打开文件</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="329"/>
+        <location filename="../UI/FindFileDialog.ui" line="309"/>
         <source>Shows the progress of the search action</source>
         <translation>显示搜索进程</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="361"/>
+        <location filename="../UI/FindFileDialog.ui" line="341"/>
         <source>File/Line</source>
         <translation>文件/行</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="366"/>
+        <location filename="../UI/FindFileDialog.ui" line="346"/>
         <source>Text</source>
         <translation>文本</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="374"/>
+        <location filename="../UI/FindFileDialog.ui" line="354"/>
         <source>Press to apply the selected replacements</source>
         <translation>点击应用已选的替换</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="377"/>
+        <location filename="../UI/FindFileDialog.ui" line="357"/>
         <source>Replace</source>
         <translation>替换</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="68"/>
+        <location filename="../UI/FindFileDialog.py" line="71"/>
         <source>Stop</source>
         <translation>中止</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="73"/>
+        <location filename="../UI/FindFileDialog.py" line="76"/>
         <source>Find</source>
         <translation>查找</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="664"/>
+        <location filename="../UI/FindFileDialog.py" line="653"/>
         <source>Replace in Files</source>
         <translation>在文件中替换</translation>
     </message>
     <message>
         <location filename="../UI/FindFileDialog.py" line="553"/>
         <source>Select directory</source>
-        <translation>选择文件夹</translation>
+        <translation type="obsolete">选择文件夹</translation>
     </message>
     <message>
         <location filename="../UI/FindFileDialog.ui" line="120"/>
@@ -15212,60 +15265,60 @@ whole selection.&lt;/li&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="691"/>
+        <location filename="../UI/FindFileDialog.py" line="680"/>
         <source>Open</source>
         <translation type="unfinished">打开</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="692"/>
+        <location filename="../UI/FindFileDialog.py" line="681"/>
         <source>Copy Path to Clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="376"/>
+        <location filename="../UI/FindFileDialog.py" line="379"/>
         <source>Invalid search expression</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="376"/>
+        <location filename="../UI/FindFileDialog.py" line="379"/>
         <source>&lt;p&gt;The search expression is not valid.&lt;/p&gt;&lt;p&gt;Error: {0}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="623"/>
+        <location filename="../UI/FindFileDialog.py" line="612"/>
         <source>&lt;p&gt;Could not read the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="664"/>
+        <location filename="../UI/FindFileDialog.py" line="653"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="638"/>
+        <location filename="../UI/FindFileDialog.py" line="627"/>
         <source>&lt;p&gt;The current and the original hash of the file &lt;b&gt;{0}&lt;/b&gt; are different. Skipping it.&lt;/p&gt;&lt;p&gt;Hash 1: {1}&lt;/p&gt;&lt;p&gt;Hash 2: {2}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="338"/>
+        <location filename="../UI/FindFileDialog.ui" line="318"/>
         <source>%v/%m Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="497"/>
+        <location filename="../UI/FindFileDialog.py" line="500"/>
         <source>{0} / {1}</source>
         <comment>occurrences / files</comment>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../UI/FindFileDialog.py" line="498"/>
+        <location filename="../UI/FindFileDialog.py" line="501"/>
         <source>%n occurrence(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../UI/FindFileDialog.py" line="498"/>
+        <location filename="../UI/FindFileDialog.py" line="501"/>
         <source>%n file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -15310,74 +15363,74 @@ whole selection.&lt;/li&gt;
         <translation>搜索路径：</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="79"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="88"/>
         <source>Enter the directory, the file should be searched in</source>
         <translation>输入文件夹，将在该文件夹中搜索文件</translation>
     </message>
     <message>
         <location filename="../UI/FindFileNameDialog.ui" line="86"/>
         <source>Press to select the directory, the file should be searched in</source>
-        <translation>点击选择文件夹，将在该文件夹中搜索文件</translation>
+        <translation type="obsolete">点击选择文件夹，将在该文件夹中搜索文件</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="97"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="99"/>
         <source>Select to search in the project path</source>
         <translation>选择在项目路径中搜索</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="100"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="102"/>
         <source>Search in &amp;project</source>
         <translation>在项目(&amp;p)中搜索</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="103"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="105"/>
         <source>Alt+P</source>
         <translation>Alt+P</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="110"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="112"/>
         <source>Select to search in sys.path</source>
         <translation>选择在系统路径中搜索</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="113"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="115"/>
         <source>Search in &amp;sys.path</source>
         <translation>在系统路径中搜索</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="116"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="118"/>
         <source>Alt+S</source>
         <translation>Alt+S</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="132"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="134"/>
         <source>Filename</source>
         <translation>文件名</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="137"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="139"/>
         <source>Path</source>
         <translation>路径</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.py" line="59"/>
+        <location filename="../UI/FindFileNameDialog.py" line="55"/>
         <source>Stop</source>
         <translation>中止</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.py" line="61"/>
+        <location filename="../UI/FindFileNameDialog.py" line="57"/>
         <source>Press to stop the search</source>
         <translation>点击停止搜索</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.py" line="63"/>
+        <location filename="../UI/FindFileNameDialog.py" line="59"/>
         <source>Opens the selected file</source>
         <translation>打开已选文件</translation>
     </message>
     <message>
         <location filename="../UI/FindFileNameDialog.py" line="205"/>
         <source>Select search directory</source>
-        <translation>选择搜索文件夹</translation>
+        <translation type="obsolete">选择搜索文件夹</translation>
     </message>
 </context>
 <context>
@@ -16203,38 +16256,43 @@ Reason: {0}</source>
         <translation>用户样式表：</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="175"/>
+        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="184"/>
         <source>Enter the file name of a user style sheet</source>
         <translation>输入用户样式表的文件名</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="182"/>
         <source>Select the user style sheet via a file selection dialog</source>
-        <translation>通过文件选择对话框选择用户样式表</translation>
+        <translation type="obsolete">通过文件选择对话框选择用户样式表</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.py" line="137"/>
         <source>Select Style Sheet</source>
-        <translation>选择样式表</translation>
+        <translation type="obsolete">选择样式表</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="192"/>
+        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="194"/>
         <source>Tabs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="198"/>
+        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="200"/>
         <source>Show only one close button instead of one for each tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="208"/>
+        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="210"/>
         <source>Warn, if multiple tabs are about to be closed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="205"/>
+        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="207"/>
         <source>Select to issue a warning, if multiple tabs are about to be closed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.py" line="35"/>
+        <source>Cascading Style Sheets (*.css);;All files (*)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -16720,82 +16778,62 @@ Reason: {0}</source>
         <translation>&lt;b&gt;配置帮助文档&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="103"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="107"/>
         <source>Qt4 Documentation</source>
         <translation>Qt4 文档</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="126"/>
         <source>Press to select the Qt4 documentation directory via a dialog</source>
-        <translation>点击通过对话框选择 Qt4 文档文件夹</translation>
+        <translation type="obsolete">点击通过对话框选择 Qt4 文档文件夹</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="109"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="122"/>
         <source>Enter the Qt4 documentation directory</source>
         <translation>输入 Qt4 文档文件夹</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="116"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="129"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the QT4DOCDIR environment variable, if set.</source>
         <translation>&lt;b&gt;注意&lt;/b&gt;: 为空时使用 QT4DOCDIR 环境变量，如果该环境变量已设定。</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="169"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="177"/>
         <source>PyQt4 Documentation</source>
         <translation>PyQt4 文档</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="192"/>
-        <source>Press to select the PyQt4 documentation directory via a dialog</source>
-        <translation>点击通过对话框选择 PyQt4 文档文件夹</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="175"/>
         <source>Enter the PyQt4 documentation directory</source>
         <translation>输入 PyQt4 文档文件夹</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="182"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="199"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYQT4DOCDIR environment variable, if set.</source>
         <translation>&lt;b&gt;注意&lt;/b&gt;: 为空时使用 PYQT4DOCDIR 环境变量，如果该环境变量已设定。</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="235"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="247"/>
         <source>PySide Documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="258"/>
-        <source>Press to select the PySide documentation directory via a dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="241"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="262"/>
         <source>Enter the PySide documentation directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="248"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="269"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYSIDEDOCDIR environment variable, if set.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="201"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="56"/>
         <source>HTML Files (*.html *.htm);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="145"/>
-        <source>Select Qt4 documentation entry</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="201"/>
-        <source>Select PySide documentation entry</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="128"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="39"/>
         <source>HTML Files (*.html *.htm);;Compressed Help Files (*.chm);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16805,99 +16843,69 @@ Reason: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="60"/>
-        <source>Press to select the Python 2 documentation directory via a dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="43"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="52"/>
         <source>Enter the Python 2 documentation directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="50"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="59"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYTHON2DOCDIR environment variable, if set.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="70"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="72"/>
         <source>Python 3 Documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="93"/>
-        <source>Press to select the Python 3 documentation directory via a dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="76"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="87"/>
         <source>Enter the Python 3 documentation directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="83"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="94"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYTHON3DOCDIR environment variable, if set.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="111"/>
-        <source>Select Python 2 documentation entry</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="128"/>
-        <source>Select Python 3 documentation entry</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="136"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="142"/>
         <source>Qt5 Documentation</source>
         <translation type="unfinished">Qt4 文档 {5 ?}</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="159"/>
         <source>Press to select the Qt5 documentation directory via a dialog</source>
-        <translation type="unfinished">点击通过对话框选择 Qt4 文档文件夹 {5 ?}</translation>
+        <translation type="obsolete">点击通过对话框选择 Qt4 文档文件夹 {5 ?}</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="142"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="157"/>
         <source>Enter the Qt5 documentation directory</source>
         <translation type="unfinished">输入 Qt4 文档文件夹 {5 ?}</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="149"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="164"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the QT5DOCDIR environment variable, if set.</source>
         <translation type="unfinished">&lt;b&gt;注意&lt;/b&gt;: 为空时使用 QT4DOCDIR 环境变量，如果该环境变量已设定。 {5D?}</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="159"/>
-        <source>Select Qt5 documentation entry</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="202"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="212"/>
         <source>PyQt5 Documentation</source>
         <translation type="unfinished">PyQt4 文档 {5 ?}</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="225"/>
         <source>Press to select the PyQt5 documentation directory via a dialog</source>
-        <translation type="unfinished">点击通过对话框选择 PyQt4 文档文件夹 {5 ?}</translation>
+        <translation type="obsolete">点击通过对话框选择 PyQt4 文档文件夹 {5 ?}</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="208"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="227"/>
         <source>Enter the PyQt5 documentation directory</source>
         <translation type="unfinished">输入 PyQt4 文档文件夹 {5 ?}</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="215"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="234"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYQT5DOCDIR environment variable, if set.</source>
         <translation type="unfinished">&lt;b&gt;注意&lt;/b&gt;: 为空时使用 PYQT4DOCDIR 环境变量，如果该环境变量已设定。 {5D?}</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="187"/>
-        <source>Select PyQt5 documentation entry</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -16913,63 +16921,58 @@ Reason: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="59"/>
+        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="50"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: You should select the directory that contains #SharedObject as a subfolder.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="72"/>
+        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="63"/>
         <source>Select to activate auto mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="75"/>
+        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="66"/>
         <source>Auto Mode Enabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="93"/>
+        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="84"/>
         <source>The flash data directory will be checked regularly and flash cookies in the blacklist will be deleted automatically.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="106"/>
+        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="97"/>
         <source>Select to show a notification upon detection of new flash cookies</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="109"/>
+        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="100"/>
         <source>Notifications enabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="130"/>
+        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="121"/>
         <source>User will be notified for every new flash cookie that is not in blacklist and whitelist.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="143"/>
+        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="134"/>
         <source>Select to delete all flash cookies on startup and shutdown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="146"/>
+        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="137"/>
         <source>Delete</source>
         <translation type="unfinished">删除</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="158"/>
+        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="149"/>
         <source>Delete all flash cookies on exit/start (except those are in whitelist)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="171"/>
+        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="162"/>
         <source>&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; These settings are just applied to flash cookies.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.py" line="70"/>
-        <source>Select Flash Cookies Data Path</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -17014,27 +17017,27 @@ Reason: {0}</source>
         <translation type="unfinished">样式表：</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.ui" line="60"/>
+        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.ui" line="69"/>
         <source>Enter the name of the style sheet file</source>
         <translation type="unfinished">输入样式表文件的名称</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.ui" line="67"/>
         <source>Select the style sheet file via a file selection dialog</source>
-        <translation type="unfinished">通过文件选择对话框选择样式表文件</translation>
+        <translation type="obsolete">通过文件选择对话框选择样式表文件</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="65"/>
+        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="62"/>
         <source>System</source>
         <translation type="unfinished">系统</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="78"/>
         <source>Select style sheet file</source>
-        <translation type="unfinished">选择样式表文件</translation>
+        <translation type="obsolete">选择样式表文件</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="78"/>
+        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="36"/>
         <source>Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;All files (*)</source>
         <translation type="unfinished">Qt 样式表 (*.qss);;Cascading 样式表 (*.css);;所有文件 (*)</translation>
     </message>
@@ -17301,72 +17304,72 @@ Do you really want to close this page?</source>
         <translation>帮助浏览器</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="48"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="98"/>
         <source>Enter the custom viewer to be used</source>
         <translation>输入要使用的自定义浏览器</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="58"/>
         <source>Press to select the custom viewer via a file selection dialog</source>
-        <translation>点击通过文件选择对话框选择自定义浏览器</translation>
+        <translation type="obsolete">点击通过文件选择对话框选择自定义浏览器</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="67"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="76"/>
         <source>Select to use a custom viewer</source>
         <translation>选择使用自定义浏览器</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="70"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="79"/>
         <source>Custom</source>
         <translation>自定义</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="77"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="56"/>
         <source>Select to use Qt Assistant</source>
         <translation>选择使用 Qt 助手</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="80"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="59"/>
         <source>Qt Assistant</source>
         <translation>Qt 助手</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="84"/>
         <source>Select Custom Viewer</source>
-        <translation>选择自定义浏览器</translation>
+        <translation type="obsolete">选择自定义浏览器</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="98"/>
         <source>Select Web-Browser</source>
-        <translation>选择网络浏览器</translation>
+        <translation type="obsolete">选择网络浏览器</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="112"/>
         <source>Select PDF-Viewer</source>
-        <translation>选择 PDF 浏览器</translation>
+        <translation type="obsolete">选择 PDF 浏览器</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="126"/>
         <source>Select CHM-Viewer</source>
-        <translation>选择 CHM 浏览器</translation>
+        <translation type="obsolete">选择 CHM 浏览器</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="87"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="43"/>
         <source>Select to use the Eric Web Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="90"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="46"/>
         <source>Eric Web Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="100"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="66"/>
         <source>Select to use the configured web browser of the system</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="103"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="69"/>
         <source>System Web Browser</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20208,7 +20211,7 @@ URL: {1}</source>
 <context>
     <name>HgAddSubrepositoryDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="103"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="98"/>
         <source>Add Sub-repository</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20218,37 +20221,32 @@ URL: {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="35"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="42"/>
         <source>Enter the path of the sub-repository relative to the project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="42"/>
-        <source>Select the path of the sub-repository with a directory selection dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="51"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="49"/>
         <source>&amp;Type:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="63"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="61"/>
         <source>Select the type of the sub-repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="85"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="83"/>
         <source>&amp;URL:</source>
         <translation type="unfinished">&amp;URL：</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="95"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="93"/>
         <source>Enter the URL of the sub-repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="103"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="98"/>
         <source>The sub-repository path must be inside the project.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20354,119 +20352,104 @@ URL: {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="30"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="39"/>
         <source>Enter the file name of the archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="85"/>
-        <source>Press to select the archive file name via a file selection dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="37"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="46"/>
         <source>Type:</source>
         <translation type="unfinished">类型：</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="44"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="53"/>
         <source>Select the archive type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="51"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="60"/>
         <source>Prefix:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="58"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="67"/>
         <source>Enter the directory prefix for the files in the archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="65"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="74"/>
         <source>Select to recurse into subrepositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="68"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="77"/>
         <source>Include Subrepositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="46"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="39"/>
         <source>Detect Automatically</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="48"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="41"/>
         <source>Directory of Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="50"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="43"/>
         <source>Uncompressed TAR-Archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="52"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="45"/>
         <source>Bzip2 compressed TAR-Archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="54"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="47"/>
         <source>Gzip compressed TAR-Archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="56"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="49"/>
         <source>Uncompressed ZIP-Archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="58"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="51"/>
         <source>Compressed ZIP-Archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="62"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="55"/>
         <source>Bzip2 compressed TAR-Archive (*.tar.bz2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="63"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="56"/>
         <source>Gzip compressed TAR-Archive (*.tar.gz)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="64"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="57"/>
         <source>Uncompressed TAR-Archive (*.tar)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="67"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="60"/>
         <source>Compressed ZIP-Archive (*.zip)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="68"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="61"/>
         <source>Uncompressed ZIP-Archive (*.uzip)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="76"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="69"/>
         <source>All Files (*)</source>
         <translation type="unfinished">所有文件 (*)</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="117"/>
-        <source>Select Archive Directory</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="123"/>
-        <source>Select Archive File</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -21429,64 +21412,64 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="64"/>
         <source>Press to open a selection dialog</source>
-        <translation type="unfinished">点击打开选择对话框</translation>
+        <translation type="obsolete">点击打开选择对话框</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="67"/>
         <source>&lt;b&gt;Target directory&lt;/b&gt;
 &lt;p&gt;Select the target name for the operation via a selection dialog.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;b&gt;目标文件夹&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;目标文件夹&lt;/b&gt;
 &lt;p&gt;通过选择对话框为操作选择目标名称。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="25"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="23"/>
         <source>Source:</source>
         <translation type="unfinished">源：</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="32"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="30"/>
         <source>Shows the name of the source</source>
         <translation type="unfinished">显示源名称</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="35"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="33"/>
         <source>&lt;b&gt;Source name&lt;/b&gt;
 &lt;p&gt;This field shows the name of the source.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;b&gt;源名称&lt;/b&gt;
 &lt;p&gt;该区域显示源名称。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="46"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="60"/>
         <source>Enter the target name</source>
         <translation type="unfinished">输入目标名</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="57"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="44"/>
         <source>Target:</source>
         <translation type="unfinished">目标：</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="77"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="71"/>
         <source>Select to force the operation</source>
         <translation type="unfinished">选择强制操作</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="80"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="74"/>
         <source>Enforce operation</source>
         <translation type="unfinished">强制操作</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="51"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="45"/>
         <source>Mercurial Move</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="89"/>
         <source>Select target</source>
-        <translation type="unfinished">选择目标</translation>
+        <translation type="obsolete">选择目标</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="49"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="63"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Enter the new name in this field. The target must be the new name or an absolute path.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -21676,7 +21659,7 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
 <context>
     <name>HgExportDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.py" line="78"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="14"/>
         <source>Export Patches</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21686,22 +21669,17 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="85"/>
-        <source>Press to select the export directory via a directory selection dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="35"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="52"/>
         <source>File Name Pattern:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="42"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="59"/>
         <source>Enter the file name pattern for the export files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="45"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="62"/>
         <source>&lt;b&gt;File Name Pattern&lt;/b&gt;
 &lt;p&gt;Enter the file name pattern to be used to generate the export files
 here. Valid recognized patterns are:&lt;/p&gt;
@@ -21719,33 +21697,44 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="65"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="82"/>
         <source>Changesets:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="72"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="92"/>
         <source>Enter changesets by number, id, range or revset expression one per line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="97"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="110"/>
         <source>Compare Against Second Parent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="107"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="120"/>
         <source>Treat all Files as Text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="114"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="127"/>
         <source>Omit Dates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="121"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="134"/>
         <source>Use Git extended Diff-Format</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="41"/>
+        <source>Enter the target name</source>
+        <translation type="unfinished">输入目标名</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="44"/>
+        <source>&lt;b&gt;Target name&lt;/b&gt;
+&lt;p&gt;Enter the new name in this field. The target must be the new name or an absolute path.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -22199,32 +22188,22 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="171"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="178"/>
         <source>Enter the name of the patch file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="178"/>
-        <source>Press to select the patch file via a file selection dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="187"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="185"/>
         <source>Select to enforce the import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="190"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="188"/>
         <source>Enforce Import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.py" line="70"/>
-        <source>Select patch file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.py" line="70"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.py" line="34"/>
         <source>Patch Files (*.diff *.patch);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -23105,32 +23084,27 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished">&amp;URL：</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="62"/>
-        <source>Select the repository url via a directory selection dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="69"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="71"/>
         <source>&amp;Revision:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="79"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="81"/>
         <source>Enter the revision the new project should be generated from</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="89"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="91"/>
         <source>Project &amp;Directory:</source>
         <translation type="unfinished">项目文件夹(&amp;D)：</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="99"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="110"/>
         <source>Enter the directory of the new project.</source>
         <translation type="unfinished">输入新项目的文件夹。</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="102"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="113"/>
         <source>&lt;b&gt;Project Directory&lt;/b&gt;
 &lt;p&gt;Enter the directory of the new project. It will be retrieved from 
 the repository and be placed in this directory.&lt;/p&gt;</source>
@@ -23140,25 +23114,25 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.py" line="98"/>
         <source>Select Repository-Directory</source>
-        <translation type="unfinished">选择储存库文件夹</translation>
+        <translation type="obsolete">选择储存库文件夹</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.py" line="113"/>
         <source>Select Project Directory</source>
-        <translation type="unfinished">选择项目文件夹</translation>
+        <translation type="obsolete">选择项目文件夹</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="55"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="64"/>
         <source>Enter the url path of the repository (without protocol part)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="114"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="122"/>
         <source>Download all versions of all large files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="121"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="129"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; This option increases the download time and volume.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -28583,59 +28557,59 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;注意：&lt;/b&gt; 这些设置将在下次启动应用程序时生效。&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="49"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="115"/>
         <source>Press to delete the selected directory from the list</source>
         <translation>点击从列表中删除选中的文件夹</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="52"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="118"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="62"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="128"/>
         <source>Press to add the entered directory to the list</source>
         <translation>点击将输入的文件夹添加到列表中</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="65"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="131"/>
         <source>Add</source>
         <translation>添加</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="72"/>
         <source>Enter a directory to be added</source>
-        <translation>输入要添加的文件夹</translation>
+        <translation type="obsolete">输入要添加的文件夹</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="79"/>
         <source>Press to select an icon directory via a selection dialog</source>
-        <translation>点击通过选择对话框选择一个图标文件夹</translation>
+        <translation type="obsolete">点击通过选择对话框选择一个图标文件夹</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="91"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="156"/>
         <source>Show</source>
         <translation>显示</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="119"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="75"/>
         <source>Up</source>
         <translation>向上</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="129"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="85"/>
         <source>Down</source>
         <translation>向下</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="154"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="44"/>
         <source>List of icon directories</source>
         <translation>图标文件夹列表</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/IconsPage.py" line="132"/>
         <source>Select icon directory</source>
-        <translation>选择图标文件夹</translation>
+        <translation type="obsolete">选择图标文件夹</translation>
     </message>
 </context>
 <context>
@@ -28965,170 +28939,170 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="184"/>
         <source>Enter the name of the style sheet file</source>
-        <translation>输入样式表文件的名称</translation>
+        <translation type="obsolete">输入样式表文件的名称</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="191"/>
         <source>Select the style sheet file via a file selection dialog</source>
-        <translation>通过文件选择对话框选择样式表文件</translation>
+        <translation type="obsolete">通过文件选择对话框选择样式表文件</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="200"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="202"/>
         <source>Dockarea Corner Usage</source>
         <translation>停靠区转角使用</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="206"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="208"/>
         <source>Top Left Corner</source>
         <translation>左上角</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="212"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="214"/>
         <source>Select to assign the top left corner to the top dockarea</source>
         <translation>选择指定左上角为顶部停靠区</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="244"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="246"/>
         <source>Top dockarea</source>
         <translation>顶部停靠区</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="222"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="224"/>
         <source>Select to assign the top left corner to the left dockarea</source>
         <translation>选择指定左上角为左停靠区</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="283"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="285"/>
         <source>Left dockarea</source>
         <translation>左停靠区</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="235"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="237"/>
         <source>Top Right Corner</source>
         <translation>右上角</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="241"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="243"/>
         <source>Select to assign the top right corner to the top dockarea</source>
         <translation>选择指定右上角为顶部停靠区</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="251"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="253"/>
         <source>Select to assign the top right corner to the right dockarea</source>
         <translation>选择指定右上角为右停靠区</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="312"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="314"/>
         <source>Right dockarea</source>
         <translation>右停靠区</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="264"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="266"/>
         <source>Bottom Left Corner</source>
         <translation>左下角</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="270"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="272"/>
         <source>Select to assign the bottom left corner to the bottom dockarea</source>
         <translation>选择指定左下角为底部停靠区</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="302"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="304"/>
         <source>Bottom dockarea</source>
         <translation>底部停靠区</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="280"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="282"/>
         <source>Select to assign the bottom left corner to the left dockarea</source>
         <translation>选择指定左下角为左停靠区</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="293"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="295"/>
         <source>Bottom Right Corner</source>
         <translation>右下角</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="299"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="301"/>
         <source>Select to assign the bottom right corner to the bottom dockarea</source>
         <translation>选择指定右下角为底部停靠区</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="309"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="311"/>
         <source>Select to assign the bottom right corner to the right dockarea</source>
         <translation>选择指定右下角为右停靠区</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="386"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="388"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; All settings below are activated at the next startup of the application.&lt;/font&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;注意：&lt;/b&gt; 以上所有设置将在下次启动应用程序时生效。&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="401"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="403"/>
         <source>Language:</source>
         <translation>语言：</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="417"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="419"/>
         <source>Select the interface language.</source>
         <translation>选择界面语言。</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="420"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="422"/>
         <source>The interface language can be selected from this list. If &quot;system&quot; is selected, the interface language is determined by the system. The selection of &quot;none&quot; means, that the default language will be used.</source>
         <translation>可以从列表中选择界面语言。如果选择“系统”，则界面语言由系统确定。“无”选项表示将使用默认语言。</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="427"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="429"/>
         <source>Layout:</source>
         <translation>布局：</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="440"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="442"/>
         <source>Select the layout type.</source>
         <translation>选择布局类型。</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="449"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="451"/>
         <source>Toolboxes</source>
         <translation>工具箱</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="461"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="463"/>
         <source>Shell</source>
         <translation>命令行</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="467"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="469"/>
         <source>Select to get a separate shell window</source>
         <translation>选择获得单独的命令行窗口</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="499"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="501"/>
         <source>separate window</source>
         <translation>独立窗口</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="490"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="492"/>
         <source>File-Browser</source>
         <translation>文件浏览器</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="496"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="498"/>
         <source>Select to get a separate file browser window</source>
         <translation>选择获得单独的文件浏览器窗口</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="560"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="562"/>
         <source>Reset layout to factory defaults</source>
         <translation>将布局重设为出厂设置</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="244"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="243"/>
         <source>System</source>
         <translation>系统</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="226"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="225"/>
         <source>English</source>
         <comment>Translate this with your language</comment>
         <translation>中文</translation>
@@ -29136,40 +29110,40 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="254"/>
         <source>Select style sheet file</source>
-        <translation>选择样式表文件</translation>
+        <translation type="obsolete">选择样式表文件</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="254"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="42"/>
         <source>Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;All files (*)</source>
         <translation>Qt 样式表 (*.qss);;Cascading 样式表 (*.css);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="444"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="446"/>
         <source>Sidebars</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="477"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="479"/>
         <source>Select to embed the shell in the Debug-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="509"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="511"/>
         <source>embed in Debug-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="506"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="508"/>
         <source>Select to embed the file browser in the Debug-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="516"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="518"/>
         <source>Select to embed the file browser in the Project-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="519"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="521"/>
         <source>embed in Project-Viewer</source>
         <translation type="unfinished"></translation>
     </message>
@@ -29184,12 +29158,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="531"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="533"/>
         <source>Tabs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="537"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="539"/>
         <source>Show only one close button instead of one for each tab</source>
         <translation type="unfinished"></translation>
     </message>
@@ -29214,14 +29188,19 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="331"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="333"/>
         <source>Delay:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="341"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="343"/>
         <source> ms</source>
         <translation type="unfinished">毫秒</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="193"/>
+        <source>Enter the path of the style sheet file</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -32224,43 +32203,33 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="33"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="42"/>
         <source>Enter the directory name of the new project directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="40"/>
-        <source>Press to select the new project directory name via a directory selection dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="47"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="49"/>
         <source>Minimum file size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="54"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="56"/>
         <source>Enter the minimum file size in MB for files to be treated as Large Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="60"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="62"/>
         <source> MB</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="86"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="88"/>
         <source>Patterns:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="93"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="95"/>
         <source>Enter file patterns (space separated) for files to be treated as Large Files</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.py" line="81"/>
-        <source>New Project Directory</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -34084,47 +34053,47 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;配置多重项目设定&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="64"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="62"/>
         <source>Master Project</source>
         <translation>主项目</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="70"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="68"/>
         <source>Select to open the master project automatically upon opening the multiproject</source>
         <translation>选择在打开多重项目时自动打开主项目</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="73"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="71"/>
         <source>Open master project automatically</source>
         <translation>自动打开主项目</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="83"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="81"/>
         <source>XML</source>
         <translation>XML</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="89"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="87"/>
         <source>Select, if a timestamp should be written to all multiproject related XML files</source>
         <translation>选择是否将时间信息写入到与 XML 文件相关的所有多重项目中</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="92"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="90"/>
         <source>Include timestamp in multiproject related XML files</source>
         <translation>在与 XML 文件相关的多重项目中包含时间信息</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="102"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="100"/>
         <source>Recent Multiprojects</source>
         <translation>最近的多重项目</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="110"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="108"/>
         <source>Number of recent multiprojects:</source>
         <translation>最近打开多重项目的数量：</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="117"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="115"/>
         <source>Enter the number of recent multiprojects to remember</source>
         <translation>输入要记住的最近打开多重项目数量</translation>
     </message>
@@ -34134,24 +34103,8 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished">工作区</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="43"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="52"/>
         <source>Enter the name of the workspace directory</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="46"/>
-        <source>&lt;b&gt;Workspace Directory&lt;/b&gt;
-&lt;p&gt;Enter the directory of the workspace. This directory is used as the default for opening or saving new files or projects.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="54"/>
-        <source>Select the workspace directory via a directory selection button</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.py" line="75"/>
-        <source>Select Workspace Directory</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -34254,112 +34207,112 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>下载文件夹：</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="52"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="61"/>
         <source>Enter the download directory (leave empty to use the default location)</source>
         <translation>输入下载文件夹（若要使用默认位置，请不要输入）</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="59"/>
         <source>Select the download directory via a directory selection dialog</source>
-        <translation>通过文件夹选择对话框选择下载文件夹</translation>
+        <translation type="obsolete">通过文件夹选择对话框选择下载文件夹</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="120"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="122"/>
         <source>Select to use a web proxy</source>
         <translation>选择使用网站代理</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="123"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="125"/>
         <source>Network Proxy</source>
         <translation type="unfinished">使用网络代理</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="365"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="367"/>
         <source>Password:</source>
         <translation type="unfinished">密码：</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="193"/>
         <source>Select download directory</source>
-        <translation>选择下载文件夹</translation>
+        <translation type="obsolete">选择下载文件夹</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="68"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="70"/>
         <source>Select to ask the user for a download filename</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="71"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="73"/>
         <source>Request name of downloaded file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="148"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="150"/>
         <source>Select to use the system proxy configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="151"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="153"/>
         <source>Use system proxy configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="158"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="160"/>
         <source>Select to use an application specific proxy configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="161"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="163"/>
         <source>Manual proxy configuration:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="174"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="176"/>
         <source>Manual proxy settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="196"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="198"/>
         <source>Enter the name of the HTTP proxy host</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="325"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="327"/>
         <source>Port:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="210"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="212"/>
         <source>Enter the HTTP proxy port</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="229"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="231"/>
         <source>Select to use the HTTP proxy for all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="232"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="234"/>
         <source>Use this proxy for all protocols</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="255"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="257"/>
         <source>Enter the name of the HTTPS proxy host</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="269"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="271"/>
         <source>Enter the HTTPS proxy port</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="318"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="320"/>
         <source>Enter the name of the FTP proxy host</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="332"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="334"/>
         <source>Enter the FTP proxy port</source>
         <translation type="unfinished"></translation>
     </message>
@@ -34369,167 +34322,167 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="78"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="80"/>
         <source>Download Manager Cleanup Policy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="84"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="86"/>
         <source>Select to never cleanup automatically</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="87"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="89"/>
         <source>Never</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="94"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="96"/>
         <source>Select to cleanup upon exiting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="97"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="99"/>
         <source>When exiting the application</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="104"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="106"/>
         <source>Select to cleanup after a successful download</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="107"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="109"/>
         <source>When download finished successfully</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="291"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="293"/>
         <source>FTP-Proxy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="311"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="313"/>
         <source>Hostname:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="297"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="299"/>
         <source>Proxy Type:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="304"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="306"/>
         <source>Select the type of the FTP proxy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="351"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="353"/>
         <source>User Name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="358"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="360"/>
         <source>Enter the user name for the proxy authentication</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="372"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="374"/>
         <source>Enter the password for the proxy authentication</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="382"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="384"/>
         <source>Account:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="389"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="391"/>
         <source>Enter the account info for the proxy authentication</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="420"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="422"/>
         <source>Press to clear the saved passwords for the Http(s) proxy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="423"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="425"/>
         <source>Clear HTTP(S) Proxy Passwords</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="44"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="38"/>
         <source>No FTP Proxy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="46"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="40"/>
         <source>No Proxy Authentication required</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="49"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="43"/>
         <source>User@Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="51"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="45"/>
         <source>SITE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="53"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="47"/>
         <source>OPEN</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="55"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="49"/>
         <source>User@Proxyuser@Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="58"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="52"/>
         <source>Proxyuser@Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="60"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="54"/>
         <source>AUTH and RESP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="62"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="56"/>
         <source>Bluecoat Proxy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="183"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="185"/>
         <source>HTTP-Proxy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="242"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="244"/>
         <source>HTTPS-Proxy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="404"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="406"/>
         <source>Exceptions:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="411"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="413"/>
         <source>Enter host names or IP-addresses for which the proxy is to be circumvented separated by &apos;,&apos; (wildcards * or ? may be used)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="135"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="137"/>
         <source>Select to not use a network proxy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="138"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="140"/>
         <source>Do not use proxy</source>
         <translation type="unfinished"></translation>
     </message>
@@ -34550,19 +34503,19 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>新建对话框类</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="25"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="78"/>
         <source>Enter the path of the file for the forms code</source>
         <translation>为窗体代码输入文件路径</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="32"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="25"/>
         <source>&amp;Classname:</source>
         <translation>类名(&amp;C)：</translation>
     </message>
     <message>
         <location filename="../Project/NewDialogClassDialog.ui" line="76"/>
         <source>Select the source file path via a directory selection dialog</source>
-        <translation>通过文件夹选择对话框选择源文件路径</translation>
+        <translation type="obsolete">通过文件夹选择对话框选择源文件路径</translation>
     </message>
     <message>
         <location filename="../Project/NewDialogClassDialog.ui" line="42"/>
@@ -34570,24 +34523,24 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>文件名(&amp;F)：</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="52"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="59"/>
         <source>&amp;Path:</source>
         <translation>路径(&amp;P)……</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="62"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="35"/>
         <source>Enter the name of the new class</source>
         <translation>输入新类的名称</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="69"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="52"/>
         <source>Enter the name of the file for the forms code</source>
         <translation>为窗体代码输入文件名称</translation>
     </message>
     <message>
         <location filename="../Project/NewDialogClassDialog.py" line="61"/>
         <source>Select source directory</source>
-        <translation>选择源文件夹</translation>
+        <translation type="obsolete">选择源文件夹</translation>
     </message>
 </context>
 <context>
@@ -36078,132 +36031,132 @@ Destination:
         <translation>插件下载文件夹：</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="46"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="55"/>
         <source>Enter the plugins download directory</source>
         <translation>输入插件下载文件夹</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="53"/>
         <source>Select the plugins download directory via a directory selection dialog</source>
-        <translation>通过文件夹选择对话框选择插件下载文件夹</translation>
+        <translation type="obsolete">通过文件夹选择对话框选择插件下载文件夹</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.py" line="109"/>
         <source>Select plugins download directory</source>
-        <translation>选择插件下载文件夹</translation>
+        <translation type="obsolete">选择插件下载文件夹</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="121"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="123"/>
         <source>Select to enable external plugins to be loaded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="124"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="126"/>
         <source>Load external plugins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="114"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="116"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; The following settings are activated at the next startup of the application.&lt;/font&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="131"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="133"/>
         <source>Check for plugin updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="137"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="139"/>
         <source>Select to disable update checking</source>
         <translation type="unfinished">选择不进行更新检查</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="140"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="142"/>
         <source>Never</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="147"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="149"/>
         <source>Select to check for updates once a day</source>
         <translation type="unfinished">选择每天检查更新</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="150"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="152"/>
         <source>Daily</source>
         <translation type="unfinished">每天</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="157"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="159"/>
         <source>Select to check for updates once a week</source>
         <translation type="unfinished">选择每周检查更新</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="160"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="162"/>
         <source>Weekly</source>
         <translation type="unfinished">每周</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="167"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="169"/>
         <source>Select to check for updates once a month</source>
         <translation type="unfinished">选择每月检查更新</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="170"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="172"/>
         <source>Monthly</source>
         <translation type="unfinished">每月</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="192"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="194"/>
         <source>Repository URL:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="199"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="201"/>
         <source>Shows the repository URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="209"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="211"/>
         <source>Press to edit the plugin repository URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="212"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="214"/>
         <source>Edit URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="180"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="182"/>
         <source>Select to check only already installed plugins for updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="183"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="185"/>
         <source>Check only installed plugins for updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="62"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="64"/>
         <source>Download Housekeeping</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="68"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="70"/>
         <source>No. of generations to keep:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="75"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="77"/>
         <source>Enter the number of generations to keep for each plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="101"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="103"/>
         <source>Select to keep generations of hidden plugins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="104"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="106"/>
         <source>Keep generations of hidden plugins</source>
         <translation type="unfinished"></translation>
     </message>
@@ -39616,12 +39569,12 @@ Select Update.</source>
         <translation>项目文件夹(&amp;D)：</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="124"/>
+        <location filename="../Project/PropertiesDialog.ui" line="133"/>
         <source>Enter the project directory</source>
         <translation>输入项目文件夹</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="127"/>
+        <location filename="../Project/PropertiesDialog.ui" line="136"/>
         <source>&lt;b&gt;Project Directory&lt;/b&gt;
 &lt;p&gt;Enter the project directory. You may select it
  with a dialog by pressing the button to the right.&lt;/p&gt;</source>
@@ -39632,43 +39585,43 @@ Select Update.</source>
     <message>
         <location filename="../Project/PropertiesDialog.ui" line="298"/>
         <source>Show directory selection dialog</source>
-        <translation>显示文件夹选择对话框</translation>
+        <translation type="obsolete">显示文件夹选择对话框</translation>
     </message>
     <message>
         <location filename="../Project/PropertiesDialog.ui" line="301"/>
         <source>&lt;b&gt;Project Directory&lt;/b&gt;
 &lt;p&gt;Select a project directory via a directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;项目文件夹&lt;/b&gt;&lt;p&gt;通过文件夹选择对话框选择一个项目文件夹。&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;项目文件夹&lt;/b&gt;&lt;p&gt;通过文件夹选择对话框选择一个项目文件夹。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="136"/>
+        <location filename="../Project/PropertiesDialog.ui" line="145"/>
         <source>&amp;Version No.:</source>
         <translation>版本号(&amp;V)：</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="146"/>
+        <location filename="../Project/PropertiesDialog.ui" line="155"/>
         <source>Enter the version number</source>
         <translation>输入版本号</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="149"/>
+        <location filename="../Project/PropertiesDialog.ui" line="158"/>
         <source>&lt;b&gt;Version No.&lt;/b&gt;
 &lt;p&gt;Enter the version no.&lt;/p&gt;</source>
         <translation>&lt;b&gt;版本号&lt;/b&gt;
 &lt;p&gt;输入版本号。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="157"/>
+        <location filename="../Project/PropertiesDialog.ui" line="166"/>
         <source>&amp;Main Script:</source>
         <translation>主脚本(&amp;M)：</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="167"/>
+        <location filename="../Project/PropertiesDialog.ui" line="185"/>
         <source>Enter the main script</source>
         <translation>输入主脚本</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="170"/>
+        <location filename="../Project/PropertiesDialog.ui" line="188"/>
         <source>&lt;b&gt;Main Script&lt;/b&gt;
 &lt;p&gt;Enter the main script of the project. You may select it
  with a dialog by pressing the button to the right.&lt;/p&gt;</source>
@@ -39677,88 +39630,88 @@ Select Update.</source>
     <message>
         <location filename="../Project/PropertiesDialog.ui" line="309"/>
         <source>Show file selection dialog</source>
-        <translation>显示文件选择对话框</translation>
+        <translation type="obsolete">显示文件选择对话框</translation>
     </message>
     <message>
         <location filename="../Project/PropertiesDialog.ui" line="312"/>
         <source>&lt;b&gt;Main Script&lt;/b&gt;
 &lt;p&gt;Select the projects main script via a file selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;主脚本&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;主脚本&lt;/b&gt;
 &lt;p&gt;通过文件选择对话框选择项目主脚本。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="179"/>
+        <location filename="../Project/PropertiesDialog.ui" line="197"/>
         <source>Press to edit the translations properties</source>
         <translation>点击编辑翻译属性</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="182"/>
+        <location filename="../Project/PropertiesDialog.ui" line="200"/>
         <source>Translations Properties...</source>
         <translation>翻译属性……</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="226"/>
+        <location filename="../Project/PropertiesDialog.ui" line="244"/>
         <source>&amp;Author:</source>
         <translation>作者(&amp;A)：</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="236"/>
+        <location filename="../Project/PropertiesDialog.ui" line="254"/>
         <source>Enter authors name</source>
         <translation>输入作者名</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="239"/>
+        <location filename="../Project/PropertiesDialog.ui" line="257"/>
         <source>&lt;b&gt;Author&lt;/b&gt;
 &lt;p&gt;Enter the name of the author.&lt;/p&gt;</source>
         <translation>&lt;b&gt;作者&lt;/b&gt;
 &lt;p&gt;输入作者的名称。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="247"/>
+        <location filename="../Project/PropertiesDialog.ui" line="265"/>
         <source>&amp;Email:</source>
         <translation>电子邮件(&amp;E)：</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="257"/>
+        <location filename="../Project/PropertiesDialog.ui" line="275"/>
         <source>Enter authors email</source>
         <translation>输入作者的电子邮箱</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="260"/>
+        <location filename="../Project/PropertiesDialog.ui" line="278"/>
         <source>&lt;b&gt;Email&lt;/b&gt;
 &lt;p&gt;Enter the email address of the author&lt;/p&gt;</source>
         <translation>&lt;b&gt;电子邮箱&lt;/b&gt;
 &lt;p&gt;输入作者的电子邮件地址&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="268"/>
+        <location filename="../Project/PropertiesDialog.ui" line="286"/>
         <source>&amp;Description:</source>
         <translation>描述(&amp;D)：</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="281"/>
+        <location filename="../Project/PropertiesDialog.ui" line="299"/>
         <source>Enter description</source>
         <translation>输入描述</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="284"/>
+        <location filename="../Project/PropertiesDialog.ui" line="302"/>
         <source>&lt;b&gt;Description&lt;/b&gt;
 &lt;p&gt;Enter a short description for the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;描述&lt;/b&gt;
 &lt;p&gt;为项目输入简要描述。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="347"/>
+        <location filename="../Project/PropertiesDialog.ui" line="343"/>
         <source>Press to show information about the repository</source>
         <translation>点击显示与储存库有关的信息</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="350"/>
+        <location filename="../Project/PropertiesDialog.ui" line="346"/>
         <source>Show &amp;Repository Info</source>
         <translation>显示储存库信息(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="353"/>
+        <location filename="../Project/PropertiesDialog.ui" line="349"/>
         <source>Alt+R</source>
         <translation>Alt+R</translation>
     </message>
@@ -39775,19 +39728,19 @@ Select Update.</source>
 &lt;p&gt;为多重项目输入简短描述。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.py" line="127"/>
+        <location filename="../Project/PropertiesDialog.py" line="130"/>
         <source>The project is not version controlled.</source>
         <translation>项目未进行版本控制。</translation>
     </message>
     <message>
         <location filename="../Project/PropertiesDialog.py" line="184"/>
         <source>Select project directory</source>
-        <translation>选择项目文件夹</translation>
+        <translation type="obsolete">选择项目文件夹</translation>
     </message>
     <message>
         <location filename="../Project/PropertiesDialog.py" line="237"/>
         <source>Select main script file</source>
-        <translation>选择主脚本文件</translation>
+        <translation type="obsolete">选择主脚本文件</translation>
     </message>
     <message>
         <location filename="../Project/PropertiesDialog.ui" line="57"/>
@@ -39800,52 +39753,52 @@ Select Update.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.py" line="121"/>
+        <location filename="../Project/PropertiesDialog.py" line="124"/>
         <source>The project is version controlled by &lt;b&gt;{0}&lt;/b&gt;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.py" line="235"/>
+        <location filename="../Project/PropertiesDialog.py" line="56"/>
         <source>Source Files ({0});;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="189"/>
+        <location filename="../Project/PropertiesDialog.ui" line="207"/>
         <source>End of &amp;Line Character:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="199"/>
+        <location filename="../Project/PropertiesDialog.ui" line="217"/>
         <source>Select the end of line character to be used by the project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="203"/>
+        <location filename="../Project/PropertiesDialog.ui" line="221"/>
         <source>System</source>
         <translation type="unfinished">系统</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="208"/>
+        <location filename="../Project/PropertiesDialog.ui" line="226"/>
         <source>Unix</source>
         <translation type="unfinished">Unix</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="213"/>
+        <location filename="../Project/PropertiesDialog.ui" line="231"/>
         <source>Macintosh</source>
         <translation type="unfinished">Macintosh</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="218"/>
+        <location filename="../Project/PropertiesDialog.ui" line="236"/>
         <source>Windows/DOS</source>
         <translation type="unfinished">Windows/DOS</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="322"/>
+        <location filename="../Project/PropertiesDialog.ui" line="318"/>
         <source>Select to create a version controlled project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="325"/>
+        <location filename="../Project/PropertiesDialog.ui" line="321"/>
         <source>Version Controlled Project</source>
         <translation type="unfinished"></translation>
     </message>
@@ -44795,32 +44748,32 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
         <translation>&lt;b&gt;配置 Qt&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="77"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="79"/>
         <source>Qt Tools</source>
         <translation>Qt 工具</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="127"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="129"/>
         <source>This gives an example of the complete tool name</source>
         <translation>这里给出了完整工具名称的一个范例</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="130"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="132"/>
         <source>designer</source>
         <translation>设计师</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/QtPage.py" line="66"/>
         <source>Select Qt4 Translations Directory</source>
-        <translation>选择 Qt4 翻译文件夹</translation>
+        <translation type="obsolete">选择 Qt4 翻译文件夹</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="50"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="43"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; This setting is activated at the next startup of the application.&lt;/font&gt;</source>
         <translation type="unfinished">&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;注意：&lt;/b&gt; 该设置将在下次启动应用程序时生效。&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="83"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="85"/>
         <source>The tool executable is composed of the prefix, the tool name and the postfix. For win, the extension is added automatically.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -44830,57 +44783,52 @@ expression; &apos;(?&amp;lt;![abc])q&apos; will match a &apos;q&apos; only if no
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="67"/>
-        <source>Press to select the Qt translations directory via a directory selection dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="43"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="59"/>
         <source>Enter the path of the Qt translations directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="57"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="66"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the QT4TRANSLATIONSDIR environment variable or the path compiled into the Qt library.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="93"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="95"/>
         <source>Qt-Prefix:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="100"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="102"/>
         <source>Enter the prefix for the Qt tools name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="107"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="109"/>
         <source>Qt-Postfix:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="114"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="116"/>
         <source>Enter the postfix for the Qt tools name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="140"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="142"/>
         <source>pyuic / pyside-uic Options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="146"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="148"/>
         <source>Indent Width:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="153"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="155"/>
         <source>Select the indent width (default: 4)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="185"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="187"/>
         <source>Generate imports relative to &apos;.&apos;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -47671,48 +47619,28 @@ Function: {3}({4})</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="50"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="59"/>
         <source>Enter the filename of the project word list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="97"/>
-        <source>Select the project word list file via a file selection dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="57"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="66"/>
         <source>Project E&amp;xclude List:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="67"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="85"/>
         <source>Enter the filename of the project exclude list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="104"/>
-        <source>Select the project exclude list file via a file selection dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Project/SpellingPropertiesDialog.py" line="52"/>
+        <location filename="../Project/SpellingPropertiesDialog.py" line="50"/>
         <source>&lt;default&gt;</source>
         <translation type="unfinished">&lt;default&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.py" line="89"/>
-        <source>Select project word list</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Project/SpellingPropertiesDialog.py" line="110"/>
+        <location filename="../Project/SpellingPropertiesDialog.py" line="43"/>
         <source>Dictionary File (*.dic);;All Files (*)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Project/SpellingPropertiesDialog.py" line="110"/>
-        <source>Select project exclude list</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -47946,79 +47874,69 @@ Function: {3}({4})</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="22"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="20"/>
         <source>D&amp;river:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="32"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="30"/>
         <source>Select the database driver</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="39"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="37"/>
         <source>&amp;Database Name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="55"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="56"/>
         <source>Enter the database name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="155"/>
-        <source>Press to select a database file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="75"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="63"/>
         <source>&amp;Username:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="85"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="73"/>
         <source>Enter the user name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="92"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="80"/>
         <source>&amp;Password:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="109"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="97"/>
         <source>&amp;Hostname:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="119"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="107"/>
         <source>Enter the hostname</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="126"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="114"/>
         <source>P&amp;ort:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="136"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="124"/>
         <source>Enter the port number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="139"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="127"/>
         <source>Default</source>
         <translation type="unfinished">默认</translation>
     </message>
     <message>
         <location filename="../SqlBrowser/SqlConnectionDialog.py" line="106"/>
-        <source>Select Database File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.py" line="106"/>
         <source>All Files (*)</source>
-        <translation type="unfinished">所有文件 (*)</translation>
+        <translation type="obsolete">所有文件 (*)</translation>
     </message>
 </context>
 <context>
@@ -48047,63 +47965,63 @@ Function: {3}({4})</source>
         <translation>开始覆盖率测试运行</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="23"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="25"/>
         <source>Command&amp;line:</source>
         <translation>命令行(&amp;l)：</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="39"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="41"/>
         <source>Enter the commandline parameters</source>
         <translation>输入命令行参数</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="42"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="44"/>
         <source>&lt;b&gt;Commandline&lt;/b&gt;
 &lt;p&gt;Enter the commandline parameters in this field.&lt;/p&gt;</source>
         <translation>&lt;b&gt;命令行&lt;/b&gt;
 &lt;p&gt;在该区域输入命令行参数。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="62"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="64"/>
         <source>&amp;Working directory:</source>
         <translation>工作文件夹(&amp;W)：</translation>
     </message>
     <message>
         <location filename="../Debugger/StartCoverageDialog.ui" line="218"/>
         <source>Select directory using a directory selection dialog</source>
-        <translation>使用文件夹选择对话框选择文件夹</translation>
+        <translation type="obsolete">使用文件夹选择对话框选择文件夹</translation>
     </message>
     <message>
         <location filename="../Debugger/StartCoverageDialog.ui" line="221"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;选择文件夹&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;选择文件夹&lt;/b&gt;
 &lt;p&gt;通过文件夹选择对话框选择工作文件夹。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="78"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="83"/>
         <source>Enter the working directory</source>
         <translation>输入工作文件夹</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="81"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="86"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory of the application to be debugged. Leave it empty to set the working directory to the executable directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;工作文件夹&lt;/b&gt;
 &lt;p&gt;输入要调试的程序的工作文件夹。为空时默认将工作文件夹设为可执行程序的文件夹。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="101"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="94"/>
         <source>&amp;Environment:</source>
         <translation>环境(&amp;E)：</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="117"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="110"/>
         <source>Enter the environment variables to be set.</source>
         <translation>输入要设定的环境变量。</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="120"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="113"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
@@ -48112,77 +48030,77 @@ Function: {3}({4})</source>
 &lt;p&gt;例： var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="191"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="188"/>
         <source>Select this to erase the collected coverage information</source>
         <translation>选择该选项可擦除已收集到的覆盖率信息</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="194"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="191"/>
         <source>&lt;b&gt;Erase coverage information&lt;/b&gt;
 &lt;p&gt;Select this to erase the collected coverage information before the next coverage run.&lt;/p&gt;</source>
         <translation>&lt;b&gt;擦除覆盖率信息&lt;/b&gt;
 &lt;p&gt;选择该选项可在下一次覆盖率测试运行之前擦除已收集到的覆盖率信息。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="198"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="195"/>
         <source>Erase &amp;coverage information</source>
         <translation>擦除覆盖率信息(&amp;c)</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="201"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="198"/>
         <source>Alt+C</source>
         <translation>Alt+C</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="141"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="138"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>取消选择可关闭异常报告</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="144"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="141"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;报告异常&lt;/b&gt;
 &lt;p&gt;取消该选项将关闭异常报告。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="148"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="145"/>
         <source>Report &amp;exceptions</source>
         <translation>报告异常(&amp;e)</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="151"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="148"/>
         <source>Alt+E</source>
         <translation>Alt+E</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="161"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="158"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>选择清除解释器窗口的显示</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="164"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="161"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;清除解释器窗口&lt;/b&gt;&lt;p&gt;将在开始调试客户之前清除解释器窗口的显示。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="167"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="164"/>
         <source>Clear &amp;interpreter window</source>
         <translation>清除解释器窗口(&amp;i)</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="177"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="174"/>
         <source>Select to start the debugger in a console window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="180"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="177"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="184"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="181"/>
         <source>Start in console</source>
         <translation type="unfinished"></translation>
     </message>
@@ -48195,12 +48113,12 @@ Function: {3}({4})</source>
         <translation>开始调试</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="117"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="110"/>
         <source>Enter the environment variables to be set.</source>
         <translation>输入要设定的环境变量。</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="120"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="113"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
@@ -48209,17 +48127,17 @@ Function: {3}({4})</source>
 &lt;p&gt;例： var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="101"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="94"/>
         <source>&amp;Environment:</source>
         <translation>环境(&amp;E)：</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="78"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="83"/>
         <source>Enter the working directory</source>
         <translation>输入工作文件夹</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="81"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="86"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory of the application to be debugged. Leave it empty to set the working directory to the executable directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;工作文件夹&lt;/b&gt;
@@ -48228,154 +48146,154 @@ Function: {3}({4})</source>
     <message>
         <location filename="../Debugger/StartDebugDialog.ui" line="270"/>
         <source>Select directory using a directory selection dialog</source>
-        <translation>使用文件夹选择对话框选择文件夹</translation>
+        <translation type="obsolete">使用文件夹选择对话框选择文件夹</translation>
     </message>
     <message>
         <location filename="../Debugger/StartDebugDialog.ui" line="273"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;选择文件夹&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;选择文件夹&lt;/b&gt;
 &lt;p&gt;通过文件夹选择对话框选择工作文件夹。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="62"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="64"/>
         <source>&amp;Working directory:</source>
         <translation>工作文件夹(&amp;W)：</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="39"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="41"/>
         <source>Enter the commandline parameters</source>
         <translation>输入命令行参数</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="42"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="44"/>
         <source>&lt;b&gt;Commandline&lt;/b&gt;
 &lt;p&gt;Enter the commandline parameters in this field.&lt;/p&gt;</source>
         <translation>&lt;b&gt;命令行&lt;/b&gt;
 &lt;p&gt;在该区域输入命令行参数。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="23"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="25"/>
         <source>Command&amp;line:</source>
         <translation>命令行(&amp;l)：</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="141"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="138"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>取消选择可关闭异常报告</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="144"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="141"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;报告异常&lt;/b&gt;
 &lt;p&gt;取消该选项将关闭异常报告。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="148"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="145"/>
         <source>Report &amp;exceptions</source>
         <translation>报告异常(&amp;e)</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="151"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="148"/>
         <source>Alt+E</source>
         <translation>Alt+E</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="191"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="188"/>
         <source>Select to trace into the Python library</source>
         <translation>选择跟踪到 Python 库</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="194"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="191"/>
         <source>&amp;Trace into interpreter libraries</source>
         <translation>跟踪到解释器库</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="197"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="194"/>
         <source>Alt+T</source>
         <translation>Alt+T</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="161"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="158"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>选择清除解释器窗口的显示</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="164"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="161"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;清除解释器窗口&lt;/b&gt;&lt;p&gt;将在开始调试客户之前清除解释器窗口的显示。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="167"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="164"/>
         <source>Clear &amp;interpreter window</source>
         <translation>清除解释器窗口(&amp;i)</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="204"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="201"/>
         <source>Select to not stop the debugger at the first executable line.</source>
         <translation>选择在第一个可执行行不要中止调试器。</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="207"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="204"/>
         <source>&lt;b&gt;Don&apos;t stop at first line&lt;/b&gt;&lt;p&gt;This prevents the debugger from stopping at the first executable line.&lt;/p&gt;</source>
         <translation>&lt;b&gt;第一行不中止&lt;/b&gt;&lt;p&gt;阻止调试器在第一个可执行行中止调试。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="210"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="207"/>
         <source>Don&apos;t stop at first line</source>
         <translation>第一行不中止</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="177"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="174"/>
         <source>Select to start the debugger in a console window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="180"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="177"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="184"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="181"/>
         <source>Start in console</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="220"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="219"/>
         <source>Forking</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="226"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="225"/>
         <source>Select to go through the fork without asking</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="229"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="228"/>
         <source>&lt;b&gt;Fork without pausing&lt;/b&gt;
 &lt;p&gt;Select to go through the fork without asking making the forking decision based on the Parent/Child selection.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="233"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="232"/>
         <source>Fork without pausing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="243"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="242"/>
         <source>Select to debug the child process after forking</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="246"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="245"/>
         <source>&lt;b&gt;Debug Child Process&lt;/b&gt;
 &lt;p&gt;Select to debug the child process after forking. If it is not selected, the parent process will be debugged. This has no effect, if forking without pausing is not selected.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="250"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="249"/>
         <source>Follow Child Process</source>
         <translation type="unfinished"></translation>
     </message>
@@ -48383,14 +48301,14 @@ Function: {3}({4})</source>
 <context>
     <name>StartDialog</name>
     <message>
-        <location filename="../Debugger/StartDialog.py" line="83"/>
+        <location filename="../Debugger/StartDialog.py" line="84"/>
         <source>Clear Histories</source>
         <translation>清除历史</translation>
     </message>
     <message>
         <location filename="../Debugger/StartDialog.py" line="130"/>
         <source>Working directory</source>
-        <translation>工作文件夹</translation>
+        <translation type="obsolete">工作文件夹</translation>
     </message>
 </context>
 <context>
@@ -48401,12 +48319,12 @@ Function: {3}({4})</source>
         <translation>开始剖析</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="117"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="110"/>
         <source>Enter the environment variables to be set.</source>
         <translation>输入要设定的环境变量。</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="120"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="113"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
@@ -48415,17 +48333,17 @@ Function: {3}({4})</source>
 &lt;p&gt;例： var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="101"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="94"/>
         <source>&amp;Environment:</source>
         <translation>环境(&amp;E)：</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="78"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="83"/>
         <source>Enter the working directory</source>
         <translation>输入工作文件夹</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="81"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="86"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory of the application to be debugged. Leave it empty to set the working directory to the executable directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;工作文件夹&lt;/b&gt;
@@ -48434,108 +48352,108 @@ Function: {3}({4})</source>
     <message>
         <location filename="../Debugger/StartProfileDialog.ui" line="218"/>
         <source>Select directory using a directory selection dialog</source>
-        <translation>使用文件夹选择对话框选择文件夹</translation>
+        <translation type="obsolete">使用文件夹选择对话框选择文件夹</translation>
     </message>
     <message>
         <location filename="../Debugger/StartProfileDialog.ui" line="221"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;选择文件夹&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;选择文件夹&lt;/b&gt;
 &lt;p&gt;通过文件夹选择对话框选择工作文件夹。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="62"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="64"/>
         <source>&amp;Working directory:</source>
         <translation>工作文件夹(&amp;W)：</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="39"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="41"/>
         <source>Enter the commandline parameters</source>
         <translation>输入命令行参数</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="42"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="44"/>
         <source>&lt;b&gt;Commandline&lt;/b&gt;
 &lt;p&gt;Enter the commandline parameters in this field.&lt;/p&gt;</source>
         <translation>&lt;b&gt;命令行&lt;/b&gt;
 &lt;p&gt;在该区域输入命令行参数。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="23"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="25"/>
         <source>Command&amp;line:</source>
         <translation>命令行(&amp;l)：</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="191"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="188"/>
         <source>Select this to erase the collected timing data</source>
         <translation>选择该选项可擦除收集到的定时数据</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="194"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="191"/>
         <source>&lt;b&gt;Erase timing data&lt;/b&gt;
 &lt;p&gt;Select this to erase the collected timing data before the next profiling run.&lt;/p&gt;</source>
         <translation>&lt;b&gt;擦除定时数据&lt;/b&gt;&lt;p&gt;选择该选项可在下一次剖析运行之前擦除定时数据。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="198"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="195"/>
         <source>Erase &amp;timing data</source>
         <translation>擦除定时数据(&amp;t)</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="201"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="198"/>
         <source>Alt+C</source>
         <translation>Alt+C</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="141"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="138"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>取消选择可关闭异常报告</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="144"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="141"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;报告异常&lt;/b&gt;
 &lt;p&gt;取消该选项将关闭异常报告。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="148"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="145"/>
         <source>Report &amp;exceptions</source>
         <translation>报告异常(&amp;e)</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="151"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="148"/>
         <source>Alt+E</source>
         <translation>Alt+E</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="161"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="158"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>选择清除解释器窗口的显示</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="164"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="161"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;清除解释器窗口&lt;/b&gt;&lt;p&gt;将在开始调试客户之前清除解释器窗口的显示。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="167"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="164"/>
         <source>Clear &amp;interpreter window</source>
         <translation>清除解释器窗口(&amp;i)</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="177"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="174"/>
         <source>Select to start the debugger in a console window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="180"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="177"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="184"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="181"/>
         <source>Start in console</source>
         <translation type="unfinished"></translation>
     </message>
@@ -48548,63 +48466,63 @@ Function: {3}({4})</source>
         <translation>开始运行</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="23"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="25"/>
         <source>Command&amp;line:</source>
         <translation>命令行(&amp;l)：</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="39"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="41"/>
         <source>Enter the commandline parameters</source>
         <translation>输入命令行参数</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="42"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="44"/>
         <source>&lt;b&gt;Commandline&lt;/b&gt;
 &lt;p&gt;Enter the commandline parameters in this field.&lt;/p&gt;</source>
         <translation>&lt;b&gt;命令行&lt;/b&gt;
 &lt;p&gt;在该区域输入命令行参数。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="62"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="64"/>
         <source>&amp;Working directory:</source>
         <translation>工作文件夹(&amp;W)：</translation>
     </message>
     <message>
         <location filename="../Debugger/StartRunDialog.ui" line="241"/>
         <source>Select directory using a directory selection dialog</source>
-        <translation>使用文件夹选择对话框选择文件夹</translation>
+        <translation type="obsolete">使用文件夹选择对话框选择文件夹</translation>
     </message>
     <message>
         <location filename="../Debugger/StartRunDialog.ui" line="244"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;选择文件夹&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;选择文件夹&lt;/b&gt;
 &lt;p&gt;通过文件夹选择对话框选择工作文件夹。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="78"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="83"/>
         <source>Enter the working directory</source>
         <translation>输入工作文件夹</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="81"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="86"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory of the application to be debugged. Leave it empty to set the working directory to the executable directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;工作文件夹&lt;/b&gt;
 &lt;p&gt;输入要调试的程序的工作文件夹。为空时默认将工作文件夹设为可执行程序的文件夹。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="101"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="94"/>
         <source>&amp;Environment:</source>
         <translation>环境(&amp;E)：</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="117"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="110"/>
         <source>Enter the environment variables to be set.</source>
         <translation>输入要设定的环境变量。</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="120"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="113"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
@@ -48613,92 +48531,92 @@ Function: {3}({4})</source>
 &lt;p&gt;例： var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="141"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="138"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>取消选择可关闭异常报告</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="144"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="141"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;报告异常&lt;/b&gt;
 &lt;p&gt;取消该选项将关闭异常报告。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="148"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="145"/>
         <source>Report &amp;exceptions</source>
         <translation>报告异常(&amp;e)</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="151"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="148"/>
         <source>Alt+E</source>
         <translation>Alt+E</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="161"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="158"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>选择清除解释器窗口的显示</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="164"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="161"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;清除解释器窗口&lt;/b&gt;&lt;p&gt;将在开始调试客户之前清除解释器窗口的显示。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="167"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="164"/>
         <source>Clear &amp;interpreter window</source>
         <translation>清除解释器窗口(&amp;i)</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="177"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="174"/>
         <source>Select to start the debugger in a console window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="180"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="177"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="184"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="181"/>
         <source>Start in console</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="191"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="190"/>
         <source>Forking</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="197"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="196"/>
         <source>Select to go through the fork without asking</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="200"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="199"/>
         <source>&lt;b&gt;Fork without pausing&lt;/b&gt;
 &lt;p&gt;Select to go through the fork without asking making the forking decision based on the Parent/Child selection.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="204"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="203"/>
         <source>Fork without pausing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="214"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="213"/>
         <source>Select to debug the child process after forking</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="217"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="216"/>
         <source>&lt;b&gt;Debug Child Process&lt;/b&gt;
 &lt;p&gt;Select to debug the child process after forking. If it is not selected, the parent process will be debugged. This has no effect, if forking without pausing is not selected.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="221"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="220"/>
         <source>Follow Child Process</source>
         <translation type="unfinished"></translation>
     </message>
@@ -49498,17 +49416,17 @@ Function: {3}({4})</source>
         <translation>版本控制命令</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="25"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="23"/>
         <source>Subversion Command:</source>
         <translation>版本控制命令：</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="38"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="36"/>
         <source>Enter the Subversion command to be executed with all necessary parameters</source>
         <translation>输入要执行的版本控制命令，带所有必须参数</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="41"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="39"/>
         <source>&lt;b&gt;Subversion Command&lt;/b&gt;
 &lt;p&gt;Enter the Subversion command to be executed including all necessary 
 parameters. If a parameter of the commandline includes a space you have to 
@@ -49522,22 +49440,22 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="125"/>
         <source>Select the working directory via a directory selection dialog</source>
-        <translation>通过文件夹选择对话框选择工作文件夹</translation>
+        <translation type="obsolete">通过文件夹选择对话框选择工作文件夹</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="128"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Select the working directory for the Subversion command via a directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;工作文件夹&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;工作文件夹&lt;/b&gt;
 &lt;p&gt;通过文件夹选择对话框为版本控制命令选择工作文件夹。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="67"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="75"/>
         <source>Enter the working directory for the Subversion command</source>
         <translation>为版本控制命令输入工作文件夹</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="70"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="78"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory for the Subversion command.
 This is an optional entry. The button to the right will open a 
@@ -49548,29 +49466,29 @@ directory selection dialog.&lt;/p&gt;</source>
 右侧的按钮可打开文件夹选择对话框。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="89"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="59"/>
         <source>Working Directory:&lt;br&gt;(optional)</source>
         <translation>工作文件夹：&lt;br&gt;（可选）</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="102"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="94"/>
         <source>Project Directory:</source>
         <translation>项目文件夹：</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="115"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="107"/>
         <source>This shows the root directory of the current project.</source>
         <translation>显示当前项目的根目录。</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="118"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="110"/>
         <source>project directory</source>
         <translation>项目文件夹</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.py" line="78"/>
         <source>Working directory</source>
-        <translation>工作文件夹</translation>
+        <translation type="obsolete">工作文件夹</translation>
     </message>
 </context>
 <context>
@@ -49638,49 +49556,49 @@ directory selection dialog.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="64"/>
         <source>Press to open a selection dialog</source>
-        <translation>点击打开选择对话框</translation>
+        <translation type="obsolete">点击打开选择对话框</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="67"/>
         <source>&lt;b&gt;Target directory&lt;/b&gt;
 &lt;p&gt;Select the target name for the operation via a selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;目标文件夹&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;目标文件夹&lt;/b&gt;
 &lt;p&gt;通过选择对话框为操作选择目标名称。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="25"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="23"/>
         <source>Source:</source>
         <translation>源：</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="32"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="30"/>
         <source>Shows the name of the source</source>
         <translation>显示源名称</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="35"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="33"/>
         <source>&lt;b&gt;Source name&lt;/b&gt;
 &lt;p&gt;This field shows the name of the source.&lt;/p&gt;</source>
         <translation>&lt;b&gt;源名称&lt;/b&gt;
 &lt;p&gt;该区域显示源名称。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="46"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="60"/>
         <source>Enter the target name</source>
         <translation>输入目标名</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="57"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="44"/>
         <source>Target:</source>
         <translation>目标：</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="77"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="71"/>
         <source>Select to force the operation</source>
         <translation>选择强制操作</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="80"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="74"/>
         <source>Enforce operation</source>
         <translation>强制操作</translation>
     </message>
@@ -49688,21 +49606,21 @@ directory selection dialog.&lt;/p&gt;</source>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="67"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Select the target name for the operation via a selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;目标名&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;目标名&lt;/b&gt;
 &lt;p&gt;通过选择对话框为操作选择目标名。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.py" line="52"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.py" line="46"/>
         <source>Subversion Move</source>
         <translation>版本控制移动</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.py" line="91"/>
         <source>Select target</source>
-        <translation>选择目标</translation>
+        <translation type="obsolete">选择目标</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="49"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="63"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Enter the new name in this field. The target must be the new name or an absolute path.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -50568,44 +50486,44 @@ the working copy.&lt;/p&gt;</source>
 &lt;p&gt;对于远程储存库来说，URL 必须包含主机名。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="30"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="84"/>
         <source>Enter the tag the new project should be generated from</source>
         <translation>输入标签，新项目将从其中生成</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="33"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="87"/>
         <source>&lt;b&gt;Tag in VCS&lt;/b&gt;
 &lt;p&gt;Enter the tag name the new project shall be generated from. Leave empty to retrieve the latest data from the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;版本控制系统中的标签&lt;/b&gt;
 &lt;p&gt;输入标签名称，新项目将从其中生成。为空时从储存库中检索最后的日期。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="41"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="38"/>
         <source>Select the protocol to access the repository</source>
         <translation>选择访问储存库的协议</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="48"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="28"/>
         <source>&amp;Protocol:</source>
         <translation>协议(&amp;P)：</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="61"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="67"/>
         <source>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Enter the URL to the module. For a repository with standard layout, this must not contain the trunk, tags or branches part.&lt;/p&gt;</source>
         <translation>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;输入模块的 URL 。由于储存库具有标准布局，则该 URL 必须包含主干、标签或分支部分。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.py" line="160"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.py" line="128"/>
         <source>&amp;URL:</source>
         <translation>&amp;URL：</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="78"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="114"/>
         <source>Enter the directory of the new project.</source>
         <translation>输入新项目的文件夹。</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="81"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="117"/>
         <source>&lt;b&gt;Project Directory&lt;/b&gt;
 &lt;p&gt;Enter the directory of the new project. It will be retrieved from 
 the repository and be placed in this directory.&lt;/p&gt;</source>
@@ -50613,57 +50531,52 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 &lt;p&gt;输入新项目的文件夹。它将在储存库中被检索，且被放置在该文件夹中。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="90"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="126"/>
         <source>Select to indicate, that the repository has a standard layout (projectdir/trunk, projectdir/tags, projectdir/branches)</source>
-        <translation>选择指示储存库具有标准布局（项目文件夹/主干，项目文件夹/标签，项目文件夹/分支）</translation>
+        <translation type="unfinished">通过文件夹选择对话框或储存库浏览器选择储存库 URL</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="93"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="129"/>
         <source>Repository has standard &amp;layout</source>
         <translation>储存库具有标准布局(&amp;l)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="96"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="132"/>
         <source>Alt+L</source>
         <translation>Alt+L</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="126"/>
-        <source>Select the repository url via a directory selection dialog or the repository browser</source>
-        <translation>通过文件夹选择对话框或储存库浏览器选择储存库 URL</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="106"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="95"/>
         <source>Project &amp;Directory:</source>
         <translation>项目文件夹(&amp;D)：</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="116"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="74"/>
         <source>&amp;Tag:</source>
         <translation>标签(&amp;T)：</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="133"/>
         <source>Select the project directory via a directory selection dialog</source>
-        <translation>通过文件夹选择对话框选择项目文件夹</translation>
+        <translation type="obsolete">通过文件夹选择对话框选择项目文件夹</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.py" line="95"/>
         <source>Select Repository-Directory</source>
-        <translation>选择储存库文件夹</translation>
+        <translation type="obsolete">选择储存库文件夹</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.py" line="123"/>
         <source>Select Project Directory</source>
-        <translation>选择项目文件夹</translation>
+        <translation type="obsolete">选择项目文件夹</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.py" line="154"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.py" line="121"/>
         <source>Pat&amp;h:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="58"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="64"/>
         <source>Enter the url path of the module in the repository (without protocol part)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -50685,79 +50598,79 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 &lt;p&gt;对于远程储存库而言 URL 必须包含主机名。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="30"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="74"/>
         <source>Log &amp;Message:</source>
         <translation>日志消息(&amp;M)：</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="40"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="98"/>
         <source>Select, if the standard repository layout (projectdir/trunk, projectdir/tags, projectdir/branches) should be generated</source>
         <translation>选择是否生成标准储存库布局（项目文件夹/主干，项目文件夹/标签，项目文件夹/分支）</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="43"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="101"/>
         <source>Create standard repository &amp;layout</source>
         <translation>创建标准储存库布局(&amp;l)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="46"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="104"/>
         <source>Alt+L</source>
         <translation>Alt+L</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="56"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="38"/>
         <source>Select the protocol to access the repository</source>
         <translation>选择访问储存库的协议</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="107"/>
         <source>Select the repository url via a directory selection dialog or the repository browser</source>
-        <translation>通过文件夹选择对话框或储存库浏览器选择储存库 URL</translation>
+        <translation type="obsolete">通过文件夹选择对话框或储存库浏览器选择储存库 URL</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.py" line="110"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.py" line="95"/>
         <source>&amp;URL:</source>
         <translation>&amp;URL：</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="73"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="84"/>
         <source>Enter the log message for the new project.</source>
         <translation>为新项目输入日志消息。</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="76"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="87"/>
         <source>&lt;b&gt;Log Message&lt;/b&gt;
 &lt;p&gt;Enter the log message to be used for the new project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;日志消息&lt;/b&gt;
 &lt;p&gt;输入将为新项目使用的日志消息。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="80"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="91"/>
         <source>new project started</source>
         <translation>新项目已开始</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="87"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="28"/>
         <source>&amp;Protocol:</source>
         <translation>协议(&amp;P)：</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="100"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="67"/>
         <source>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Enter the URL to the module. For a repository with standard layout, this must not contain the trunk, tags or branches part.&lt;/p&gt;</source>
         <translation>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;输入模块的 URL 。由于储存库具有标准布局，则该 URL 必须包含主干、标签或分支部分。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.py" line="71"/>
         <source>Select Repository-Directory</source>
-        <translation>选择储存库文件夹</translation>
+        <translation type="obsolete">选择储存库文件夹</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.py" line="104"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.py" line="89"/>
         <source>Pat&amp;h:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="97"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="64"/>
         <source>Enter the url path of the module in the repository (without protocol part)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -51648,27 +51561,27 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>选择属性源</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="50"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="73"/>
         <source>File</source>
         <translation>文件</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="57"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="47"/>
         <source>Text</source>
         <translation>文本</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="67"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="57"/>
         <source>Enter text of the property</source>
         <translation>输入属性的文本</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="93"/>
         <source>Press to select the file via a file selection dialog</source>
-        <translation>请通过文件选择对话框选择文件</translation>
+        <translation type="obsolete">请通过文件选择对话框选择文件</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="83"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="92"/>
         <source>Enter the name of a file for the property</source>
         <translation>为属性输入文件名称</translation>
     </message>
@@ -51695,7 +51608,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.py" line="46"/>
         <source>Select file for property</source>
-        <translation>为属性选择文件</translation>
+        <translation type="obsolete">为属性选择文件</translation>
     </message>
 </context>
 <context>
@@ -54114,18 +54027,8 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="39"/>
+        <location filename="../Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="48"/>
         <source>Enter the full path of the shared directory</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="46"/>
-        <source>Select the shared directory via a directory selection dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/Sync/SyncDirectorySettingsPage.py" line="72"/>
-        <source>Shared Directory</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -56023,340 +55926,340 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>配置工具菜单</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="25"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="151"/>
         <source>Add a separator</source>
         <translation>添加一个分隔符</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="28"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="154"/>
         <source>&lt;b&gt;Add separator&lt;/b&gt;&lt;p&gt;Add a separator for the menu.&lt;/p&gt;</source>
         <translation>&lt;b&gt;添加分隔符&lt;/b&gt;&lt;p&gt;为菜单添加分隔符。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="31"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="157"/>
         <source>Add &amp;Separator</source>
         <translation>添加分隔符(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="38"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="47"/>
         <source>Add a new tools entry</source>
         <translation>添加一个新的工具条目</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="41"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="50"/>
         <source>&lt;b&gt;Add&lt;/b&gt;
 &lt;p&gt;Add a new tools entry with the values entered below.&lt;/p&gt;</source>
         <translation>&lt;b&gt;添加&lt;/b&gt;
 &lt;p&gt;用以上输入的值添加一个新的工具条目。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="45"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="54"/>
         <source>&amp;Add</source>
         <translation>添加(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="48"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="57"/>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="58"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="296"/>
         <source>Select the output redirection mode</source>
         <translation>选择输出重定向模式</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="61"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="299"/>
         <source>&lt;b&gt;Redirect output&lt;b&gt;&lt;p&gt;Select the output redirection mode. The standard error channel is either not redirected or shown in the log viewer.&lt;/p&gt;</source>
         <translation>&lt;b&gt;重定向输出&lt;b&gt;&lt;p&gt;选择输出重定模式。标准错误通道既无法进行重定向也不显示在日志浏览器中。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="68"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="275"/>
         <source>Enter the arguments for the executable</source>
         <translation>输入执行的参数</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="71"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="278"/>
         <source>&lt;b&gt;Arguments&lt;/b&gt;
 &lt;p&gt;Enter the arguments for the executable.&lt;/p&gt;</source>
         <translation>&lt;b&gt;参数&lt;/b&gt;
 &lt;p&gt;为执行输入参数。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="82"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="107"/>
         <source>Move up</source>
         <translation>上移</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="85"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="110"/>
         <source>&lt;b&gt;Move Up&lt;/b&gt;
 &lt;p&gt;Move the selected entry up.&lt;/p&gt;</source>
         <translation>&lt;b&gt;上移&lt;/b&gt;&lt;p&gt;向上移动所选入口。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="89"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="114"/>
         <source>&amp;Up</source>
         <translation>向上(&amp;U)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="92"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="117"/>
         <source>Alt+U</source>
         <translation>Alt+U</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="102"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="87"/>
         <source>Delete the selected entry</source>
         <translation>删除所选入口</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="105"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="90"/>
         <source>&lt;b&gt;Delete&lt;/b&gt;
 &lt;p&gt;Delete the selected entry.&lt;/p&gt;</source>
         <translation>&lt;b&gt;删除&lt;/b&gt;
 &lt;p&gt;删除所选入口。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="109"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="94"/>
         <source>&amp;Delete</source>
         <translation>删除(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="112"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="97"/>
         <source>Alt+D</source>
         <translation>Alt+D</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="119"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="30"/>
         <source>Clear all entry fields</source>
         <translation>清除所有条目区域</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="122"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="33"/>
         <source>&lt;b&gt;New&lt;/b&gt;
 &lt;p&gt;Clear all entry fields for entering a new tools entry.&lt;/p&gt;</source>
         <translation>&lt;b&gt;新建&lt;/b&gt;
 &lt;p&gt;清除所有条目区域以便输入一个新的工具条目。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="126"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="37"/>
         <source>&amp;New</source>
         <translation>新建(&amp;N)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="129"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="40"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
     <message>
         <location filename="../Preferences/ToolConfigurationDialog.ui" line="282"/>
         <source>Select the icon via a file selection dialog</source>
-        <translation>通过文件选择对话框选择图标</translation>
+        <translation type="obsolete">通过文件选择对话框选择图标</translation>
     </message>
     <message>
         <location filename="../Preferences/ToolConfigurationDialog.ui" line="285"/>
         <source>&lt;b&gt;Icon&lt;/b&gt;
 &lt;p&gt;Select the icon via a file selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;图标&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;图标&lt;/b&gt;
 &lt;p&gt;通过文件选择对话框选择图标。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="136"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="254"/>
         <source>Enter the filename of the executable</source>
         <translation>输入执行的文件名</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="139"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="257"/>
         <source>&lt;b&gt;Executable&lt;/b&gt;
 &lt;p&gt;Enter the filename of the executable.&lt;/p&gt;</source>
         <translation>&lt;b&gt;执行&lt;/b&gt;
 &lt;p&gt;输入执行的文件名。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="150"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="127"/>
         <source>Move down</source>
         <translation>下移</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="153"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="130"/>
         <source>&lt;b&gt;Move Down&lt;/b&gt;
 &lt;p&gt;Move the selected entry down.&lt;/p&gt;</source>
         <translation>&lt;b&gt;下移&lt;/b&gt;
 &lt;p&gt;向下移动所选入口。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="157"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="134"/>
         <source>Do&amp;wn</source>
         <translation>向下(&amp;w)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="160"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="137"/>
         <source>Alt+W</source>
         <translation>Alt+W</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="183"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="194"/>
         <source>Enter the menu text</source>
         <translation>输入菜单文本</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="186"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="197"/>
         <source>&lt;b&gt;Menu text&lt;/b&gt;
 &lt;p&gt;Enter the menu text. Precede the accelerator key with an &amp; character.&lt;/p&gt;</source>
         <translation>&lt;b&gt;菜单文本&lt;/b&gt;
 &lt;p&gt;输入菜单文本。通过在字母前添加“&amp;”符号定义加速键。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="197"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="67"/>
         <source>Change the values of the selected entry</source>
         <translation>改变所选条目的值</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="200"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="70"/>
         <source>&lt;b&gt;Change&lt;/b&gt;
 &lt;p&gt;Change the values of the selected entry.&lt;/p&gt;</source>
         <translation>&lt;b&gt;改变&lt;/b&gt;
 &lt;p&gt;改变所选条目的值。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="204"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="74"/>
         <source>C&amp;hange</source>
         <translation>改变(&amp;h)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="207"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="77"/>
         <source>Alt+H</source>
         <translation>Alt+H</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="214"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="205"/>
         <source>&amp;Icon file:</source>
         <translation>图标文件(&amp;I)：</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="224"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="265"/>
         <source>Ar&amp;guments:</source>
         <translation>参数(&amp;g)：</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="234"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="184"/>
         <source>&amp;Menu text:</source>
         <translation>菜单文本(&amp;M)：</translation>
     </message>
     <message>
         <location filename="../Preferences/ToolConfigurationDialog.ui" line="293"/>
         <source>Select the executable via a file selection dialog</source>
-        <translation>通过文件选择对话框选择执行</translation>
+        <translation type="obsolete">通过文件选择对话框选择执行</translation>
     </message>
     <message>
         <location filename="../Preferences/ToolConfigurationDialog.ui" line="296"/>
         <source>&lt;b&gt;Executable&lt;/b&gt;
 &lt;p&gt;Select the executable via a file selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;执行&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;执行&lt;/b&gt;
 &lt;p&gt;通过文件选择对话框选择执行。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="251"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="224"/>
         <source>Enter the filename of the icon</source>
         <translation>输入图标的文件名</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="254"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="227"/>
         <source>&lt;b&gt;Icon&lt;/b&gt;
 &lt;p&gt;Enter the filename of the icon.&lt;/p&gt;</source>
         <translation>&lt;b&gt;图标&lt;/b&gt;
 &lt;p&gt;输入图标的文件名。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="262"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="286"/>
         <source>&amp;Redirect output</source>
         <translation>重定向输出(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="272"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="235"/>
         <source>&amp;Executable file:</source>
         <translation>可执行文件(&amp;E)：</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="47"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="44"/>
         <source>no redirection</source>
         <translation>不重定向</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="48"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="45"/>
         <source>show output</source>
         <translation>显示输出</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="49"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="46"/>
         <source>insert into current editor</source>
         <translation>插入到当前编辑器</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="50"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="47"/>
         <source>replace selection of current editor</source>
         <translation>替换当前编辑器的所选内容</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="136"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="133"/>
         <source>Add tool entry</source>
         <translation>添加工具条目</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="107"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="104"/>
         <source>You have to set an executable to add to the Tools-Menu first.</source>
         <translation>必须首先设置要添加到工具-菜单的执行。</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="116"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="113"/>
         <source>You have to insert a menuentry text to add the selected program to the Tools-Menu first.</source>
         <translation>必须首先插入一个菜单条目文本以便将所选程序添加到工具-菜单中。</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="125"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="122"/>
         <source>The selected file could not be found or is not an executable. Please choose an executable filename.</source>
         <translation>选文件或未找到或不可执行。请选择一个可执行文件名。</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="187"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="184"/>
         <source>Change tool entry</source>
         <translation>改变工具条目</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="169"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="166"/>
         <source>You have to set an executable to change the Tools-Menu entry.</source>
         <translation>必须设置一个执行以改变工具-菜单条目。</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="178"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="175"/>
         <source>You have to insert a menuentry text to change the selected Tools-Menu entry.</source>
         <translation>必须插入一个菜单条目文本以改变所选工具-菜单条目。</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="187"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="184"/>
         <source>The selected file could not be found or is not an executable. Please choose an existing executable filename.</source>
         <translation>所选文件未找到或不可执行。请选择一个存在的可执行文件名。</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="282"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="275"/>
         <source>Select executable</source>
         <translation>选择可执行的</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="282"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="275"/>
         <source>The selected file is not an executable. Please choose an executable filename.</source>
         <translation>所选文件不可执行。请选择一个可执行文件名。</translation>
     </message>
     <message>
         <location filename="../Preferences/ToolConfigurationDialog.py" line="297"/>
         <source>Select icon file</source>
-        <translation>选择图标文件</translation>
+        <translation type="obsolete">选择图标文件</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="297"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="40"/>
         <source>Icon files (*.png)</source>
         <translation>图标文件 (*.png)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="136"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="133"/>
         <source>An entry for the menu text {0} already exists.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -56552,22 +56455,22 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="../Project/TranslationPropertiesDialog.ui" line="82"/>
         <source>Show directory selection dialog</source>
-        <translation>显示文件夹选择对话框</translation>
+        <translation type="obsolete">显示文件夹选择对话框</translation>
     </message>
     <message>
         <location filename="../Project/TranslationPropertiesDialog.ui" line="85"/>
         <source>&lt;b&gt;Binary Translations Path&lt;/b&gt;
 &lt;p&gt;Select the directory for the binary translations via a directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;二进制翻译路径&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;二进制翻译路径&lt;/b&gt;
 &lt;p&gt;通过文件夹选择对话框为二进制翻译选择文件夹。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="25"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="76"/>
         <source>Enter the path for the binary translation files (*.qm)</source>
         <translation>为二进制翻译文件 (*.qm) 输入路径</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="28"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="79"/>
         <source>&lt;b&gt;Binary Translations Path&lt;/b&gt;
 &lt;p&gt;Enter the directory for the binary translation files (*.qm). Leave it empty to store them together with the *.ts files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;二进制翻译路径&lt;/b&gt;
@@ -56577,11 +56480,11 @@ be changed via the preferences dialog.&lt;/p&gt;
         <location filename="../Project/TranslationPropertiesDialog.ui" line="74"/>
         <source>&lt;b&gt;Translation Pattern&lt;/b&gt;
 &lt;p&gt;Select a translation file via a file selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;翻译模式&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;翻译模式&lt;/b&gt;
 &lt;p&gt;通过文件选择对话框选择一个翻译文件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="36"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="57"/>
         <source>&amp;Binary Translations Path:</source>
         <translation>二进制翻译路径(&amp;B)：</translation>
     </message>
@@ -56591,57 +56494,57 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>为翻译文件输入路径模式</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="95"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="87"/>
         <source>Exclude from translation</source>
         <translation>从翻译中排除</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="101"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="93"/>
         <source>Press to select a directory via a selection dialog</source>
         <translation>点击通过选择对话框选择一个文件夹</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="104"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="96"/>
         <source>Select d&amp;irectory...</source>
         <translation>选择文件夹(&amp;i)……</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="111"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="103"/>
         <source>Press to select a file via a selection dialog</source>
         <translation>点击通过选择对话框选择一个文件</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="114"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="106"/>
         <source>Select &amp;file...</source>
         <translation>选择文件(&amp;f)……</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="124"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="116"/>
         <source>Press to add the entered path or file to the list</source>
         <translation>点击将输入的路径或文件添加到列表中</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="127"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="119"/>
         <source>&amp;Add</source>
         <translation>添加(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="137"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="129"/>
         <source>Press to delete the selected entry from the list</source>
         <translation>点击将所选条目从列表中删除</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="140"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="132"/>
         <source>&amp;Delete</source>
         <translation>删除(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="147"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="139"/>
         <source>Enter a path or file to be added</source>
         <translation>输入要添加的路径或文件</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="154"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="146"/>
         <source>List of paths or files to excude from translation</source>
         <translation>要从翻译中排除的路径或文件列表</translation>
     </message>
@@ -56653,20 +56556,20 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="../Project/TranslationPropertiesDialog.py" line="103"/>
         <source>Select translation file</source>
-        <translation>选择翻译文件</translation>
+        <translation type="obsolete">选择翻译文件</translation>
     </message>
     <message>
         <location filename="../Project/TranslationPropertiesDialog.py" line="132"/>
         <source>Select directory for binary translations</source>
-        <translation>为二进制翻译选择文件夹</translation>
+        <translation type="obsolete">为二进制翻译选择文件夹</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.py" line="175"/>
+        <location filename="../Project/TranslationPropertiesDialog.py" line="156"/>
         <source>Exempt file from translation</source>
         <translation>从翻译中除去文件</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.py" line="188"/>
+        <location filename="../Project/TranslationPropertiesDialog.py" line="169"/>
         <source>Exempt directory from translation</source>
         <translation>从翻译中除去文件夹</translation>
     </message>
@@ -56687,7 +56590,7 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="57"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="23"/>
         <source>&amp;Translation Path Pattern:
 (Use &apos;%language%&apos; where the language code should be inserted, e.g. i18n/eric6_%language%.ts)</source>
         <translation type="unfinished">翻译路径模式(&amp;T)：
@@ -57570,17 +57473,17 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>UnittestDialog</name>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="398"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="400"/>
         <source>Unittest</source>
         <translation>单元测试</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="26"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="69"/>
         <source>Enter the test name. Leave empty to use the default name &quot;suite&quot;.</source>
         <translation>输入测试名称。为空时使用默认名称“suite”。</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="29"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="72"/>
         <source>&lt;b&gt;Testname&lt;/b&gt;&lt;p&gt;Enter the name of the test to be performed. This name must follow the rules given by Python&apos;s unittest module. If this field is empty, the default name of &quot;suite&quot; will be used.&lt;/p&gt;</source>
         <translation>&lt;b&gt;测试名&lt;/b&gt;&lt;p&gt;输入要执行测试的名称。该名称必须遵循由 Python 的单元测试模块所给出的规则。如果该区域没有输入，则使用默认名称“suite”。&lt;/p&gt;</translation>
     </message>
@@ -57602,112 +57505,112 @@ cases.&lt;/p&gt;</source>
 如果没有找到相应的方法，则将在模块中检查合适的测试案例。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="68"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="59"/>
         <source>Enter &amp;test name:</source>
         <translation>输入测试名(&amp;t)：</translation>
     </message>
     <message>
         <location filename="../PyUnit/UnittestDialog.ui" line="88"/>
         <source>Open a file selection dialog</source>
-        <translation>打开文件选择对话框</translation>
+        <translation type="obsolete">打开文件选择对话框</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="78"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="26"/>
         <source>Enter test &amp;filename:</source>
         <translation>输入测试文件名(&amp;f)：</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="104"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="91"/>
         <source>Select whether you want to run the test locally</source>
         <translation>选择是否在局部运行测试</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="107"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="94"/>
         <source>Run &amp;local</source>
         <translation>局部运行(&amp;l)</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="114"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="101"/>
         <source>Select whether coverage data should be collected</source>
         <translation>选择是否收集覆盖率数据</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="117"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="104"/>
         <source>C&amp;ollect coverage data</source>
         <translation>收集覆盖率数据(&amp;o)</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="127"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="114"/>
         <source>Select whether old coverage data should be erased</source>
         <translation>选择是否擦除原有的覆盖率数据</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="130"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="117"/>
         <source>&amp;Erase coverage data</source>
         <translation>擦除覆盖率数据(&amp;E)</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="148"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="135"/>
         <source>Progress:</source>
         <translation>进程：</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="188"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="175"/>
         <source>Run:</source>
         <translation>运行：</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="195"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="182"/>
         <source>Number of tests run</source>
         <translation>测试运行的数目</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="239"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="226"/>
         <source>Failures:</source>
         <translation>失败：</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="246"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="233"/>
         <source>Number of test failures</source>
         <translation>测试失败的数目</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="256"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="243"/>
         <source>Errors:</source>
         <translation>错误：</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="263"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="250"/>
         <source>Number of test errors</source>
         <translation>测试错误的数目</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="205"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="192"/>
         <source>Remaining:</source>
         <translation>剩余：</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="212"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="199"/>
         <source>Number of tests to be run</source>
         <translation>将要运行的测试的数目</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="345"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="332"/>
         <source>Tests performed:</source>
         <translation>测试已完成：</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="355"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="342"/>
         <source>Failures and errors:</source>
         <translation>失败和错误：</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="362"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="349"/>
         <source>Failures and Errors list</source>
         <translation>失败和错误列表</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="365"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="352"/>
         <source>&lt;b&gt;Failures and Errors list&lt;/b&gt;
 &lt;p&gt;This list shows all failed and errored tests.
 Double clicking on an entry will show the respective traceback.&lt;/p&gt;</source>
@@ -57716,168 +57619,183 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 双击条目将显示相应的追踪。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="392"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="379"/>
         <source>Idle</source>
         <translation>空闲</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="68"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="71"/>
         <source>Start</source>
         <translation>开始</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="70"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="73"/>
         <source>Start the selected testsuite</source>
         <translation>开启所选测试套件</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="72"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="75"/>
         <source>&lt;b&gt;Start Test&lt;/b&gt;&lt;p&gt;This button starts the selected testsuite.&lt;/p&gt;</source>
         <translation>&lt;b&gt;开始测试&lt;/b&gt;&lt;p&gt;该按钮开启所选测试套件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="83"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="86"/>
         <source>Stop</source>
         <translation>中止</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="85"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="88"/>
         <source>Stop the running unittest</source>
         <translation>中止正在运行的单元测试</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="86"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="89"/>
         <source>&lt;b&gt;Stop Test&lt;/b&gt;&lt;p&gt;This button stops a running unittest.&lt;/p&gt;</source>
         <translation>&lt;b&gt;中止测试&lt;/b&gt;&lt;p&gt;该按钮中止一个正在运行的单元测试。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="120"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="121"/>
         <source>^Failure: </source>
         <translation>^失败：</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="121"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="122"/>
         <source>^Error: </source>
         <translation>^错误：</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="264"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="266"/>
         <source>You must enter a test suite file.</source>
         <translation>必须输入测试套件文件。</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="272"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="274"/>
         <source>Preparing Testsuite</source>
         <translation>准备测试套件</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="467"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="469"/>
         <source>Running</source>
         <translation>正在运行</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="632"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="634"/>
         <source>Show Source</source>
         <translation>显示源代码</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="205"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="206"/>
         <source>Python Files (*.py);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="201"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="202"/>
         <source>Python3 Files ({1});;Python2 Files ({0});;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="398"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="400"/>
         <source>&lt;p&gt;Unable to run test &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;{1}&lt;br&gt;{2}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="491"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="493"/>
         <source>Ran {0} test in {1:.3f}s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="495"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="497"/>
         <source>Ran {0} tests in {1:.3f}s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="512"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="514"/>
         <source>Failure: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="527"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="529"/>
         <source>Error: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="273"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="260"/>
         <source>Skipped:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="280"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="267"/>
         <source>Number of tests skipped</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="290"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="277"/>
         <source>Expected Failures:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="297"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="284"/>
         <source>Number of tests with expected failure</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="307"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="294"/>
         <source>Unexpected Successes:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="314"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="301"/>
         <source>Number of tests with unexpected success</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="542"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="544"/>
         <source>    Skipped: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="557"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="559"/>
         <source>    Expected Failure</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="571"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="573"/>
         <source>    Unexpected Success</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="75"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="78"/>
         <source>Rerun Failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="77"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="80"/>
         <source>Reruns failed tests of the selected testsuite</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="79"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="82"/>
         <source>&lt;b&gt;Rerun Failed&lt;/b&gt;&lt;p&gt;This button reruns all failed tests of the selected testsuite.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="179"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="166"/>
         <source>%v/%m Tests</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PyUnit/UnittestDialog.ui" line="20"/>
+        <source>Test Parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PyUnit/UnittestDialog.ui" line="85"/>
+        <source>Run Parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PyUnit/UnittestDialog.ui" line="127"/>
+        <source>Progress</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

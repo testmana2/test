@@ -443,16 +443,16 @@
         <location filename="../Project/AddDirectoryDialog.ui" line="108"/>
         <source>&lt;b&gt;Target Directory&lt;/b&gt;
 &lt;p&gt;Select the target directory via a directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Cílový adresář&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Cílový adresář&lt;/b&gt;
 &lt;p&gt;Výběr cílového adresáře přes dialogové okno výběru adresáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="35"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="74"/>
         <source>&amp;Target Directory:</source>
         <translation>&amp;Cílový adresář:</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="45"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="62"/>
         <source>Enter the name of the directory to add</source>
         <translation>Vložte jméno adresáře, který se má přidat</translation>
     </message>
@@ -462,27 +462,27 @@
 &lt;p&gt;Enter the name of the directory to add to the current project.
  You may select it with a dialog by pressing the button to
  the right.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Zdrojový adresář&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Zdrojový adresář&lt;/b&gt;
 &lt;p&gt;Vložte jméno adresáře, krerý se má přidat do aktuálního projektu
 Stisknutím pravého tlačítka jej můžete vybrat pomocí dialogového okna.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="58"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="105"/>
         <source>Select, whether a recursive add should be performed</source>
         <translation>Vybrat, jestliže přidávání bude rekurzivní</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="61"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="108"/>
         <source>&amp;Recurse into subdirectories</source>
         <translation>&amp;Rekurzivně i pro podadresáře</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="68"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="93"/>
         <source>Enter the target directory for the file</source>
         <translation>Název cílového adresáře pro soubor</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="71"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="96"/>
         <source>&lt;b&gt;Target Directory&lt;/b&gt;
 &lt;p&gt;Enter the target directory. You may select it
  with a dialog by pressing the button to the right.&lt;/p&gt;</source>
@@ -494,48 +494,55 @@ jej můžete vybrat v dialogovém okně.&lt;/p&gt;</translation>
         <location filename="../Project/AddDirectoryDialog.ui" line="100"/>
         <source>&lt;b&gt;Source Directory&lt;/b&gt;
 &lt;p&gt;Select the source directory via a directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Zdrojový adresář&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Zdrojový adresář&lt;/b&gt;
 &lt;p&gt;Výběr zdrojového adresáře přes dialogové okno.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="80"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="43"/>
         <source>&amp;Source Directory:</source>
         <translation>Zdrojový adre&amp;sář:</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.ui" line="90"/>
+        <location filename="../Project/AddDirectoryDialog.ui" line="30"/>
         <source>&amp;File Type:</source>
         <translation>&amp;Typ souboru:</translation>
     </message>
     <message>
         <location filename="../Project/AddDirectoryDialog.py" line="116"/>
         <source>Select directory</source>
-        <translation>Výběr adresáře</translation>
+        <translation type="obsolete">Výběr adresáře</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.py" line="72"/>
+        <location filename="../Project/AddDirectoryDialog.py" line="66"/>
         <source>Source Files</source>
         <translation>Zdrojové soubory</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.py" line="74"/>
+        <location filename="../Project/AddDirectoryDialog.py" line="68"/>
         <source>Forms Files</source>
         <translation>Soubory s formuláři</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.py" line="78"/>
+        <location filename="../Project/AddDirectoryDialog.py" line="72"/>
         <source>Interface Files</source>
         <translation>Interface soubory</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.py" line="80"/>
+        <location filename="../Project/AddDirectoryDialog.py" line="74"/>
         <source>Other Files (*)</source>
         <translation>Jiné soubory (*)</translation>
     </message>
     <message>
-        <location filename="../Project/AddDirectoryDialog.py" line="76"/>
+        <location filename="../Project/AddDirectoryDialog.py" line="70"/>
         <source>Resource Files</source>
         <translation>Resource soubory</translation>
+    </message>
+    <message>
+        <location filename="../Project/AddDirectoryDialog.ui" line="65"/>
+        <source>&lt;b&gt;Source Directory&lt;/b&gt;
+&lt;p&gt;Enter the name of the directory to add to the current project.
+ You may select it with a dialog by pressing the button to the right.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -556,21 +563,21 @@ jej můžete vybrat v dialogovém okně.&lt;/p&gt;</translation>
         <location filename="../Project/AddFileDialog.ui" line="74"/>
         <source>&lt;b&gt;Source Files&lt;/b&gt;
 &lt;p&gt;Select the source files via a files selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Zdrojové soubory&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Zdrojové soubory&lt;/b&gt;
 &lt;p&gt;Výběr zdrojových souborů přes dialogové okno výběru souborů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="29"/>
+        <location filename="../Project/AddFileDialog.ui" line="61"/>
         <source>&amp;Target Directory:</source>
         <translation>&amp;Cílový adresář:</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="39"/>
+        <location filename="../Project/AddFileDialog.ui" line="80"/>
         <source>Enter the target directory for the file</source>
         <translation>Zadejte cílový adresář pro soubor</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="42"/>
+        <location filename="../Project/AddFileDialog.ui" line="83"/>
         <source>&lt;b&gt;Target Directory&lt;/b&gt;
 &lt;p&gt;Enter the target directory. You may select it
  with a dialog by pressing the button to the right.&lt;/p&gt;</source>
@@ -580,18 +587,18 @@ jej můžete vybrat v dialogovém okně.&lt;/p&gt;</translation>
         <location filename="../Project/AddFileDialog.ui" line="82"/>
         <source>&lt;b&gt;Target Directory&lt;/b&gt;
 &lt;p&gt;Select the target directory via a directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Cílový adresář&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Cílový adresář&lt;/b&gt;
 &lt;p&gt;Výběr cílového adresáře přes dialog výběru adresáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="51"/>
+        <location filename="../Project/AddFileDialog.ui" line="29"/>
         <source>&amp;Source Files:</source>
         <translation>&amp;Zdrojové soubory:</translation>
     </message>
     <message>
         <location filename="../Project/AddFileDialog.ui" line="61"/>
         <source>Enter the name of files to add separated by the path separator</source>
-        <translation>Zadejte jména souborů oddělená oddělovačem cesty</translation>
+        <translation type="obsolete">Zadejte jména souborů oddělená oddělovačem cesty</translation>
     </message>
     <message>
         <location filename="../Project/AddFileDialog.ui" line="64"/>
@@ -599,98 +606,111 @@ jej můžete vybrat v dialogovém okně.&lt;/p&gt;</translation>
 &lt;p&gt;Enter the name of files to add to the current project separated
 by the path separator. You may select them with a dialog by pressing 
 the button to the right.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Zdrojové soubory&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Zdrojové soubory&lt;/b&gt;
 &lt;p&gt;Vložte jména souborů oddělená oddělovačem cesty, krerá se přidají do aktuálního projektu. Stisknutím pravého tlačítka je můžete vybrat pomocí dialogového okna.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="92"/>
+        <location filename="../Project/AddFileDialog.ui" line="94"/>
         <source>Select, if the files should be added as sourcecode (overriding automatic detection)</source>
         <translation>Označte, jestliže soubory mají být přidány jako zdrojový kód (přepíše automatickou detekci)</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="95"/>
+        <location filename="../Project/AddFileDialog.ui" line="97"/>
         <source>Is source&amp;code files</source>
         <translation>Soubor je zdrojový &amp;kód</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.ui" line="98"/>
+        <location filename="../Project/AddFileDialog.ui" line="100"/>
         <source>Alt+C</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../Project/AddFileDialog.py" line="73"/>
         <source>Select target directory</source>
-        <translation>Výběr cílového adresáře</translation>
+        <translation type="obsolete">Výběr cílového adresáře</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="116"/>
+        <location filename="../Project/AddFileDialog.py" line="94"/>
         <source>Select Files</source>
         <translation>Výběr souborů</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="124"/>
+        <location filename="../Project/AddFileDialog.py" line="102"/>
         <source>Select user-interface files</source>
         <translation>Výběr user-interface souborů</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="132"/>
+        <location filename="../Project/AddFileDialog.py" line="110"/>
         <source>Select resource files</source>
         <translation>Výběr resource souborů</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="158"/>
+        <location filename="../Project/AddFileDialog.py" line="136"/>
         <source>All Files (*)</source>
         <translation>Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="140"/>
+        <location filename="../Project/AddFileDialog.py" line="118"/>
         <source>Select source files</source>
         <translation>Výběr zdrojových souborů</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="148"/>
+        <location filename="../Project/AddFileDialog.py" line="126"/>
         <source>Select interface files</source>
         <translation>Výběr interface souborů</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="156"/>
+        <location filename="../Project/AddFileDialog.py" line="134"/>
         <source>Select translation files</source>
         <translation>Výběr souborů s překlady</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="159"/>
+        <location filename="../Project/AddFileDialog.py" line="137"/>
         <source>Select files</source>
         <translation>Výběr souborů</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="103"/>
+        <location filename="../Project/AddFileDialog.py" line="81"/>
         <source>Source Files ({0});;Forms Files ({1});;Resource Files ({2});;Interface Files ({3});;Translation Files ({4});;All Files (*)</source>
         <translation>Zdrojové soubory ({0});;Soubory s formuláři ({1});;Resource soubory ({2});;Interface soubory ({3});; Soubory s překlady ({4});;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="122"/>
+        <location filename="../Project/AddFileDialog.py" line="100"/>
         <source>Forms Files ({0})</source>
         <translation>Soubory s formuláři ({0})</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="130"/>
+        <location filename="../Project/AddFileDialog.py" line="108"/>
         <source>Resource Files ({0})</source>
         <translation>Zdrojové soubory {0})</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="138"/>
+        <location filename="../Project/AddFileDialog.py" line="116"/>
         <source>Source Files ({0});;All Files (*)</source>
         <translation>Zdrojové soubory ({0});;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="146"/>
+        <location filename="../Project/AddFileDialog.py" line="124"/>
         <source>Interface Files ({0})</source>
         <translation>Interface soubory ({0})</translation>
     </message>
     <message>
-        <location filename="../Project/AddFileDialog.py" line="154"/>
+        <location filename="../Project/AddFileDialog.py" line="132"/>
         <source>Translation Files ({0})</source>
         <translation>Soubory s překlady ({0})</translation>
+    </message>
+    <message>
+        <location filename="../Project/AddFileDialog.ui" line="48"/>
+        <source>Enter the name of files to add separated by &quot;;&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Project/AddFileDialog.ui" line="51"/>
+        <source>&lt;b&gt;Source Files&lt;/b&gt;
+&lt;p&gt;Enter the name of files to add to the current project separated
+by &quot;;&quot;. You may select them with a dialog by pressing 
+the button to the right.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1066,7 +1086,7 @@ the button to the right.&lt;/p&gt;</source>
 <context>
     <name>AddProjectDialog</name>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.py" line="80"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="14"/>
         <source>Add Project</source>
         <translation>Nový projekt</translation>
     </message>
@@ -1086,52 +1106,52 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Sou&amp;bor projektu:</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="50"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="59"/>
         <source>Enter the name of the project file</source>
         <translation>Zadejte název souboru projektu</translation>
     </message>
     <message>
         <location filename="../MultiProject/AddProjectDialog.ui" line="57"/>
         <source>Select the project file via a file selection dialog</source>
-        <translation>Výběr projektu přes dialogové okno výběru souboru</translation>
+        <translation type="obsolete">Výběr projektu přes dialogové okno výběru souboru</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="77"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="79"/>
         <source>Enter a short description for the project</source>
         <translation>Zadejte krátký popis projektu</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="64"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="66"/>
         <source>&amp;Description:</source>
         <translation>&amp;Popis:</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.py" line="59"/>
+        <location filename="../MultiProject/AddProjectDialog.py" line="56"/>
         <source>Project Properties</source>
         <translation>Nastavení projektu</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.py" line="80"/>
+        <location filename="../MultiProject/AddProjectDialog.py" line="42"/>
         <source>Project Files (*.e4p)</source>
         <translation>Soubory projektu (*.e4p)</translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="110"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="112"/>
         <source>Select to make this project the main project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="113"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="115"/>
         <source>Is &amp;main project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="90"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="92"/>
         <source>&amp;Category:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../MultiProject/AddProjectDialog.ui" line="100"/>
+        <location filename="../MultiProject/AddProjectDialog.ui" line="102"/>
         <source>Select a project category</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1530,122 +1550,122 @@ the button to the right.&lt;/p&gt;</source>
         <translation>Konfigurace menu souborů v záložkách</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="35"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="75"/>
         <source>Delete the selected entry</source>
         <translation>Smazat vybranou položku</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="38"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="78"/>
         <source>&lt;b&gt;Delete&lt;/b&gt;
 &lt;p&gt;Delete the selected entry.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Smazat&lt;/b&gt;
 &lt;p&gt;Smazat vybranou položku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="42"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="82"/>
         <source>&amp;Delete</source>
         <translation>Sma&amp;zat</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="101"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="125"/>
         <source>Alt+D</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="71"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="95"/>
         <source>Move up</source>
         <translation>Posunout nahoru</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="74"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="98"/>
         <source>&lt;b&gt;Move Up&lt;/b&gt;
 &lt;p&gt;Move the selected entry up.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Posunout nahoru&lt;/b&gt;
 &lt;p&gt;Posunout vybranou položku nahoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="78"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="102"/>
         <source>&amp;Up</source>
         <translation>Nahor&amp;u</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="81"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="105"/>
         <source>Alt+U</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="169"/>
         <source>Select the file via a file selection dialog</source>
-        <translation>Vybrat soubor přes dialog výběru souborů</translation>
+        <translation type="obsolete">Vybrat soubor přes dialog výběru souborů</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="91"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="115"/>
         <source>Move down</source>
         <translation>Posunout dolů</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="94"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="118"/>
         <source>&lt;b&gt;Move Down&lt;/b&gt;
 &lt;p&gt;Move the selected entry down.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Posunout dolů&lt;/b&gt;
 &lt;p&gt;Posunout vybranou položku dolů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="98"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="122"/>
         <source>&amp;Down</source>
         <translation>&amp;Dolů</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="111"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="35"/>
         <source>Add a new bookmarked file</source>
         <translation>Přidat novou záložku</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="114"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="38"/>
         <source>&lt;b&gt;Add&lt;/b&gt;
 &lt;p&gt;Add a new bookmarked file with the value entered below.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přidat&lt;/b&gt;
 &lt;p&gt;Přidat novou záložku s hodnotou zadanou níže.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="118"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="42"/>
         <source>&amp;Add</source>
         <translation>Přid&amp;at</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="121"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="45"/>
         <source>Alt+A</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="128"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="148"/>
         <source>&amp;File:</source>
         <translation>&amp;Soubor:</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="141"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="55"/>
         <source>Change the value of the selected entry</source>
         <translation>Změnit hodnotu vybrané položky</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="144"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="58"/>
         <source>&lt;b&gt;Change&lt;/b&gt;
 &lt;p&gt;Change the value of the selected entry.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Změnit&lt;/b&gt;
 &lt;p&gt;Změnit hodnotu vybrané položky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="148"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="62"/>
         <source>C&amp;hange</source>
         <translation>Z&amp;měnit</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="151"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="65"/>
         <source>Alt+H</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="158"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="167"/>
         <source>Enter the filename of the file</source>
         <translation>Vložte jméno souboru</translation>
     </message>
@@ -1653,11 +1673,11 @@ the button to the right.&lt;/p&gt;</source>
         <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="172"/>
         <source>&lt;b&gt;File&lt;/b&gt;
 &lt;p&gt;Select the file to be bookmarked via a file selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Soubor&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Soubor&lt;/b&gt;
 &lt;p&gt;Výběr souboru, který bude uložen do záložek, pomocí dialogu výběru souborů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="161"/>
+        <location filename="../ViewManager/BookmarkedFilesDialog.ui" line="170"/>
         <source>&lt;b&gt;File&lt;/b&gt;
 &lt;p&gt;Enter the filename of the bookmarked file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Soubor&lt;/b&gt;
@@ -1745,44 +1765,34 @@ the button to the right.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="196"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="187"/>
         <source>Cancel</source>
         <translation type="unfinished">Zrušit</translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="94"/>
-        <source>Choose Directory ...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="104"/>
-        <source>Choose File ...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="129"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="103"/>
         <source>&lt;b&gt;Importing from {0}&lt;/b&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="136"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="110"/>
         <source>Finish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="151"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.py" line="137"/>
         <source>Error importing bookmarks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="145"/>
-        <source>Shows the name of the bookmarks file or directory</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="189"/>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="180"/>
         <source>Next &gt;</source>
         <translation type="unfinished">Další &gt;</translation>
+    </message>
+    <message>
+        <location filename="../Helpviewer/Bookmarks/BookmarksImportDialog.ui" line="141"/>
+        <source>Enter the name of the bookmarks file or directory</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3945,109 +3955,114 @@ the respective line and position.&lt;/p&gt;</source>
         <translation>Porovnání souboru</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="41"/>
+        <location filename="../UI/CompareDialog.ui" line="29"/>
         <source>File &amp;1:</source>
         <translation>Soubor &amp;1:</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="51"/>
+        <location filename="../UI/CompareDialog.ui" line="48"/>
         <source>Enter the name of the first file</source>
         <translation>Zadejte jméno prvního souboru</translation>
     </message>
     <message>
         <location filename="../UI/CompareDialog.ui" line="82"/>
         <source>Press to select the file via a file selection dialog</source>
-        <translation>Stisknout pro výběr souboru přes dialogové okno</translation>
+        <translation type="obsolete">Stisknout pro výběr souboru přes dialogové okno</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="65"/>
+        <location filename="../UI/CompareDialog.ui" line="55"/>
         <source>File &amp;2:</source>
         <translation>Soubor &amp;2:</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="75"/>
+        <location filename="../UI/CompareDialog.ui" line="74"/>
         <source>Enter the name of the second file</source>
         <translation>Zadejte jméno druhého souboru</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="151"/>
+        <location filename="../UI/CompareDialog.ui" line="143"/>
         <source>Press to move to the first difference</source>
         <translation>Stisknout pro posun na první rozdíl</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="161"/>
+        <location filename="../UI/CompareDialog.ui" line="153"/>
         <source>Press to move to the previous difference</source>
         <translation>Stisknout pro posun na předchozí rozdíl</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="171"/>
+        <location filename="../UI/CompareDialog.ui" line="163"/>
         <source>Press to move to the next difference</source>
         <translation>Stisknout pro posun na další rozdíl</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="181"/>
+        <location filename="../UI/CompareDialog.ui" line="173"/>
         <source>Press to move to the last difference</source>
         <translation>Stisknout pro posun na poslední rozdíl</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="230"/>
+        <location filename="../UI/CompareDialog.ui" line="222"/>
         <source>Alt+S</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="111"/>
+        <location filename="../UI/CompareDialog.py" line="107"/>
         <source>Compare</source>
         <translation>Porovnat</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="113"/>
+        <location filename="../UI/CompareDialog.py" line="109"/>
         <source>Press to perform the comparison of the two files</source>
         <translation>Stisknout pro provedení porovnání dvou souborů</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="253"/>
+        <location filename="../UI/CompareDialog.py" line="249"/>
         <source>Compare Files</source>
         <translation>Porovnat soubory</translation>
     </message>
     <message>
         <location filename="../UI/CompareDialog.py" line="448"/>
         <source>Select file to compare</source>
-        <translation>Výběr souboru pro porovnání</translation>
+        <translation type="obsolete">Výběr souboru pro porovnání</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="224"/>
+        <location filename="../UI/CompareDialog.ui" line="216"/>
         <source>Select, if the horizontal scrollbars should be synchronized</source>
         <translation>Vybrat, mají-li se vodorovné posuvníky pohybovat společně</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.ui" line="227"/>
+        <location filename="../UI/CompareDialog.ui" line="219"/>
         <source>&amp;Synchronize horizontal scrollbars</source>
         <translation>&amp;Synchronizovat vodorovné posuvníky</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="360"/>
+        <location filename="../UI/CompareDialog.py" line="356"/>
         <source>Total: {0}</source>
         <translation>Celkem: {0}</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="362"/>
+        <location filename="../UI/CompareDialog.py" line="358"/>
         <source>Changed: {0}</source>
         <translation>Změněno: {0}</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="363"/>
+        <location filename="../UI/CompareDialog.py" line="359"/>
         <source>Added: {0}</source>
         <translation>Přidáno: {0}</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="364"/>
+        <location filename="../UI/CompareDialog.py" line="360"/>
         <source>Deleted: {0}</source>
         <translation>Smazáno: {0}</translation>
     </message>
     <message>
-        <location filename="../UI/CompareDialog.py" line="253"/>
+        <location filename="../UI/CompareDialog.py" line="249"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nelze přečíst.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../UI/CompareDialog.ui" line="20"/>
+        <source>Files to be compared:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4845,12 +4860,12 @@ to display the configuration page.</source>
         <translation>Stisknout pro výběr IDL kompilátoru přes dialog výběru souboru.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="43"/>
+        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="46"/>
         <source>Enter the path to the IDL compiler.</source>
         <translation type="unfinished">Zadejte cestu k IDL kompilátoru.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="50"/>
+        <location filename="../Preferences/ConfigurationPages/CorbaPage.ui" line="53"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the default value (omniidl or omniidl.exe).</source>
         <translation>&lt;b&gt;Poznámka:&lt;/b&gt; Ponechte tento vstup prázdný chcete-li použít defaultní hodnotu omniidl or omniidl.exe).</translation>
     </message>
@@ -6240,192 +6255,192 @@ Nepřipojen
         <translation>Klient debugeru</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="29"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="32"/>
         <source>Enter the path of the Debug Client to be used.  Leave empty to use the default.</source>
         <translation>Zadání cesty ke klinetu debugeru. Ponechte prázdné chcete-li použít default.</translation>
     </message>
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="36"/>
         <source>Press to select the Debug Client via a file selection dialog</source>
-        <translation>Stisknout pro výběr klienta debugeru přes dialog výběru souborů</translation>
+        <translation type="obsolete">Stisknout pro výběr klienta debugeru přes dialog výběru souborů</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="46"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="42"/>
         <source>Interpreter for Debug Client</source>
         <translation>Interpret pro klienta debugeru</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="52"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="51"/>
         <source>Enter the path of the interpreter to be used by the debug client.</source>
         <translation>Zadání cesty k interpretru použitého v klient debugeru.</translation>
     </message>
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.ui" line="59"/>
         <source>Press to select the interpreter via a file selection dialog</source>
-        <translation>Stisknout pro výběr interpretru přes dialog výběru souborů</translation>
+        <translation type="obsolete">Stisknout pro výběr interpretru přes dialog výběru souborů</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="69"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="61"/>
         <source>Environment for Debug Client</source>
         <translation>Prostředí klienta debugeru</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="75"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="67"/>
         <source>Select, if the environment of the debug client should be replaced</source>
         <translation>Zatrhněte, jestliže prostředí klienta debugeru má být nahrazeno</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="78"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="70"/>
         <source>Replace Environment</source>
         <translation>Nahradit prostředí</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="85"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="77"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Zadání proměnných prostředí, které mají být nastaveny.</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="88"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="80"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the debugger. The individual settings must be separate by whitespace and be given in the form &apos;var=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot;&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prostředí&lt;/b&gt;&lt;p&gt;Zadání proměnných prostředím které debuger použije. Jednotlivá nastavení musí být oddělena bílými znaky a být ve formátu  &apos;var=value&apos;.&lt;/p&gt;&lt;p&gt;Příklad: var1=1 var2=&quot;hello world&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="97"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="89"/>
         <source>Environment:</source>
         <translation>Prostředí:</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="107"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="99"/>
         <source>Select, if the debugger should be run remotely</source>
         <translation>Vyberte, má-li debuger běžet vzdáleně</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="110"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="102"/>
         <source>Remote Debugger</source>
         <translation>Vzdálený debuger</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="119"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="111"/>
         <source>Select, if path translation for remote debugging should be done</source>
         <translation>Vyberte, je-li cesta překladu pro vzdálený debuger dána</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="122"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="114"/>
         <source>Perform Path Translation</source>
         <translation>Vykonat cestu překladu</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="131"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="123"/>
         <source>Local Path:</source>
         <translation>Lokální cesta:</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="138"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="130"/>
         <source>Enter the local path</source>
         <translation>Zadání lokální cesty</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="145"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="137"/>
         <source>Enter the remote path</source>
         <translation>Zadání vzdálené cesty</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="152"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="144"/>
         <source>Remote Path:</source>
         <translation>Vzdálená cesta:</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="162"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="154"/>
         <source>Remote Host:</source>
         <translation>Vzdálený host:</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="169"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="161"/>
         <source>Enter the remote execution command.</source>
         <translation>Zadání příkazu pro vzdálené vykonání.</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="172"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="164"/>
         <source>&lt;b&gt;Remote Execution&lt;/b&gt;
 &lt;p&gt;Enter the remote execution command (e.g. ssh). This command is used to log into the remote host and execute the remote debugger.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vzdálené vykonání&lt;/b&gt;&lt;p&gt;Zadání příkazu pro vzdálené vykonání (např. ssh). Tento příkaz je použit pro zalogování se na vzdáleného hosta a spuštění vzdáleného debugeru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="180"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="172"/>
         <source>Remote Execution:</source>
         <translation>Vykonat vzdálený příkaz:</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="187"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="179"/>
         <source>Enter the hostname of the remote machine.</source>
         <translation>Zadání jméno hosta vzdáleného stroje.</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="190"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="182"/>
         <source>&lt;b&gt;Remote Host&lt;/b&gt;
 &lt;p&gt;Enter the hostname of the remote machine.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vzdálený host&lt;/b&gt;&lt;p&gt;Zadání jména hosta vzdáleného stroje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="201"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="193"/>
         <source>Select, if the debugger should be executed in a console window</source>
         <translation>Vyberte má-li debuger běžet v okně konzole</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="204"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="196"/>
         <source>Console Debugger</source>
         <translation>Debuger na konzoli</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="213"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="205"/>
         <source>Console Command:</source>
         <translation>Příkaz konzole:</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="220"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="212"/>
         <source>Enter the console command (e.g. xterm -e)</source>
         <translation>Zadání příkazu konzole (např. xterm -e)</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="223"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="215"/>
         <source>&lt;b&gt;Console Command&lt;/b&gt;
 &lt;p&gt;Enter the console command (e.g. xterm -e). This command is used to open a command window for the debugger.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Příkaz konzole&lt;/b&gt;&lt;p&gt;Zadání příkazu konzole (např. xterm -e). Tento příkaz je použit pro otevření příkazového okna debugeru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="237"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="229"/>
         <source>Redirect stdin/stdout/stderr</source>
         <translation>Přesměrování stdin/stdout/stderr</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="244"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="236"/>
         <source>Select to not set the debug client encoding</source>
         <translation>Nenastavovat kódování debug klienta</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="247"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="239"/>
         <source>Don&apos;t set the encoding of the debug client</source>
         <translation>Nenastavovat kódování debug klienta</translation>
     </message>
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.py" line="119"/>
         <source>Select interpreter for Debug Client</source>
-        <translation>Výběr interpretru pro Debug klienta</translation>
+        <translation type="obsolete">Výběr interpretru pro Debug klienta</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.py" line="135"/>
+        <location filename="../Project/DebuggerPropertiesDialog.py" line="118"/>
         <source>All Files (*)</source>
         <translation>Všechny soubory (*)</translation>
     </message>
     <message>
         <location filename="../Project/DebuggerPropertiesDialog.py" line="136"/>
         <source>Select Debug Client</source>
-        <translation>Výběr Debug klienta</translation>
+        <translation type="obsolete">Výběr Debug klienta</translation>
     </message>
     <message>
-        <location filename="../Project/DebuggerPropertiesDialog.ui" line="234"/>
+        <location filename="../Project/DebuggerPropertiesDialog.ui" line="226"/>
         <source>Select to redirect stdin, stdout and stderr of the program being debugged to the eric6 IDE</source>
         <translation type="unfinished">Vyberte pro přesměrování stdin, stdout, a stderr programu, který je debugován v eric5 IDE {6 ?}</translation>
     </message>
@@ -6443,102 +6458,102 @@ Nepřipojen
         <translation>Python3 interpret pro Debug klienta</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="50"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="33"/>
         <source>Press to select the Python3 interpreter via a file selection dialog</source>
         <translation>Stisknout pro výběr Python3 interpretru přes dialog výběru souborů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="60"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="56"/>
         <source>Debug Client Type</source>
         <translation>Typ Debug klienta</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="71"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="98"/>
         <source>Enter the path of the Debug Client to be used.  Leave empty to use the default.</source>
         <translation>Zadání cesty ke klinetu debugeru.   Ponechte prázdné chcete-li použít výchozí hodnotu.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="81"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="38"/>
         <source>Press to select the Debug Client via a file selection dialog</source>
         <translation>Stisknout pro výběr klienta debugeru přes dialog výběru souborů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="90"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="62"/>
         <source>Select the standard debug client</source>
         <translation>Výběr standardního debug klienta</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="93"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="65"/>
         <source>Standard</source>
         <translation>Standard</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="100"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="82"/>
         <source>Select the custom selected debug client</source>
         <translation>Zapnout vybraného obvyklého debug klienta</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="103"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="85"/>
         <source>Custom</source>
         <translation>Obvyklý</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="110"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="72"/>
         <source>Select the multi threaded debug client</source>
         <translation>Výběr multi threadového debug klienta</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="113"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="75"/>
         <source>Multi Threaded</source>
         <translation>Multi Threadový</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="123"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="108"/>
         <source>Source association</source>
         <translation>Asociace zdroje</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="129"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="114"/>
         <source>Enter the file extensions to be associated with the Python3 debugger separated by a space. They must not overlap with the ones for Python2.</source>
         <translation>Zadejte extenze (oddělené mezerou) pro asociaci s Python3 debugerem. Pozor! Musí být jiné, než ty pro Python2. </translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="148"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="133"/>
         <source>Redirect stdin/stdout/stderr</source>
         <translation>Přesměrování stdin/stdout/stderr</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="155"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="140"/>
         <source>Select to not set the debug client encoding</source>
         <translation>Nenastavovat kódování debug klienta</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="158"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="143"/>
         <source>Don&apos;t set the encoding of the debug client</source>
         <translation>Nenastavovat kódování debug klienta</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="94"/>
         <source>Select Python interpreter for Debug Client</source>
-        <translation>Výběr interpretru pro Debug klienta</translation>
+        <translation type="obsolete">Výběr interpretru pro Debug klienta</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="109"/>
         <source>Select Debug Client</source>
-        <translation>Výběr Debug klienta</translation>
+        <translation type="obsolete">Výběr Debug klienta</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="109"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.py" line="40"/>
         <source>Python Files (*.py *.py3)</source>
         <translation>Python soubory (*.py *.py3)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="43"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="46"/>
         <source>Enter the path of the Python3 interpreter to be used by the debug client. Leave empty to use the default.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="145"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPython3Page.ui" line="130"/>
         <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric6 IDE</source>
         <translation type="unfinished">Vyberte pro přesměrování stdin, stdout, a stderr programu, který je debugován v eric5 IDE {6 ?}</translation>
     </message>
@@ -6556,102 +6571,102 @@ Nepřipojen
         <translation>Python interpret pro Debug klienta</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="50"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="33"/>
         <source>Press to select the Python interpreter via a file selection dialog</source>
         <translation>Stisknout pro výběr Python interpretru přes dialog výběru souborů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="60"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="56"/>
         <source>Debug Client Type</source>
         <translation>Typ Debug klienta</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="71"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="98"/>
         <source>Enter the path of the Debug Client to be used.  Leave empty to use the default.</source>
         <translation>Zadání cesty k Debug klinetovi, který se má použít. Ponechte prázdné chcete-li použít default.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="81"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="38"/>
         <source>Press to select the Debug Client via a file selection dialog</source>
         <translation>Stisknout pro výběr klienta debugeru přes dialog výběru souborů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="90"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="62"/>
         <source>Select the standard debug client</source>
         <translation>Výběr standardního debug klienta</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="93"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="65"/>
         <source>Standard</source>
         <translation>Standard</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="100"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="82"/>
         <source>Select the custom selected debug client</source>
         <translation>Zapnout vybraného běžného debug klienta</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="103"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="85"/>
         <source>Custom</source>
         <translation>Běžný</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="110"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="72"/>
         <source>Select the multi threaded debug client</source>
         <translation>Výběr multi threadového debug klienta</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="113"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="75"/>
         <source>Multi Threaded</source>
         <translation>Multi Threadový</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="148"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="133"/>
         <source>Redirect stdin/stdout/stderr</source>
         <translation>Přesměrování stdin/stdout/stderr</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="155"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="140"/>
         <source>Select to not set the debug client encoding</source>
         <translation>Nenastavovat kódování debug klienta</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="158"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="143"/>
         <source>Don&apos;t set the encoding of the debug client</source>
         <translation>Nenastavovat kódování debug klienta</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="94"/>
         <source>Select Python interpreter for Debug Client</source>
-        <translation>Výběr interpretru pro Debug klienta</translation>
+        <translation type="obsolete">Výběr interpretru pro Debug klienta</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="109"/>
         <source>Select Debug Client</source>
-        <translation>Výběr Debug klienta</translation>
+        <translation type="obsolete">Výběr Debug klienta</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="123"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="108"/>
         <source>Source association</source>
         <translation>Asociace zdroje</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="129"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="114"/>
         <source>Enter the file extensions to be associated with the Python2 debugger separated by a space. They must not overlap with the ones for Python3.</source>
         <translation>Zadejte extenze (oddělené mezerou) pro asociaci s Python2 debugerem. Pozor! Musí být jiné, než ty pro Python3. </translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="109"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.py" line="40"/>
         <source>Python Files (*.py *.py2)</source>
         <translation type="unfinished">Python soubory (*.py *.py3) {2)?}</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="43"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="46"/>
         <source>Enter the path of the Python interpreter to be used by the debug client.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="145"/>
+        <location filename="../Preferences/ConfigurationPages/DebuggerPythonPage.ui" line="130"/>
         <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric6 IDE</source>
         <translation type="unfinished">Vyberte pro přesměrování stdin, stdout, a stderr programu, který je debugován v eric5 IDE {6 ?}</translation>
     </message>
@@ -6661,37 +6676,37 @@ Nepřipojen
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="17"/>
         <source>&lt;b&gt;Configure Ruby Debugger&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Konfigurace Ruby debuger&lt;/b&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Konfigurace Ruby debuger&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="37"/>
         <source>Ruby Interpreter for Debug Client</source>
-        <translation>Ruby interpret pro Debug klienta</translation>
+        <translation type="obsolete">Ruby interpret pro Debug klienta</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="43"/>
         <source>Enter the path of the Ruby interpreter to be used by the debug client.</source>
-        <translation>Zadání cesty na Ruby interpret, který bude použit debug klientem.</translation>
+        <translation type="obsolete">Zadání cesty na Ruby interpret, který bude použit debug klientem.</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="50"/>
         <source>Press to select the Ruby interpreter via a file selection dialog</source>
-        <translation>Stisknout pro výběr Ruby interpretru přes dialog výběru souborů</translation>
+        <translation type="obsolete">Stisknout pro výběr Ruby interpretru přes dialog výběru souborů</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="63"/>
         <source>Redirect stdin/stdout/stderr</source>
-        <translation>Přesměrování stdin/stdout/stderr</translation>
+        <translation type="obsolete">Přesměrování stdin/stdout/stderr</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.py" line="64"/>
         <source>Select Ruby interpreter for Debug Client</source>
-        <translation>Výběr Ruby interpretru pro Debug klienta</translation>
+        <translation type="obsolete">Výběr Ruby interpretru pro Debug klienta</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/DebuggerRubyPage.ui" line="60"/>
         <source>Select, to redirect stdin, stdout and stderr of the program being debugged to the eric6 IDE</source>
-        <translation type="unfinished">Vyberte pro přesměrování stdin, stdout, a stderr programu, který je debugován v eric5 IDE {6 ?}</translation>
+        <translation type="obsolete">Vyberte pro přesměrování stdin, stdout, a stderr programu, který je debugován v eric5 IDE {6 ?}</translation>
     </message>
 </context>
 <context>
@@ -6715,113 +6730,118 @@ Nepřipojen
         <translation>Soubor &amp;1:</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="32"/>
+        <location filename="../UI/DiffDialog.ui" line="41"/>
         <source>Enter the name of the first file</source>
         <translation>Zadání jména prvního souboru</translation>
     </message>
     <message>
         <location filename="../UI/DiffDialog.ui" line="67"/>
         <source>Press to select the file via a file selection dialog</source>
-        <translation>Stisknout pro výběr souboru přes dialog výběru souborů</translation>
+        <translation type="obsolete">Stisknout pro výběr souboru přes dialog výběru souborů</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="50"/>
+        <location filename="../UI/DiffDialog.ui" line="52"/>
         <source>File &amp;2:</source>
         <translation>Soubor &amp;2:</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="60"/>
+        <location filename="../UI/DiffDialog.ui" line="71"/>
         <source>Enter the name of the second file</source>
         <translation>Zadejte jméno druhého souboru</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="82"/>
+        <location filename="../UI/DiffDialog.ui" line="86"/>
         <source>Select to generate a unified diff</source>
         <translation>Zapnout generování sjednoceného diffu</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="85"/>
+        <location filename="../UI/DiffDialog.ui" line="89"/>
         <source>&amp;Unified Diff</source>
         <translation>&amp;Sjednocený Diff</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="88"/>
+        <location filename="../UI/DiffDialog.ui" line="92"/>
         <source>Alt+U</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="98"/>
+        <location filename="../UI/DiffDialog.ui" line="102"/>
         <source>Select to generate a context diff</source>
         <translation>Zapnout generování diffu kontextu</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="101"/>
+        <location filename="../UI/DiffDialog.ui" line="105"/>
         <source>Co&amp;ntext Diff</source>
         <translation>Ko&amp;ntext Diff</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.ui" line="104"/>
+        <location filename="../UI/DiffDialog.ui" line="108"/>
         <source>Alt+N</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="223"/>
+        <location filename="../UI/DiffDialog.py" line="219"/>
         <source>Compare</source>
         <translation>Porovnat</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="225"/>
+        <location filename="../UI/DiffDialog.py" line="221"/>
         <source>Press to perform the comparison of the two files</source>
         <translation>Stisknout pro provedení porovnání dvou souborů</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="227"/>
+        <location filename="../UI/DiffDialog.py" line="223"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="229"/>
+        <location filename="../UI/DiffDialog.py" line="225"/>
         <source>Save the output to a patch file</source>
         <translation>Uložit výstup do path souboru</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="325"/>
+        <location filename="../UI/DiffDialog.py" line="321"/>
         <source>Save Diff</source>
         <translation>Uložit Diff</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="289"/>
+        <location filename="../UI/DiffDialog.py" line="285"/>
         <source>Patch Files (*.diff)</source>
         <translation>Patch soubory (*.diff)</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="366"/>
+        <location filename="../UI/DiffDialog.py" line="362"/>
         <source>Compare Files</source>
         <translation>Porovnat soubory</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="448"/>
+        <location filename="../UI/DiffDialog.py" line="444"/>
         <source>There is no difference.</source>
         <translation>Žádné rozdíly nebyly nalezeny.</translation>
     </message>
     <message>
         <location filename="../UI/DiffDialog.py" line="467"/>
         <source>Select file to compare</source>
-        <translation>Výběr souboru pro porovnání</translation>
+        <translation type="obsolete">Výběr souboru pro porovnání</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="325"/>
+        <location filename="../UI/DiffDialog.py" line="321"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; could not be saved.&lt;br /&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Patch soubor &lt;b&gt;{0}&lt;/b&gt; nelze uložit.&lt;br /&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="366"/>
+        <location filename="../UI/DiffDialog.py" line="362"/>
         <source>&lt;p&gt;The file &lt;b&gt;{0}&lt;/b&gt; could not be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Soubor &lt;b&gt;{0}&lt;/b&gt; nelze přečíst.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/DiffDialog.py" line="306"/>
+        <location filename="../UI/DiffDialog.py" line="302"/>
         <source>&lt;p&gt;The patch file &lt;b&gt;{0}&lt;/b&gt; already exists. Overwrite it?&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../UI/DiffDialog.ui" line="80"/>
+        <source>Select Diff Kind</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7328,6 +7348,39 @@ Do you want to quit anyway?</source>
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
+    </message>
+</context>
+<context>
+    <name>E5ComboPathPicker</name>
+    <message>
+        <location filename="../E5Gui/E5PathPicker.py" line="561"/>
+        <source>Enter Path Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5PathPicker.py" line="558"/>
+        <source>Enter Path Names separated by &apos;;&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5PathPicker.py" line="868"/>
+        <source>Choose a file to open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5PathPicker.py" line="870"/>
+        <source>Choose files to open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5PathPicker.py" line="872"/>
+        <source>Choose a file to save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5PathPicker.py" line="874"/>
+        <source>Choose a directory</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7930,28 +7983,33 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>E5PathPicker</name>
     <message>
-        <location filename="../E5Gui/E5PathPicker.py" line="70"/>
+        <location filename="../E5Gui/E5PathPicker.py" line="149"/>
         <source>Enter Path Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../E5Gui/E5PathPicker.py" line="275"/>
+        <location filename="../E5Gui/E5PathPicker.py" line="407"/>
         <source>Choose a file to open</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../E5Gui/E5PathPicker.py" line="277"/>
+        <location filename="../E5Gui/E5PathPicker.py" line="409"/>
         <source>Choose files to open</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../E5Gui/E5PathPicker.py" line="279"/>
+        <location filename="../E5Gui/E5PathPicker.py" line="413"/>
         <source>Choose a file to save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../E5Gui/E5PathPicker.py" line="281"/>
+        <location filename="../E5Gui/E5PathPicker.py" line="415"/>
         <source>Choose a directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../E5Gui/E5PathPicker.py" line="146"/>
+        <source>Enter Path Names separated by &apos;;&apos;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -8436,12 +8494,12 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation type="unfinished">Stisknout pro vyhledání následujícího výskytu</translation>
     </message>
     <message>
-        <location filename="../E5Gui/E5TextEditSearchWidget.py" line="138"/>
+        <location filename="../E5Gui/E5TextEditSearchWidget.py" line="140"/>
         <source>Find</source>
         <translation type="unfinished">Hledat</translation>
     </message>
     <message>
-        <location filename="../E5Gui/E5TextEditSearchWidget.py" line="138"/>
+        <location filename="../E5Gui/E5TextEditSearchWidget.py" line="140"/>
         <source>&apos;{0}&apos; was not found.</source>
         <translation type="unfinished">&apos;{0}&apos; nebyl nalezen.</translation>
     </message>
@@ -8618,79 +8676,79 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Editovat breakpointy</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="33"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="148"/>
         <source>Select, whether the breakpoint is enabled</source>
         <translation>Vybrat, má-li být breakpoint aktivovaný</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="36"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="151"/>
         <source>Enabled</source>
         <translation>Zapnuto</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="46"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="138"/>
         <source>Select whether this is a temporary breakpoint</source>
         <translation>Vybrat, má-li být breakpoint dočasný</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="49"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="141"/>
         <source>Temporary Breakpoint</source>
         <translation>Dočasný breakpoint</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="56"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="39"/>
         <source>Enter the filename of the breakpoint</source>
         <translation>Zadání jména souboru, ve kterém breakpoint bude</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="72"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="95"/>
         <source>Enter or select a condition for the breakpoint</source>
         <translation>Zadání nebo výběr podmínky breakpointu</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="82"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="112"/>
         <source>Enter an ignore count for the breakpoint</source>
         <translation>Zadání počtu průchodů, které má breakpoint ignorovat</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="108"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="53"/>
         <source>Enter the linenumber of the breakpoint</source>
         <translation>Zadání čísla řádky breakpointu</translation>
     </message>
     <message>
         <location filename="../Debugger/EditBreakpointDialog.ui" line="165"/>
         <source>Press to open a file selection dialog</source>
-        <translation>Stisknout pro otevření dialogu výběru souborů</translation>
+        <translation type="obsolete">Stisknout pro otevření dialogu výběru souborů</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="137"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="46"/>
         <source>Linenumber:</source>
         <translation>Číslo řádky:</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="144"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="23"/>
         <source>Filename:</source>
         <translation>Jméno souboru:</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="151"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="82"/>
         <source>Condition:</source>
         <translation>Podmínka:</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.ui" line="158"/>
+        <location filename="../Debugger/EditBreakpointDialog.ui" line="105"/>
         <source>Ignore Count:</source>
         <translation>Ignorovat počet:</translation>
     </message>
     <message>
-        <location filename="../Debugger/EditBreakpointDialog.py" line="94"/>
+        <location filename="../Debugger/EditBreakpointDialog.py" line="87"/>
         <source>Add Breakpoint</source>
         <translation>Přidat breakpoint</translation>
     </message>
     <message>
         <location filename="../Debugger/EditBreakpointDialog.py" line="129"/>
         <source>Select filename of the breakpoint</source>
-        <translation>Zadání jména souboru, ve kterém breakpoint bude</translation>
+        <translation type="obsolete">Zadání jména souboru, ve kterém breakpoint bude</translation>
     </message>
 </context>
 <context>
@@ -9707,22 +9765,22 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>APIs</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="123"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="129"/>
         <source>Press to select an API file from the list of installed API files</source>
         <translation>Stiskněte pro výběr API souboru ze seznamu instalovaných API</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="197"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="184"/>
         <source>Add from installed APIs</source>
         <translation>Přidat z instalovaných API</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="150"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="156"/>
         <source>Press to compile the selected APIs definition</source>
         <translation>Stiskněte pro kompilování vybrané API definici</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="249"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="236"/>
         <source>Compile APIs</source>
         <translation>Kompilovat API</translation>
     </message>
@@ -9744,10 +9802,10 @@ se zobrazenými položkami.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="116"/>
         <source>Enter a file to be added</source>
-        <translation>Zadejte soubor, který bude přidán</translation>
+        <translation type="obsolete">Zadejte soubor, který bude přidán</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="173"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="39"/>
         <source>Press to select an API file via a selection dialog</source>
         <translation>Stiskněte pro výběr API souboru pomocí dialogového okna</translation>
     </message>
@@ -9759,20 +9817,20 @@ se zobrazenými položkami.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="142"/>
         <source>Select API file</source>
-        <translation>Výběr API souboru</translation>
+        <translation type="obsolete">Výběr API souboru</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="142"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="41"/>
         <source>API File (*.api);;All Files (*)</source>
         <translation>API soubor (*.api);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="186"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="173"/>
         <source>Select from the list of installed API files</source>
         <translation>Výběr ze seznamu instalovaných API souborů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="264"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="251"/>
         <source>Cancel compilation</source>
         <translation>Zrušit kompilaci</translation>
     </message>
@@ -9782,22 +9840,22 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Stisknout pro odebrání vybraného souboru ze seznamu</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="133"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.ui" line="139"/>
         <source>Press to select an API file from the list of API files installed by plugins</source>
         <translation>Stiskněte pro výběr API souboru ze seznamu API souborů instalovaných z pluginů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="216"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="203"/>
         <source>Add from Plugin APIs</source>
         <translation>Přidat z API pluginů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="216"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="203"/>
         <source>Select from the list of API files installed by plugins</source>
         <translation>Vybrat ze seznamu API souborů instalovaných pluginy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="197"/>
+        <location filename="../Preferences/ConfigurationPages/EditorAPIsPage.py" line="184"/>
         <source>There are no APIs installed yet. Selection is not available.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11744,7 +11802,7 @@ se zobrazenými položkami.&lt;/p&gt;
 <context>
     <name>EditorSpellCheckingPage</name>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="295"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="293"/>
         <source>Select to enable spellchecking</source>
         <translation>Vybrat pro zapnutí kontroly pravopisu</translation>
     </message>
@@ -11831,70 +11889,70 @@ se zobrazenými položkami.&lt;/p&gt;
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="237"/>
         <source>Enter the filename of the personal word list</source>
-        <translation>Zadejte jméno souboru s vlasním seznamem slov</translation>
+        <translation type="obsolete">Zadejte jméno souboru s vlasním seznamem slov</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="272"/>
         <source>Select the personal word list file via a file selection dialog</source>
-        <translation>Výběr souboru s vlasním seznamem slov přes dialog výběru</translation>
+        <translation type="obsolete">Výběr souboru s vlasním seznamem slov přes dialog výběru</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="244"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="250"/>
         <source>Personal exclude list file:</source>
         <translation>Soubor s vlastním seznamem vyřazených:</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="251"/>
         <source>Enter the filename of the personal exclude list</source>
-        <translation>Zadejte název souboru s vlastním seznamem vyřazených</translation>
+        <translation type="obsolete">Zadejte název souboru s vlastním seznamem vyřazených</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="279"/>
         <source>Select the personal exclude list file via a file selection dialog</source>
-        <translation>Výběr souboru s vlastním seznamem vyřazených před dialog</translation>
+        <translation type="obsolete">Výběr souboru s vlastním seznamem vyřazených před dialog</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="258"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="270"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; leave these entries empty to use the default</source>
         <translation>&lt;b&gt;Poznámka:&lt;/b&gt; pro použití výchozí hodnoty ponechte prázdné</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="265"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="277"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; valid for all newly opened editors</source>
         <translation>&lt;b&gt;Poznámka:&lt;/b&gt; platné pro všechny nově otevřené editory</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="289"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="287"/>
         <source>Automatic spell checking</source>
         <translation>Automatická kontrola pravopisu</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="298"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="296"/>
         <source>Automatic spell checking enabled</source>
         <translation>Automatická kontrola pravopisu zapnuta</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="307"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="305"/>
         <source>Amount of lines to autocheck at once:</source>
         <translation>Počet řádek kontrolovaných najednou:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="314"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.ui" line="312"/>
         <source>Enter the number of lines to check per go. Higher values increase checking speed but decrease GUI responsivenes</source>
         <translation>Zadejte počet řádek, které se budou kontrolovat najednou. Vyšší hodnota zvyšuje rychlost kontroly ale snižuje GUI plynulost</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="115"/>
         <source>Select personal word list</source>
-        <translation>Výběr vlasního seznamu slov</translation>
+        <translation type="obsolete">Výběr vlasního seznamu slov</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="129"/>
         <source>Select personal exclude list</source>
-        <translation>Výběr vlasního seznamu vyřazených</translation>
+        <translation type="obsolete">Výběr vlasního seznamu vyřazených</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="129"/>
+        <location filename="../Preferences/ConfigurationPages/EditorSpellCheckingPage.py" line="38"/>
         <source>Dictionary File (*.dic);;All Files (*)</source>
         <translation>Soubor slovníku (*.dic);;Všechny soubory (*)</translation>
     </message>
@@ -13390,137 +13448,137 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Konfigurace Ericapi</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="25"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="41"/>
         <source>Enter an output filename</source>
         <translation>Zadejte jméno výstupního souboru</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="45"/>
         <source>Press to open a file selection dialog</source>
-        <translation>Stisknout pro otevření dialogu výběru souborů</translation>
+        <translation type="obsolete">Stisknout pro otevření dialogu výběru souborů</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="35"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="25"/>
         <source>Output File:</source>
         <translation>Výstupní soubor:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="81"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="80"/>
         <source>Additional source extensions:</source>
         <translation>Doplňující extenze zdroje:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="88"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="87"/>
         <source>Enter additional source extensions separated by a comma</source>
         <translation>Zadejte doplňující extenze zdrojů oddělené čárkami</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="115"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="114"/>
         <source>Select to recurse into subdirectories</source>
         <translation>Vybrat pro platnost hodnoty i pro podadresáře</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="118"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="117"/>
         <source>Recurse into subdirectories</source>
         <translation>Rekurzivně i pro podadresáře</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="139"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="138"/>
         <source>Base package name:</source>
         <translation>Jméno bázového balíčku:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="146"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="145"/>
         <source>Enter the name of the base package</source>
         <translation>Zadejte jméno bázového balíčku</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="179"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="178"/>
         <source>Exclude Directories</source>
         <translation>Vyloučit adresáře</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="185"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="220"/>
         <source>Enter a directory basename to be ignored</source>
         <translation>Zadejte jméno bázového adresáře, který má být ignorován</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="192"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="201"/>
         <source>Press to add the entered directory to the list</source>
         <translation>Stisknout pro přidání adresáře do seznamu</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="195"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="204"/>
         <source>Add</source>
         <translation>Přidat</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="205"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="194"/>
         <source>Delete</source>
         <translation>Odebrat</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="222"/>
         <source>Press to open a directory selection dialog</source>
-        <translation>Stisknout pro otevření dialogu výběru adresáře</translation>
+        <translation type="obsolete">Stisknout pro otevření dialogu výběru adresáře</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="212"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="184"/>
         <source>List of directory basenames to be ignored</source>
         <translation>Seznam jmen bázových adresářů, které budou ignorovány</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="197"/>
         <source>Select output file</source>
-        <translation>Vybrat výstupní soubor</translation>
+        <translation type="obsolete">Vybrat výstupní soubor</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="197"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="45"/>
         <source>API files (*.api);;All files (*)</source>
         <translation>API soubory (*.api);;Všechny soubory (*)</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.py" line="228"/>
         <source>Select directory to exclude</source>
-        <translation>Vybrat adresář, který bude vyloučen</translation>
+        <translation type="obsolete">Vybrat adresář, který bude vyloučen</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="157"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="156"/>
         <source>Exclude Files:</source>
         <translation>Nevkládat soubory:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="164"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="163"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
         <translation>Zadejte patterny jmen souborů oddělené čárkami, které se nemají vkládat</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="202"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="191"/>
         <source>Press to delete the selected directory from the list</source>
         <translation>Stisknout pro odebrání vybraného adresáře ze seznamu</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="125"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="124"/>
         <source>Select to include private classes, methods and functions in the API file</source>
         <translation>Vybrat pro vložení private tříd, metod a funkcí v API souboru</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="128"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="127"/>
         <source>Include private classes, methods and functions</source>
         <translation>Vložit private třídy, metody a funkce</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="28"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="44"/>
         <source>&lt;b&gt;Output Filename&lt;/b&gt;&lt;p&gt;Enter the filename of the output file. A &apos;%L&apos; placeholder is replaced by the language of the API file.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Jméno výstupního souboru&lt;/b&gt;&lt;p&gt;Zadejte jmé=no výstupního souboru. Zástupce &apos;%L&apos; bude nahrazen jazykem API souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="60"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="59"/>
         <source>Languages</source>
         <translation>Jazyky</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="66"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericapi/EricapiConfigDialog.ui" line="65"/>
         <source>Select the languages of the  APIs to generate</source>
         <translation>Výběr jazyků, jejichž API se použije pro generování</translation>
     </message>
@@ -13620,322 +13678,322 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Hlavní</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="390"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="406"/>
         <source>Enter an output directory</source>
         <translation>Zadejte výstupní adresář</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="400"/>
         <source>Press to open a directory selection dialog</source>
-        <translation>Stisknout pro otevření dialogu výběru adresáře</translation>
+        <translation type="obsolete">Stisknout pro otevření dialogu výběru adresáře</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="381"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="390"/>
         <source>Output Directory:</source>
         <translation>Výstupní adresář:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="63"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="62"/>
         <source>Additional source extensions:</source>
         <translation>Doplňující extenze zdroje:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="70"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="69"/>
         <source>Enter additional source extensions separated by a comma</source>
         <translation>Zadejte doplňující extenze zdrojů oddělené čárkami</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="81"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="80"/>
         <source>Select to recurse into subdirectories</source>
         <translation>Rekurzivně i pro podadresáře</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="84"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="83"/>
         <source>Recurse into subdirectories</source>
         <translation>Rekurzivně i pro podadresáře</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="91"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="90"/>
         <source>Select, if no index files should be generated</source>
         <translation>Vybrat, jestliže nebudou generovány indexové soubory</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="94"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="93"/>
         <source>Don&apos;t generate index files</source>
         <translation>Negenerovat indexové soubory</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="121"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="120"/>
         <source>Select to exclude empty modules</source>
         <translation>Vybrat pro vyloučení prázdných modulů</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="124"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="123"/>
         <source>Don&apos;t include empty modules</source>
         <translation>Nevkládat prázdné moduly</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="167"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="172"/>
         <source>Exclude Directories</source>
         <translation>Nevkládat adresáře</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="173"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="220"/>
         <source>Enter a directory basename to be ignored</source>
         <translation>Zadejte jméno bázového adresáře, který má být ignorován</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="180"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="178"/>
         <source>Press to add the entered directory to the list</source>
         <translation>Stisknout pro přidání adresáře do seznamu</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="183"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="181"/>
         <source>Add</source>
         <translation>Přidat</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="193"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="191"/>
         <source>Delete</source>
         <translation>Smazat</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="200"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="204"/>
         <source>List of directory basenames to be ignored</source>
         <translation>Seznam jmen bázových adresářů, které budou ignorovány</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="221"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="231"/>
         <source>Style</source>
         <translation>Styl</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="227"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="237"/>
         <source>Style Sheet</source>
         <translation>List stylů</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="233"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="252"/>
         <source>Enter the filename of a CSS style sheet. Leave empty to use the colours defined below.</source>
         <translation>Zadejte jméno souboru s CSS styly. Ponechte prázdné pro použití barev definovaných níže.</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="243"/>
         <source>Press to open a file selection dialog</source>
-        <translation>Stisknout pro otevření dialogu výběru</translation>
+        <translation type="obsolete">Stisknout pro otevření dialogu výběru</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="253"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="262"/>
         <source>Colours</source>
         <translation>Barvy</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="259"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="268"/>
         <source>Press to select the class and function header background colour.</source>
         <translation>Stisknout pro výběr barvy pozadí pro třídu a hlavičku funkce.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="262"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="271"/>
         <source>Class/Function Header Background</source>
         <translation>Barva pozadí třídy/hlavičky funkce</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="269"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="278"/>
         <source>Press to select the class and function header foreground colour.</source>
         <translation>Stisknout pro výběr barvy textu pro třídu a hlavičku funkce.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="272"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="281"/>
         <source>Class/Function Header Foreground</source>
         <translation>Barva textu třídy/hlavičky funkce</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="279"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="288"/>
         <source>Press to select the level 2 header background colour.</source>
         <translation>Stisknout pro výběr barvy pozadí hlavičky druhé úrovně.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="282"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="291"/>
         <source>Level 2 Header Background</source>
         <translation>Barva pozadí hlavičky druhé úrovně</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="289"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="298"/>
         <source>Press to select the level 2 header foreground colour.</source>
         <translation>Stisknout pro výběr barvy textu hlavičky druhé úrovně.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="292"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="301"/>
         <source>Level 2 Header Foreground</source>
         <translation>Barva textu hlavičky druhé úrovně</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="299"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="308"/>
         <source>Press to select the level 1 header background colour.</source>
         <translation>Stisknout pro výběr barvy pozadí hlavičky první úrovně.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="302"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="311"/>
         <source>Level 1 Header Background</source>
         <translation>Barva pozadí hlavičky první úrovně</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="309"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="318"/>
         <source>Press to select the level 1 header foreground colour.</source>
         <translation>Stisknout pro výběr barvy textu hlavičky první úrovně.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="312"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="321"/>
         <source>Level 1 Header Foreground</source>
         <translation>Barva textu hlavičky první úrovně</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="319"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="328"/>
         <source>Press to select the body background colour.</source>
         <translation>Stisknout pro výběr barvy pozadí těla.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="322"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="331"/>
         <source>Body Background</source>
         <translation>Barva pozadí těla</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="329"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="338"/>
         <source>Press to select the body foreground colour.</source>
         <translation>Stisknout pro výběr barvy textu těla.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="332"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="341"/>
         <source>Body Foreground</source>
         <translation>Barva textu těla</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="339"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="348"/>
         <source>Press to select the foreground colour of links.</source>
         <translation>Stisknout pro výběr barvy linek.</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="342"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="351"/>
         <source>Links</source>
         <translation>Linky</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="349"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="358"/>
         <source>This shows an example of the selected colours.</source>
         <translation>Zde se zobrazuje příklad vybraných barev.</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="305"/>
         <source>Select output directory</source>
-        <translation>Výběr výstupního adresáře</translation>
+        <translation type="obsolete">Výběr výstupního adresáře</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="330"/>
         <source>Select directory to exclude</source>
-        <translation>Vybrat adresář, který bude vyloučen</translation>
+        <translation type="obsolete">Vybrat adresář, který bude vyloučen</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="370"/>
         <source>Select CSS style sheet</source>
-        <translation>Vybrat CSS soubor</translation>
+        <translation type="obsolete">Vybrat CSS soubor</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="370"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="53"/>
         <source>Style sheet (*.css);;All files (*)</source>
         <translation>Style sheet (*.css);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="151"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="150"/>
         <source>Exclude Files:</source>
         <translation>Nevkládat soubory:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="158"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="157"/>
         <source>Enter filename patterns of files to be excluded separated by a comma</source>
         <translation>Zadejte patterny jmen souborů oddělené čárkami, které se nemají vkládat</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="190"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="188"/>
         <source>Press to delete the selected directory from the list</source>
         <translation>Stisknout pro odebrání vybraného adresáře ze seznamu</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="363"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="372"/>
         <source>QtHelp</source>
         <translation>QtNápověda</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="369"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="378"/>
         <source>Generate QtHelp Files</source>
         <translation>Generovat soubory QtNápovědy</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="409"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="413"/>
         <source>Namespace:</source>
         <translation>Jmenný prostor:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="416"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="420"/>
         <source>Enter the namespace</source>
         <translation>Zadejte jmenný prostor</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="423"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="427"/>
         <source>Virtual Folder:</source>
         <translation>Virtuální adresář:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="430"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="434"/>
         <source>Enter the name of the virtual folder (must not contain &apos;/&apos;)</source>
         <translation>Zadejte jméno virtuálního adresáře (nesmí obsahovat &quot;/&quot;)</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="437"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="441"/>
         <source>Filter Name:</source>
         <translation>Název filtru:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="444"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="448"/>
         <source>Enter the name of the custom filter</source>
         <translation>Zadejte název aktuálního filtru</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="451"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="455"/>
         <source>Filter Attributes:</source>
         <translation>Atributy filtru:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="458"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="462"/>
         <source>Enter the filter attributes separated by &apos;:&apos;</source>
         <translation>Zadejte atributy filtru oddělené &apos;:&apos;</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="465"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="469"/>
         <source>Title:</source>
         <translation>Titulek:</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="472"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="476"/>
         <source>Enter a short title for the top entry</source>
         <translation>Zadejte krátký titulek pro vstup nahoře</translation>
     </message>
     <message>
         <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="519"/>
         <source>Select output directory for QtHelp files</source>
-        <translation>Vybrat výstupní adresář pro soubory QtNápovědy</translation>
+        <translation type="obsolete">Vybrat výstupní adresář pro soubory QtNápovědy</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="479"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="483"/>
         <source>Select to generate the QtHelp collection files</source>
         <translation>Vybrat pro generování kolekce souborů QtNápovědy</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="482"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.ui" line="486"/>
         <source>Generate QtHelp collection files</source>
         <translation>Generovat kolekci souborů QtNápovědy</translation>
     </message>
     <message>
-        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="56"/>
+        <location filename="../Plugins/DocumentationPlugins/Ericdoc/EricdocConfigDialog.py" line="63"/>
         <source>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body style=&quot;background-color:{BodyBgColor};color:{BodyColor}&quot;&gt;&lt;h1 style=&quot;background-color:{Level1HeaderBgColor};color:{Level1HeaderColor}&quot;&gt;Level 1 Header&lt;/h1&gt;&lt;h3 style=&quot;background-color:{Level2HeaderBgColor};color:{Level2HeaderColor}&quot;&gt;Level 2 Header&lt;/h3&gt;&lt;h2 style=&quot;background-color:{CFBgColor};color:{CFColor}&quot;&gt;Class and Function Header&lt;/h2&gt;Standard body text with &lt;a style=&quot;color:{LinkColor}&quot;&gt;some links&lt;/a&gt; embedded.&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -15078,14 +15136,14 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Strom a&amp;dresářů</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="269"/>
+        <location filename="../UI/FindFileDialog.ui" line="270"/>
         <source>Enter the directory to search in</source>
         <translation>Zadejte adresář pro hledání</translation>
     </message>
     <message>
         <location filename="../UI/FindFileDialog.ui" line="288"/>
         <source>Select the directory via a directory selection dialog</source>
-        <translation>Výběr adresáře přes dialog výběru adresáře</translation>
+        <translation type="obsolete">Výběr adresáře přes dialog výběru adresáře</translation>
     </message>
     <message>
         <location filename="../UI/FindFileDialog.ui" line="90"/>
@@ -15123,27 +15181,27 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Hledat &amp;text:</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="329"/>
+        <location filename="../UI/FindFileDialog.ui" line="309"/>
         <source>Shows the progress of the search action</source>
         <translation>Zobrazit průběh vyhledávání</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="366"/>
+        <location filename="../UI/FindFileDialog.ui" line="346"/>
         <source>Text</source>
         <translation>Text</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="73"/>
+        <location filename="../UI/FindFileDialog.py" line="76"/>
         <source>Find</source>
         <translation>Hledat</translation>
     </message>
     <message>
         <location filename="../UI/FindFileDialog.py" line="553"/>
         <source>Select directory</source>
-        <translation>Výběr adresáře</translation>
+        <translation type="obsolete">Výběr adresáře</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="68"/>
+        <location filename="../UI/FindFileDialog.py" line="71"/>
         <source>Stop</source>
         <translation></translation>
     </message>
@@ -15183,32 +15241,32 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Zadejte text k nahrazení nebo regulární výraz</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="361"/>
+        <location filename="../UI/FindFileDialog.ui" line="341"/>
         <source>File/Line</source>
         <translation>Soubor/Řádek</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="374"/>
+        <location filename="../UI/FindFileDialog.ui" line="354"/>
         <source>Press to apply the selected replacements</source>
         <translation>Stisknout pro použití vybraných náhrad</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="377"/>
+        <location filename="../UI/FindFileDialog.ui" line="357"/>
         <source>Replace</source>
         <translation>Nahradit</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="664"/>
+        <location filename="../UI/FindFileDialog.py" line="653"/>
         <source>Replace in Files</source>
         <translation>Nahradit v souborech</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="299"/>
+        <location filename="../UI/FindFileDialog.ui" line="279"/>
         <source>Search in open files only </source>
         <translation>Hledat jen v otevřených souborech </translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="302"/>
+        <location filename="../UI/FindFileDialog.ui" line="282"/>
         <source>&amp;Open files only</source>
         <translation>Jen &amp;otevřené soubory</translation>
     </message>
@@ -15223,53 +15281,53 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Pocit jako</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="691"/>
+        <location filename="../UI/FindFileDialog.py" line="680"/>
         <source>Open</source>
         <translation>Otevřít</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="692"/>
+        <location filename="../UI/FindFileDialog.py" line="681"/>
         <source>Copy Path to Clipboard</source>
         <translation>Kopírovat cestu do schránky</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="376"/>
+        <location filename="../UI/FindFileDialog.py" line="379"/>
         <source>Invalid search expression</source>
         <translation>Neplatný výraz hledání</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="376"/>
+        <location filename="../UI/FindFileDialog.py" line="379"/>
         <source>&lt;p&gt;The search expression is not valid.&lt;/p&gt;&lt;p&gt;Error: {0}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Výraz hledná není platný. &lt;/p&gt;&lt;p&gt;Chyba: {0}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="623"/>
+        <location filename="../UI/FindFileDialog.py" line="612"/>
         <source>&lt;p&gt;Could not read the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nelze číst ze souboru  &lt;b&gt;{0}&lt;/b&gt;. Přeskočeno.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="664"/>
+        <location filename="../UI/FindFileDialog.py" line="653"/>
         <source>&lt;p&gt;Could not save the file &lt;b&gt;{0}&lt;/b&gt;. Skipping it.&lt;/p&gt;&lt;p&gt;Reason: {1}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nelze uložit do souboru  &lt;b&gt;{0}&lt;/b&gt;. Přeskočeno.&lt;/p&gt;&lt;p&gt;Důvod: {1}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="638"/>
+        <location filename="../UI/FindFileDialog.py" line="627"/>
         <source>&lt;p&gt;The current and the original hash of the file &lt;b&gt;{0}&lt;/b&gt; are different. Skipping it.&lt;/p&gt;&lt;p&gt;Hash 1: {1}&lt;/p&gt;&lt;p&gt;Hash 2: {2}&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.ui" line="338"/>
+        <location filename="../UI/FindFileDialog.ui" line="318"/>
         <source>%v/%m Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileDialog.py" line="497"/>
+        <location filename="../UI/FindFileDialog.py" line="500"/>
         <source>{0} / {1}</source>
         <comment>occurrences / files</comment>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../UI/FindFileDialog.py" line="498"/>
+        <location filename="../UI/FindFileDialog.py" line="501"/>
         <source>%n occurrence(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -15278,7 +15336,7 @@ se zobrazenými položkami.&lt;/p&gt;
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../UI/FindFileDialog.py" line="498"/>
+        <location filename="../UI/FindFileDialog.py" line="501"/>
         <source>%n file(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -15325,74 +15383,74 @@ se zobrazenými položkami.&lt;/p&gt;
         <translation>Cesta pro hledání:</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="79"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="88"/>
         <source>Enter the directory, the file should be searched in</source>
         <translation>Zadejte adresář, kde se bude vyhledávat</translation>
     </message>
     <message>
         <location filename="../UI/FindFileNameDialog.ui" line="86"/>
         <source>Press to select the directory, the file should be searched in</source>
-        <translation>Stisknout pro výběr adresáře, ve kterém se budou soubory prohledávat</translation>
+        <translation type="obsolete">Stisknout pro výběr adresáře, ve kterém se budou soubory prohledávat</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="97"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="99"/>
         <source>Select to search in the project path</source>
         <translation>Vybrat pro hledání v cestě projektu</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="100"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="102"/>
         <source>Search in &amp;project</source>
         <translation>Hledat v &amp;projektu</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="103"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="105"/>
         <source>Alt+P</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="110"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="112"/>
         <source>Select to search in sys.path</source>
         <translation>Vybrat pro hledání v sys.path</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="113"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="115"/>
         <source>Search in &amp;sys.path</source>
         <translation>Hledat v &amp;sys.path</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="116"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="118"/>
         <source>Alt+S</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="132"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="134"/>
         <source>Filename</source>
         <translation>Jméno souboru</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.ui" line="137"/>
+        <location filename="../UI/FindFileNameDialog.ui" line="139"/>
         <source>Path</source>
         <translation>Cesta</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.py" line="59"/>
+        <location filename="../UI/FindFileNameDialog.py" line="55"/>
         <source>Stop</source>
         <translation>Stop</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.py" line="61"/>
+        <location filename="../UI/FindFileNameDialog.py" line="57"/>
         <source>Press to stop the search</source>
         <translation>Stisknout pro ukončení hledání</translation>
     </message>
     <message>
-        <location filename="../UI/FindFileNameDialog.py" line="63"/>
+        <location filename="../UI/FindFileNameDialog.py" line="59"/>
         <source>Opens the selected file</source>
         <translation>Otevřít vybraný soubor</translation>
     </message>
     <message>
         <location filename="../UI/FindFileNameDialog.py" line="205"/>
         <source>Select search directory</source>
-        <translation>Vybrat hledaný adresář</translation>
+        <translation type="obsolete">Vybrat hledaný adresář</translation>
     </message>
 </context>
 <context>
@@ -16203,19 +16261,19 @@ Reason: {0}</source>
         <translation>Uživatelský list stylů:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="175"/>
+        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="184"/>
         <source>Enter the file name of a user style sheet</source>
         <translation>Zadejte jméno souboru uživatelských stylů</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="182"/>
         <source>Select the user style sheet via a file selection dialog</source>
-        <translation>Vybrat uživatelské styly přes dialog výběru souborů</translation>
+        <translation type="obsolete">Vybrat uživatelské styly přes dialog výběru souborů</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.py" line="137"/>
         <source>Select Style Sheet</source>
-        <translation>Vybrat sadu stylů</translation>
+        <translation type="obsolete">Vybrat sadu stylů</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="98"/>
@@ -16233,23 +16291,28 @@ Reason: {0}</source>
         <translation>Vybrat barvu pozadí pro bezpečné URL.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="192"/>
+        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="194"/>
         <source>Tabs</source>
         <translation type="unfinished">Taby</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="198"/>
+        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="200"/>
         <source>Show only one close button instead of one for each tab</source>
         <translation type="unfinished">Zobrazit pouze jedno tlačítko Zavřít místo jednoho v každém tabu</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="208"/>
+        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="210"/>
         <source>Warn, if multiple tabs are about to be closed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="205"/>
+        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.ui" line="207"/>
         <source>Select to issue a warning, if multiple tabs are about to be closed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/HelpAppearancePage.py" line="35"/>
+        <source>Cascading Style Sheets (*.css);;All files (*)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -16735,82 +16798,77 @@ Reason: {0}</source>
         <translation>&lt;b&gt;Konfigurace dokumentace nápovědy&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="103"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="107"/>
         <source>Qt4 Documentation</source>
         <translation>Qt4 dokumentace</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="126"/>
         <source>Press to select the Qt4 documentation directory via a dialog</source>
-        <translation>Stisknout pro výběr Qt4 dokumentace přes dialog výběru</translation>
+        <translation type="obsolete">Stisknout pro výběr Qt4 dokumentace přes dialog výběru</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="109"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="122"/>
         <source>Enter the Qt4 documentation directory</source>
         <translation>Zadejte adresář Qt4 dokumentace</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="116"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="129"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the QT4DOCDIR environment variable, if set.</source>
         <translation>&lt;b&gt;Poznámka&lt;/b&gt;: Ponechte prázdné má-li se použít proměnná prostředí QT4DOCDIR, je-li nastavena.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="169"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="177"/>
         <source>PyQt4 Documentation</source>
         <translation>PyQt4 dokumentace</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="192"/>
-        <source>Press to select the PyQt4 documentation directory via a dialog</source>
-        <translation>Stisknout pro výběr PyQt4 dokumentace přes dialog výběru</translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="175"/>
         <source>Enter the PyQt4 documentation directory</source>
         <translation>Zadejte adresář PyQt4 dokumentace</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="182"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="199"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYQT4DOCDIR environment variable, if set.</source>
         <translation>&lt;b&gt;Poznámka&lt;/b&gt;: Ponechte prázdné má-li se použít proměnná prostředí PYQT4DOCDIR, je-li nastavena.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="235"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="247"/>
         <source>PySide Documentation</source>
         <translation>PySide dokumentace</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="258"/>
         <source>Press to select the PySide documentation directory via a dialog</source>
-        <translation>Stisknout pro výběr adresáře PySide dokumentace přes dialog</translation>
+        <translation type="obsolete">Stisknout pro výběr adresáře PySide dokumentace přes dialog</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="241"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="262"/>
         <source>Enter the PySide documentation directory</source>
         <translation>Zadejte adresář pro PySide dokumentaci</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="248"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="269"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYSIDEDOCDIR environment variable, if set.</source>
         <translation>&lt;b&gt;Poznámka&lt;/b&gt;: Ponechte prázdné má-li se použít proměnná prostředí PYSIDEDOCDIR, je-li nastavena.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="201"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="56"/>
         <source>HTML Files (*.html *.htm);;All Files (*)</source>
         <translation>HTML soubory (*.html *.htm);;Všechny soubory (*)</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="145"/>
         <source>Select Qt4 documentation entry</source>
-        <translation>Vyberte pro vstup do Qt4 dokumentace</translation>
+        <translation type="obsolete">Vyberte pro vstup do Qt4 dokumentace</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="201"/>
         <source>Select PySide documentation entry</source>
-        <translation>Vyberte pro vstup do PySide dokumentace</translation>
+        <translation type="obsolete">Vyberte pro vstup do PySide dokumentace</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="128"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="39"/>
         <source>HTML Files (*.html *.htm);;Compressed Help Files (*.chm);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16820,99 +16878,79 @@ Reason: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="60"/>
-        <source>Press to select the Python 2 documentation directory via a dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="43"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="52"/>
         <source>Enter the Python 2 documentation directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="50"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="59"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYTHON2DOCDIR environment variable, if set.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="70"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="72"/>
         <source>Python 3 Documentation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="93"/>
-        <source>Press to select the Python 3 documentation directory via a dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="76"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="87"/>
         <source>Enter the Python 3 documentation directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="83"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="94"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYTHON3DOCDIR environment variable, if set.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="111"/>
-        <source>Select Python 2 documentation entry</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="128"/>
-        <source>Select Python 3 documentation entry</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="136"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="142"/>
         <source>Qt5 Documentation</source>
         <translation type="unfinished">Qt4 dokumentace {5 ?}</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="159"/>
         <source>Press to select the Qt5 documentation directory via a dialog</source>
-        <translation type="unfinished">Stisknout pro výběr Qt4 dokumentace přes dialog výběru {5 ?}</translation>
+        <translation type="obsolete">Stisknout pro výběr Qt4 dokumentace přes dialog výběru {5 ?}</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="142"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="157"/>
         <source>Enter the Qt5 documentation directory</source>
         <translation type="unfinished">Zadejte adresář Qt4 dokumentace {5 ?}</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="149"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="164"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the QT5DOCDIR environment variable, if set.</source>
         <translation type="unfinished">&lt;b&gt;Poznámka&lt;/b&gt;: Ponechte prázdné má-li se použít proměnná prostředí QT4DOCDIR, je-li nastavena. {5D?}</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="159"/>
         <source>Select Qt5 documentation entry</source>
-        <translation type="unfinished">Vyberte pro vstup do Qt4 dokumentace {5 ?}</translation>
+        <translation type="obsolete">Vyberte pro vstup do Qt4 dokumentace {5 ?}</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="202"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="212"/>
         <source>PyQt5 Documentation</source>
         <translation type="unfinished">PyQt4 dokumentace {5 ?}</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="225"/>
         <source>Press to select the PyQt5 documentation directory via a dialog</source>
-        <translation type="unfinished">Stisknout pro výběr PyQt4 dokumentace přes dialog výběru {5 ?}</translation>
+        <translation type="obsolete">Stisknout pro výběr PyQt4 dokumentace přes dialog výběru {5 ?}</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="208"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="227"/>
         <source>Enter the PyQt5 documentation directory</source>
         <translation type="unfinished">Zadejte adresář PyQt4 dokumentace {5 ?}</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="215"/>
+        <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.ui" line="234"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: Leave empty to use the PYQT5DOCDIR environment variable, if set.</source>
         <translation type="unfinished">&lt;b&gt;Poznámka&lt;/b&gt;: Ponechte prázdné má-li se použít proměnná prostředí PYQT4DOCDIR, je-li nastavena. {5D?}</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpDocumentationPage.py" line="187"/>
         <source>Select PyQt5 documentation entry</source>
-        <translation type="unfinished">Vyberte pro vstup do PyQt4 dokumentace {5 ?}</translation>
+        <translation type="obsolete">Vyberte pro vstup do PyQt4 dokumentace {5 ?}</translation>
     </message>
 </context>
 <context>
@@ -16928,63 +16966,58 @@ Reason: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="59"/>
+        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="50"/>
         <source>&lt;b&gt;Note&lt;/b&gt;: You should select the directory that contains #SharedObject as a subfolder.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="72"/>
+        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="63"/>
         <source>Select to activate auto mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="75"/>
+        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="66"/>
         <source>Auto Mode Enabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="93"/>
+        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="84"/>
         <source>The flash data directory will be checked regularly and flash cookies in the blacklist will be deleted automatically.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="106"/>
+        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="97"/>
         <source>Select to show a notification upon detection of new flash cookies</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="109"/>
+        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="100"/>
         <source>Notifications enabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="130"/>
+        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="121"/>
         <source>User will be notified for every new flash cookie that is not in blacklist and whitelist.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="143"/>
+        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="134"/>
         <source>Select to delete all flash cookies on startup and shutdown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="146"/>
+        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="137"/>
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="158"/>
+        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="149"/>
         <source>Delete all flash cookies on exit/start (except those are in whitelist)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="171"/>
+        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.ui" line="162"/>
         <source>&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; These settings are just applied to flash cookies.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/HelpFlashCookieManagerPage.py" line="70"/>
-        <source>Select Flash Cookies Data Path</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -17029,27 +17062,27 @@ Reason: {0}</source>
         <translation type="unfinished">List stylů:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.ui" line="60"/>
+        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.ui" line="69"/>
         <source>Enter the name of the style sheet file</source>
         <translation type="unfinished">Zadejte jméno souboru se styly</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.ui" line="67"/>
         <source>Select the style sheet file via a file selection dialog</source>
-        <translation type="unfinished">Vybrat list se styly přes dialog výběru souborů</translation>
+        <translation type="obsolete">Vybrat list se styly přes dialog výběru souborů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="65"/>
+        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="62"/>
         <source>System</source>
         <translation type="unfinished">Systém</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="78"/>
         <source>Select style sheet file</source>
-        <translation type="unfinished">Vybrat soubor s CSS styly</translation>
+        <translation type="obsolete">Vybrat soubor s CSS styly</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="78"/>
+        <location filename="../Preferences/ConfigurationPages/HelpInterfacePage.py" line="36"/>
         <source>Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;All files (*)</source>
         <translation type="unfinished">Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;Všechny soubory (*)</translation>
     </message>
@@ -17318,72 +17351,72 @@ Do you really want to close this page?</source>
         <translation>Prohlížeč nápovědy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="48"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="98"/>
         <source>Enter the custom viewer to be used</source>
         <translation>Zadání obvyklého prohlížeče pro používání</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="58"/>
         <source>Press to select the custom viewer via a file selection dialog</source>
-        <translation>Stisknout pro výběr obvyklého prohlížeče přes dialog výběru souborů</translation>
+        <translation type="obsolete">Stisknout pro výběr obvyklého prohlížeče přes dialog výběru souborů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="67"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="76"/>
         <source>Select to use a custom viewer</source>
         <translation>Vybrat používání obvyklého prohlížeče</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="70"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="79"/>
         <source>Custom</source>
         <translation>Obvyklý</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="77"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="56"/>
         <source>Select to use Qt Assistant</source>
         <translation>Vybrat pro používání Qt asistenta</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="80"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="59"/>
         <source>Qt Assistant</source>
         <translation>Qt asistent</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="84"/>
         <source>Select Custom Viewer</source>
-        <translation>Vybrat obvyklý prohlížeč</translation>
+        <translation type="obsolete">Vybrat obvyklý prohlížeč</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="98"/>
         <source>Select Web-Browser</source>
-        <translation>Vybrat web prohlížeč</translation>
+        <translation type="obsolete">Vybrat web prohlížeč</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="112"/>
         <source>Select PDF-Viewer</source>
-        <translation>Vybrat PDF prohlížeč</translation>
+        <translation type="obsolete">Vybrat PDF prohlížeč</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/HelpViewersPage.py" line="126"/>
         <source>Select CHM-Viewer</source>
-        <translation>Vybrat CHM prohlížeč</translation>
+        <translation type="obsolete">Vybrat CHM prohlížeč</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="87"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="43"/>
         <source>Select to use the Eric Web Browser</source>
         <translation>Vybrat pro používání Eric web prohlížeče</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="90"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="46"/>
         <source>Eric Web Browser</source>
         <translation>Eric web prohlížeč</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="100"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="66"/>
         <source>Select to use the configured web browser of the system</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="103"/>
+        <location filename="../Preferences/ConfigurationPages/HelpViewersPage.ui" line="69"/>
         <source>System Web Browser</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20230,7 +20263,7 @@ URL: {1}</source>
 <context>
     <name>HgAddSubrepositoryDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="103"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="98"/>
         <source>Add Sub-repository</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20240,37 +20273,32 @@ URL: {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="35"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="42"/>
         <source>Enter the path of the sub-repository relative to the project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="42"/>
-        <source>Select the path of the sub-repository with a directory selection dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="51"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="49"/>
         <source>&amp;Type:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="63"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="61"/>
         <source>Select the type of the sub-repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="85"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="83"/>
         <source>&amp;URL:</source>
         <translation type="unfinished">&amp;URL:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="95"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.ui" line="93"/>
         <source>Enter the URL of the sub-repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="103"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgAddSubrepositoryDialog.py" line="98"/>
         <source>The sub-repository path must be inside the project.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20376,119 +20404,104 @@ URL: {1}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="30"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="39"/>
         <source>Enter the file name of the archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="85"/>
-        <source>Press to select the archive file name via a file selection dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="37"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="46"/>
         <source>Type:</source>
         <translation type="unfinished">Typ:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="44"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="53"/>
         <source>Select the archive type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="51"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="60"/>
         <source>Prefix:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="58"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="67"/>
         <source>Enter the directory prefix for the files in the archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="65"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="74"/>
         <source>Select to recurse into subrepositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="68"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.ui" line="77"/>
         <source>Include Subrepositories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="46"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="39"/>
         <source>Detect Automatically</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="48"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="41"/>
         <source>Directory of Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="50"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="43"/>
         <source>Uncompressed TAR-Archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="52"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="45"/>
         <source>Bzip2 compressed TAR-Archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="54"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="47"/>
         <source>Gzip compressed TAR-Archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="56"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="49"/>
         <source>Uncompressed ZIP-Archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="58"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="51"/>
         <source>Compressed ZIP-Archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="62"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="55"/>
         <source>Bzip2 compressed TAR-Archive (*.tar.bz2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="63"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="56"/>
         <source>Gzip compressed TAR-Archive (*.tar.gz)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="64"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="57"/>
         <source>Uncompressed TAR-Archive (*.tar)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="67"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="60"/>
         <source>Compressed ZIP-Archive (*.zip)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="68"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="61"/>
         <source>Uncompressed ZIP-Archive (*.uzip)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="76"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="69"/>
         <source>All Files (*)</source>
         <translation type="unfinished">Všechny soubory (*)</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="117"/>
-        <source>Select Archive Directory</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgArchiveDialog.py" line="123"/>
-        <source>Select Archive File</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -21450,63 +21463,63 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="64"/>
         <source>Press to open a selection dialog</source>
-        <translation>Stisknout pro otevření dialogu výběru</translation>
+        <translation type="obsolete">Stisknout pro otevření dialogu výběru</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="67"/>
         <source>&lt;b&gt;Target directory&lt;/b&gt;
 &lt;p&gt;Select the target name for the operation via a selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Cílový adresář&lt;/b&gt;&lt;p&gt;Výběr cílového adresáře přes dialogové okno výběru adresáře.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Cílový adresář&lt;/b&gt;&lt;p&gt;Výběr cílového adresáře přes dialogové okno výběru adresáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="25"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="23"/>
         <source>Source:</source>
         <translation>Zdroj:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="32"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="30"/>
         <source>Shows the name of the source</source>
         <translation>Zobrazuje jméno zdroje</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="35"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="33"/>
         <source>&lt;b&gt;Source name&lt;/b&gt;
 &lt;p&gt;This field shows the name of the source.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Jméno zdroje&lt;/b&gt;
 &lt;p&gt;Toto pole zobrazuje jméno zdroje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="46"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="60"/>
         <source>Enter the target name</source>
         <translation>Zadejte jméno cíle</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="57"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="44"/>
         <source>Target:</source>
         <translation>Cíl:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="77"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="71"/>
         <source>Select to force the operation</source>
         <translation>Vybrat pro vynucení operace</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="80"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="74"/>
         <source>Enforce operation</source>
         <translation>Vynutit operaci</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="51"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="45"/>
         <source>Mercurial Move</source>
         <translation>Mercurial přesun</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.py" line="89"/>
         <source>Select target</source>
-        <translation>Vybrat cíl</translation>
+        <translation type="obsolete">Vybrat cíl</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="49"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgCopyDialog.ui" line="63"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Enter the new name in this field. The target must be the new name or an absolute path.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -21696,7 +21709,7 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
 <context>
     <name>HgExportDialog</name>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.py" line="78"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="14"/>
         <source>Export Patches</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21706,22 +21719,17 @@ of the Mercurial client executable (i.e. hg).&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="85"/>
-        <source>Press to select the export directory via a directory selection dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="35"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="52"/>
         <source>File Name Pattern:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="42"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="59"/>
         <source>Enter the file name pattern for the export files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="45"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="62"/>
         <source>&lt;b&gt;File Name Pattern&lt;/b&gt;
 &lt;p&gt;Enter the file name pattern to be used to generate the export files
 here. Valid recognized patterns are:&lt;/p&gt;
@@ -21739,33 +21747,44 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="65"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="82"/>
         <source>Changesets:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="72"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="92"/>
         <source>Enter changesets by number, id, range or revset expression one per line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="97"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="110"/>
         <source>Compare Against Second Parent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="107"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="120"/>
         <source>Treat all Files as Text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="114"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="127"/>
         <source>Omit Dates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="121"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="134"/>
         <source>Use Git extended Diff-Format</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="41"/>
+        <source>Enter the target name</source>
+        <translation type="unfinished">Zadejte jméno cíle</translation>
+    </message>
+    <message>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgExportDialog.ui" line="44"/>
+        <source>&lt;b&gt;Target name&lt;/b&gt;
+&lt;p&gt;Enter the new name in this field. The target must be the new name or an absolute path.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -22219,32 +22238,22 @@ here. Valid recognized patterns are:&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="171"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="178"/>
         <source>Enter the name of the patch file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="178"/>
-        <source>Press to select the patch file via a file selection dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="187"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="185"/>
         <source>Select to enforce the import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="190"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.ui" line="188"/>
         <source>Enforce Import</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.py" line="70"/>
-        <source>Select patch file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.py" line="70"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgImportDialog.py" line="34"/>
         <source>Patch Files (*.diff *.patch);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -23126,30 +23135,30 @@ here. Valid recognized patterns are:&lt;/p&gt;
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="62"/>
         <source>Select the repository url via a directory selection dialog</source>
-        <translation>Výběr repozitáře přes dialog výběru adresáře</translation>
+        <translation type="obsolete">Výběr repozitáře přes dialog výběru adresáře</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="69"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="71"/>
         <source>&amp;Revision:</source>
         <translation>&amp;Revize:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="79"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="81"/>
         <source>Enter the revision the new project should be generated from</source>
         <translation>Zadejte revizi, ze které bude vygenerován nový projekt</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="89"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="91"/>
         <source>Project &amp;Directory:</source>
         <translation>A&amp;dresář projektu:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="99"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="110"/>
         <source>Enter the directory of the new project.</source>
         <translation>Zadejte adresář nového projektu.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="102"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="113"/>
         <source>&lt;b&gt;Project Directory&lt;/b&gt;
 &lt;p&gt;Enter the directory of the new project. It will be retrieved from 
 the repository and be placed in this directory.&lt;/p&gt;</source>
@@ -23158,25 +23167,25 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.py" line="98"/>
         <source>Select Repository-Directory</source>
-        <translation>Vyberte adresář repozitáře</translation>
+        <translation type="obsolete">Vyberte adresář repozitáře</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.py" line="113"/>
         <source>Select Project Directory</source>
-        <translation>Vyberte adresář projektu</translation>
+        <translation type="obsolete">Vyberte adresář projektu</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="55"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="64"/>
         <source>Enter the url path of the repository (without protocol part)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="114"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="122"/>
         <source>Download all versions of all large files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="121"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/HgNewProjectOptionsDialog.ui" line="129"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; This option increases the download time and volume.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -28618,57 +28627,57 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Poznámka:&lt;/b&gt; Tato nastavení budou aktivována až po novém spuštění aplikace.&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="52"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="118"/>
         <source>Delete</source>
         <translation>Odebrat</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="62"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="128"/>
         <source>Press to add the entered directory to the list</source>
         <translation>Stisknout pro přidání adresáře do seznamu</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="65"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="131"/>
         <source>Add</source>
         <translation>Přidat</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="72"/>
         <source>Enter a directory to be added</source>
-        <translation>Zadejte adresář, který bude přidán</translation>
+        <translation type="obsolete">Zadejte adresář, který bude přidán</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="79"/>
         <source>Press to select an icon directory via a selection dialog</source>
-        <translation>Stisknout pro výběr ikony adresáře přes dialog výběru</translation>
+        <translation type="obsolete">Stisknout pro výběr ikony adresáře přes dialog výběru</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="91"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="156"/>
         <source>Show</source>
         <translation>Zobrazit</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="119"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="75"/>
         <source>Up</source>
         <translation>Nahoru</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="129"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="85"/>
         <source>Down</source>
         <translation>Dolů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="154"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="44"/>
         <source>List of icon directories</source>
         <translation>Seznam adresářů s ikonami</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/IconsPage.py" line="132"/>
         <source>Select icon directory</source>
-        <translation>Vybrat adresář s ikonami</translation>
+        <translation type="obsolete">Vybrat adresář s ikonami</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="49"/>
+        <location filename="../Preferences/ConfigurationPages/IconsPage.ui" line="115"/>
         <source>Press to delete the selected directory from the list</source>
         <translation>Stisknout pro odebrání vybraného adresáře ze seznamu</translation>
     </message>
@@ -28918,7 +28927,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
 <context>
     <name>InterfacePage</name>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="226"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="225"/>
         <source>English</source>
         <comment>Translate this with your language</comment>
         <translation>Česky</translation>
@@ -28986,170 +28995,170 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="184"/>
         <source>Enter the name of the style sheet file</source>
-        <translation>Zadejte jméno souboru se styly</translation>
+        <translation type="obsolete">Zadejte jméno souboru se styly</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="191"/>
         <source>Select the style sheet file via a file selection dialog</source>
-        <translation>Vybrat list se styly přes dialog výběru souborů</translation>
+        <translation type="obsolete">Vybrat list se styly přes dialog výběru souborů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="200"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="202"/>
         <source>Dockarea Corner Usage</source>
         <translation>Použití dockování</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="206"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="208"/>
         <source>Top Left Corner</source>
         <translation>Horní levý dock</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="212"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="214"/>
         <source>Select to assign the top left corner to the top dockarea</source>
         <translation>Vybrat pro označení levého horního rohu horního docku</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="244"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="246"/>
         <source>Top dockarea</source>
         <translation>Horní dock</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="222"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="224"/>
         <source>Select to assign the top left corner to the left dockarea</source>
         <translation>Vybrat pro označení levého horního rohu levého docku</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="283"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="285"/>
         <source>Left dockarea</source>
         <translation>Levý dock</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="235"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="237"/>
         <source>Top Right Corner</source>
         <translation>Horní pravý dock</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="241"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="243"/>
         <source>Select to assign the top right corner to the top dockarea</source>
         <translation>Vybrat pro označení pravého horního rohu horního docku</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="251"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="253"/>
         <source>Select to assign the top right corner to the right dockarea</source>
         <translation>Vybrat pro označení pravého horního rohu pravého docku</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="312"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="314"/>
         <source>Right dockarea</source>
         <translation>Pravý dock</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="264"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="266"/>
         <source>Bottom Left Corner</source>
         <translation>Levý dolní dock</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="270"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="272"/>
         <source>Select to assign the bottom left corner to the bottom dockarea</source>
         <translation>Vybrat pro označení levého dolního rohu dolního docku</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="302"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="304"/>
         <source>Bottom dockarea</source>
         <translation>Dolní dock</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="280"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="282"/>
         <source>Select to assign the bottom left corner to the left dockarea</source>
         <translation>Vybrat pro označení levého dolního rohu levého docku</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="293"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="295"/>
         <source>Bottom Right Corner</source>
         <translation>Pravý dolní dock</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="299"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="301"/>
         <source>Select to assign the bottom right corner to the bottom dockarea</source>
         <translation>Vybrat pro označení pravého dolního rohu dolního docku</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="309"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="311"/>
         <source>Select to assign the bottom right corner to the right dockarea</source>
         <translation>Vybrat pro označení pravého dolního rohu pravého docku</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="386"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="388"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; All settings below are activated at the next startup of the application.&lt;/font&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Poznámka:&lt;/b&gt; Tato nastavení budou aktivována až po novém spuštění aplikace.&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="401"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="403"/>
         <source>Language:</source>
         <translation>Jazyk:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="417"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="419"/>
         <source>Select the interface language.</source>
         <translation>Vybrat jazyk rozhraní.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="420"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="422"/>
         <source>The interface language can be selected from this list. If &quot;system&quot; is selected, the interface language is determined by the system. The selection of &quot;none&quot; means, that the default language will be used.</source>
         <translation>Jazyk rozhraní (interface) může být vybrán z tohoto seznamu. Je-li vybrán &quot;system&quot;, je rozhraní určeno tímto systémem. Výběr &quot;none&quot; znamená, že bude použit defaultní jazyk.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="427"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="429"/>
         <source>Layout:</source>
         <translation>Layout:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="440"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="442"/>
         <source>Select the layout type.</source>
         <translation>Vybrat typ layoutu.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="461"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="463"/>
         <source>Shell</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="467"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="469"/>
         <source>Select to get a separate shell window</source>
         <translation>Vybrat pro získání oddělených shell oken</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="499"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="501"/>
         <source>separate window</source>
         <translation>oddělit okna</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="490"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="492"/>
         <source>File-Browser</source>
         <translation>Prohlížeč souborů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="496"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="498"/>
         <source>Select to get a separate file browser window</source>
         <translation>Vybrat pro získání odděleného okna prohlížeče souborů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="560"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="562"/>
         <source>Reset layout to factory defaults</source>
         <translation>Resetovat layout továrny defaultů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="244"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="243"/>
         <source>System</source>
         <translation>Systém</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="254"/>
         <source>Select style sheet file</source>
-        <translation>Vybrat soubor s CSS styly</translation>
+        <translation type="obsolete">Vybrat soubor s CSS styly</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="254"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.py" line="42"/>
         <source>Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;All files (*)</source>
         <translation>Qt Style Sheets (*.qss);;Cascading Style Sheets (*.css);;Všechny soubory (*)</translation>
     </message>
@@ -29169,7 +29178,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="obsolete">Vybrat barvu pro text poslaný na stderr</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="449"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="451"/>
         <source>Toolboxes</source>
         <translation>Nástrojové lišty</translation>
     </message>
@@ -29179,32 +29188,32 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Konfigurace uživatelského rozhraní&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="444"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="446"/>
         <source>Sidebars</source>
         <translation>Postranní menu</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="477"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="479"/>
         <source>Select to embed the shell in the Debug-Viewer</source>
         <translation>Vybrat pro přiřazení shellu do debug prohlížeče</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="509"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="511"/>
         <source>embed in Debug-Viewer</source>
         <translation>přiřadit do debug prohlížeče</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="506"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="508"/>
         <source>Select to embed the file browser in the Debug-Viewer</source>
         <translation>Vybrat pro přiřazení prohlížeče souborů do debug prohlížeče</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="516"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="518"/>
         <source>Select to embed the file browser in the Project-Viewer</source>
         <translation>Vybrat pro přiřazení prohlížeče souborů do prohlížeče projektu</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="519"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="521"/>
         <source>embed in Project-Viewer</source>
         <translation>přiřadit do prohlížeče projektu</translation>
     </message>
@@ -29229,12 +29238,12 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="obsolete">Zobrazit na nový výstup</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="531"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="533"/>
         <source>Tabs</source>
         <translation>Taby</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="537"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="539"/>
         <source>Show only one close button instead of one for each tab</source>
         <translation>Zobrazit pouze jedno tlačítko Zavřít místo jednoho v každém tabu</translation>
     </message>
@@ -29259,14 +29268,19 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="331"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="333"/>
         <source>Delay:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="341"/>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="343"/>
         <source> ms</source>
         <translation type="unfinished"> ms</translation>
+    </message>
+    <message>
+        <location filename="../Preferences/ConfigurationPages/InterfacePage.ui" line="193"/>
+        <source>Enter the path of the style sheet file</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -32283,43 +32297,33 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="33"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="42"/>
         <source>Enter the directory name of the new project directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="40"/>
-        <source>Press to select the new project directory name via a directory selection dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="47"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="49"/>
         <source>Minimum file size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="54"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="56"/>
         <source>Enter the minimum file size in MB for files to be treated as Large Files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="60"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="62"/>
         <source> MB</source>
         <translation type="unfinished"> MB</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="86"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="88"/>
         <source>Patterns:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="93"/>
+        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.ui" line="95"/>
         <source>Enter file patterns (space separated) for files to be treated as Large Files</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsMercurial/LargefilesExtension/LfConvertDataDialog.py" line="81"/>
-        <source>New Project Directory</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -34143,47 +34147,47 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Konfigurace nastavení multiprojektu&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="64"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="62"/>
         <source>Master Project</source>
         <translation>Hlavní projekt</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="73"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="71"/>
         <source>Open master project automatically</source>
         <translation>Otevřít hlavní projekt automaticky</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="83"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="81"/>
         <source>XML</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="89"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="87"/>
         <source>Select, if a timestamp should be written to all multiproject related XML files</source>
         <translation>Vybrat, má-li být časové razítko zapsáno do všech XML souborů týkající se multiprojektu</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="92"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="90"/>
         <source>Include timestamp in multiproject related XML files</source>
         <translation>Zahrnout časové razítko do XML týkající se multiprojeku</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="102"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="100"/>
         <source>Recent Multiprojects</source>
         <translation>Poslední multiprojekty</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="117"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="115"/>
         <source>Enter the number of recent multiprojects to remember</source>
         <translation>Zadejte počet posledních multiprojektů k zapamatování</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="70"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="68"/>
         <source>Select to open the master project automatically upon opening the multiproject</source>
         <translation>Vybrat pro otevření hlavního projektu automaticky po otevření multiprojektu</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="110"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="108"/>
         <source>Number of recent multiprojects:</source>
         <translation>Počet posledních multiprojektů:</translation>
     </message>
@@ -34193,24 +34197,8 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="43"/>
+        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="52"/>
         <source>Enter the name of the workspace directory</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="46"/>
-        <source>&lt;b&gt;Workspace Directory&lt;/b&gt;
-&lt;p&gt;Enter the directory of the workspace. This directory is used as the default for opening or saving new files or projects.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.ui" line="54"/>
-        <source>Select the workspace directory via a directory selection button</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/MultiProjectPage.py" line="75"/>
-        <source>Select Workspace Directory</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -34313,107 +34301,107 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Download adresář:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="52"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="61"/>
         <source>Enter the download directory (leave empty to use the default location)</source>
         <translation>Zadejte download adresář (ponechte prázdné pro výchozí lokaci)</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="59"/>
         <source>Select the download directory via a directory selection dialog</source>
-        <translation>Vybrat adresář pro download přes dialog výběru adresáře</translation>
+        <translation type="obsolete">Vybrat adresář pro download přes dialog výběru adresáře</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="120"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="122"/>
         <source>Select to use a web proxy</source>
         <translation>Výběr použití web proxy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="123"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="125"/>
         <source>Network Proxy</source>
         <translation type="unfinished">Použít síťovou proxy</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="193"/>
         <source>Select download directory</source>
-        <translation>Vybrat adresář pro download</translation>
+        <translation type="obsolete">Vybrat adresář pro download</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="68"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="70"/>
         <source>Select to ask the user for a download filename</source>
         <translation>Vybrat pro požádání uživatele aby si stáhnul soubor s názvem</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="71"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="73"/>
         <source>Request name of downloaded file</source>
         <translation>Požádat o jméno souboru ke stažení</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="148"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="150"/>
         <source>Select to use the system proxy configuration</source>
         <translation>Zvolte, chccete-li použít systémovou proxy konfiguraci</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="151"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="153"/>
         <source>Use system proxy configuration</source>
         <translation>Použít systémouvou proxy konfiguraci</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="158"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="160"/>
         <source>Select to use an application specific proxy configuration</source>
         <translation>Zvolte pro použití proxy konfigurace konkrétní aplikace</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="161"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="163"/>
         <source>Manual proxy configuration:</source>
         <translation>Ruční proxy konfigurace:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="174"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="176"/>
         <source>Manual proxy settings</source>
         <translation>Ruční proxy nastavení</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="196"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="198"/>
         <source>Enter the name of the HTTP proxy host</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="325"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="327"/>
         <source>Port:</source>
         <translation type="unfinished">Port:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="210"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="212"/>
         <source>Enter the HTTP proxy port</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="229"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="231"/>
         <source>Select to use the HTTP proxy for all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="232"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="234"/>
         <source>Use this proxy for all protocols</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="255"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="257"/>
         <source>Enter the name of the HTTPS proxy host</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="269"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="271"/>
         <source>Enter the HTTPS proxy port</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="318"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="320"/>
         <source>Enter the name of the FTP proxy host</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="332"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="334"/>
         <source>Enter the FTP proxy port</source>
         <translation type="unfinished"></translation>
     </message>
@@ -34423,172 +34411,172 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="78"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="80"/>
         <source>Download Manager Cleanup Policy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="84"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="86"/>
         <source>Select to never cleanup automatically</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="87"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="89"/>
         <source>Never</source>
         <translation type="unfinished">Nikdy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="94"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="96"/>
         <source>Select to cleanup upon exiting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="97"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="99"/>
         <source>When exiting the application</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="104"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="106"/>
         <source>Select to cleanup after a successful download</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="107"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="109"/>
         <source>When download finished successfully</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="291"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="293"/>
         <source>FTP-Proxy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="311"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="313"/>
         <source>Hostname:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="297"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="299"/>
         <source>Proxy Type:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="304"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="306"/>
         <source>Select the type of the FTP proxy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="351"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="353"/>
         <source>User Name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="358"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="360"/>
         <source>Enter the user name for the proxy authentication</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="365"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="367"/>
         <source>Password:</source>
         <translation type="unfinished">Heslo:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="372"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="374"/>
         <source>Enter the password for the proxy authentication</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="382"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="384"/>
         <source>Account:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="389"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="391"/>
         <source>Enter the account info for the proxy authentication</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="420"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="422"/>
         <source>Press to clear the saved passwords for the Http(s) proxy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="423"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="425"/>
         <source>Clear HTTP(S) Proxy Passwords</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="44"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="38"/>
         <source>No FTP Proxy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="46"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="40"/>
         <source>No Proxy Authentication required</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="49"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="43"/>
         <source>User@Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="51"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="45"/>
         <source>SITE</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="53"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="47"/>
         <source>OPEN</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="55"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="49"/>
         <source>User@Proxyuser@Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="58"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="52"/>
         <source>Proxyuser@Server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="60"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="54"/>
         <source>AUTH and RESP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="62"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.py" line="56"/>
         <source>Bluecoat Proxy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="183"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="185"/>
         <source>HTTP-Proxy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="242"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="244"/>
         <source>HTTPS-Proxy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="404"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="406"/>
         <source>Exceptions:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="411"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="413"/>
         <source>Enter host names or IP-addresses for which the proxy is to be circumvented separated by &apos;,&apos; (wildcards * or ? may be used)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="135"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="137"/>
         <source>Select to not use a network proxy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="138"/>
+        <location filename="../Preferences/ConfigurationPages/NetworkPage.ui" line="140"/>
         <source>Do not use proxy</source>
         <translation type="unfinished"></translation>
     </message>
@@ -34609,19 +34597,19 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Nová třída Dialog</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="25"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="78"/>
         <source>Enter the path of the file for the forms code</source>
         <translation>Zadejte cestu k souboru obsahující kód formulářů</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="32"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="25"/>
         <source>&amp;Classname:</source>
         <translation>&amp;Jméno třídy:</translation>
     </message>
     <message>
         <location filename="../Project/NewDialogClassDialog.ui" line="76"/>
         <source>Select the source file path via a directory selection dialog</source>
-        <translation>Výběr souboru se zdrojovým kódem přes dialog výběru adresáře</translation>
+        <translation type="obsolete">Výběr souboru se zdrojovým kódem přes dialog výběru adresáře</translation>
     </message>
     <message>
         <location filename="../Project/NewDialogClassDialog.ui" line="42"/>
@@ -34629,24 +34617,24 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Jméno &amp;souboru:</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="52"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="59"/>
         <source>&amp;Path:</source>
         <translation>&amp;Cesta:</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="62"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="35"/>
         <source>Enter the name of the new class</source>
         <translation>Zadejte jméno nové třídy</translation>
     </message>
     <message>
-        <location filename="../Project/NewDialogClassDialog.ui" line="69"/>
+        <location filename="../Project/NewDialogClassDialog.ui" line="52"/>
         <source>Enter the name of the file for the forms code</source>
         <translation>Zadejte jméno souboru pro kód formulářů</translation>
     </message>
     <message>
         <location filename="../Project/NewDialogClassDialog.py" line="61"/>
         <source>Select source directory</source>
-        <translation>Vybrat zdrojový adresář</translation>
+        <translation type="obsolete">Vybrat zdrojový adresář</translation>
     </message>
 </context>
 <context>
@@ -36138,132 +36126,132 @@ Destination:
         <translation>Adresář pro download pluginů:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="46"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="55"/>
         <source>Enter the plugins download directory</source>
         <translation>Zadejte adresář pro download pluginů</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="53"/>
         <source>Select the plugins download directory via a directory selection dialog</source>
-        <translation>Výběr adresáře pro download plugůnů přes dialog výběru adresáře</translation>
+        <translation type="obsolete">Výběr adresáře pro download plugůnů přes dialog výběru adresáře</translation>
     </message>
     <message>
         <location filename="../Preferences/ConfigurationPages/PluginManagerPage.py" line="109"/>
         <source>Select plugins download directory</source>
-        <translation>Vybrat adresář pro download pluginů</translation>
+        <translation type="obsolete">Vybrat adresář pro download pluginů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="121"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="123"/>
         <source>Select to enable external plugins to be loaded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="124"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="126"/>
         <source>Load external plugins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="114"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="116"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; The following settings are activated at the next startup of the application.&lt;/font&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="131"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="133"/>
         <source>Check for plugin updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="137"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="139"/>
         <source>Select to disable update checking</source>
         <translation type="unfinished">Vybrat pro vypnutí zjišťování updatů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="140"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="142"/>
         <source>Never</source>
         <translation type="unfinished">Nikdy</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="147"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="149"/>
         <source>Select to check for updates once a day</source>
         <translation type="unfinished">Vybrat pro zjišťování updatů jednou denně</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="150"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="152"/>
         <source>Daily</source>
         <translation type="unfinished">Denně</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="157"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="159"/>
         <source>Select to check for updates once a week</source>
         <translation type="unfinished">Vybrat pro zjišťování updatů jednou týdně</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="160"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="162"/>
         <source>Weekly</source>
         <translation type="unfinished">Týdně</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="167"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="169"/>
         <source>Select to check for updates once a month</source>
         <translation type="unfinished">Vybrat pro zjišťování updatů jednou měsíčně</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="170"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="172"/>
         <source>Monthly</source>
         <translation type="unfinished">Měsíčně</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="192"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="194"/>
         <source>Repository URL:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="199"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="201"/>
         <source>Shows the repository URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="209"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="211"/>
         <source>Press to edit the plugin repository URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="212"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="214"/>
         <source>Edit URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="180"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="182"/>
         <source>Select to check only already installed plugins for updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="183"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="185"/>
         <source>Check only installed plugins for updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="62"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="64"/>
         <source>Download Housekeeping</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="68"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="70"/>
         <source>No. of generations to keep:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="75"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="77"/>
         <source>Enter the number of generations to keep for each plugin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="101"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="103"/>
         <source>Select to keep generations of hidden plugins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="104"/>
+        <location filename="../Preferences/ConfigurationPages/PluginManagerPage.ui" line="106"/>
         <source>Keep generations of hidden plugins</source>
         <translation type="unfinished"></translation>
     </message>
@@ -39621,24 +39609,24 @@ Vyberte Obnovit.</translation>
 &lt;p&gt;Pokud je projekt pod správou verzovacího systému, tak se informace o repozitáři zobrazí stisknutím tlačítka &quot;Zobrazit info o repozitáři&quot;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="226"/>
+        <location filename="../Project/PropertiesDialog.ui" line="244"/>
         <source>&amp;Author:</source>
         <translation>&amp;Autor:</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="236"/>
+        <location filename="../Project/PropertiesDialog.ui" line="254"/>
         <source>Enter authors name</source>
         <translation>Zadejte jméno autora</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="239"/>
+        <location filename="../Project/PropertiesDialog.ui" line="257"/>
         <source>&lt;b&gt;Author&lt;/b&gt;
 &lt;p&gt;Enter the name of the author.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Autor&lt;/b&gt;
 &lt;p&gt;Zadání jmána autora.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="268"/>
+        <location filename="../Project/PropertiesDialog.ui" line="286"/>
         <source>&amp;Description:</source>
         <translation>&amp;Popis:</translation>
     </message>
@@ -39648,36 +39636,36 @@ Vyberte Obnovit.</translation>
         <translation>Jmé&amp;no projektu:</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="146"/>
+        <location filename="../Project/PropertiesDialog.ui" line="155"/>
         <source>Enter the version number</source>
         <translation>Zadejte číslo verze</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="149"/>
+        <location filename="../Project/PropertiesDialog.ui" line="158"/>
         <source>&lt;b&gt;Version No.&lt;/b&gt;
 &lt;p&gt;Enter the version no.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Číslo verze&lt;/b&gt;
 &lt;p&gt;Zadání čísla verze.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="281"/>
+        <location filename="../Project/PropertiesDialog.ui" line="299"/>
         <source>Enter description</source>
         <translation>Zadejte popis</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="284"/>
+        <location filename="../Project/PropertiesDialog.ui" line="302"/>
         <source>&lt;b&gt;Description&lt;/b&gt;
 &lt;p&gt;Enter a short description for the project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Popis&lt;/b&gt;
 &lt;p&gt;Zadání krátkého popisku o projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="124"/>
+        <location filename="../Project/PropertiesDialog.ui" line="133"/>
         <source>Enter the project directory</source>
         <translation>Zadejte adresář projektu</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="127"/>
+        <location filename="../Project/PropertiesDialog.ui" line="136"/>
         <source>&lt;b&gt;Project Directory&lt;/b&gt;
 &lt;p&gt;Enter the project directory. You may select it
  with a dialog by pressing the button to the right.&lt;/p&gt;</source>
@@ -39685,17 +39673,17 @@ Vyberte Obnovit.</translation>
 &lt;p&gt;Zadání adresáře projektu. Stisknutím pravého tlačítka jej můžete vybrat i pomocí dialogu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="247"/>
+        <location filename="../Project/PropertiesDialog.ui" line="265"/>
         <source>&amp;Email:</source>
         <translation>&amp;Email:</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="257"/>
+        <location filename="../Project/PropertiesDialog.ui" line="275"/>
         <source>Enter authors email</source>
         <translation>Zadejte email autora</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="260"/>
+        <location filename="../Project/PropertiesDialog.ui" line="278"/>
         <source>&lt;b&gt;Email&lt;/b&gt;
 &lt;p&gt;Enter the email address of the author&lt;/p&gt;</source>
         <translation>&lt;b&gt;Email&lt;/b&gt;
@@ -39704,13 +39692,13 @@ Vyberte Obnovit.</translation>
     <message>
         <location filename="../Project/PropertiesDialog.ui" line="309"/>
         <source>Show file selection dialog</source>
-        <translation>Zobrazit dialog výběru souboru</translation>
+        <translation type="obsolete">Zobrazit dialog výběru souboru</translation>
     </message>
     <message>
         <location filename="../Project/PropertiesDialog.ui" line="312"/>
         <source>&lt;b&gt;Main Script&lt;/b&gt;
 &lt;p&gt;Select the projects main script via a file selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Hlavní skript&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Hlavní skript&lt;/b&gt;
 &lt;p&gt;Výběr hlavního skriptu projektu přes dialog výběru souboru.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -39726,7 +39714,7 @@ Vyberte Obnovit.</translation>
 &lt;p&gt;Zadání jména projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="157"/>
+        <location filename="../Project/PropertiesDialog.ui" line="166"/>
         <source>&amp;Main Script:</source>
         <translation>&amp;Hlavní skript:</translation>
     </message>
@@ -39736,12 +39724,12 @@ Vyberte Obnovit.</translation>
         <translation>A&amp;dresář projektu:</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="167"/>
+        <location filename="../Project/PropertiesDialog.ui" line="185"/>
         <source>Enter the main script</source>
         <translation>Zadejte hlavní skript</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="170"/>
+        <location filename="../Project/PropertiesDialog.ui" line="188"/>
         <source>&lt;b&gt;Main Script&lt;/b&gt;
 &lt;p&gt;Enter the main script of the project. You may select it
  with a dialog by pressing the button to the right.&lt;/p&gt;</source>
@@ -39749,30 +39737,30 @@ Vyberte Obnovit.</translation>
 &lt;p&gt;Zadání hlavního sktriptu projektu. Stisknutím pravého tlačítka jej můžete vybrat i pomocí dialogu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="179"/>
+        <location filename="../Project/PropertiesDialog.ui" line="197"/>
         <source>Press to edit the translations properties</source>
         <translation>Stisknout pro editaci nastavení překladu</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="182"/>
+        <location filename="../Project/PropertiesDialog.ui" line="200"/>
         <source>Translations Properties...</source>
         <translation>Nastavení překladu...</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="136"/>
+        <location filename="../Project/PropertiesDialog.ui" line="145"/>
         <source>&amp;Version No.:</source>
         <translation>Číslo &amp;verze:</translation>
     </message>
     <message>
         <location filename="../Project/PropertiesDialog.ui" line="298"/>
         <source>Show directory selection dialog</source>
-        <translation>Zobrazit dialog výběru adresáře</translation>
+        <translation type="obsolete">Zobrazit dialog výběru adresáře</translation>
     </message>
     <message>
         <location filename="../Project/PropertiesDialog.ui" line="301"/>
         <source>&lt;b&gt;Project Directory&lt;/b&gt;
 &lt;p&gt;Select a project directory via a directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Adrsář projektu&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Adrsář projektu&lt;/b&gt;
 &lt;p&gt;Výběr adresáře projektu přes dialog výběru adresáře.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -39791,34 +39779,34 @@ Vyberte Obnovit.</translation>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="347"/>
+        <location filename="../Project/PropertiesDialog.ui" line="343"/>
         <source>Press to show information about the repository</source>
         <translation>Stisknout pro zobrazení informace o repozitáři</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="350"/>
+        <location filename="../Project/PropertiesDialog.ui" line="346"/>
         <source>Show &amp;Repository Info</source>
         <translation>Zobrazit info o &amp;repozitáři</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="353"/>
+        <location filename="../Project/PropertiesDialog.ui" line="349"/>
         <source>Alt+R</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.py" line="127"/>
+        <location filename="../Project/PropertiesDialog.py" line="130"/>
         <source>The project is not version controlled.</source>
         <translation>Projekt není pod správou verzovacího systému.</translation>
     </message>
     <message>
         <location filename="../Project/PropertiesDialog.py" line="184"/>
         <source>Select project directory</source>
-        <translation>Vybrat adresář projektu</translation>
+        <translation type="obsolete">Vybrat adresář projektu</translation>
     </message>
     <message>
         <location filename="../Project/PropertiesDialog.py" line="237"/>
         <source>Select main script file</source>
-        <translation>Vybrat soubor hlavního skriptu</translation>
+        <translation type="obsolete">Vybrat soubor hlavního skriptu</translation>
     </message>
     <message>
         <location filename="../Project/PropertiesDialog.ui" line="97"/>
@@ -39862,52 +39850,52 @@ Vyberte Obnovit.</translation>
         <translation>Nastavení kontroly pravopisu...</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.py" line="121"/>
+        <location filename="../Project/PropertiesDialog.py" line="124"/>
         <source>The project is version controlled by &lt;b&gt;{0}&lt;/b&gt;.</source>
         <translation>Projekt je pod správou verzovacího systému &lt;b&gt;{0}&lt;/b&gt;.</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.py" line="235"/>
+        <location filename="../Project/PropertiesDialog.py" line="56"/>
         <source>Source Files ({0});;All Files (*)</source>
         <translation>Zdrojové soubory ({0});;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="189"/>
+        <location filename="../Project/PropertiesDialog.ui" line="207"/>
         <source>End of &amp;Line Character:</source>
         <translation>Znak &amp;konce řádku:</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="199"/>
+        <location filename="../Project/PropertiesDialog.ui" line="217"/>
         <source>Select the end of line character to be used by the project</source>
         <translation>Zvolze znak konce řádku, který bude v projektu použit</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="203"/>
+        <location filename="../Project/PropertiesDialog.ui" line="221"/>
         <source>System</source>
         <translation>Systém</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="208"/>
+        <location filename="../Project/PropertiesDialog.ui" line="226"/>
         <source>Unix</source>
         <translation>Unix</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="213"/>
+        <location filename="../Project/PropertiesDialog.ui" line="231"/>
         <source>Macintosh</source>
         <translation>Macintosh</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="218"/>
+        <location filename="../Project/PropertiesDialog.ui" line="236"/>
         <source>Windows/DOS</source>
         <translation>Windows/DOS</translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="322"/>
+        <location filename="../Project/PropertiesDialog.ui" line="318"/>
         <source>Select to create a version controlled project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/PropertiesDialog.ui" line="325"/>
+        <location filename="../Project/PropertiesDialog.ui" line="321"/>
         <source>Version Controlled Project</source>
         <translation type="unfinished"></translation>
     </message>
@@ -44829,30 +44817,30 @@ Používá se k vyhledání znaků, jen pokud před nimi nepředchází daný v�
     <message>
         <location filename="../Preferences/ConfigurationPages/QtPage.py" line="66"/>
         <source>Select Qt4 Translations Directory</source>
-        <translation>Výběr adresáře s Qt4 překlady</translation>
+        <translation type="obsolete">Výběr adresáře s Qt4 překlady</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="77"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="79"/>
         <source>Qt Tools</source>
         <translation>Qt nástroje</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="127"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="129"/>
         <source>This gives an example of the complete tool name</source>
         <translation>Příklad kompletního jména nástroje</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="130"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="132"/>
         <source>designer</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="50"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="43"/>
         <source>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; This setting is activated at the next startup of the application.&lt;/font&gt;</source>
         <translation>&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Poznámka:&lt;/b&gt; Tato nastavení budou aktivována až po novém spuštění aplikace.&lt;/font&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="83"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="85"/>
         <source>The tool executable is composed of the prefix, the tool name and the postfix. For win, the extension is added automatically.</source>
         <translation>Spustitelný nástroj je složen z prefixu, jména nástroje a postfixu. Pro win je extenze připojena automaticky.</translation>
     </message>
@@ -44862,57 +44850,52 @@ Používá se k vyhledání znaků, jen pokud před nimi nepředchází daný v�
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="67"/>
-        <source>Press to select the Qt translations directory via a directory selection dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="43"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="59"/>
         <source>Enter the path of the Qt translations directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="57"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="66"/>
         <source>&lt;b&gt;Note:&lt;/b&gt; Leave this entry empty to use the QT4TRANSLATIONSDIR environment variable or the path compiled into the Qt library.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="93"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="95"/>
         <source>Qt-Prefix:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="100"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="102"/>
         <source>Enter the prefix for the Qt tools name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="107"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="109"/>
         <source>Qt-Postfix:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="114"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="116"/>
         <source>Enter the postfix for the Qt tools name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="140"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="142"/>
         <source>pyuic / pyside-uic Options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="146"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="148"/>
         <source>Indent Width:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="153"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="155"/>
         <source>Select the indent width (default: 4)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="185"/>
+        <location filename="../Preferences/ConfigurationPages/QtPage.ui" line="187"/>
         <source>Generate imports relative to &apos;.&apos;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -47701,49 +47684,49 @@ Function: {3}({4})</source>
         <translation>&amp;Seznam slov projektu:</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="50"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="59"/>
         <source>Enter the filename of the project word list</source>
         <translation>Zadejte jméno souboru se seznamem slov projektu</translation>
     </message>
     <message>
         <location filename="../Project/SpellingPropertiesDialog.ui" line="97"/>
         <source>Select the project word list file via a file selection dialog</source>
-        <translation>Vybrat soubor se seznamem slov projektu přes dialog výběru</translation>
+        <translation type="obsolete">Vybrat soubor se seznamem slov projektu přes dialog výběru</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="57"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="66"/>
         <source>Project E&amp;xclude List:</source>
         <translation>Seznam &amp;vyřazených v projektu:</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.ui" line="67"/>
+        <location filename="../Project/SpellingPropertiesDialog.ui" line="85"/>
         <source>Enter the filename of the project exclude list</source>
         <translation>Zadejte jméno souboru se seznamem vyřazených v projektu</translation>
     </message>
     <message>
         <location filename="../Project/SpellingPropertiesDialog.ui" line="104"/>
         <source>Select the project exclude list file via a file selection dialog</source>
-        <translation>Výběr souboru se seznamem vyřazených z projektu přes dialog výběru</translation>
+        <translation type="obsolete">Výběr souboru se seznamem vyřazených z projektu přes dialog výběru</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.py" line="52"/>
+        <location filename="../Project/SpellingPropertiesDialog.py" line="50"/>
         <source>&lt;default&gt;</source>
         <translation>&lt;default&gt;</translation>
     </message>
     <message>
         <location filename="../Project/SpellingPropertiesDialog.py" line="89"/>
         <source>Select project word list</source>
-        <translation>Vybrat seznam slov projektu</translation>
+        <translation type="obsolete">Vybrat seznam slov projektu</translation>
     </message>
     <message>
-        <location filename="../Project/SpellingPropertiesDialog.py" line="110"/>
+        <location filename="../Project/SpellingPropertiesDialog.py" line="43"/>
         <source>Dictionary File (*.dic);;All Files (*)</source>
         <translation>Soubor slovníku (*.dic);;Všechny soubory (*)</translation>
     </message>
     <message>
         <location filename="../Project/SpellingPropertiesDialog.py" line="110"/>
         <source>Select project exclude list</source>
-        <translation>Vybrat seznam vyřazených v projektu</translation>
+        <translation type="obsolete">Vybrat seznam vyřazených v projektu</translation>
     </message>
     <message>
         <location filename="../Project/SpellingPropertiesDialog.ui" line="14"/>
@@ -47981,79 +47964,79 @@ Function: {3}({4})</source>
         <translation>Spojuji...</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="22"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="20"/>
         <source>D&amp;river:</source>
         <translation>O&amp;vladač:</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="32"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="30"/>
         <source>Select the database driver</source>
         <translation>Vybrat databázový ovladač</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="39"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="37"/>
         <source>&amp;Database Name:</source>
         <translation>Název &amp;databáze:</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="55"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="56"/>
         <source>Enter the database name</source>
         <translation>Zadejte název databáze</translation>
     </message>
     <message>
         <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="155"/>
         <source>Press to select a database file</source>
-        <translation>Stisknout pro výběr souboru databáze</translation>
+        <translation type="obsolete">Stisknout pro výběr souboru databáze</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="75"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="63"/>
         <source>&amp;Username:</source>
         <translation>&amp;Uživatelské jméno:</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="85"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="73"/>
         <source>Enter the user name</source>
         <translation>Zadejte uživatelské jméno</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="92"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="80"/>
         <source>&amp;Password:</source>
         <translation>&amp;Heslo:</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="109"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="97"/>
         <source>&amp;Hostname:</source>
         <translation>Jméno &amp;hosta:</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="119"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="107"/>
         <source>Enter the hostname</source>
         <translation>Zadejte jméno hosta</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="126"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="114"/>
         <source>P&amp;ort:</source>
         <translation>P&amp;ort:</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="136"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="124"/>
         <source>Enter the port number</source>
         <translation>Zadejte číslo portu</translation>
     </message>
     <message>
-        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="139"/>
+        <location filename="../SqlBrowser/SqlConnectionDialog.ui" line="127"/>
         <source>Default</source>
         <translation>Výchozí</translation>
     </message>
     <message>
         <location filename="../SqlBrowser/SqlConnectionDialog.py" line="106"/>
         <source>Select Database File</source>
-        <translation>Vybrat soubor databáze</translation>
+        <translation type="obsolete">Vybrat soubor databáze</translation>
     </message>
     <message>
         <location filename="../SqlBrowser/SqlConnectionDialog.py" line="106"/>
         <source>All Files (*)</source>
-        <translation>Všechny soubory (*)</translation>
+        <translation type="obsolete">Všechny soubory (*)</translation>
     </message>
 </context>
 <context>
@@ -48082,63 +48065,63 @@ Function: {3}({4})</source>
         <translation>Spustit běh pokrytí</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="23"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="25"/>
         <source>Command&amp;line:</source>
         <translation>Příkazový řá&amp;dek:</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="39"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="41"/>
         <source>Enter the commandline parameters</source>
         <translation>Zadejte parametry příkazového řádku</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="42"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="44"/>
         <source>&lt;b&gt;Commandline&lt;/b&gt;
 &lt;p&gt;Enter the commandline parameters in this field.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Příkazový řádek&lt;/b&gt;
 &lt;p&gt;Zadání parametrů příkazového řádku do tohoto pole.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="62"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="64"/>
         <source>&amp;Working directory:</source>
         <translation>&amp;Pracovní adresář:</translation>
     </message>
     <message>
         <location filename="../Debugger/StartCoverageDialog.ui" line="218"/>
         <source>Select directory using a directory selection dialog</source>
-        <translation>Vybrat adresář za použití dialogu výběru adresáře</translation>
+        <translation type="obsolete">Vybrat adresář za použití dialogu výběru adresáře</translation>
     </message>
     <message>
         <location filename="../Debugger/StartCoverageDialog.ui" line="221"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Vybrat adresář&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Vybrat adresář&lt;/b&gt;
 &lt;p&gt;Výběr pracovního adresáře před dialog výběru adresáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="78"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="83"/>
         <source>Enter the working directory</source>
         <translation>Zadejte pracovní adresář</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="81"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="86"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory of the application to be debugged. Leave it empty to set the working directory to the executable directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pracovní adresář&lt;/b&gt;
 &lt;p&gt;Zadání pracovního adresáře, ve kterém proběhne debugging. Ponechte jej prázdný pokud chcete pro spuštění použít adresář aplikace.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="101"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="94"/>
         <source>&amp;Environment:</source>
         <translation>Prostř&amp;edí:</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="117"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="110"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Zadání proměnných prostředí, které mají být nastaveny.</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="120"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="113"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
@@ -48147,78 +48130,78 @@ Function: {3}({4})</source>
 &lt;p&gt;Příklad: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="191"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="188"/>
         <source>Select this to erase the collected coverage information</source>
         <translation>Vybrat pro vymazání shromážděných informací z pokrytí</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="194"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="191"/>
         <source>&lt;b&gt;Erase coverage information&lt;/b&gt;
 &lt;p&gt;Select this to erase the collected coverage information before the next coverage run.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vymazat informace z pokrytí&lt;/b&gt;
 &lt;p&gt;Před dalším spuštěním procesu pokrytí vyberte toto pro vymazání předchozích nashromážděných informací.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="198"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="195"/>
         <source>Erase &amp;coverage information</source>
         <translation>&amp;Vymazat info pokrytí</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="201"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="198"/>
         <source>Alt+C</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="141"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="138"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>Zrušit zatržení pro vypnutí reportování výjimek</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="144"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="141"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Report výjimek&lt;/b&gt;
 &lt;p&gt;Zrušte zatržení přepínače pro vypnutí reportování výjimek.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="148"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="145"/>
         <source>Report &amp;exceptions</source>
         <translation>R&amp;eport výjimek</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="151"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="148"/>
         <source>Alt+E</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="161"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="158"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>Vybrat pro vyčištění okna interpretru</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="164"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="161"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyčistit okno interpretru&lt;/b&gt;&lt;p&gt;Vyčistí displej okna interpretru před tím, než se spustí debugovací klient.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="167"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="164"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Vyčistit okno &amp;interpretru</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="177"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="174"/>
         <source>Select to start the debugger in a console window</source>
         <translation>Vybrat pro spuštění debugeru v okně konzole</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="180"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="177"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spustit na konzoli&lt;/b&gt;
 &lt;p&gt;Vybrat pro spuštění debugeru v okně konzole. Příkaz konzole musí být nakonfigurován na Debugger-&amp;gt;Hlavní straně&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartCoverageDialog.ui" line="184"/>
+        <location filename="../Debugger/StartCoverageDialog.ui" line="181"/>
         <source>Start in console</source>
         <translation>Spustit na konzoli</translation>
     </message>
@@ -48231,29 +48214,29 @@ Function: {3}({4})</source>
         <translation>Spustit debuger</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="117"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="110"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Zadání proměnných prostředí.</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="120"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="113"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prostředí&lt;/b&gt;&lt;p&gt;Zadání proměnných prostředí, které mají být nastaveny. Jednotlivé položky musí být odděleny mezerou a musí být ve tvaru &apos;var=value&apos;. Pro přičtení hodnoty zadejte výraz ve tvaru &apos;var+=value&apos;.&lt;/p&gt;&lt;p&gt;Příklad: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="101"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="94"/>
         <source>&amp;Environment:</source>
         <translation>Prostř&amp;edí:</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="78"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="83"/>
         <source>Enter the working directory</source>
         <translation>Zadejte pracovní adresář</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="81"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="86"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory of the application to be debugged. Leave it empty to set the working directory to the executable directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pracovní adresář&lt;/b&gt;&lt;p&gt;Zadání pracovního adresáře, ve kterém proběhne ladění. Ponechte jej prázdný pokud chcete pro spuštění použít adresář aplikace.&lt;/p&gt;</translation>
@@ -48261,153 +48244,153 @@ Function: {3}({4})</source>
     <message>
         <location filename="../Debugger/StartDebugDialog.ui" line="270"/>
         <source>Select directory using a directory selection dialog</source>
-        <translation>Vybrat adresář za použití dialogu výběru adresáře</translation>
+        <translation type="obsolete">Vybrat adresář za použití dialogu výběru adresáře</translation>
     </message>
     <message>
         <location filename="../Debugger/StartDebugDialog.ui" line="273"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Vybrat adresář&lt;/b&gt;&lt;p&gt;Výběr pracovního adresáře před dialog výběru adresáře.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Vybrat adresář&lt;/b&gt;&lt;p&gt;Výběr pracovního adresáře před dialog výběru adresáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="62"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="64"/>
         <source>&amp;Working directory:</source>
         <translation>&amp;Pracovní adresář:</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="39"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="41"/>
         <source>Enter the commandline parameters</source>
         <translation>Zadejte parametry příkazového řádku</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="42"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="44"/>
         <source>&lt;b&gt;Commandline&lt;/b&gt;
 &lt;p&gt;Enter the commandline parameters in this field.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Příkazový řádek&lt;/b&gt;&lt;p&gt;Zadání parametrů příkazového řádku do tohoto pole.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="23"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="25"/>
         <source>Command&amp;line:</source>
         <translation>Příkazový řá&amp;dek:</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="141"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="138"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>Zrušit zatržení pro vypnutí reportování výjimek</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="144"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="141"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Report výjimek&lt;/b&gt;&lt;p&gt;Zrušte zatržení přepínače pro vypnutí reportování výjimek.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="148"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="145"/>
         <source>Report &amp;exceptions</source>
         <translation>R&amp;eport výjimek</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="151"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="148"/>
         <source>Alt+E</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="191"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="188"/>
         <source>Select to trace into the Python library</source>
         <translation>Výběr pro trasování do Python knihovny</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="194"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="191"/>
         <source>&amp;Trace into interpreter libraries</source>
         <translation>&amp;Trasovat do knihoven inerpretru</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="197"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="194"/>
         <source>Alt+T</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="161"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="158"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>Vybrat pro vyčištění okna interpretru</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="164"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="161"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyčistit okno interpretru&lt;/b&gt;&lt;p&gt;Vyčistí displej okna interpretru před tím, než se spustí ladicí klient.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="167"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="164"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Vyčistit okno &amp;interpretru</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="204"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="201"/>
         <source>Select to not stop the debugger at the first executable line.</source>
         <translation>Vybrat pro zastavení debugeru na první spustitelné řádce.</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="207"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="204"/>
         <source>&lt;b&gt;Don&apos;t stop at first line&lt;/b&gt;&lt;p&gt;This prevents the debugger from stopping at the first executable line.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nezastavovat na první řádce&lt;/b&gt;&lt;p&gt;Toto debugeru zabrání zastavit se na první spustitelné řádce.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="210"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="207"/>
         <source>Don&apos;t stop at first line</source>
         <translation>Nezastavovat na prvním řádku</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="177"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="174"/>
         <source>Select to start the debugger in a console window</source>
         <translation>Vybrat pro spuštění debugeru v okně konzole</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="180"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="177"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spustit na konzoli&lt;/b&gt;&lt;p&gt;Vybrat pro spuštění debugeru v okně konzole. Příkaz konzole musí být nakonfigurován na Debugger-&amp;gt;Hlavní straně&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="184"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="181"/>
         <source>Start in console</source>
         <translation>Spustit na konzoli</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="220"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="219"/>
         <source>Forking</source>
         <translation>Forkování</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="226"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="225"/>
         <source>Select to go through the fork without asking</source>
         <translation>Neptat se když se prochází přes fork</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="229"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="228"/>
         <source>&lt;b&gt;Fork without pausing&lt;/b&gt;
 &lt;p&gt;Select to go through the fork without asking making the forking decision based on the Parent/Child selection.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Fork bez zastavení&lt;/b&gt;
 &lt;p&gt;Procházet přes fork bez ptaní a provést rozhodnutí pro fork založeném na výběru Rodič/Potomek.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="233"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="232"/>
         <source>Fork without pausing</source>
         <translation>Fork bez zastavení</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="243"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="242"/>
         <source>Select to debug the child process after forking</source>
         <translation>Vybrat pro ladění potomka procesu po forku</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="246"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="245"/>
         <source>&lt;b&gt;Debug Child Process&lt;/b&gt;
 &lt;p&gt;Select to debug the child process after forking. If it is not selected, the parent process will be debugged. This has no effect, if forking without pausing is not selected.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ladit potomka procesu&lt;/b&gt;
 &lt;p&gt;Výběr debugování potomka procesu po forku. Není-li toto vybráno, je laděn rodičovský proces. Toto nastavení nemá efekt, není-li nastaveno forkování bez zastavení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDebugDialog.ui" line="250"/>
+        <location filename="../Debugger/StartDebugDialog.ui" line="249"/>
         <source>Follow Child Process</source>
         <translation type="unfinished"></translation>
     </message>
@@ -48417,10 +48400,10 @@ Function: {3}({4})</source>
     <message>
         <location filename="../Debugger/StartDialog.py" line="130"/>
         <source>Working directory</source>
-        <translation>Pracovní adresář</translation>
+        <translation type="obsolete">Pracovní adresář</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartDialog.py" line="83"/>
+        <location filename="../Debugger/StartDialog.py" line="84"/>
         <source>Clear Histories</source>
         <translation>Vyčistit historii</translation>
     </message>
@@ -48433,29 +48416,29 @@ Function: {3}({4})</source>
         <translation>Spustit profilování</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="117"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="110"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Zadání proměnných prostředí, které mají být nastaveny.</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="120"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="113"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prostředí&lt;/b&gt;&lt;p&gt;Zadání proměnných prostředí, které mají být nastaveny. Jednotlivé položky musí být odděleny mezerou a musí být ve tvaru &apos;var=value&apos;. Pro přičtení hodnoty zadejte výraz ve tvaru &apos;var+=value&apos;.&lt;/p&gt;&lt;p&gt;Příklad: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="101"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="94"/>
         <source>&amp;Environment:</source>
         <translation>Prostř&amp;edí:</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="78"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="83"/>
         <source>Enter the working directory</source>
         <translation>Zadejte pracovní adresář</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="81"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="86"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory of the application to be debugged. Leave it empty to set the working directory to the executable directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pracovní adresář&lt;/b&gt;&lt;p&gt;Zadání pracovního adresáře, ve kterém proběhne debugging. Ponechte jej prázdný pokud chcete pro spuštění použít adresář aplikace.&lt;/p&gt;</translation>
@@ -48463,106 +48446,106 @@ Function: {3}({4})</source>
     <message>
         <location filename="../Debugger/StartProfileDialog.ui" line="218"/>
         <source>Select directory using a directory selection dialog</source>
-        <translation>Vybrat adresář za použití dialogu výběru adresáře</translation>
+        <translation type="obsolete">Vybrat adresář za použití dialogu výběru adresáře</translation>
     </message>
     <message>
         <location filename="../Debugger/StartProfileDialog.ui" line="221"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Vybrat adresář&lt;/b&gt;&lt;p&gt;Výběr pracovního adresáře před dialog výběru adresáře.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Vybrat adresář&lt;/b&gt;&lt;p&gt;Výběr pracovního adresáře před dialog výběru adresáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="62"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="64"/>
         <source>&amp;Working directory:</source>
         <translation>&amp;Pracovní adresář:</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="39"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="41"/>
         <source>Enter the commandline parameters</source>
         <translation>Zadejte parametry příkazového řádku</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="42"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="44"/>
         <source>&lt;b&gt;Commandline&lt;/b&gt;
 &lt;p&gt;Enter the commandline parameters in this field.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Příkazový řádek&lt;/b&gt;&lt;p&gt;Zadání parametrů příkazového řádku do tohoto pole.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="23"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="25"/>
         <source>Command&amp;line:</source>
         <translation>Příkazový řá&amp;dek:</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="191"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="188"/>
         <source>Select this to erase the collected timing data</source>
         <translation>Vybrat pro vymazání shromážděných informací z timig</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="194"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="191"/>
         <source>&lt;b&gt;Erase timing data&lt;/b&gt;
 &lt;p&gt;Select this to erase the collected timing data before the next profiling run.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vymazat timig data&lt;/b&gt;
 &lt;p&gt;Vyberete pro vymazání shomážděných timing dat před dalším spuštěním profilování.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="198"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="195"/>
         <source>Erase &amp;timing data</source>
         <translation>Vymazat &amp;timing data</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="201"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="198"/>
         <source>Alt+C</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="141"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="138"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>Zrušit zatržení pro vypnutí reportování výjimek</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="144"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="141"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Report výjimek&lt;/b&gt;&lt;p&gt;Zrušte zatržení přepínače pro vypnutí reportování výjimek.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="148"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="145"/>
         <source>Report &amp;exceptions</source>
         <translation>R&amp;eport výjimek</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="151"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="148"/>
         <source>Alt+E</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="161"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="158"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>Vybrat pro vyčištění okna interpretru</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="164"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="161"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyčistit okno interpretru&lt;/b&gt;&lt;p&gt;Vyčistí displej okna interpretru před tím, než se spustí debugovací klient.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="167"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="164"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Vyčistit okno &amp;interpretru</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="177"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="174"/>
         <source>Select to start the debugger in a console window</source>
         <translation>Vybrat pro spuštění debugeru v okně konzole</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="180"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="177"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spustit na konzoli&lt;/b&gt;&lt;p&gt;Vybrat pro spuštění debugeru v okně konzole. Příkaz konzole musí být nakonfigurován na Debugger-&amp;gt;Hlavní straně&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartProfileDialog.ui" line="184"/>
+        <location filename="../Debugger/StartProfileDialog.ui" line="181"/>
         <source>Start in console</source>
         <translation>Spustit na konzoli</translation>
     </message>
@@ -48575,153 +48558,153 @@ Function: {3}({4})</source>
         <translation>Spustit běh</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="23"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="25"/>
         <source>Command&amp;line:</source>
         <translation>Příkazový řá&amp;dek:</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="39"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="41"/>
         <source>Enter the commandline parameters</source>
         <translation>Zadejte parametry příkazového řádku</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="42"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="44"/>
         <source>&lt;b&gt;Commandline&lt;/b&gt;
 &lt;p&gt;Enter the commandline parameters in this field.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Příkazový řádek&lt;/b&gt;&lt;p&gt;Zadání parametrů příkazového řádku do tohoto pole.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="62"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="64"/>
         <source>&amp;Working directory:</source>
         <translation>&amp;Pracovní adresář:</translation>
     </message>
     <message>
         <location filename="../Debugger/StartRunDialog.ui" line="241"/>
         <source>Select directory using a directory selection dialog</source>
-        <translation>Vybrat adresář za použití dialogu výběru adresáře</translation>
+        <translation type="obsolete">Vybrat adresář za použití dialogu výběru adresáře</translation>
     </message>
     <message>
         <location filename="../Debugger/StartRunDialog.ui" line="244"/>
         <source>&lt;b&gt;Select directory&lt;/b&gt;
 &lt;p&gt;Select the working directory via a directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Vybrat adresář&lt;/b&gt;&lt;p&gt;Výběr pracovního adresáře před dialog výběru adresáře.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Vybrat adresář&lt;/b&gt;&lt;p&gt;Výběr pracovního adresáře před dialog výběru adresáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="78"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="83"/>
         <source>Enter the working directory</source>
         <translation>Zadejte pracovní adresář</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="81"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="86"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory of the application to be debugged. Leave it empty to set the working directory to the executable directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Pracovní adresář&lt;/b&gt;&lt;p&gt;Zadání pracovního adresáře, ve kterém proběhne debugging. Ponechte jej prázdný pokud chcete pro spuštění použít adresář aplikace.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="101"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="94"/>
         <source>&amp;Environment:</source>
         <translation>Prostř&amp;edí:</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="117"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="110"/>
         <source>Enter the environment variables to be set.</source>
         <translation>Zadání proměnných prostředí, které mají být nastaveny.</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="120"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="113"/>
         <source>&lt;b&gt;Environment&lt;/b&gt;
 &lt;p&gt;Enter the environment variables to be set for the program. The individual settings must be separated by whitespace and be given in the form &apos;var=value&apos;. In order to add to an environment variable, enter it in the form &apos;var+=value&apos;.&lt;/p&gt;
 &lt;p&gt;Example: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</source>
         <translation>&lt;b&gt;Prostředí&lt;/b&gt;&lt;p&gt;Zadání proměnných prostředí, které mají být nastaveny. Jednotlivé položky musí být odděleny mezerou a musí být ve tvaru &apos;var=value&apos;. Pro přičtení hodnoty zadejte výraz ve tvaru &apos;var+=value&apos;.&lt;/p&gt;&lt;p&gt;Příklad: var1=1 var2=&quot;hello world&quot; var3+=&quot;:/tmp&quot;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="141"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="138"/>
         <source>Uncheck to disable exception reporting</source>
         <translation>Zrušit zatržení pro vypnutí reportování výjimek</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="144"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="141"/>
         <source>&lt;b&gt;Report exceptions&lt;/b&gt;
 &lt;p&gt;Uncheck this in order to disable exception reporting.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Report výjimek&lt;/b&gt;&lt;p&gt;Zrušte zatržení přepínače pro vypnutí reportování výjimek.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="148"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="145"/>
         <source>Report &amp;exceptions</source>
         <translation>R&amp;eport výjimek</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="151"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="148"/>
         <source>Alt+E</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="161"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="158"/>
         <source>Select to clear the display of the interpreter window</source>
         <translation>Vybrat pro vyčištění okna interpretru</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="164"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="161"/>
         <source>&lt;b&gt;Clear interpreter window&lt;/b&gt;&lt;p&gt;This clears the display of the interpreter window before starting the debug client.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Vyčistit okno interpretru&lt;/b&gt;&lt;p&gt;Vyčistí displej okna interpretru před tím, než se spustí debugovací klient.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="167"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="164"/>
         <source>Clear &amp;interpreter window</source>
         <translation>Vyčistit okno &amp;interpretru</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="177"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="174"/>
         <source>Select to start the debugger in a console window</source>
         <translation>Vybrat pro spuštění debugeru v okně konzole</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="180"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="177"/>
         <source>&lt;b&gt;Start in console&lt;/b&gt;
 &lt;p&gt;Select to start the debugger in a console window. The console command has to be configured on the Debugger-&amp;gt;General page&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spustit na konzoli&lt;/b&gt;&lt;p&gt;Vybrat pro spuštění debugeru v okně konzole. Příkaz konzole musí být nakonfigurován na Debugger-&amp;gt;Hlavní straně&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="184"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="181"/>
         <source>Start in console</source>
         <translation>Spustit na konzoli</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="191"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="190"/>
         <source>Forking</source>
         <translation>Větvení</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="197"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="196"/>
         <source>Select to go through the fork without asking</source>
         <translation>Neptat se když se prochází přes větvení</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="200"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="199"/>
         <source>&lt;b&gt;Fork without pausing&lt;/b&gt;
 &lt;p&gt;Select to go through the fork without asking making the forking decision based on the Parent/Child selection.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Větvení bez zastavení&lt;/b&gt;
 &lt;p&gt;Procházet přes větvení bez ptaní a provést rozhodnutí pro fork založeném na výběru Rodič/Potomek.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="204"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="203"/>
         <source>Fork without pausing</source>
         <translation>Fork bez zastavení</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="214"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="213"/>
         <source>Select to debug the child process after forking</source>
         <translation>Vybrat pro ladění potomka procesu po větvení</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="217"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="216"/>
         <source>&lt;b&gt;Debug Child Process&lt;/b&gt;
 &lt;p&gt;Select to debug the child process after forking. If it is not selected, the parent process will be debugged. This has no effect, if forking without pausing is not selected.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ladit potomka procesu&lt;/b&gt;
 &lt;p&gt;Výběr debugování potomka procesu po forku. Není-li toto vybráno, je laděn rodičovský proces. Toto nastavení nemá efekt, není-li nastaveno větvení bez zastavení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Debugger/StartRunDialog.ui" line="221"/>
+        <location filename="../Debugger/StartRunDialog.ui" line="220"/>
         <source>Follow Child Process</source>
         <translation type="unfinished"></translation>
     </message>
@@ -49521,28 +49504,28 @@ Function: {3}({4})</source>
         <translation>Subversion příkaz</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="25"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="23"/>
         <source>Subversion Command:</source>
         <translation>Subversion příkaz:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="125"/>
         <source>Select the working directory via a directory selection dialog</source>
-        <translation>Výběr pracovního adresáře přes dialog výběru adresáře</translation>
+        <translation type="obsolete">Výběr pracovního adresáře přes dialog výběru adresáře</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="128"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Select the working directory for the Subversion command via a directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Pracovní adresář&lt;/b&gt;&lt;p&gt;Výběr pracovního adresáře pro CVS příkaz přes dialog výběru adresáře.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Pracovní adresář&lt;/b&gt;&lt;p&gt;Výběr pracovního adresáře pro CVS příkaz přes dialog výběru adresáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="67"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="75"/>
         <source>Enter the working directory for the Subversion command</source>
         <translation>Zadejte pracovní adresář pro Subversion příkaz</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="70"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="78"/>
         <source>&lt;b&gt;Working directory&lt;/b&gt;
 &lt;p&gt;Enter the working directory for the Subversion command.
 This is an optional entry. The button to the right will open a 
@@ -49552,37 +49535,37 @@ directory selection dialog.&lt;/p&gt;</source>
 Zadání je nepovinné. Stisknutím pravého tlačítka se otevře dialog výběru adresáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="89"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="59"/>
         <source>Working Directory:&lt;br&gt;(optional)</source>
         <translation>Pracovní adresář:&lt;br&gt;(nepovinné)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="102"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="94"/>
         <source>Project Directory:</source>
         <translation>Projekt adresář:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="115"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="107"/>
         <source>This shows the root directory of the current project.</source>
         <translation>Toto zobrazí kořenový adresář aktuálního projektu.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="118"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="110"/>
         <source>project directory</source>
         <translation>projekt adresář</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.py" line="78"/>
         <source>Working directory</source>
-        <translation>Pracovní adresář</translation>
+        <translation type="obsolete">Pracovní adresář</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="38"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="36"/>
         <source>Enter the Subversion command to be executed with all necessary parameters</source>
         <translation>Zadejte subversion příkaz, který bude vykonán se všemy potřebnými parametry</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="41"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCommandDialog.ui" line="39"/>
         <source>&lt;b&gt;Subversion Command&lt;/b&gt;
 &lt;p&gt;Enter the Subversion command to be executed including all necessary 
 parameters. If a parameter of the commandline includes a space you have to 
@@ -49656,58 +49639,58 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="64"/>
         <source>Press to open a selection dialog</source>
-        <translation>Stisknout pro otevření dialogu výběru</translation>
+        <translation type="obsolete">Stisknout pro otevření dialogu výběru</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="67"/>
         <source>&lt;b&gt;Target directory&lt;/b&gt;
 &lt;p&gt;Select the target name for the operation via a selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Cílový adresář&lt;/b&gt;&lt;p&gt;Výběr cílového adresáře přes dialogové okno výběru adresáře.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;b&gt;Cílový adresář&lt;/b&gt;&lt;p&gt;Výběr cílového adresáře přes dialogové okno výběru adresáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="25"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="23"/>
         <source>Source:</source>
         <translation>Zdroj:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="32"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="30"/>
         <source>Shows the name of the source</source>
         <translation>Zobrazuje jméno zdroje</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="35"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="33"/>
         <source>&lt;b&gt;Source name&lt;/b&gt;
 &lt;p&gt;This field shows the name of the source.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Jméno zdroje&lt;/b&gt;
 &lt;p&gt;Toto pole zobrazuje jméno zdroje.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="46"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="60"/>
         <source>Enter the target name</source>
         <translation>Zadejte jméno cíle</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="57"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="44"/>
         <source>Target:</source>
         <translation>Cíl:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.py" line="52"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.py" line="46"/>
         <source>Subversion Move</source>
         <translation>Subversion přesun</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.py" line="91"/>
         <source>Select target</source>
-        <translation>Vybrat cíl</translation>
+        <translation type="obsolete">Vybrat cíl</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="77"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="71"/>
         <source>Select to force the operation</source>
         <translation>Vybrat pro vynucení operace</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="80"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="74"/>
         <source>Enforce operation</source>
         <translation>Vynutit operaci</translation>
     </message>
@@ -49715,11 +49698,11 @@ of the subversion client executable (i.e. svn).&lt;/p&gt;</source>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnCopyDialog.ui" line="67"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Select the target name for the operation via a selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Jméno cíle&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Jméno cíle&lt;/b&gt;
 &lt;p&gt;Výběr jména cíle přes dialogové okno výběru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="49"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnCopyDialog.ui" line="63"/>
         <source>&lt;b&gt;Target name&lt;/b&gt;
 &lt;p&gt;Enter the new name in this field. The target must be the new name or an absolute path.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -50586,100 +50569,95 @@ get the target URL from the working copy.&lt;/p&gt;
         <translation>&lt;b&gt;Dialog Nový projekt z repozitáře&lt;/b&gt;&lt;p&gt;Zadání různých údajů o repozitáři. Tyto údaje jsou použity ve chvíli, kdy se z repozitáře projekt načítá. Pokud checkbox zapnut, tak na URL musí zakončovat jméno projektu. Je převzat layout repozitáře s adresáři projekt/tags, projekt/branches a projekt/trunk. V tomto případě můžete zadat tag nebo větev (branch), které musí vypadat jako tags/jméno_tagu nebo branches/jménovětve. Pokud je checkbox vypnut, tak URL musí obsahovat kompletní cestu do repozitáře.&lt;/p&gt;&lt;p&gt;Pro vzdálený repozitář musí URL obsahovat jméno hosta.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="30"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="84"/>
         <source>Enter the tag the new project should be generated from</source>
         <translation>Zadání tagu nového projektu, který bude generován z</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="33"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="87"/>
         <source>&lt;b&gt;Tag in VCS&lt;/b&gt;
 &lt;p&gt;Enter the tag name the new project shall be generated from. Leave empty to retrieve the latest data from the repository.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Tag v VCS&lt;/b&gt;&lt;p&gt;Zadání jména tagu v novém projektu, který se má vygenerovat. Ponechte prázdné, pokud z repozitáře chcete získat poslední verzi.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="41"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="38"/>
         <source>Select the protocol to access the repository</source>
         <translation>Výběr protokolu pro přístup do repozitáře</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="48"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="28"/>
         <source>&amp;Protocol:</source>
         <translation>Prot&amp;otokol:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.py" line="160"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.py" line="128"/>
         <source>&amp;URL:</source>
         <translation>&amp;URL:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="78"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="114"/>
         <source>Enter the directory of the new project.</source>
         <translation>Zadejte adresář nového projektu.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="81"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="117"/>
         <source>&lt;b&gt;Project Directory&lt;/b&gt;
 &lt;p&gt;Enter the directory of the new project. It will be retrieved from 
 the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Adresář projektu&lt;/b&gt;&lt;p&gt;Zadání adresáře nového projektu. Ten bude stažen z repozitáře a umístěn do tohoto adresáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="90"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="126"/>
         <source>Select to indicate, that the repository has a standard layout (projectdir/trunk, projectdir/tags, projectdir/branches)</source>
-        <translation>Vybrat pro indikaci toho, že repozitář má standardní layout (projectdir/trunk, projectdir/tags, projectdir/branches)</translation>
+        <translation type="unfinished">Vybrat url repozitáře přes dialog výběru adresáře nebo přes prohlížeč repozitáře</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="93"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="129"/>
         <source>Repository has standard &amp;layout</source>
         <translation>Repozitář má standardní &amp;layout</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="96"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="132"/>
         <source>Alt+L</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="106"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="95"/>
         <source>Project &amp;Directory:</source>
         <translation>A&amp;dresář projektu:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="116"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="74"/>
         <source>&amp;Tag:</source>
         <translation>&amp;Tag:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.py" line="95"/>
         <source>Select Repository-Directory</source>
-        <translation>Vyberte adresář repozitáře</translation>
+        <translation type="obsolete">Vyberte adresář repozitáře</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.py" line="123"/>
         <source>Select Project Directory</source>
-        <translation>Vyberte adresář projektu</translation>
+        <translation type="obsolete">Vyberte adresář projektu</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsPySvn/SvnNewProjectOptionsDialog.ui" line="133"/>
         <source>Select the project directory via a directory selection dialog</source>
-        <translation>Výběr adresáře projektu přes dialog výběru adresáře</translation>
+        <translation type="obsolete">Výběr adresáře projektu přes dialog výběru adresáře</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="126"/>
-        <source>Select the repository url via a directory selection dialog or the repository browser</source>
-        <translation>Vybrat url repozitáře přes dialog výběru adresáře nebo přes prohlížeč repozitáře</translation>
-    </message>
-    <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="61"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="67"/>
         <source>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Enter the URL to the module. For a repository with standard layout, this must not contain the trunk, tags or branches part.&lt;/p&gt;</source>
         <translation>&lt;b&gt;URL&lt;b&gt;&lt;p&gt;Zadejte URL modulu. Repozitář ve standardním uspořádání musí obsahovat trunk, tags nebo branches.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.py" line="154"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.py" line="121"/>
         <source>Pat&amp;h:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="58"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnNewProjectOptionsDialog.ui" line="64"/>
         <source>Enter the url path of the module in the repository (without protocol part)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -50699,78 +50677,78 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Dialog informací o repozitáři&lt;/b&gt;&lt;p&gt;Zadání různých informací do vstupních polí. Tyto hodnoty jsou pak použity při generování nového projektu v repozitáři. Pokud je zatržen checkbox, tak URL musí končit jménem projektu. Pak budou v repozitáři generovány složky project/tags, project/branches a project/trunk. Pokud checkbox není zatržen, tak URL musí obsahovat kompletní cestu do repozitáře.&lt;/p&gt;&lt;p&gt;U více repozitářů musí URL obsahovat i název hosta.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="30"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="74"/>
         <source>Log &amp;Message:</source>
         <translation>&amp;Log zpráva:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="40"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="98"/>
         <source>Select, if the standard repository layout (projectdir/trunk, projectdir/tags, projectdir/branches) should be generated</source>
         <translation>Vybrat, jestliže se má vygenerovat standardní layout repozitáře (projectdir/trunk, projectdir/tags, projectdir/branches)</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="43"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="101"/>
         <source>Create standard repository &amp;layout</source>
         <translation>Vytvořit standardní &amp;layout repozitáře</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="46"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="104"/>
         <source>Alt+L</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="56"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="38"/>
         <source>Select the protocol to access the repository</source>
         <translation>Výběr protokolu pro přístup do repozitáře</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.py" line="110"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.py" line="95"/>
         <source>&amp;URL:</source>
         <translation>&amp;URL:</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="73"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="84"/>
         <source>Enter the log message for the new project.</source>
         <translation>Zadání log popisu pro nový projekt.</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="76"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="87"/>
         <source>&lt;b&gt;Log Message&lt;/b&gt;
 &lt;p&gt;Enter the log message to be used for the new project.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Log popisek&lt;/b&gt;&lt;p&gt;Zadání log popisku, který bude použit při založení nového projektu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="80"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="91"/>
         <source>new project started</source>
         <translation>nový projekt spuštěn</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="87"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="28"/>
         <source>&amp;Protocol:</source>
         <translation>Prot&amp;otokol:</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.py" line="71"/>
         <source>Select Repository-Directory</source>
-        <translation>Vyberte adresář repozitáře</translation>
+        <translation type="obsolete">Vyberte adresář repozitáře</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="107"/>
         <source>Select the repository url via a directory selection dialog or the repository browser</source>
-        <translation>Vybrat url repozitáře přes dialog výběru adresáře nebo přes prohlížeč repozitáře</translation>
+        <translation type="obsolete">Vybrat url repozitáře přes dialog výběru adresáře nebo přes prohlížeč repozitáře</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="100"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="67"/>
         <source>&lt;b&gt;URL&lt;/b&gt;&lt;p&gt;Enter the URL to the module. For a repository with standard layout, this must not contain the trunk, tags or branches part.&lt;/p&gt;</source>
         <translation>&lt;b&gt;URL&lt;b&gt;&lt;p&gt;Zadejte URL modulu. Repozitář ve standardním uspořádání musí obsahovat trunk, tags nebo branches.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.py" line="104"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.py" line="89"/>
         <source>Pat&amp;h:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="97"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnOptionsDialog.ui" line="64"/>
         <source>Enter the url path of the module in the repository (without protocol part)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -51661,27 +51639,27 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
         <translation>Vybrat zdroj vlastnosti</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="50"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="73"/>
         <source>File</source>
         <translation>Soubor</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="57"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="47"/>
         <source>Text</source>
         <translation>Text</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="67"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="57"/>
         <source>Enter text of the property</source>
         <translation>Zadání testu vlastnosti</translation>
     </message>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="93"/>
         <source>Press to select the file via a file selection dialog</source>
-        <translation>Stisknout pro výběr souboru přes dialogové okno</translation>
+        <translation type="obsolete">Stisknout pro výběr souboru přes dialogové okno</translation>
     </message>
     <message>
-        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="83"/>
+        <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.ui" line="92"/>
         <source>Enter the name of a file for the property</source>
         <translation>Zadejte jméno souboru nebo vlastnosti</translation>
     </message>
@@ -51708,7 +51686,7 @@ the repository and be placed in this directory.&lt;/p&gt;</source>
     <message>
         <location filename="../Plugins/VcsPlugins/vcsSubversion/SvnPropSetDialog.py" line="46"/>
         <source>Select file for property</source>
-        <translation>Vybrat soubor pro vlastnost</translation>
+        <translation type="obsolete">Vybrat soubor pro vlastnost</translation>
     </message>
 </context>
 <context>
@@ -54124,18 +54102,8 @@ In order to switch to the trunk version leave it empty.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="39"/>
+        <location filename="../Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="48"/>
         <source>Enter the full path of the shared directory</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/Sync/SyncDirectorySettingsPage.ui" line="46"/>
-        <source>Select the shared directory via a directory selection dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../Helpviewer/Sync/SyncDirectorySettingsPage.py" line="72"/>
-        <source>Shared Directory</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -56034,338 +56002,338 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation>Konfigurovat menu nástrojů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="25"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="151"/>
         <source>Add a separator</source>
         <translation>Přidat oddělovač</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="28"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="154"/>
         <source>&lt;b&gt;Add separator&lt;/b&gt;&lt;p&gt;Add a separator for the menu.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přidat oddělovač&lt;/b&gt;&lt;p&gt;Do menu se přidá oddělovač.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="31"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="157"/>
         <source>Add &amp;Separator</source>
         <translation>Přidat &amp;oddělovač</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="38"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="47"/>
         <source>Add a new tools entry</source>
         <translation>Přidat záznam o novém nástroji</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="41"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="50"/>
         <source>&lt;b&gt;Add&lt;/b&gt;
 &lt;p&gt;Add a new tools entry with the values entered below.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přidat&lt;/b&gt;
 &lt;p&gt;Přidat záznam o novém nástroji s hodnotami zadanými níže.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="45"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="54"/>
         <source>&amp;Add</source>
         <translation>Přid&amp;at</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="48"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="57"/>
         <source>Alt+A</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="58"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="296"/>
         <source>Select the output redirection mode</source>
         <translation>Vyberte mód přesměrovaného výstupu</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="61"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="299"/>
         <source>&lt;b&gt;Redirect output&lt;b&gt;&lt;p&gt;Select the output redirection mode. The standard error channel is either not redirected or shown in the log viewer.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Přesměrovaný výstup&lt;/b&gt;&lt;p&gt;Výběr módu přesměrovaného výstupu. Standardní chybový kanál také není přesměrován nebo zobrazen v log prohlížeči.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="68"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="275"/>
         <source>Enter the arguments for the executable</source>
         <translation>Zadejte argumenty pro provedení</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="71"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="278"/>
         <source>&lt;b&gt;Arguments&lt;/b&gt;
 &lt;p&gt;Enter the arguments for the executable.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Argumenty&lt;/b&gt;
 &lt;p&gt;Zadání argumentů pro provedení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="82"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="107"/>
         <source>Move up</source>
         <translation>Posunout nahoru</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="85"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="110"/>
         <source>&lt;b&gt;Move Up&lt;/b&gt;
 &lt;p&gt;Move the selected entry up.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Posunout nahoru&lt;/b&gt;&lt;p&gt;Posunout vybranou položku nahoru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="89"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="114"/>
         <source>&amp;Up</source>
         <translation>Nahor&amp;u</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="92"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="117"/>
         <source>Alt+U</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="102"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="87"/>
         <source>Delete the selected entry</source>
         <translation>Smazat vybranou položku</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="105"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="90"/>
         <source>&lt;b&gt;Delete&lt;/b&gt;
 &lt;p&gt;Delete the selected entry.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Smazat&lt;/b&gt;&lt;p&gt;Smazat vybranou položku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="109"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="94"/>
         <source>&amp;Delete</source>
         <translation>Sma&amp;zat</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="112"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="97"/>
         <source>Alt+D</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="119"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="30"/>
         <source>Clear all entry fields</source>
         <translation>Vyčistit všechna vstupní pole</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="122"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="33"/>
         <source>&lt;b&gt;New&lt;/b&gt;
 &lt;p&gt;Clear all entry fields for entering a new tools entry.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Nový&lt;/b&gt;
 &lt;p&gt;Vyčistí všechna vstupní pole pro zadání nového záznamu o nástroji.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="126"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="37"/>
         <source>&amp;New</source>
         <translation>&amp;Nový</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="129"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="40"/>
         <source>Alt+N</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../Preferences/ToolConfigurationDialog.ui" line="282"/>
         <source>Select the icon via a file selection dialog</source>
-        <translation>Vybrat ikonu přes dialog výběru souborů</translation>
+        <translation type="obsolete">Vybrat ikonu přes dialog výběru souborů</translation>
     </message>
     <message>
         <location filename="../Preferences/ToolConfigurationDialog.ui" line="285"/>
         <source>&lt;b&gt;Icon&lt;/b&gt;
 &lt;p&gt;Select the icon via a file selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Ikona&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Ikona&lt;/b&gt;
 &lt;p&gt;Vybere se ikona přes dialog výběru souobru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="136"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="254"/>
         <source>Enter the filename of the executable</source>
         <translation>Zadejte jméno souboru, který má být spustilený</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="139"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="257"/>
         <source>&lt;b&gt;Executable&lt;/b&gt;
 &lt;p&gt;Enter the filename of the executable.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spustitelný soubor&lt;/b&gt;
 &lt;p&gt;Zadání jméno souboru, který má být spustitelný.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="150"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="127"/>
         <source>Move down</source>
         <translation>Posunout dolů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="153"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="130"/>
         <source>&lt;b&gt;Move Down&lt;/b&gt;
 &lt;p&gt;Move the selected entry down.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Posunout dolů&lt;/b&gt;&lt;p&gt;Posunout vybranou položku dolů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="157"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="134"/>
         <source>Do&amp;wn</source>
         <translation>&amp;Dolů</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="160"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="137"/>
         <source>Alt+W</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="183"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="194"/>
         <source>Enter the menu text</source>
         <translation>Zadejte text menu</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="186"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="197"/>
         <source>&lt;b&gt;Menu text&lt;/b&gt;
 &lt;p&gt;Enter the menu text. Precede the accelerator key with an &amp; character.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Text menu&lt;/b&gt;
 &lt;p&gt;Zadání textu menu. Před akcelerátor se uvádí znak &amp;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="197"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="67"/>
         <source>Change the values of the selected entry</source>
         <translation>Změnit hodnoty vybrané položky</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="200"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="70"/>
         <source>&lt;b&gt;Change&lt;/b&gt;
 &lt;p&gt;Change the values of the selected entry.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Změnit&lt;/b&gt;
 &lt;p&gt;Změní se hodnoty vybrané položky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="204"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="74"/>
         <source>C&amp;hange</source>
         <translation>Z&amp;měnit</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="207"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="77"/>
         <source>Alt+H</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="214"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="205"/>
         <source>&amp;Icon file:</source>
         <translation>Soubor s &amp;ikonou:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="224"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="265"/>
         <source>Ar&amp;guments:</source>
         <translation>Ar&amp;gumenty:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="234"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="184"/>
         <source>&amp;Menu text:</source>
         <translation>Text &amp;menu:</translation>
     </message>
     <message>
         <location filename="../Preferences/ToolConfigurationDialog.ui" line="293"/>
         <source>Select the executable via a file selection dialog</source>
-        <translation>Výběr spustitelného přes dialog výběru souboru</translation>
+        <translation type="obsolete">Výběr spustitelného přes dialog výběru souboru</translation>
     </message>
     <message>
         <location filename="../Preferences/ToolConfigurationDialog.ui" line="296"/>
         <source>&lt;b&gt;Executable&lt;/b&gt;
 &lt;p&gt;Select the executable via a file selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Spustitelný soubor&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Spustitelný soubor&lt;/b&gt;
 &lt;p&gt;Výběr spusttitelného přes dialog výběru souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="251"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="224"/>
         <source>Enter the filename of the icon</source>
         <translation>Zadejte jméno souboru ikony</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="254"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="227"/>
         <source>&lt;b&gt;Icon&lt;/b&gt;
 &lt;p&gt;Enter the filename of the icon.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Ikona&lt;/b&gt;
 &lt;p&gt;Zadání jména soubory ikony.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="262"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="286"/>
         <source>&amp;Redirect output</source>
         <translation>Přesmě&amp;rovat výstup</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.ui" line="272"/>
+        <location filename="../Preferences/ToolConfigurationDialog.ui" line="235"/>
         <source>&amp;Executable file:</source>
         <translation>Spustit&amp;elný soubor:</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="47"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="44"/>
         <source>no redirection</source>
         <translation>žádné přesměrování</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="48"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="45"/>
         <source>show output</source>
         <translation>zobrazit výstup</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="49"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="46"/>
         <source>insert into current editor</source>
         <translation>vložit do aktuálního editoru</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="50"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="47"/>
         <source>replace selection of current editor</source>
         <translation>nahradit výběr aktuálního editoru</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="136"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="133"/>
         <source>Add tool entry</source>
         <translation>Přidat záznam o nástroji</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="107"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="104"/>
         <source>You have to set an executable to add to the Tools-Menu first.</source>
         <translation>Pro přidání menu nástrojů musíte nejdříve nastavit spustitelný soubor.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="116"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="113"/>
         <source>You have to insert a menuentry text to add the selected program to the Tools-Menu first.</source>
         <translation>Pro přidání vybraného programu do menu nástrojů musíte nejdříve vložit text položky menu.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="125"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="122"/>
         <source>The selected file could not be found or is not an executable. Please choose an executable filename.</source>
         <translation>Vybraný soubor nebyl nalezen nebo není spustitelný. Prosím, vyberte spustitelný soubor.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="187"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="184"/>
         <source>Change tool entry</source>
         <translation>Změnit položku nástroje</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="169"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="166"/>
         <source>You have to set an executable to change the Tools-Menu entry.</source>
         <translation>Pro změnu položky menu nástrojů musíte nejdříve nastavit spustitelný soubor.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="178"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="175"/>
         <source>You have to insert a menuentry text to change the selected Tools-Menu entry.</source>
         <translation>Pro přidání vybraného programu do menu nástrojů musíte nejdříve vložit text položky menu.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="187"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="184"/>
         <source>The selected file could not be found or is not an executable. Please choose an existing executable filename.</source>
         <translation>Vybraný soubor nebyl nalezen nebo není spustitelný. Prosím, vyberte spustitelný soubor.</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="282"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="275"/>
         <source>Select executable</source>
         <translation>Vybrat spustitelný soubor</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="282"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="275"/>
         <source>The selected file is not an executable. Please choose an executable filename.</source>
         <translation>Vybraný soubor není spustitelný. Prosím, vyberte spustitelný soubor.</translation>
     </message>
     <message>
         <location filename="../Preferences/ToolConfigurationDialog.py" line="297"/>
         <source>Select icon file</source>
-        <translation>Vybrat soubor ikony</translation>
+        <translation type="obsolete">Vybrat soubor ikony</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="297"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="40"/>
         <source>Icon files (*.png)</source>
         <translation>Soubory ikon (*.png)</translation>
     </message>
     <message>
-        <location filename="../Preferences/ToolConfigurationDialog.py" line="136"/>
+        <location filename="../Preferences/ToolConfigurationDialog.py" line="133"/>
         <source>An entry for the menu text {0} already exists.</source>
         <translation>Text položky menu {0} již existuje.</translation>
     </message>
@@ -56555,94 +56523,94 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="../Project/TranslationPropertiesDialog.ui" line="82"/>
         <source>Show directory selection dialog</source>
-        <translation>Zobrazit dialog výběru adresáře</translation>
+        <translation type="obsolete">Zobrazit dialog výběru adresáře</translation>
     </message>
     <message>
         <location filename="../Project/TranslationPropertiesDialog.ui" line="85"/>
         <source>&lt;b&gt;Binary Translations Path&lt;/b&gt;
 &lt;p&gt;Select the directory for the binary translations via a directory selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Cesta k binárnímu překladu&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Cesta k binárnímu překladu&lt;/b&gt;
 &lt;p&gt;Výběr adresáře binárního překladu přes dialog výběru adresáře.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="36"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="57"/>
         <source>&amp;Binary Translations Path:</source>
         <translation>Cesta k &amp;binárnímu překladu:</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="25"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="76"/>
         <source>Enter the path for the binary translation files (*.qm)</source>
         <translation>Zadejte cestu k binárním souborům překladů (*.qm)</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="28"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="79"/>
         <source>&lt;b&gt;Binary Translations Path&lt;/b&gt;
 &lt;p&gt;Enter the directory for the binary translation files (*.qm). Leave it empty to store them together with the *.ts files.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Cesta k binárním překladům&lt;/b&gt;
 &lt;p&gt;Zadání adresáře pro binární soubory překladů (*.qm). Pro jejich uložení do stejného adresáře, kde jsou *.ts soubory, ponechte prázdné.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="95"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="87"/>
         <source>Exclude from translation</source>
         <translation>Vyloučit překlady formulářů</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="101"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="93"/>
         <source>Press to select a directory via a selection dialog</source>
         <translation>Stisknout pro výběr adresáře přes dialog výběru</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="104"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="96"/>
         <source>Select d&amp;irectory...</source>
         <translation>Vybrat &amp;adresář...</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="111"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="103"/>
         <source>Press to select a file via a selection dialog</source>
         <translation>Stisknout pro výběr souboru pomocí dialogu</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="114"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="106"/>
         <source>Select &amp;file...</source>
         <translation>Vybrat &amp;soubor...</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="124"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="116"/>
         <source>Press to add the entered path or file to the list</source>
         <translation>Stisknout pro přidání vstupní cesty nebo souboru do seznamu</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="127"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="119"/>
         <source>&amp;Add</source>
         <translation>Přid&amp;at</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="140"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="132"/>
         <source>&amp;Delete</source>
         <translation>Sma&amp;zat</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="147"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="139"/>
         <source>Enter a path or file to be added</source>
         <translation>Zadejte cestu nebo soubor, který se má přidat</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="154"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="146"/>
         <source>List of paths or files to excude from translation</source>
         <translation>Seznam cest nebo souborů pro provedení překladu formulářů</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.py" line="175"/>
+        <location filename="../Project/TranslationPropertiesDialog.py" line="156"/>
         <source>Exempt file from translation</source>
         <translation>Vyjmout soubor z překladu</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.py" line="188"/>
+        <location filename="../Project/TranslationPropertiesDialog.py" line="169"/>
         <source>Exempt directory from translation</source>
         <translation>Vyjmout adresář z překladu</translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="137"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="129"/>
         <source>Press to delete the selected entry from the list</source>
         <translation>Stisknout pro odebrání vybraného záznamu ze seznamu</translation>
     </message>
@@ -56659,18 +56627,18 @@ be changed via the preferences dialog.&lt;/p&gt;
     <message>
         <location filename="../Project/TranslationPropertiesDialog.py" line="103"/>
         <source>Select translation file</source>
-        <translation>Vybrat soubor s překladem</translation>
+        <translation type="obsolete">Vybrat soubor s překladem</translation>
     </message>
     <message>
         <location filename="../Project/TranslationPropertiesDialog.py" line="132"/>
         <source>Select directory for binary translations</source>
-        <translation>Výběr adresáře pro binární překlady</translation>
+        <translation type="obsolete">Výběr adresáře pro binární překlady</translation>
     </message>
     <message>
         <location filename="../Project/TranslationPropertiesDialog.ui" line="74"/>
         <source>&lt;b&gt;Translation Pattern&lt;/b&gt;
 &lt;p&gt;Select a translation file via a file selection dialog.&lt;/p&gt;</source>
-        <translation>&lt;b&gt;Vzorek cesty k překladům&lt;/b&gt;
+        <translation type="obsolete">&lt;b&gt;Vzorek cesty k překladům&lt;/b&gt;
 &lt;p&gt;Vyberte soubor s překladem přes dialog výběru souboru.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -56690,7 +56658,7 @@ be changed via the preferences dialog.&lt;/p&gt;
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Project/TranslationPropertiesDialog.ui" line="57"/>
+        <location filename="../Project/TranslationPropertiesDialog.ui" line="23"/>
         <source>&amp;Translation Path Pattern:
 (Use &apos;%language%&apos; where the language code should be inserted, e.g. i18n/eric6_%language%.ts)</source>
         <translation type="unfinished">&amp;Vzorek cesty k překladům:
@@ -57573,17 +57541,17 @@ be changed via the preferences dialog.&lt;/p&gt;
 <context>
     <name>UnittestDialog</name>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="398"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="400"/>
         <source>Unittest</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="26"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="69"/>
         <source>Enter the test name. Leave empty to use the default name &quot;suite&quot;.</source>
         <translation>Zadejte jméno testu. Pro použití defaultního jména &quot;suite&quot; ponechte prázdné.</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="29"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="72"/>
         <source>&lt;b&gt;Testname&lt;/b&gt;&lt;p&gt;Enter the name of the test to be performed. This name must follow the rules given by Python&apos;s unittest module. If this field is empty, the default name of &quot;suite&quot; will be used.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Jméno testu&lt;/b&gt;&lt;p&gt;Zadání jména testu, který bude proveden. Toto jméno musí být zadáno v souladu s pravidly, které definuje modul unittest v Pythonu. Je-li toto pole prázdné, je použito defaultní jméno &quot;suite&quot;.&lt;/p&gt;</translation>
     </message>
@@ -57604,112 +57572,112 @@ cases.&lt;/p&gt;</source>
 Může mít metodu pojmenovanou níže. Není-li jméno zadáno, bude spuštěna metoda suite(). Není-li tato metoda přítomna, bude modul prověřen podle vlastních nastavení testu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="68"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="59"/>
         <source>Enter &amp;test name:</source>
         <translation>Zadejte jméno &amp;testu:</translation>
     </message>
     <message>
         <location filename="../PyUnit/UnittestDialog.ui" line="88"/>
         <source>Open a file selection dialog</source>
-        <translation>Otevřít dialog výběru souboru</translation>
+        <translation type="obsolete">Otevřít dialog výběru souboru</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="78"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="26"/>
         <source>Enter test &amp;filename:</source>
         <translation>Zadejte jméno &amp;souboru s testem:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="104"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="91"/>
         <source>Select whether you want to run the test locally</source>
         <translation>Vybrat, jestliže chcete aby test běžel lokálně</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="107"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="94"/>
         <source>Run &amp;local</source>
         <translation>Spustit &amp;lokálně</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="114"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="101"/>
         <source>Select whether coverage data should be collected</source>
         <translation>Vybrat, mají-li být data o pokrytí sbírána</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="117"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="104"/>
         <source>C&amp;ollect coverage data</source>
         <translation>Sbírat údaje &amp;o pokrytí</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="127"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="114"/>
         <source>Select whether old coverage data should be erased</source>
         <translation>Vybrat jestliže mají být stará data vymazána</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="130"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="117"/>
         <source>&amp;Erase coverage data</source>
         <translation>&amp;Vymazat data pokrytí</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="148"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="135"/>
         <source>Progress:</source>
         <translation>Stav procesu:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="188"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="175"/>
         <source>Run:</source>
         <translation>Běží:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="195"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="182"/>
         <source>Number of tests run</source>
         <translation>Počet běžících testů</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="239"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="226"/>
         <source>Failures:</source>
         <translation>Selhalo:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="246"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="233"/>
         <source>Number of test failures</source>
         <translation>Počet testů, které selhaly</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="256"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="243"/>
         <source>Errors:</source>
         <translation>Chyby:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="263"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="250"/>
         <source>Number of test errors</source>
         <translation>Počet testů s chybami</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="205"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="192"/>
         <source>Remaining:</source>
         <translation>Zbývá:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="212"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="199"/>
         <source>Number of tests to be run</source>
         <translation>Počet testů, které se ještě mají vykonat</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="345"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="332"/>
         <source>Tests performed:</source>
         <translation>Provedeno testů:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="355"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="342"/>
         <source>Failures and errors:</source>
         <translation>Selhání a chyby:</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="362"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="349"/>
         <source>Failures and Errors list</source>
         <translation>Seznam selhání a chyb</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="365"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="352"/>
         <source>&lt;b&gt;Failures and Errors list&lt;/b&gt;
 &lt;p&gt;This list shows all failed and errored tests.
 Double clicking on an entry will show the respective traceback.&lt;/p&gt;</source>
@@ -57718,168 +57686,183 @@ Double clicking on an entry will show the respective traceback.&lt;/p&gt;</sourc
 Dvojklik na položku zobrazí výpis zásobníku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="392"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="379"/>
         <source>Idle</source>
         <translation>V běhu</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="68"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="71"/>
         <source>Start</source>
         <translation>Spustit</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="70"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="73"/>
         <source>Start the selected testsuite</source>
         <translation>Spustit vybranou soupravu testů</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="72"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="75"/>
         <source>&lt;b&gt;Start Test&lt;/b&gt;&lt;p&gt;This button starts the selected testsuite.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Spustit test&lt;/b&gt;&lt;p&gt;Toto tlačítko spustí vybranou soupravu testů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="83"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="86"/>
         <source>Stop</source>
         <translation>Zastavit</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="85"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="88"/>
         <source>Stop the running unittest</source>
         <translation>Zastaví běžící unittest</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="86"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="89"/>
         <source>&lt;b&gt;Stop Test&lt;/b&gt;&lt;p&gt;This button stops a running unittest.&lt;/p&gt;</source>
         <translation>&lt;b&gt;Zastavit test&lt;/b&gt;&lt;p&gt;Toto tlačítko zastaví běžící unittest.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="120"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="121"/>
         <source>^Failure: </source>
         <translation>^Selhalo: </translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="121"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="122"/>
         <source>^Error: </source>
         <translation>^Chyby: </translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="264"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="266"/>
         <source>You must enter a test suite file.</source>
         <translation>Musíte zadat soubor soupravy testu.</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="272"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="274"/>
         <source>Preparing Testsuite</source>
         <translation>Příprava soupravy testu</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="467"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="469"/>
         <source>Running</source>
         <translation>Běží</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="632"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="634"/>
         <source>Show Source</source>
         <translation>Zobrazit zdroj</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="205"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="206"/>
         <source>Python Files (*.py);;All Files (*)</source>
         <translation>Python soubory (*.py);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="201"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="202"/>
         <source>Python3 Files ({1});;Python2 Files ({0});;All Files (*)</source>
         <translation>Python3 soubory ({1});;Python2 soubory ({0});;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="398"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="400"/>
         <source>&lt;p&gt;Unable to run test &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;{1}&lt;br&gt;{2}&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nelze spustit test &lt;b&gt;{0}&lt;/b&gt;.&lt;br&gt;{1}&lt;br&gt;{2}&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="491"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="493"/>
         <source>Ran {0} test in {1:.3f}s</source>
         <translation>Doběhl {0} test za {1:.3f}s</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="495"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="497"/>
         <source>Ran {0} tests in {1:.3f}s</source>
         <translation>Doběhlo {0} testů za {1:.3f}s</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="512"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="514"/>
         <source>Failure: {0}</source>
         <translation>Selhalo: {0}</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="527"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="529"/>
         <source>Error: {0}</source>
         <translation>Chyby: {0}</translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="273"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="260"/>
         <source>Skipped:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="280"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="267"/>
         <source>Number of tests skipped</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="290"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="277"/>
         <source>Expected Failures:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="297"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="284"/>
         <source>Number of tests with expected failure</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="307"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="294"/>
         <source>Unexpected Successes:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="314"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="301"/>
         <source>Number of tests with unexpected success</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="542"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="544"/>
         <source>    Skipped: {0}</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="557"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="559"/>
         <source>    Expected Failure</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="571"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="573"/>
         <source>    Unexpected Success</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="75"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="78"/>
         <source>Rerun Failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="77"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="80"/>
         <source>Reruns failed tests of the selected testsuite</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.py" line="79"/>
+        <location filename="../PyUnit/UnittestDialog.py" line="82"/>
         <source>&lt;b&gt;Rerun Failed&lt;/b&gt;&lt;p&gt;This button reruns all failed tests of the selected testsuite.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PyUnit/UnittestDialog.ui" line="179"/>
+        <location filename="../PyUnit/UnittestDialog.ui" line="166"/>
         <source>%v/%m Tests</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PyUnit/UnittestDialog.ui" line="20"/>
+        <source>Test Parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PyUnit/UnittestDialog.ui" line="85"/>
+        <source>Run Parameters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../PyUnit/UnittestDialog.ui" line="127"/>
+        <source>Progress</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
