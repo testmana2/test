@@ -9,16 +9,11 @@ Module implementing a dialog to enter the data for a new property.
 
 from __future__ import unicode_literals
 
-from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QDialog
 
-from E5Gui.E5Completers import E5FileCompleter
-from E5Gui import E5FileDialog
+from E5Gui.E5PathPicker import E5PathPickerModes
 
 from .Ui_SvnPropSetDialog import Ui_SvnPropSetDialog
-
-import Utilities
-import UI.PixmapCache
 
 
 class SvnPropSetDialog(QDialog, Ui_SvnPropSetDialog):
@@ -34,23 +29,7 @@ class SvnPropSetDialog(QDialog, Ui_SvnPropSetDialog):
         super(SvnPropSetDialog, self).__init__(parent)
         self.setupUi(self)
         
-        self.fileButton.setIcon(UI.PixmapCache.getIcon("open.png"))
-        
-        self.propFileCompleter = E5FileCompleter(self.propFileEdit)
-        
-    @pyqtSlot()
-    def on_fileButton_clicked(self):
-        """
-        Private slot called by pressing the file selection button.
-        """
-        fn = E5FileDialog.getOpenFileName(
-            self,
-            self.tr("Select file for property"),
-            self.propFileEdit.text(),
-            "")
-        
-        if fn:
-            self.propFileEdit.setText(Utilities.toNativeSeparators(fn))
+        self.propFilePicker.setMode(E5PathPickerModes.OpenFileMode)
         
     def getData(self):
         """
@@ -61,7 +40,7 @@ class SvnPropSetDialog(QDialog, Ui_SvnPropSetDialog):
             or the selected filename. (string, boolean, string)
         """
         if self.fileRadioButton.isChecked():
-            return (self.propNameEdit.text(), True, self.propFileEdit.text())
+            return (self.propNameEdit.text(), True, self.propFilePicker.text())
         else:
             return (self.propNameEdit.text(), False,
                     self.propTextEdit.toPlainText())

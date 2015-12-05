@@ -16,7 +16,7 @@
   <property name="sizeGripEnabled">
    <bool>true</bool>
   </property>
-  <layout class="QVBoxLayout">
+  <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <layout class="QHBoxLayout">
      <item>
@@ -40,18 +40,8 @@
      <property name="title">
       <string>Select property source</string>
      </property>
-     <layout class="QGridLayout">
-      <item row="2" column="0" colspan="2">
-       <widget class="QRadioButton" name="fileRadioButton">
-        <property name="focusPolicy">
-         <enum>Qt::NoFocus</enum>
-        </property>
-        <property name="text">
-         <string>File</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0" colspan="2">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
        <widget class="QRadioButton" name="textRadioButton">
         <property name="text">
          <string>Text</string>
@@ -61,7 +51,7 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="0" colspan="2">
+      <item>
        <widget class="QTextEdit" name="propTextEdit">
         <property name="toolTip">
          <string>Enter text of the property</string>
@@ -74,23 +64,32 @@
         </property>
        </widget>
       </item>
-      <item row="3" column="0">
-       <widget class="QLineEdit" name="propFileEdit">
-        <property name="enabled">
-         <bool>false</bool>
+      <item>
+       <widget class="QRadioButton" name="fileRadioButton">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
         </property>
-        <property name="toolTip">
-         <string>Enter the name of a file for the property</string>
+        <property name="text">
+         <string>File</string>
         </property>
        </widget>
       </item>
-      <item row="3" column="1">
-       <widget class="QToolButton" name="fileButton">
+      <item>
+       <widget class="E5PathPicker" name="propFilePicker" native="true">
         <property name="enabled">
          <bool>false</bool>
         </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
         <property name="toolTip">
-         <string>Press to select the file via a file selection dialog</string>
+         <string>Enter the name of a file for the property</string>
         </property>
        </widget>
       </item>
@@ -111,12 +110,19 @@
  </widget>
  <layoutdefault spacing="6" margin="6"/>
  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <customwidgets>
+  <customwidget>
+   <class>E5PathPicker</class>
+   <extends>QWidget</extends>
+   <header>E5Gui/E5PathPicker.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>propNameEdit</tabstop>
   <tabstop>textRadioButton</tabstop>
   <tabstop>propTextEdit</tabstop>
-  <tabstop>propFileEdit</tabstop>
-  <tabstop>fileButton</tabstop>
+  <tabstop>propFilePicker</tabstop>
  </tabstops>
  <resources/>
  <connections>
@@ -133,22 +139,6 @@
     <hint type="destinationlabel">
      <x>76</x>
      <y>140</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>fileRadioButton</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>propFileEdit</receiver>
-   <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>35</x>
-     <y>287</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>49</x>
-     <y>319</y>
     </hint>
    </hints>
   </connection>
@@ -175,12 +165,28 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>196</x>
-     <y>367</y>
+     <x>175</x>
+     <y>374</y>
     </hint>
     <hint type="destinationlabel">
      <x>199</x>
      <y>385</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fileRadioButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>propFilePicker</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>35</x>
+     <y>291</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>283</x>
+     <y>321</y>
     </hint>
    </hints>
   </connection>
