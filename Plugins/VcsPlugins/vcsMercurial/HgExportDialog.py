@@ -19,7 +19,6 @@ from E5Gui.E5PathPicker import E5PathPickerModes
 from .Ui_HgExportDialog import Ui_HgExportDialog
 
 
-
 class HgExportDialog(QDialog, Ui_HgExportDialog):
     """
     Class documentation goes here.

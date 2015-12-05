@@ -17,7 +17,7 @@ except ImportError:
     from ThirdParty.enum import Enum
 
 from PyQt5.QtCore import pyqtSignal, Qt, QFileInfo
-from PyQt5.QtWidgets import QWidget, QHBoxLayout, QToolButton,  QSizePolicy
+from PyQt5.QtWidgets import QWidget, QHBoxLayout, QToolButton, QSizePolicy
 
 from . import E5FileDialog
 from .E5LineEdit import E5ClearableLineEdit
@@ -41,6 +41,7 @@ class E5PathPickerModes(Enum):
     NoMode = 100
 
 # TODO: Refactor the classes using a base class with common functions
+
 
 class E5PathPicker(QWidget):
     """
@@ -343,7 +344,7 @@ class E5PathPicker(QWidget):
         """
         Public method to set the name filters for the completer.
         
-        @param filter list of file name filters
+        @param filters list of file name filters
         @type list of str
         """
         self.__editor.completer().model().setNameFilters(filters)

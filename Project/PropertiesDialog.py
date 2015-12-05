@@ -228,7 +228,7 @@ class PropertiesDialog(QDialog, Ui_PropertiesDialog):
     def on_mainscriptPicker_aboutToShowPathPickerDialog(self):
         """
         Private slot to perform actions before the main script selection dialog
-        is shown. 
+        is shown.
         """
         path = self.dirPicker.text()
         if not path:

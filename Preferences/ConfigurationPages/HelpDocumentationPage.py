@@ -32,14 +32,14 @@ class HelpDocumentationPage(ConfigurationPageBase, Ui_HelpDocumentationPage):
         
         self.python2DocDirPicker.setMode(E5PathPickerModes.OpenFileMode)
         self.python2DocDirPicker.setFilters(self.tr(
-                "HTML Files (*.html *.htm);;"
-                "Compressed Help Files (*.chm);;"
-                "All Files (*)"))
+            "HTML Files (*.html *.htm);;"
+            "Compressed Help Files (*.chm);;"
+            "All Files (*)"))
         self.pythonDocDirPicker.setMode(E5PathPickerModes.OpenFileMode)
         self.pythonDocDirPicker.setFilters(self.tr(
-                "HTML Files (*.html *.htm);;"
-                "Compressed Help Files (*.chm);;"
-                "All Files (*)"))
+            "HTML Files (*.html *.htm);;"
+            "Compressed Help Files (*.chm);;"
+            "All Files (*)"))
         self.qt4DocDirPicker.setMode(E5PathPickerModes.OpenFileMode)
         self.qt4DocDirPicker.setFilters(self.tr(
             "HTML Files (*.html *.htm);;All Files (*)"))

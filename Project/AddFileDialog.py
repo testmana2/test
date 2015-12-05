@@ -60,7 +60,7 @@ class AddFileDialog(QDialog, Ui_AddFileDialog):
     def on_sourceFilesPicker_aboutToShowPathPickerDialog(self):
         """
         Private slot to perform actions before the source files selection
-        dialog is shown. 
+        dialog is shown.
         """
         path = self.targetDirPicker.text()
         if not path:

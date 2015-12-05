@@ -110,7 +110,7 @@ class DebuggerPropertiesDialog(QDialog, Ui_DebuggerPropertiesDialog):
     def on_debugClientPicker_aboutToShowPathPickerDialog(self):
         """
         Private slot to perform actions before the debug client selection
-        dialog is shown. 
+        dialog is shown.
         """
         filters = self.project.dbgFilters[
             self.project.pdata["PROGLANGUAGE"][0]]
