@@ -87,16 +87,13 @@ QDialog, Ui_ToolConfigurationDialog
 <td><a href="#ToolConfigurationDialog.on_downButton_clicked">on_downButton_clicked</a></td>
 <td>Private slot to move an entry down in the list.</td>
 </tr><tr>
-<td><a href="#ToolConfigurationDialog.on_executableButton_clicked">on_executableButton_clicked</a></td>
-<td>Private slot to handle the executable selection via a file selection dialog.</td>
+<td><a href="#ToolConfigurationDialog.on_executablePicker_pathSelected">on_executablePicker_pathSelected</a></td>
+<td>Private slot to check the executable after it has been selected.</td>
 </tr><tr>
-<td><a href="#ToolConfigurationDialog.on_executableEdit_textChanged">on_executableEdit_textChanged</a></td>
+<td><a href="#ToolConfigurationDialog.on_executablePicker_textChanged">on_executablePicker_textChanged</a></td>
 <td>Private slot called, when the executable was changed.</td>
 </tr><tr>
-<td><a href="#ToolConfigurationDialog.on_iconButton_clicked">on_iconButton_clicked</a></td>
-<td>Private slot to handle the icon selection via a file selection dialog.</td>
-</tr><tr>
-<td><a href="#ToolConfigurationDialog.on_iconEdit_textChanged">on_iconEdit_textChanged</a></td>
+<td><a href="#ToolConfigurationDialog.on_iconPicker_textChanged">on_iconPicker_textChanged</a></td>
 <td>Private slot called, when the icon path was changed.</td>
 </tr><tr>
 <td><a href="#ToolConfigurationDialog.on_menuEdit_textChanged">on_menuEdit_textChanged</a></td>
@@ -209,15 +206,19 @@ the new text (string) (ignored)
 <b>on_downButton_clicked</b>(<i></i>)
 <p>
         Private slot to move an entry down in the list.
-</p><a NAME="ToolConfigurationDialog.on_executableButton_clicked" ID="ToolConfigurationDialog.on_executableButton_clicked"></a>
-<h4>ToolConfigurationDialog.on_executableButton_clicked</h4>
-<b>on_executableButton_clicked</b>(<i></i>)
+</p><a NAME="ToolConfigurationDialog.on_executablePicker_pathSelected" ID="ToolConfigurationDialog.on_executablePicker_pathSelected"></a>
+<h4>ToolConfigurationDialog.on_executablePicker_pathSelected</h4>
+<b>on_executablePicker_pathSelected</b>(<i>path</i>)
 <p>
-        Private slot to handle the executable selection via a file selection
-        dialog.
-</p><a NAME="ToolConfigurationDialog.on_executableEdit_textChanged" ID="ToolConfigurationDialog.on_executableEdit_textChanged"></a>
-<h4>ToolConfigurationDialog.on_executableEdit_textChanged</h4>
-<b>on_executableEdit_textChanged</b>(<i>text</i>)
+        Private slot to check the executable after it has been selected.
+</p><dl>
+<dt><i>path</i> (str)</dt>
+<dd>
+path of the executable
+</dd>
+</dl><a NAME="ToolConfigurationDialog.on_executablePicker_textChanged" ID="ToolConfigurationDialog.on_executablePicker_textChanged"></a>
+<h4>ToolConfigurationDialog.on_executablePicker_textChanged</h4>
+<b>on_executablePicker_textChanged</b>(<i>text</i>)
 <p>
         Private slot called, when the executable was changed.
 </p><dl>
@@ -225,14 +226,9 @@ the new text (string) (ignored)
 <dd>
 the new text (string) (ignored)
 </dd>
-</dl><a NAME="ToolConfigurationDialog.on_iconButton_clicked" ID="ToolConfigurationDialog.on_iconButton_clicked"></a>
-<h4>ToolConfigurationDialog.on_iconButton_clicked</h4>
-<b>on_iconButton_clicked</b>(<i></i>)
-<p>
-        Private slot to handle the icon selection via a file selection dialog.
-</p><a NAME="ToolConfigurationDialog.on_iconEdit_textChanged" ID="ToolConfigurationDialog.on_iconEdit_textChanged"></a>
-<h4>ToolConfigurationDialog.on_iconEdit_textChanged</h4>
-<b>on_iconEdit_textChanged</b>(<i>text</i>)
+</dl><a NAME="ToolConfigurationDialog.on_iconPicker_textChanged" ID="ToolConfigurationDialog.on_iconPicker_textChanged"></a>
+<h4>ToolConfigurationDialog.on_iconPicker_textChanged</h4>
+<b>on_iconPicker_textChanged</b>(<i>text</i>)
 <p>
         Private slot called, when the icon path was changed.
 </p><dl>

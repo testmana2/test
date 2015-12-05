@@ -66,17 +66,17 @@ QDialog, Ui_PropertiesDialog
 <td><a href="#PropertiesDialog.getProjectType">getProjectType</a></td>
 <td>Public method to get the selected project type.</td>
 </tr><tr>
-<td><a href="#PropertiesDialog.on_dirButton_clicked">on_dirButton_clicked</a></td>
-<td>Private slot to display a directory selection dialog.</td>
-</tr><tr>
-<td><a href="#PropertiesDialog.on_dirEdit_textChanged">on_dirEdit_textChanged</a></td>
+<td><a href="#PropertiesDialog.on_dirPicker_textChanged">on_dirPicker_textChanged</a></td>
 <td>Private slot to handle a change of the project directory.</td>
 </tr><tr>
 <td><a href="#PropertiesDialog.on_languageComboBox_currentIndexChanged">on_languageComboBox_currentIndexChanged</a></td>
 <td>Private slot handling the selection of a programming language.</td>
 </tr><tr>
-<td><a href="#PropertiesDialog.on_mainscriptButton_clicked">on_mainscriptButton_clicked</a></td>
-<td>Private slot to display a file selection dialog.</td>
+<td><a href="#PropertiesDialog.on_mainscriptPicker_aboutToShowPathPickerDialog">on_mainscriptPicker_aboutToShowPathPickerDialog</a></td>
+<td>Private slot to perform actions before the main script selection dialog is shown.</td>
+</tr><tr>
+<td><a href="#PropertiesDialog.on_mainscriptPicker_pathSelected">on_mainscriptPicker_pathSelected</a></td>
+<td>Private slot to check the selected main script name.</td>
 </tr><tr>
 <td><a href="#PropertiesDialog.on_spellPropertiesButton_clicked">on_spellPropertiesButton_clicked</a></td>
 <td>Private slot to display the spelling properties dialog.</td>
@@ -134,14 +134,9 @@ data of the project directory edit (string)
 <dd>
 selected UI type (string)
 </dd>
-</dl><a NAME="PropertiesDialog.on_dirButton_clicked" ID="PropertiesDialog.on_dirButton_clicked"></a>
-<h4>PropertiesDialog.on_dirButton_clicked</h4>
-<b>on_dirButton_clicked</b>(<i></i>)
-<p>
-        Private slot to display a directory selection dialog.
-</p><a NAME="PropertiesDialog.on_dirEdit_textChanged" ID="PropertiesDialog.on_dirEdit_textChanged"></a>
-<h4>PropertiesDialog.on_dirEdit_textChanged</h4>
-<b>on_dirEdit_textChanged</b>(<i>txt</i>)
+</dl><a NAME="PropertiesDialog.on_dirPicker_textChanged" ID="PropertiesDialog.on_dirPicker_textChanged"></a>
+<h4>PropertiesDialog.on_dirPicker_textChanged</h4>
+<b>on_dirPicker_textChanged</b>(<i>txt</i>)
 <p>
         Private slot to handle a change of the project directory.
 </p><dl>
@@ -159,12 +154,23 @@ name of the project directory (string)
 <dd>
 selected programming language (string)
 </dd>
-</dl><a NAME="PropertiesDialog.on_mainscriptButton_clicked" ID="PropertiesDialog.on_mainscriptButton_clicked"></a>
-<h4>PropertiesDialog.on_mainscriptButton_clicked</h4>
-<b>on_mainscriptButton_clicked</b>(<i></i>)
+</dl><a NAME="PropertiesDialog.on_mainscriptPicker_aboutToShowPathPickerDialog" ID="PropertiesDialog.on_mainscriptPicker_aboutToShowPathPickerDialog"></a>
+<h4>PropertiesDialog.on_mainscriptPicker_aboutToShowPathPickerDialog</h4>
+<b>on_mainscriptPicker_aboutToShowPathPickerDialog</b>(<i></i>)
 <p>
-        Private slot to display a file selection dialog.
-</p><a NAME="PropertiesDialog.on_spellPropertiesButton_clicked" ID="PropertiesDialog.on_spellPropertiesButton_clicked"></a>
+        Private slot to perform actions before the main script selection dialog
+        is shown.
+</p><a NAME="PropertiesDialog.on_mainscriptPicker_pathSelected" ID="PropertiesDialog.on_mainscriptPicker_pathSelected"></a>
+<h4>PropertiesDialog.on_mainscriptPicker_pathSelected</h4>
+<b>on_mainscriptPicker_pathSelected</b>(<i>script</i>)
+<p>
+        Private slot to check the selected main script name.
+</p><dl>
+<dt><i>script</i> (str)</dt>
+<dd>
+name of the main script
+</dd>
+</dl><a NAME="PropertiesDialog.on_spellPropertiesButton_clicked" ID="PropertiesDialog.on_spellPropertiesButton_clicked"></a>
 <h4>PropertiesDialog.on_spellPropertiesButton_clicked</h4>
 <b>on_spellPropertiesButton_clicked</b>(<i></i>)
 <p>

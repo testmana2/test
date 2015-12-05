@@ -30,6 +30,9 @@ Module implementing a path picker widget.
 <h3>Classes</h3>
 <table>
 <tr>
+<td><a href="#E5ComboPathPicker">E5ComboPathPicker</a></td>
+<td>Class implementing a path picker widget consisting of a combobox and a tool button to open a file dialog.</td>
+</tr><tr>
 <td><a href="#E5PathPicker">E5PathPicker</a></td>
 <td>Class implementing a path picker widget consisting of a line edit and a tool button to open a file dialog.</td>
 </tr><tr>
@@ -42,6 +45,531 @@ Module implementing a path picker widget.
 <tr><td>None</td></tr>
 </table>
 <hr /><hr />
+<a NAME="E5ComboPathPicker" ID="E5ComboPathPicker"></a>
+<h2>E5ComboPathPicker</h2>
+<p>
+    Class implementing a path picker widget consisting of a combobox and a
+    tool button to open a file dialog.
+</p><h3>Signals</h3>
+<dl>
+<dt>aboutToShowPathPickerDialog</dt>
+<dd>
+emitted before the file dialog is shown
+</dd><dt>editTextChanged(path)</dt>
+<dd>
+emitted when the entered path has changed
+</dd><dt>pathSelected(path)</dt>
+<dd>
+emitted after a path has been selected via the
+        file dialog
+</dd><dt>pickerButtonClicked</dt>
+<dd>
+emitted when the picker button was pressed and
+        the widget mode is custom
+</dd>
+</dl>
+<h3>Derived from</h3>
+QWidget
+<h3>Class Attributes</h3>
+<table>
+<tr><td>DefaultMode</td></tr>
+</table>
+<h3>Class Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<h3>Methods</h3>
+<table>
+<tr>
+<td><a href="#E5ComboPathPicker.__init__">E5ComboPathPicker</a></td>
+<td>Constructor</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.__showPathPickerDialog">__showPathPickerDialog</a></td>
+<td>Private slot to show the path picker dialog.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.addItem">addItem</a></td>
+<td>Public method to add a paths to the current list.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.addItems">addItems</a></td>
+<td>Public method to add paths to the current list.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.buttonToolTip">buttonToolTip</a></td>
+<td>Public method to get the tool button tool tip.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.clear">clear</a></td>
+<td>Public method to clear the list of paths.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.clearEditText">clearEditText</a></td>
+<td>Public method to clear the current path.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.currentText">currentText</a></td>
+<td>Public method to get the current path.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.defaultDirectory">defaultDirectory</a></td>
+<td>Public method to get the default directory.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.editorEnabled">editorEnabled</a></td>
+<td>Public method to get the path editor's enabled state.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.editorToolTip">editorToolTip</a></td>
+<td>Public method to get the editor tool tip.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.filters">filters</a></td>
+<td>Public methods to get the filter string.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.firstPath">firstPath</a></td>
+<td>Public method to get the first path of a list of entered paths.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.isPickerEnabled">isPickerEnabled</a></td>
+<td>Public method to get the file dialog button enabled state.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.lastPath">lastPath</a></td>
+<td>Public method to get the last path of a list of entered paths.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.mode">mode</a></td>
+<td>Public method to get the path picker mode.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.path">path</a></td>
+<td>Public method to get the current path.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.paths">paths</a></td>
+<td>Public method to get the list of entered paths.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.setButtonToolTip">setButtonToolTip</a></td>
+<td>Public method to set the tool button tool tip.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.setCurrentIndex">setCurrentIndex</a></td>
+<td>Public slot to set the current index.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.setDefaultDirectory">setDefaultDirectory</a></td>
+<td>Public method to set the default directory.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.setEditText">setEditText</a></td>
+<td>Public method to set the current path.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.setEditorEnabled">setEditorEnabled</a></td>
+<td>Public method to set the path editor's enabled state.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.setEditorToolTip">setEditorToolTip</a></td>
+<td>Public method to set the editor tool tip.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.setFilters">setFilters</a></td>
+<td>Public method to set the filters for the path picker dialog.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.setInsertPolicy">setInsertPolicy</a></td>
+<td>Public method to set the insertion policy of the combo box.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.setMode">setMode</a></td>
+<td>Public method to set the path picker mode.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.setPath">setPath</a></td>
+<td>Public method to set the current path.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.setPathsList">setPathsList</a></td>
+<td>Public method to set the paths list.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.setPickerEnabled">setPickerEnabled</a></td>
+<td>Public method to set the enabled state of the file dialog button.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.setSizeAdjustPolicy">setSizeAdjustPolicy</a></td>
+<td>Public method to set the size adjust policy of the combo box.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.setWindowTitle">setWindowTitle</a></td>
+<td>Public method to set the path picker dialog window title.</td>
+</tr><tr>
+<td><a href="#E5ComboPathPicker.windowTitle">windowTitle</a></td>
+<td>Public method to get the path picker dialog's window title.</td>
+</tr>
+</table>
+<h3>Static Methods</h3>
+<table>
+<tr><td>None</td></tr>
+</table>
+<a NAME="E5ComboPathPicker.__init__" ID="E5ComboPathPicker.__init__"></a>
+<h4>E5ComboPathPicker (Constructor)</h4>
+<b>E5ComboPathPicker</b>(<i>parent=None</i>)
+<p>
+        Constructor
+</p><dl>
+<dt><i>parent</i> (QWidget)</dt>
+<dd>
+reference to the parent widget
+</dd>
+</dl><a NAME="E5ComboPathPicker.__showPathPickerDialog" ID="E5ComboPathPicker.__showPathPickerDialog"></a>
+<h4>E5ComboPathPicker.__showPathPickerDialog</h4>
+<b>__showPathPickerDialog</b>(<i></i>)
+<p>
+        Private slot to show the path picker dialog.
+</p><a NAME="E5ComboPathPicker.addItem" ID="E5ComboPathPicker.addItem"></a>
+<h4>E5ComboPathPicker.addItem</h4>
+<b>addItem</b>(<i>path</i>)
+<p>
+        Public method to add a paths to the current list.
+</p><dl>
+<dt><i>path</i> (str)</dt>
+<dd>
+path to add
+</dd>
+</dl><a NAME="E5ComboPathPicker.addItems" ID="E5ComboPathPicker.addItems"></a>
+<h4>E5ComboPathPicker.addItems</h4>
+<b>addItems</b>(<i>pathsList</i>)
+<p>
+        Public method to add paths to the current list.
+</p><dl>
+<dt><i>pathsList</i> (list of str)</dt>
+<dd>
+list of paths to add
+</dd>
+</dl><a NAME="E5ComboPathPicker.buttonToolTip" ID="E5ComboPathPicker.buttonToolTip"></a>
+<h4>E5ComboPathPicker.buttonToolTip</h4>
+<b>buttonToolTip</b>(<i></i>)
+<p>
+        Public method to get the tool button tool tip.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tool tip text
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl><a NAME="E5ComboPathPicker.clear" ID="E5ComboPathPicker.clear"></a>
+<h4>E5ComboPathPicker.clear</h4>
+<b>clear</b>(<i></i>)
+<p>
+        Public method to clear the list of paths.
+</p><a NAME="E5ComboPathPicker.clearEditText" ID="E5ComboPathPicker.clearEditText"></a>
+<h4>E5ComboPathPicker.clearEditText</h4>
+<b>clearEditText</b>(<i></i>)
+<p>
+        Public method to clear the current path.
+</p><a NAME="E5ComboPathPicker.currentText" ID="E5ComboPathPicker.currentText"></a>
+<h4>E5ComboPathPicker.currentText</h4>
+<b>currentText</b>(<i></i>)
+<p>
+        Public method to get the current path.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+current path
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl><a NAME="E5ComboPathPicker.defaultDirectory" ID="E5ComboPathPicker.defaultDirectory"></a>
+<h4>E5ComboPathPicker.defaultDirectory</h4>
+<b>defaultDirectory</b>(<i></i>)
+<p>
+        Public method to get the default directory.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+default directory
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl><a NAME="E5ComboPathPicker.editorEnabled" ID="E5ComboPathPicker.editorEnabled"></a>
+<h4>E5ComboPathPicker.editorEnabled</h4>
+<b>editorEnabled</b>(<i></i>)
+<p>
+        Public method to get the path editor's enabled state.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the enabled state
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl><a NAME="E5ComboPathPicker.editorToolTip" ID="E5ComboPathPicker.editorToolTip"></a>
+<h4>E5ComboPathPicker.editorToolTip</h4>
+<b>editorToolTip</b>(<i></i>)
+<p>
+        Public method to get the editor tool tip.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+tool tip text
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl><a NAME="E5ComboPathPicker.filters" ID="E5ComboPathPicker.filters"></a>
+<h4>E5ComboPathPicker.filters</h4>
+<b>filters</b>(<i></i>)
+<p>
+        Public methods to get the filter string.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+filter string
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl><a NAME="E5ComboPathPicker.firstPath" ID="E5ComboPathPicker.firstPath"></a>
+<h4>E5ComboPathPicker.firstPath</h4>
+<b>firstPath</b>(<i></i>)
+<p>
+        Public method to get the first path of a list of entered paths.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+first path
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl><a NAME="E5ComboPathPicker.isPickerEnabled" ID="E5ComboPathPicker.isPickerEnabled"></a>
+<h4>E5ComboPathPicker.isPickerEnabled</h4>
+<b>isPickerEnabled</b>(<i></i>)
+<p>
+        Public method to get the file dialog button enabled state.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the enabled state
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl><a NAME="E5ComboPathPicker.lastPath" ID="E5ComboPathPicker.lastPath"></a>
+<h4>E5ComboPathPicker.lastPath</h4>
+<b>lastPath</b>(<i></i>)
+<p>
+        Public method to get the last path of a list of entered paths.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+first path
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl><a NAME="E5ComboPathPicker.mode" ID="E5ComboPathPicker.mode"></a>
+<h4>E5ComboPathPicker.mode</h4>
+<b>mode</b>(<i></i>)
+<p>
+        Public method to get the path picker mode.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+path picker mode
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+E5PathPickerModes
+</dd>
+</dl><a NAME="E5ComboPathPicker.path" ID="E5ComboPathPicker.path"></a>
+<h4>E5ComboPathPicker.path</h4>
+<b>path</b>(<i></i>)
+<p>
+        Public method to get the current path.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+current path
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl><a NAME="E5ComboPathPicker.paths" ID="E5ComboPathPicker.paths"></a>
+<h4>E5ComboPathPicker.paths</h4>
+<b>paths</b>(<i></i>)
+<p>
+        Public method to get the list of entered paths.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+entered paths
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+list of str
+</dd>
+</dl><a NAME="E5ComboPathPicker.setButtonToolTip" ID="E5ComboPathPicker.setButtonToolTip"></a>
+<h4>E5ComboPathPicker.setButtonToolTip</h4>
+<b>setButtonToolTip</b>(<i>tooltip</i>)
+<p>
+        Public method to set the tool button tool tip.
+</p><dl>
+<dt><i>tooltip</i> (str)</dt>
+<dd>
+text to be set as a tool tip
+</dd>
+</dl><a NAME="E5ComboPathPicker.setCurrentIndex" ID="E5ComboPathPicker.setCurrentIndex"></a>
+<h4>E5ComboPathPicker.setCurrentIndex</h4>
+<b>setCurrentIndex</b>(<i>index</i>)
+<p>
+        Public slot to set the current index.
+</p><dl>
+<dt><i>index</i> (int)</dt>
+<dd>
+index of the item to set current
+</dd>
+</dl><a NAME="E5ComboPathPicker.setDefaultDirectory" ID="E5ComboPathPicker.setDefaultDirectory"></a>
+<h4>E5ComboPathPicker.setDefaultDirectory</h4>
+<b>setDefaultDirectory</b>(<i>directory</i>)
+<p>
+        Public method to set the default directory.
+</p><dl>
+<dt><i>directory</i> (str)</dt>
+<dd>
+default directory
+</dd>
+</dl><a NAME="E5ComboPathPicker.setEditText" ID="E5ComboPathPicker.setEditText"></a>
+<h4>E5ComboPathPicker.setEditText</h4>
+<b>setEditText</b>(<i>path</i>)
+<p>
+        Public method to set the current path.
+</p><dl>
+<dt><i>path</i> (str)</dt>
+<dd>
+path to be set
+</dd>
+</dl><a NAME="E5ComboPathPicker.setEditorEnabled" ID="E5ComboPathPicker.setEditorEnabled"></a>
+<h4>E5ComboPathPicker.setEditorEnabled</h4>
+<b>setEditorEnabled</b>(<i>enable</i>)
+<p>
+        Public method to set the path editor's enabled state.
+</p><dl>
+<dt><i>enable</i> (bool)</dt>
+<dd>
+flag indicating the enable state
+</dd>
+</dl><a NAME="E5ComboPathPicker.setEditorToolTip" ID="E5ComboPathPicker.setEditorToolTip"></a>
+<h4>E5ComboPathPicker.setEditorToolTip</h4>
+<b>setEditorToolTip</b>(<i>tooltip</i>)
+<p>
+        Public method to set the editor tool tip.
+</p><dl>
+<dt><i>tooltip</i> (str)</dt>
+<dd>
+text to be set as a tool tip
+</dd>
+</dl><a NAME="E5ComboPathPicker.setFilters" ID="E5ComboPathPicker.setFilters"></a>
+<h4>E5ComboPathPicker.setFilters</h4>
+<b>setFilters</b>(<i>filters</i>)
+<p>
+        Public method to set the filters for the path picker dialog.
+</p><p>
+        Note: Multiple filters must be separated by ';;'.
+</p><dl>
+<dt><i>filters</i> (str)</dt>
+<dd>
+string containing the file filters
+</dd>
+</dl><a NAME="E5ComboPathPicker.setInsertPolicy" ID="E5ComboPathPicker.setInsertPolicy"></a>
+<h4>E5ComboPathPicker.setInsertPolicy</h4>
+<b>setInsertPolicy</b>(<i>policy</i>)
+<p>
+        Public method to set the insertion policy of the combo box.
+</p><dl>
+<dt><i>policy</i> (QComboBox.InsertPolicy)</dt>
+<dd>
+insertion policy
+</dd>
+</dl><a NAME="E5ComboPathPicker.setMode" ID="E5ComboPathPicker.setMode"></a>
+<h4>E5ComboPathPicker.setMode</h4>
+<b>setMode</b>(<i>mode</i>)
+<p>
+        Public method to set the path picker mode.
+</p><dl>
+<dt><i>mode</i> (E5PathPickerModes)</dt>
+<dd>
+picker mode
+</dd>
+</dl><a NAME="E5ComboPathPicker.setPath" ID="E5ComboPathPicker.setPath"></a>
+<h4>E5ComboPathPicker.setPath</h4>
+<b>setPath</b>(<i>path</i>)
+<p>
+        Public method to set the current path.
+</p><dl>
+<dt><i>path</i> (str)</dt>
+<dd>
+path to be set
+</dd>
+</dl><a NAME="E5ComboPathPicker.setPathsList" ID="E5ComboPathPicker.setPathsList"></a>
+<h4>E5ComboPathPicker.setPathsList</h4>
+<b>setPathsList</b>(<i>pathsList</i>)
+<p>
+        Public method to set the paths list.
+</p><dl>
+<dt><i>pathsList</i> (list of str)</dt>
+<dd>
+list of paths
+</dd>
+</dl><a NAME="E5ComboPathPicker.setPickerEnabled" ID="E5ComboPathPicker.setPickerEnabled"></a>
+<h4>E5ComboPathPicker.setPickerEnabled</h4>
+<b>setPickerEnabled</b>(<i>enable</i>)
+<p>
+        Public method to set the enabled state of the file dialog button.
+</p><dl>
+<dt><i>enable</i> (bool)</dt>
+<dd>
+flag indicating the enabled state
+</dd>
+</dl><a NAME="E5ComboPathPicker.setSizeAdjustPolicy" ID="E5ComboPathPicker.setSizeAdjustPolicy"></a>
+<h4>E5ComboPathPicker.setSizeAdjustPolicy</h4>
+<b>setSizeAdjustPolicy</b>(<i>policy</i>)
+<p>
+        Public method to set the size adjust policy of the combo box.
+</p><dl>
+<dt><i>policy</i> (QComboBox.SizeAdjustPolicy)</dt>
+<dd>
+size adjust policy
+</dd>
+</dl><a NAME="E5ComboPathPicker.setWindowTitle" ID="E5ComboPathPicker.setWindowTitle"></a>
+<h4>E5ComboPathPicker.setWindowTitle</h4>
+<b>setWindowTitle</b>(<i>title</i>)
+<p>
+        Public method to set the path picker dialog window title.
+</p><dl>
+<dt><i>title</i> (str)</dt>
+<dd>
+window title
+</dd>
+</dl><a NAME="E5ComboPathPicker.windowTitle" ID="E5ComboPathPicker.windowTitle"></a>
+<h4>E5ComboPathPicker.windowTitle</h4>
+<b>windowTitle</b>(<i></i>)
+<p>
+        Public method to get the path picker dialog's window title.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+window title
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl>
+<div align="right"><a href="#top">Up</a></div>
+<hr /><hr />
 <a NAME="E5PathPicker" ID="E5PathPicker"></a>
 <h2>E5PathPicker</h2>
 <p>
@@ -49,7 +577,18 @@ Module implementing a path picker widget.
     tool button to open a file dialog.
 </p><h3>Signals</h3>
 <dl>
-<dt>textChanged(path)</dt>
+<dt>aboutToShowPathPickerDialog</dt>
+<dd>
+emitted before the file dialog is shown
+</dd><dt>pathSelected(path)</dt>
+<dd>
+emitted after a path has been selected via the
+        file dialog
+</dd><dt>pickerButtonClicked</dt>
+<dd>
+emitted when the picker button was pressed and
+        the widget mode is custom
+</dd><dt>textChanged(path)</dt>
 <dd>
 emitted when the entered path has changed
 </dd>
@@ -69,6 +608,9 @@ QWidget
 <tr>
 <td><a href="#E5PathPicker.__init__">E5PathPicker</a></td>
 <td>Constructor</td>
+</tr><tr>
+<td><a href="#E5PathPicker.__pathEdited">__pathEdited</a></td>
+<td>Private slot handling editing of the path.</td>
 </tr><tr>
 <td><a href="#E5PathPicker.__showPathPickerDialog">__showPathPickerDialog</a></td>
 <td>Private slot to show the path picker dialog.</td>
@@ -91,11 +633,23 @@ QWidget
 <td><a href="#E5PathPicker.filters">filters</a></td>
 <td>Public methods to get the filter string.</td>
 </tr><tr>
+<td><a href="#E5PathPicker.firstPath">firstPath</a></td>
+<td>Public method to get the first path of a list of entered paths.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.isPickerEnabled">isPickerEnabled</a></td>
+<td>Public method to get the file dialog button enabled state.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.lastPath">lastPath</a></td>
+<td>Public method to get the last path of a list of entered paths.</td>
+</tr><tr>
 <td><a href="#E5PathPicker.mode">mode</a></td>
 <td>Public method to get the path picker mode.</td>
 </tr><tr>
 <td><a href="#E5PathPicker.path">path</a></td>
 <td>Public method to get the current path.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.paths">paths</a></td>
+<td>Public method to get the list of entered paths.</td>
 </tr><tr>
 <td><a href="#E5PathPicker.setButtonToolTip">setButtonToolTip</a></td>
 <td>Public method to set the tool button tool tip.</td>
@@ -115,8 +669,14 @@ QWidget
 <td><a href="#E5PathPicker.setMode">setMode</a></td>
 <td>Public method to set the path picker mode.</td>
 </tr><tr>
+<td><a href="#E5PathPicker.setNameFilters">setNameFilters</a></td>
+<td>Public method to set the name filters for the completer.</td>
+</tr><tr>
 <td><a href="#E5PathPicker.setPath">setPath</a></td>
 <td>Public method to set the current path.</td>
+</tr><tr>
+<td><a href="#E5PathPicker.setPickerEnabled">setPickerEnabled</a></td>
+<td>Public method to set the enabled state of the file dialog button.</td>
 </tr><tr>
 <td><a href="#E5PathPicker.setText">setText</a></td>
 <td>Public method to set the current path.</td>
@@ -144,6 +704,16 @@ QWidget
 <dt><i>parent</i> (QWidget)</dt>
 <dd>
 reference to the parent widget
+</dd>
+</dl><a NAME="E5PathPicker.__pathEdited" ID="E5PathPicker.__pathEdited"></a>
+<h4>E5PathPicker.__pathEdited</h4>
+<b>__pathEdited</b>(<i>path</i>)
+<p>
+        Private slot handling editing of the path.
+</p><dl>
+<dt><i>path</i> (str)</dt>
+<dd>
+current text of the path line edit
 </dd>
 </dl><a NAME="E5PathPicker.__showPathPickerDialog" ID="E5PathPicker.__showPathPickerDialog"></a>
 <h4>E5PathPicker.__showPathPickerDialog</h4>
@@ -230,6 +800,51 @@ filter string
 <dd>
 str
 </dd>
+</dl><a NAME="E5PathPicker.firstPath" ID="E5PathPicker.firstPath"></a>
+<h4>E5PathPicker.firstPath</h4>
+<b>firstPath</b>(<i></i>)
+<p>
+        Public method to get the first path of a list of entered paths.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+first path
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
+</dl><a NAME="E5PathPicker.isPickerEnabled" ID="E5PathPicker.isPickerEnabled"></a>
+<h4>E5PathPicker.isPickerEnabled</h4>
+<b>isPickerEnabled</b>(<i></i>)
+<p>
+        Public method to get the file dialog button enabled state.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+flag indicating the enabled state
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+bool
+</dd>
+</dl><a NAME="E5PathPicker.lastPath" ID="E5PathPicker.lastPath"></a>
+<h4>E5PathPicker.lastPath</h4>
+<b>lastPath</b>(<i></i>)
+<p>
+        Public method to get the last path of a list of entered paths.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+first path
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+str
+</dd>
 </dl><a NAME="E5PathPicker.mode" ID="E5PathPicker.mode"></a>
 <h4>E5PathPicker.mode</h4>
 <b>mode</b>(<i></i>)
@@ -259,6 +874,21 @@ current path
 <dt>Return Type:</dt>
 <dd>
 str
+</dd>
+</dl><a NAME="E5PathPicker.paths" ID="E5PathPicker.paths"></a>
+<h4>E5PathPicker.paths</h4>
+<b>paths</b>(<i></i>)
+<p>
+        Public method to get the list of entered paths.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+entered paths
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+list of str
 </dd>
 </dl><a NAME="E5PathPicker.setButtonToolTip" ID="E5PathPicker.setButtonToolTip"></a>
 <h4>E5PathPicker.setButtonToolTip</h4>
@@ -322,6 +952,16 @@ string containing the file filters
 <dd>
 picker mode
 </dd>
+</dl><a NAME="E5PathPicker.setNameFilters" ID="E5PathPicker.setNameFilters"></a>
+<h4>E5PathPicker.setNameFilters</h4>
+<b>setNameFilters</b>(<i>filters</i>)
+<p>
+        Public method to set the name filters for the completer.
+</p><dl>
+<dt><i>filters</i> (list of str)</dt>
+<dd>
+list of file name filters
+</dd>
 </dl><a NAME="E5PathPicker.setPath" ID="E5PathPicker.setPath"></a>
 <h4>E5PathPicker.setPath</h4>
 <b>setPath</b>(<i>path</i>)
@@ -331,6 +971,16 @@ picker mode
 <dt><i>path</i> (str)</dt>
 <dd>
 path to be set
+</dd>
+</dl><a NAME="E5PathPicker.setPickerEnabled" ID="E5PathPicker.setPickerEnabled"></a>
+<h4>E5PathPicker.setPickerEnabled</h4>
+<b>setPickerEnabled</b>(<i>enable</i>)
+<p>
+        Public method to set the enabled state of the file dialog button.
+</p><dl>
+<dt><i>enable</i> (bool)</dt>
+<dd>
+flag indicating the enabled state
 </dd>
 </dl><a NAME="E5PathPicker.setText" ID="E5PathPicker.setText"></a>
 <h4>E5PathPicker.setText</h4>
@@ -394,7 +1044,7 @@ str
 Enum
 <h3>Class Attributes</h3>
 <table>
-<tr><td>DiretoryMode</td></tr><tr><td>OpenFileMode</td></tr><tr><td>OpenFilesMode</td></tr><tr><td>SaveFileMode</td></tr>
+<tr><td>CustomMode</td></tr><tr><td>DirectoryMode</td></tr><tr><td>NoMode</td></tr><tr><td>OpenFileMode</td></tr><tr><td>OpenFilesMode</td></tr><tr><td>SaveFileEnsureExtensionMode</td></tr><tr><td>SaveFileMode</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>

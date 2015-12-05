@@ -60,23 +60,14 @@ QDialog, Ui_AddDirectoryDialog
 <td><a href="#AddDirectoryDialog.__init__">AddDirectoryDialog</a></td>
 <td>Constructor</td>
 </tr><tr>
-<td><a href="#AddDirectoryDialog.__dirDialog">__dirDialog</a></td>
-<td>Private slot to display a directory selection dialog.</td>
-</tr><tr>
 <td><a href="#AddDirectoryDialog.getData">getData</a></td>
 <td>Public slot to retrieve the dialogs data.</td>
 </tr><tr>
 <td><a href="#AddDirectoryDialog.on_filterComboBox_highlighted">on_filterComboBox_highlighted</a></td>
 <td>Private slot to handle the selection of a file type.</td>
 </tr><tr>
-<td><a href="#AddDirectoryDialog.on_sourceDirButton_clicked">on_sourceDirButton_clicked</a></td>
-<td>Private slot to handle the source dir button press.</td>
-</tr><tr>
-<td><a href="#AddDirectoryDialog.on_sourceDirEdit_textChanged">on_sourceDirEdit_textChanged</a></td>
-<td>Private slot to handle the source dir text changed.</td>
-</tr><tr>
-<td><a href="#AddDirectoryDialog.on_targetDirButton_clicked">on_targetDirButton_clicked</a></td>
-<td>Private slot to handle the target dir button press.</td>
+<td><a href="#AddDirectoryDialog.on_sourceDirPicker_textChanged">on_sourceDirPicker_textChanged</a></td>
+<td>Private slot to handle the source directory text changed.</td>
 </tr>
 </table>
 <h3>Static Methods</h3>
@@ -105,17 +96,6 @@ name of this dialog (string)
 <dd>
 start directory for the selection dialog
 </dd>
-</dl><a NAME="AddDirectoryDialog.__dirDialog" ID="AddDirectoryDialog.__dirDialog"></a>
-<h4>AddDirectoryDialog.__dirDialog</h4>
-<b>__dirDialog</b>(<i>textEdit</i>)
-<p>
-        Private slot to display a directory selection dialog.
-</p><dl>
-<dt><i>textEdit</i></dt>
-<dd>
-field for the display of the selected directory name
-            (QLineEdit)
-</dd>
 </dl><a NAME="AddDirectoryDialog.getData" ID="AddDirectoryDialog.getData"></a>
 <h4>AddDirectoryDialog.getData</h4>
 <b>getData</b>(<i></i>)
@@ -138,16 +118,11 @@ tuple of four values (string, string, string, boolean) giving
 <dd>
 the selected file type (string)
 </dd>
-</dl><a NAME="AddDirectoryDialog.on_sourceDirButton_clicked" ID="AddDirectoryDialog.on_sourceDirButton_clicked"></a>
-<h4>AddDirectoryDialog.on_sourceDirButton_clicked</h4>
-<b>on_sourceDirButton_clicked</b>(<i></i>)
+</dl><a NAME="AddDirectoryDialog.on_sourceDirPicker_textChanged" ID="AddDirectoryDialog.on_sourceDirPicker_textChanged"></a>
+<h4>AddDirectoryDialog.on_sourceDirPicker_textChanged</h4>
+<b>on_sourceDirPicker_textChanged</b>(<i>dir</i>)
 <p>
-        Private slot to handle the source dir button press.
-</p><a NAME="AddDirectoryDialog.on_sourceDirEdit_textChanged" ID="AddDirectoryDialog.on_sourceDirEdit_textChanged"></a>
-<h4>AddDirectoryDialog.on_sourceDirEdit_textChanged</h4>
-<b>on_sourceDirEdit_textChanged</b>(<i>dir</i>)
-<p>
-        Private slot to handle the source dir text changed.
+        Private slot to handle the source directory text changed.
 </p><p>
         If the entered source directory is a subdirectory of the current
         projects main directory, the target directory path is synchronized.
@@ -158,12 +133,7 @@ the selected file type (string)
 <dd>
 the text of the source directory line edit (string)
 </dd>
-</dl><a NAME="AddDirectoryDialog.on_targetDirButton_clicked" ID="AddDirectoryDialog.on_targetDirButton_clicked"></a>
-<h4>AddDirectoryDialog.on_targetDirButton_clicked</h4>
-<b>on_targetDirButton_clicked</b>(<i></i>)
-<p>
-        Private slot to handle the target dir button press.
-</p>
+</dl>
 <div align="right"><a href="#top">Up</a></div>
 <hr />
 </body></html>

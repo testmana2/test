@@ -1344,19 +1344,15 @@
       <keyword name="AddDirectoryDialog" id="AddDirectoryDialog" ref="eric6.Project.AddDirectoryDialog.html#AddDirectoryDialog" />
       <keyword name="AddDirectoryDialog (Constructor)" id="AddDirectoryDialog (Constructor)" ref="eric6.Project.AddDirectoryDialog.html#AddDirectoryDialog.__init__" />
       <keyword name="AddDirectoryDialog (Module)" id="AddDirectoryDialog (Module)" ref="eric6.Project.AddDirectoryDialog.html" />
-      <keyword name="AddDirectoryDialog.__dirDialog" id="AddDirectoryDialog.__dirDialog" ref="eric6.Project.AddDirectoryDialog.html#AddDirectoryDialog.__dirDialog" />
       <keyword name="AddDirectoryDialog.getData" id="AddDirectoryDialog.getData" ref="eric6.Project.AddDirectoryDialog.html#AddDirectoryDialog.getData" />
       <keyword name="AddDirectoryDialog.on_filterComboBox_highlighted" id="AddDirectoryDialog.on_filterComboBox_highlighted" ref="eric6.Project.AddDirectoryDialog.html#AddDirectoryDialog.on_filterComboBox_highlighted" />
-      <keyword name="AddDirectoryDialog.on_sourceDirButton_clicked" id="AddDirectoryDialog.on_sourceDirButton_clicked" ref="eric6.Project.AddDirectoryDialog.html#AddDirectoryDialog.on_sourceDirButton_clicked" />
-      <keyword name="AddDirectoryDialog.on_sourceDirEdit_textChanged" id="AddDirectoryDialog.on_sourceDirEdit_textChanged" ref="eric6.Project.AddDirectoryDialog.html#AddDirectoryDialog.on_sourceDirEdit_textChanged" />
-      <keyword name="AddDirectoryDialog.on_targetDirButton_clicked" id="AddDirectoryDialog.on_targetDirButton_clicked" ref="eric6.Project.AddDirectoryDialog.html#AddDirectoryDialog.on_targetDirButton_clicked" />
+      <keyword name="AddDirectoryDialog.on_sourceDirPicker_textChanged" id="AddDirectoryDialog.on_sourceDirPicker_textChanged" ref="eric6.Project.AddDirectoryDialog.html#AddDirectoryDialog.on_sourceDirPicker_textChanged" />
       <keyword name="AddFileDialog" id="AddFileDialog" ref="eric6.Project.AddFileDialog.html#AddFileDialog" />
       <keyword name="AddFileDialog (Constructor)" id="AddFileDialog (Constructor)" ref="eric6.Project.AddFileDialog.html#AddFileDialog.__init__" />
       <keyword name="AddFileDialog (Module)" id="AddFileDialog (Module)" ref="eric6.Project.AddFileDialog.html" />
       <keyword name="AddFileDialog.getData" id="AddFileDialog.getData" ref="eric6.Project.AddFileDialog.html#AddFileDialog.getData" />
-      <keyword name="AddFileDialog.on_sourceFileButton_clicked" id="AddFileDialog.on_sourceFileButton_clicked" ref="eric6.Project.AddFileDialog.html#AddFileDialog.on_sourceFileButton_clicked" />
-      <keyword name="AddFileDialog.on_sourceFileEdit_textChanged" id="AddFileDialog.on_sourceFileEdit_textChanged" ref="eric6.Project.AddFileDialog.html#AddFileDialog.on_sourceFileEdit_textChanged" />
-      <keyword name="AddFileDialog.on_targetDirButton_clicked" id="AddFileDialog.on_targetDirButton_clicked" ref="eric6.Project.AddFileDialog.html#AddFileDialog.on_targetDirButton_clicked" />
+      <keyword name="AddFileDialog.on_sourceFilesPicker_aboutToShowPathPickerDialog" id="AddFileDialog.on_sourceFilesPicker_aboutToShowPathPickerDialog" ref="eric6.Project.AddFileDialog.html#AddFileDialog.on_sourceFilesPicker_aboutToShowPathPickerDialog" />
+      <keyword name="AddFileDialog.on_sourceFilesPicker_textChanged" id="AddFileDialog.on_sourceFilesPicker_textChanged" ref="eric6.Project.AddFileDialog.html#AddFileDialog.on_sourceFilesPicker_textChanged" />
       <keyword name="AddFoundFilesDialog" id="AddFoundFilesDialog" ref="eric6.Project.AddFoundFilesDialog.html#AddFoundFilesDialog" />
       <keyword name="AddFoundFilesDialog (Constructor)" id="AddFoundFilesDialog (Constructor)" ref="eric6.Project.AddFoundFilesDialog.html#AddFoundFilesDialog.__init__" />
       <keyword name="AddFoundFilesDialog (Module)" id="AddFoundFilesDialog (Module)" ref="eric6.Project.AddFoundFilesDialog.html" />
@@ -1373,8 +1369,7 @@
       <keyword name="AddProjectDialog (Module)" id="AddProjectDialog (Module)" ref="eric6.MultiProject.AddProjectDialog.html" />
       <keyword name="AddProjectDialog.__updateUi" id="AddProjectDialog.__updateUi" ref="eric6.MultiProject.AddProjectDialog.html#AddProjectDialog.__updateUi" />
       <keyword name="AddProjectDialog.getData" id="AddProjectDialog.getData" ref="eric6.MultiProject.AddProjectDialog.html#AddProjectDialog.getData" />
-      <keyword name="AddProjectDialog.on_fileButton_clicked" id="AddProjectDialog.on_fileButton_clicked" ref="eric6.MultiProject.AddProjectDialog.html#AddProjectDialog.on_fileButton_clicked" />
-      <keyword name="AddProjectDialog.on_filenameEdit_textChanged" id="AddProjectDialog.on_filenameEdit_textChanged" ref="eric6.MultiProject.AddProjectDialog.html#AddProjectDialog.on_filenameEdit_textChanged" />
+      <keyword name="AddProjectDialog.on_filenamePicker_textChanged" id="AddProjectDialog.on_filenamePicker_textChanged" ref="eric6.MultiProject.AddProjectDialog.html#AddProjectDialog.on_filenamePicker_textChanged" />
       <keyword name="AddProjectDialog.on_nameEdit_textChanged" id="AddProjectDialog.on_nameEdit_textChanged" ref="eric6.MultiProject.AddProjectDialog.html#AddProjectDialog.on_nameEdit_textChanged" />
       <keyword name="AppInfo (Module)" id="AppInfo (Module)" ref="eric6.Globals.AppInfo.html" />
       <keyword name="ApplicationDiagramBuilder" id="ApplicationDiagramBuilder" ref="eric6.Graphics.ApplicationDiagramBuilder.html#ApplicationDiagramBuilder" />
@@ -1581,8 +1576,7 @@
       <keyword name="BookmarkedFilesDialog.on_changeButton_clicked" id="BookmarkedFilesDialog.on_changeButton_clicked" ref="eric6.ViewManager.BookmarkedFilesDialog.html#BookmarkedFilesDialog.on_changeButton_clicked" />
       <keyword name="BookmarkedFilesDialog.on_deleteButton_clicked" id="BookmarkedFilesDialog.on_deleteButton_clicked" ref="eric6.ViewManager.BookmarkedFilesDialog.html#BookmarkedFilesDialog.on_deleteButton_clicked" />
       <keyword name="BookmarkedFilesDialog.on_downButton_clicked" id="BookmarkedFilesDialog.on_downButton_clicked" ref="eric6.ViewManager.BookmarkedFilesDialog.html#BookmarkedFilesDialog.on_downButton_clicked" />
-      <keyword name="BookmarkedFilesDialog.on_fileButton_clicked" id="BookmarkedFilesDialog.on_fileButton_clicked" ref="eric6.ViewManager.BookmarkedFilesDialog.html#BookmarkedFilesDialog.on_fileButton_clicked" />
-      <keyword name="BookmarkedFilesDialog.on_fileEdit_textChanged" id="BookmarkedFilesDialog.on_fileEdit_textChanged" ref="eric6.ViewManager.BookmarkedFilesDialog.html#BookmarkedFilesDialog.on_fileEdit_textChanged" />
+      <keyword name="BookmarkedFilesDialog.on_filePicker_textChanged" id="BookmarkedFilesDialog.on_filePicker_textChanged" ref="eric6.ViewManager.BookmarkedFilesDialog.html#BookmarkedFilesDialog.on_filePicker_textChanged" />
       <keyword name="BookmarkedFilesDialog.on_filesList_currentRowChanged" id="BookmarkedFilesDialog.on_filesList_currentRowChanged" ref="eric6.ViewManager.BookmarkedFilesDialog.html#BookmarkedFilesDialog.on_filesList_currentRowChanged" />
       <keyword name="BookmarkedFilesDialog.on_upButton_clicked" id="BookmarkedFilesDialog.on_upButton_clicked" ref="eric6.ViewManager.BookmarkedFilesDialog.html#BookmarkedFilesDialog.on_upButton_clicked" />
       <keyword name="Bookmarks (Package)" id="Bookmarks (Package)" ref="index-eric6.Helpviewer.Bookmarks.html" />
@@ -1609,8 +1603,7 @@
       <keyword name="BookmarksImportDialog.__enableNextButton" id="BookmarksImportDialog.__enableNextButton" ref="eric6.Helpviewer.Bookmarks.BookmarksImportDialog.html#BookmarksImportDialog.__enableNextButton" />
       <keyword name="BookmarksImportDialog.getImportedBookmarks" id="BookmarksImportDialog.getImportedBookmarks" ref="eric6.Helpviewer.Bookmarks.BookmarksImportDialog.html#BookmarksImportDialog.getImportedBookmarks" />
       <keyword name="BookmarksImportDialog.on_cancelButton_clicked" id="BookmarksImportDialog.on_cancelButton_clicked" ref="eric6.Helpviewer.Bookmarks.BookmarksImportDialog.html#BookmarksImportDialog.on_cancelButton_clicked" />
-      <keyword name="BookmarksImportDialog.on_chooseButton_clicked" id="BookmarksImportDialog.on_chooseButton_clicked" ref="eric6.Helpviewer.Bookmarks.BookmarksImportDialog.html#BookmarksImportDialog.on_chooseButton_clicked" />
-      <keyword name="BookmarksImportDialog.on_fileEdit_textChanged" id="BookmarksImportDialog.on_fileEdit_textChanged" ref="eric6.Helpviewer.Bookmarks.BookmarksImportDialog.html#BookmarksImportDialog.on_fileEdit_textChanged" />
+      <keyword name="BookmarksImportDialog.on_filePicker_textChanged" id="BookmarksImportDialog.on_filePicker_textChanged" ref="eric6.Helpviewer.Bookmarks.BookmarksImportDialog.html#BookmarksImportDialog.on_filePicker_textChanged" />
       <keyword name="BookmarksImportDialog.on_nextButton_clicked" id="BookmarksImportDialog.on_nextButton_clicked" ref="eric6.Helpviewer.Bookmarks.BookmarksImportDialog.html#BookmarksImportDialog.on_nextButton_clicked" />
       <keyword name="BookmarksImportDialog.on_sourcesList_itemSelectionChanged" id="BookmarksImportDialog.on_sourcesList_itemSelectionChanged" ref="eric6.Helpviewer.Bookmarks.BookmarksImportDialog.html#BookmarksImportDialog.on_sourcesList_itemSelectionChanged" />
       <keyword name="BookmarksImporter" id="BookmarksImporter" ref="eric6.Helpviewer.Bookmarks.BookmarksImporters.BookmarksImporter.html#BookmarksImporter" />
@@ -2300,13 +2293,10 @@
       <keyword name="CompareDialog.__fileChanged" id="CompareDialog.__fileChanged" ref="eric6.UI.CompareDialog.html#CompareDialog.__fileChanged" />
       <keyword name="CompareDialog.__moveTextToCurrentDiffPos" id="CompareDialog.__moveTextToCurrentDiffPos" ref="eric6.UI.CompareDialog.html#CompareDialog.__moveTextToCurrentDiffPos" />
       <keyword name="CompareDialog.__scrollBarMoved" id="CompareDialog.__scrollBarMoved" ref="eric6.UI.CompareDialog.html#CompareDialog.__scrollBarMoved" />
-      <keyword name="CompareDialog.__selectFile" id="CompareDialog.__selectFile" ref="eric6.UI.CompareDialog.html#CompareDialog.__selectFile" />
       <keyword name="CompareDialog.compare" id="CompareDialog.compare" ref="eric6.UI.CompareDialog.html#CompareDialog.compare" />
       <keyword name="CompareDialog.on_buttonBox_clicked" id="CompareDialog.on_buttonBox_clicked" ref="eric6.UI.CompareDialog.html#CompareDialog.on_buttonBox_clicked" />
       <keyword name="CompareDialog.on_diffButton_clicked" id="CompareDialog.on_diffButton_clicked" ref="eric6.UI.CompareDialog.html#CompareDialog.on_diffButton_clicked" />
       <keyword name="CompareDialog.on_downButton_clicked" id="CompareDialog.on_downButton_clicked" ref="eric6.UI.CompareDialog.html#CompareDialog.on_downButton_clicked" />
-      <keyword name="CompareDialog.on_file1Button_clicked" id="CompareDialog.on_file1Button_clicked" ref="eric6.UI.CompareDialog.html#CompareDialog.on_file1Button_clicked" />
-      <keyword name="CompareDialog.on_file2Button_clicked" id="CompareDialog.on_file2Button_clicked" ref="eric6.UI.CompareDialog.html#CompareDialog.on_file2Button_clicked" />
       <keyword name="CompareDialog.on_firstButton_clicked" id="CompareDialog.on_firstButton_clicked" ref="eric6.UI.CompareDialog.html#CompareDialog.on_firstButton_clicked" />
       <keyword name="CompareDialog.on_lastButton_clicked" id="CompareDialog.on_lastButton_clicked" ref="eric6.UI.CompareDialog.html#CompareDialog.on_lastButton_clicked" />
       <keyword name="CompareDialog.on_synchronizeCheckBox_toggled" id="CompareDialog.on_synchronizeCheckBox_toggled" ref="eric6.UI.CompareDialog.html#CompareDialog.on_synchronizeCheckBox_toggled" />
@@ -3177,8 +3167,7 @@
       <keyword name="DebuggerPropertiesDialog" id="DebuggerPropertiesDialog" ref="eric6.Project.DebuggerPropertiesDialog.html#DebuggerPropertiesDialog" />
       <keyword name="DebuggerPropertiesDialog (Constructor)" id="DebuggerPropertiesDialog (Constructor)" ref="eric6.Project.DebuggerPropertiesDialog.html#DebuggerPropertiesDialog.__init__" />
       <keyword name="DebuggerPropertiesDialog (Module)" id="DebuggerPropertiesDialog (Module)" ref="eric6.Project.DebuggerPropertiesDialog.html" />
-      <keyword name="DebuggerPropertiesDialog.on_debugClientButton_clicked" id="DebuggerPropertiesDialog.on_debugClientButton_clicked" ref="eric6.Project.DebuggerPropertiesDialog.html#DebuggerPropertiesDialog.on_debugClientButton_clicked" />
-      <keyword name="DebuggerPropertiesDialog.on_interpreterButton_clicked" id="DebuggerPropertiesDialog.on_interpreterButton_clicked" ref="eric6.Project.DebuggerPropertiesDialog.html#DebuggerPropertiesDialog.on_interpreterButton_clicked" />
+      <keyword name="DebuggerPropertiesDialog.on_debugClientPicker_aboutToShowPathPickerDialog" id="DebuggerPropertiesDialog.on_debugClientPicker_aboutToShowPathPickerDialog" ref="eric6.Project.DebuggerPropertiesDialog.html#DebuggerPropertiesDialog.on_debugClientPicker_aboutToShowPathPickerDialog" />
       <keyword name="DebuggerPropertiesDialog.storeData" id="DebuggerPropertiesDialog.storeData" ref="eric6.Project.DebuggerPropertiesDialog.html#DebuggerPropertiesDialog.storeData" />
       <keyword name="DebuggerPropertiesReader" id="DebuggerPropertiesReader" ref="eric6.E5XML.DebuggerPropertiesReader.html#DebuggerPropertiesReader" />
       <keyword name="DebuggerPropertiesReader (Constructor)" id="DebuggerPropertiesReader (Constructor)" ref="eric6.E5XML.DebuggerPropertiesReader.html#DebuggerPropertiesReader.__init__" />
@@ -3210,11 +3199,8 @@
       <keyword name="DiffDialog.__fileChanged" id="DiffDialog.__fileChanged" ref="eric6.UI.DiffDialog.html#DiffDialog.__fileChanged" />
       <keyword name="DiffDialog.__generateContextDiff" id="DiffDialog.__generateContextDiff" ref="eric6.UI.DiffDialog.html#DiffDialog.__generateContextDiff" />
       <keyword name="DiffDialog.__generateUnifiedDiff" id="DiffDialog.__generateUnifiedDiff" ref="eric6.UI.DiffDialog.html#DiffDialog.__generateUnifiedDiff" />
-      <keyword name="DiffDialog.__selectFile" id="DiffDialog.__selectFile" ref="eric6.UI.DiffDialog.html#DiffDialog.__selectFile" />
       <keyword name="DiffDialog.on_buttonBox_clicked" id="DiffDialog.on_buttonBox_clicked" ref="eric6.UI.DiffDialog.html#DiffDialog.on_buttonBox_clicked" />
       <keyword name="DiffDialog.on_diffButton_clicked" id="DiffDialog.on_diffButton_clicked" ref="eric6.UI.DiffDialog.html#DiffDialog.on_diffButton_clicked" />
-      <keyword name="DiffDialog.on_file1Button_clicked" id="DiffDialog.on_file1Button_clicked" ref="eric6.UI.DiffDialog.html#DiffDialog.on_file1Button_clicked" />
-      <keyword name="DiffDialog.on_file2Button_clicked" id="DiffDialog.on_file2Button_clicked" ref="eric6.UI.DiffDialog.html#DiffDialog.on_file2Button_clicked" />
       <keyword name="DiffDialog.on_saveButton_clicked" id="DiffDialog.on_saveButton_clicked" ref="eric6.UI.DiffDialog.html#DiffDialog.on_saveButton_clicked" />
       <keyword name="DiffDialog.show" id="DiffDialog.show" ref="eric6.UI.DiffDialog.html#DiffDialog.show" />
       <keyword name="DiffHighlighter" id="DiffHighlighter" ref="eric6.UI.DiffHighlighter.html#DiffHighlighter" />
@@ -3439,9 +3425,45 @@
       <keyword name="E5ComboBox (Module)" id="E5ComboBox (Module)" ref="eric6.E5Gui.E5ComboBox.html" />
       <keyword name="E5ComboBox.inactiveText" id="E5ComboBox.inactiveText" ref="eric6.E5Gui.E5ComboBox.html#E5ComboBox.inactiveText" />
       <keyword name="E5ComboBox.setInactiveText" id="E5ComboBox.setInactiveText" ref="eric6.E5Gui.E5ComboBox.html#E5ComboBox.setInactiveText" />
+      <keyword name="E5ComboPathPicker" id="E5ComboPathPicker" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker" />
+      <keyword name="E5ComboPathPicker (Constructor)" id="E5ComboPathPicker (Constructor)" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.__init__" />
+      <keyword name="E5ComboPathPicker.__showPathPickerDialog" id="E5ComboPathPicker.__showPathPickerDialog" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.__showPathPickerDialog" />
+      <keyword name="E5ComboPathPicker.addItem" id="E5ComboPathPicker.addItem" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.addItem" />
+      <keyword name="E5ComboPathPicker.addItems" id="E5ComboPathPicker.addItems" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.addItems" />
+      <keyword name="E5ComboPathPicker.buttonToolTip" id="E5ComboPathPicker.buttonToolTip" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.buttonToolTip" />
+      <keyword name="E5ComboPathPicker.clear" id="E5ComboPathPicker.clear" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.clear" />
+      <keyword name="E5ComboPathPicker.clearEditText" id="E5ComboPathPicker.clearEditText" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.clearEditText" />
+      <keyword name="E5ComboPathPicker.currentText" id="E5ComboPathPicker.currentText" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.currentText" />
+      <keyword name="E5ComboPathPicker.defaultDirectory" id="E5ComboPathPicker.defaultDirectory" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.defaultDirectory" />
+      <keyword name="E5ComboPathPicker.editorEnabled" id="E5ComboPathPicker.editorEnabled" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.editorEnabled" />
+      <keyword name="E5ComboPathPicker.editorToolTip" id="E5ComboPathPicker.editorToolTip" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.editorToolTip" />
+      <keyword name="E5ComboPathPicker.filters" id="E5ComboPathPicker.filters" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.filters" />
+      <keyword name="E5ComboPathPicker.firstPath" id="E5ComboPathPicker.firstPath" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.firstPath" />
+      <keyword name="E5ComboPathPicker.isPickerEnabled" id="E5ComboPathPicker.isPickerEnabled" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.isPickerEnabled" />
+      <keyword name="E5ComboPathPicker.lastPath" id="E5ComboPathPicker.lastPath" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.lastPath" />
+      <keyword name="E5ComboPathPicker.mode" id="E5ComboPathPicker.mode" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.mode" />
+      <keyword name="E5ComboPathPicker.path" id="E5ComboPathPicker.path" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.path" />
+      <keyword name="E5ComboPathPicker.paths" id="E5ComboPathPicker.paths" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.paths" />
+      <keyword name="E5ComboPathPicker.setButtonToolTip" id="E5ComboPathPicker.setButtonToolTip" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.setButtonToolTip" />
+      <keyword name="E5ComboPathPicker.setCurrentIndex" id="E5ComboPathPicker.setCurrentIndex" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.setCurrentIndex" />
+      <keyword name="E5ComboPathPicker.setDefaultDirectory" id="E5ComboPathPicker.setDefaultDirectory" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.setDefaultDirectory" />
+      <keyword name="E5ComboPathPicker.setEditText" id="E5ComboPathPicker.setEditText" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.setEditText" />
+      <keyword name="E5ComboPathPicker.setEditorEnabled" id="E5ComboPathPicker.setEditorEnabled" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.setEditorEnabled" />
+      <keyword name="E5ComboPathPicker.setEditorToolTip" id="E5ComboPathPicker.setEditorToolTip" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.setEditorToolTip" />
+      <keyword name="E5ComboPathPicker.setFilters" id="E5ComboPathPicker.setFilters" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.setFilters" />
+      <keyword name="E5ComboPathPicker.setInsertPolicy" id="E5ComboPathPicker.setInsertPolicy" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.setInsertPolicy" />
+      <keyword name="E5ComboPathPicker.setMode" id="E5ComboPathPicker.setMode" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.setMode" />
+      <keyword name="E5ComboPathPicker.setPath" id="E5ComboPathPicker.setPath" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.setPath" />
+      <keyword name="E5ComboPathPicker.setPathsList" id="E5ComboPathPicker.setPathsList" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.setPathsList" />
+      <keyword name="E5ComboPathPicker.setPickerEnabled" id="E5ComboPathPicker.setPickerEnabled" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.setPickerEnabled" />
+      <keyword name="E5ComboPathPicker.setSizeAdjustPolicy" id="E5ComboPathPicker.setSizeAdjustPolicy" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.setSizeAdjustPolicy" />
+      <keyword name="E5ComboPathPicker.setWindowTitle" id="E5ComboPathPicker.setWindowTitle" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.setWindowTitle" />
+      <keyword name="E5ComboPathPicker.windowTitle" id="E5ComboPathPicker.windowTitle" ref="eric6.E5Gui.E5PathPicker.html#E5ComboPathPicker.windowTitle" />
       <keyword name="E5Completers (Module)" id="E5Completers (Module)" ref="eric6.E5Gui.E5Completers.html" />
       <keyword name="E5DirCompleter" id="E5DirCompleter" ref="eric6.E5Gui.E5Completers.html#E5DirCompleter" />
       <keyword name="E5DirCompleter (Constructor)" id="E5DirCompleter (Constructor)" ref="eric6.E5Gui.E5Completers.html#E5DirCompleter.__init__" />
+      <keyword name="E5DirCompleter.rootPath" id="E5DirCompleter.rootPath" ref="eric6.E5Gui.E5Completers.html#E5DirCompleter.rootPath" />
+      <keyword name="E5DirCompleter.setRootPath" id="E5DirCompleter.setRootPath" ref="eric6.E5Gui.E5Completers.html#E5DirCompleter.setRootPath" />
       <keyword name="E5DnDTabBar" id="E5DnDTabBar" ref="eric6.E5Gui.E5TabWidget.html#E5DnDTabBar" />
       <keyword name="E5DnDTabBar (Constructor)" id="E5DnDTabBar (Constructor)" ref="eric6.E5Gui.E5TabWidget.html#E5DnDTabBar.__init__" />
       <keyword name="E5DnDTabBar.dragEnterEvent" id="E5DnDTabBar.dragEnterEvent" ref="eric6.E5Gui.E5TabWidget.html#E5DnDTabBar.dragEnterEvent" />
@@ -3460,6 +3482,8 @@
       <keyword name="E5ErrorMessageFilterDialog.getFilters" id="E5ErrorMessageFilterDialog.getFilters" ref="eric6.E5Gui.E5ErrorMessageFilterDialog.html#E5ErrorMessageFilterDialog.getFilters" />
       <keyword name="E5FileCompleter" id="E5FileCompleter" ref="eric6.E5Gui.E5Completers.html#E5FileCompleter" />
       <keyword name="E5FileCompleter (Constructor)" id="E5FileCompleter (Constructor)" ref="eric6.E5Gui.E5Completers.html#E5FileCompleter.__init__" />
+      <keyword name="E5FileCompleter.rootPath" id="E5FileCompleter.rootPath" ref="eric6.E5Gui.E5Completers.html#E5FileCompleter.rootPath" />
+      <keyword name="E5FileCompleter.setRootPath" id="E5FileCompleter.setRootPath" ref="eric6.E5Gui.E5Completers.html#E5FileCompleter.setRootPath" />
       <keyword name="E5FileDialog (Module)" id="E5FileDialog (Module)" ref="eric6.E5Gui.E5FileDialog.html" />
       <keyword name="E5Ftp" id="E5Ftp" ref="eric6.E5Network.E5Ftp.html#E5Ftp" />
       <keyword name="E5Ftp (Constructor)" id="E5Ftp (Constructor)" ref="eric6.E5Network.E5Ftp.html#E5Ftp.__init__" />
@@ -3715,6 +3739,7 @@
       <keyword name="E5PathPicker" id="E5PathPicker" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker" />
       <keyword name="E5PathPicker (Constructor)" id="E5PathPicker (Constructor)" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.__init__" />
       <keyword name="E5PathPicker (Module)" id="E5PathPicker (Module)" ref="eric6.E5Gui.E5PathPicker.html" />
+      <keyword name="E5PathPicker.__pathEdited" id="E5PathPicker.__pathEdited" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.__pathEdited" />
       <keyword name="E5PathPicker.__showPathPickerDialog" id="E5PathPicker.__showPathPickerDialog" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.__showPathPickerDialog" />
       <keyword name="E5PathPicker.buttonToolTip" id="E5PathPicker.buttonToolTip" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.buttonToolTip" />
       <keyword name="E5PathPicker.clear" id="E5PathPicker.clear" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.clear" />
@@ -3722,15 +3747,21 @@
       <keyword name="E5PathPicker.editorEnabled" id="E5PathPicker.editorEnabled" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.editorEnabled" />
       <keyword name="E5PathPicker.editorToolTip" id="E5PathPicker.editorToolTip" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.editorToolTip" />
       <keyword name="E5PathPicker.filters" id="E5PathPicker.filters" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.filters" />
+      <keyword name="E5PathPicker.firstPath" id="E5PathPicker.firstPath" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.firstPath" />
+      <keyword name="E5PathPicker.isPickerEnabled" id="E5PathPicker.isPickerEnabled" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.isPickerEnabled" />
+      <keyword name="E5PathPicker.lastPath" id="E5PathPicker.lastPath" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.lastPath" />
       <keyword name="E5PathPicker.mode" id="E5PathPicker.mode" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.mode" />
       <keyword name="E5PathPicker.path" id="E5PathPicker.path" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.path" />
+      <keyword name="E5PathPicker.paths" id="E5PathPicker.paths" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.paths" />
       <keyword name="E5PathPicker.setButtonToolTip" id="E5PathPicker.setButtonToolTip" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.setButtonToolTip" />
       <keyword name="E5PathPicker.setDefaultDirectory" id="E5PathPicker.setDefaultDirectory" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.setDefaultDirectory" />
       <keyword name="E5PathPicker.setEditorEnabled" id="E5PathPicker.setEditorEnabled" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.setEditorEnabled" />
       <keyword name="E5PathPicker.setEditorToolTip" id="E5PathPicker.setEditorToolTip" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.setEditorToolTip" />
       <keyword name="E5PathPicker.setFilters" id="E5PathPicker.setFilters" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.setFilters" />
       <keyword name="E5PathPicker.setMode" id="E5PathPicker.setMode" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.setMode" />
+      <keyword name="E5PathPicker.setNameFilters" id="E5PathPicker.setNameFilters" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.setNameFilters" />
       <keyword name="E5PathPicker.setPath" id="E5PathPicker.setPath" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.setPath" />
+      <keyword name="E5PathPicker.setPickerEnabled" id="E5PathPicker.setPickerEnabled" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.setPickerEnabled" />
       <keyword name="E5PathPicker.setText" id="E5PathPicker.setText" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.setText" />
       <keyword name="E5PathPicker.setWindowTitle" id="E5PathPicker.setWindowTitle" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.setWindowTitle" />
       <keyword name="E5PathPicker.text" id="E5PathPicker.text" ref="eric6.E5Gui.E5PathPicker.html#E5PathPicker.text" />
@@ -4085,8 +4116,7 @@
       <keyword name="EditBreakpointDialog (Module)" id="EditBreakpointDialog (Module)" ref="eric6.Debugger.EditBreakpointDialog.html" />
       <keyword name="EditBreakpointDialog.getAddData" id="EditBreakpointDialog.getAddData" ref="eric6.Debugger.EditBreakpointDialog.html#EditBreakpointDialog.getAddData" />
       <keyword name="EditBreakpointDialog.getData" id="EditBreakpointDialog.getData" ref="eric6.Debugger.EditBreakpointDialog.html#EditBreakpointDialog.getData" />
-      <keyword name="EditBreakpointDialog.on_fileButton_clicked" id="EditBreakpointDialog.on_fileButton_clicked" ref="eric6.Debugger.EditBreakpointDialog.html#EditBreakpointDialog.on_fileButton_clicked" />
-      <keyword name="EditBreakpointDialog.on_filenameCombo_editTextChanged" id="EditBreakpointDialog.on_filenameCombo_editTextChanged" ref="eric6.Debugger.EditBreakpointDialog.html#EditBreakpointDialog.on_filenameCombo_editTextChanged" />
+      <keyword name="EditBreakpointDialog.on_filenamePicker_editTextChanged" id="EditBreakpointDialog.on_filenamePicker_editTextChanged" ref="eric6.Debugger.EditBreakpointDialog.html#EditBreakpointDialog.on_filenamePicker_editTextChanged" />
       <keyword name="EditWatchpointDialog" id="EditWatchpointDialog" ref="eric6.Debugger.EditWatchpointDialog.html#EditWatchpointDialog" />
       <keyword name="EditWatchpointDialog (Constructor)" id="EditWatchpointDialog (Constructor)" ref="eric6.Debugger.EditWatchpointDialog.html#EditWatchpointDialog.__init__" />
       <keyword name="EditWatchpointDialog (Module)" id="EditWatchpointDialog (Module)" ref="eric6.Debugger.EditWatchpointDialog.html" />
@@ -4576,8 +4606,6 @@
       <keyword name="EditorSpellCheckingPage" id="EditorSpellCheckingPage" ref="eric6.Preferences.ConfigurationPages.EditorSpellCheckingPage.html#EditorSpellCheckingPage" />
       <keyword name="EditorSpellCheckingPage (Constructor)" id="EditorSpellCheckingPage (Constructor)" ref="eric6.Preferences.ConfigurationPages.EditorSpellCheckingPage.html#EditorSpellCheckingPage.__init__" />
       <keyword name="EditorSpellCheckingPage (Module)" id="EditorSpellCheckingPage (Module)" ref="eric6.Preferences.ConfigurationPages.EditorSpellCheckingPage.html" />
-      <keyword name="EditorSpellCheckingPage.on_pelButton_clicked" id="EditorSpellCheckingPage.on_pelButton_clicked" ref="eric6.Preferences.ConfigurationPages.EditorSpellCheckingPage.html#EditorSpellCheckingPage.on_pelButton_clicked" />
-      <keyword name="EditorSpellCheckingPage.on_pwlButton_clicked" id="EditorSpellCheckingPage.on_pwlButton_clicked" ref="eric6.Preferences.ConfigurationPages.EditorSpellCheckingPage.html#EditorSpellCheckingPage.on_pwlButton_clicked" />
       <keyword name="EditorSpellCheckingPage.save" id="EditorSpellCheckingPage.save" ref="eric6.Preferences.ConfigurationPages.EditorSpellCheckingPage.html#EditorSpellCheckingPage.save" />
       <keyword name="EditorStylesPage" id="EditorStylesPage" ref="eric6.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage" />
       <keyword name="EditorStylesPage (Constructor)" id="EditorStylesPage (Constructor)" ref="eric6.Preferences.ConfigurationPages.EditorStylesPage.html#EditorStylesPage.__init__" />
@@ -4647,9 +4675,10 @@
       <keyword name="EricapiConfigDialog.generateParameters" id="EricapiConfigDialog.generateParameters" ref="eric6.Plugins.DocumentationPlugins.Ericapi.EricapiConfigDialog.html#EricapiConfigDialog.generateParameters" />
       <keyword name="EricapiConfigDialog.on_addButton_clicked" id="EricapiConfigDialog.on_addButton_clicked" ref="eric6.Plugins.DocumentationPlugins.Ericapi.EricapiConfigDialog.html#EricapiConfigDialog.on_addButton_clicked" />
       <keyword name="EricapiConfigDialog.on_deleteButton_clicked" id="EricapiConfigDialog.on_deleteButton_clicked" ref="eric6.Plugins.DocumentationPlugins.Ericapi.EricapiConfigDialog.html#EricapiConfigDialog.on_deleteButton_clicked" />
-      <keyword name="EricapiConfigDialog.on_ignoreDirButton_clicked" id="EricapiConfigDialog.on_ignoreDirButton_clicked" ref="eric6.Plugins.DocumentationPlugins.Ericapi.EricapiConfigDialog.html#EricapiConfigDialog.on_ignoreDirButton_clicked" />
-      <keyword name="EricapiConfigDialog.on_outputFileButton_clicked" id="EricapiConfigDialog.on_outputFileButton_clicked" ref="eric6.Plugins.DocumentationPlugins.Ericapi.EricapiConfigDialog.html#EricapiConfigDialog.on_outputFileButton_clicked" />
-      <keyword name="EricapiConfigDialog.on_outputFileEdit_textChanged" id="EricapiConfigDialog.on_outputFileEdit_textChanged" ref="eric6.Plugins.DocumentationPlugins.Ericapi.EricapiConfigDialog.html#EricapiConfigDialog.on_outputFileEdit_textChanged" />
+      <keyword name="EricapiConfigDialog.on_ignoreDirPicker_pathSelected" id="EricapiConfigDialog.on_ignoreDirPicker_pathSelected" ref="eric6.Plugins.DocumentationPlugins.Ericapi.EricapiConfigDialog.html#EricapiConfigDialog.on_ignoreDirPicker_pathSelected" />
+      <keyword name="EricapiConfigDialog.on_outputFilePicker_aboutToShowPathPickerDialog" id="EricapiConfigDialog.on_outputFilePicker_aboutToShowPathPickerDialog" ref="eric6.Plugins.DocumentationPlugins.Ericapi.EricapiConfigDialog.html#EricapiConfigDialog.on_outputFilePicker_aboutToShowPathPickerDialog" />
+      <keyword name="EricapiConfigDialog.on_outputFilePicker_pathSelected" id="EricapiConfigDialog.on_outputFilePicker_pathSelected" ref="eric6.Plugins.DocumentationPlugins.Ericapi.EricapiConfigDialog.html#EricapiConfigDialog.on_outputFilePicker_pathSelected" />
+      <keyword name="EricapiConfigDialog.on_outputFilePicker_textChanged" id="EricapiConfigDialog.on_outputFilePicker_textChanged" ref="eric6.Plugins.DocumentationPlugins.Ericapi.EricapiConfigDialog.html#EricapiConfigDialog.on_outputFilePicker_textChanged" />
       <keyword name="EricapiExecDialog" id="EricapiExecDialog" ref="eric6.Plugins.DocumentationPlugins.Ericapi.EricapiExecDialog.html#EricapiExecDialog" />
       <keyword name="EricapiExecDialog (Constructor)" id="EricapiExecDialog (Constructor)" ref="eric6.Plugins.DocumentationPlugins.Ericapi.EricapiExecDialog.html#EricapiExecDialog.__init__" />
       <keyword name="EricapiExecDialog (Module)" id="EricapiExecDialog (Module)" ref="eric6.Plugins.DocumentationPlugins.Ericapi.EricapiExecDialog.html" />
@@ -4679,16 +4708,16 @@
       <keyword name="EricdocConfigDialog.on_bodyFgButton_clicked" id="EricdocConfigDialog.on_bodyFgButton_clicked" ref="eric6.Plugins.DocumentationPlugins.Ericdoc.EricdocConfigDialog.html#EricdocConfigDialog.on_bodyFgButton_clicked" />
       <keyword name="EricdocConfigDialog.on_cfBgButton_clicked" id="EricdocConfigDialog.on_cfBgButton_clicked" ref="eric6.Plugins.DocumentationPlugins.Ericdoc.EricdocConfigDialog.html#EricdocConfigDialog.on_cfBgButton_clicked" />
       <keyword name="EricdocConfigDialog.on_cfFgButton_clicked" id="EricdocConfigDialog.on_cfFgButton_clicked" ref="eric6.Plugins.DocumentationPlugins.Ericdoc.EricdocConfigDialog.html#EricdocConfigDialog.on_cfFgButton_clicked" />
-      <keyword name="EricdocConfigDialog.on_cssButton_clicked" id="EricdocConfigDialog.on_cssButton_clicked" ref="eric6.Plugins.DocumentationPlugins.Ericdoc.EricdocConfigDialog.html#EricdocConfigDialog.on_cssButton_clicked" />
+      <keyword name="EricdocConfigDialog.on_cssPicker_pathSelected" id="EricdocConfigDialog.on_cssPicker_pathSelected" ref="eric6.Plugins.DocumentationPlugins.Ericdoc.EricdocConfigDialog.html#EricdocConfigDialog.on_cssPicker_pathSelected" />
       <keyword name="EricdocConfigDialog.on_deleteButton_clicked" id="EricdocConfigDialog.on_deleteButton_clicked" ref="eric6.Plugins.DocumentationPlugins.Ericdoc.EricdocConfigDialog.html#EricdocConfigDialog.on_deleteButton_clicked" />
-      <keyword name="EricdocConfigDialog.on_ignoreDirButton_clicked" id="EricdocConfigDialog.on_ignoreDirButton_clicked" ref="eric6.Plugins.DocumentationPlugins.Ericdoc.EricdocConfigDialog.html#EricdocConfigDialog.on_ignoreDirButton_clicked" />
+      <keyword name="EricdocConfigDialog.on_ignoreDirPicker_pathSelected" id="EricdocConfigDialog.on_ignoreDirPicker_pathSelected" ref="eric6.Plugins.DocumentationPlugins.Ericdoc.EricdocConfigDialog.html#EricdocConfigDialog.on_ignoreDirPicker_pathSelected" />
       <keyword name="EricdocConfigDialog.on_l1BgButton_clicked" id="EricdocConfigDialog.on_l1BgButton_clicked" ref="eric6.Plugins.DocumentationPlugins.Ericdoc.EricdocConfigDialog.html#EricdocConfigDialog.on_l1BgButton_clicked" />
       <keyword name="EricdocConfigDialog.on_l1FgButton_clicked" id="EricdocConfigDialog.on_l1FgButton_clicked" ref="eric6.Plugins.DocumentationPlugins.Ericdoc.EricdocConfigDialog.html#EricdocConfigDialog.on_l1FgButton_clicked" />
       <keyword name="EricdocConfigDialog.on_l2BgButton_clicked" id="EricdocConfigDialog.on_l2BgButton_clicked" ref="eric6.Plugins.DocumentationPlugins.Ericdoc.EricdocConfigDialog.html#EricdocConfigDialog.on_l2BgButton_clicked" />
       <keyword name="EricdocConfigDialog.on_l2FgButton_clicked" id="EricdocConfigDialog.on_l2FgButton_clicked" ref="eric6.Plugins.DocumentationPlugins.Ericdoc.EricdocConfigDialog.html#EricdocConfigDialog.on_l2FgButton_clicked" />
       <keyword name="EricdocConfigDialog.on_linkFgButton_clicked" id="EricdocConfigDialog.on_linkFgButton_clicked" ref="eric6.Plugins.DocumentationPlugins.Ericdoc.EricdocConfigDialog.html#EricdocConfigDialog.on_linkFgButton_clicked" />
-      <keyword name="EricdocConfigDialog.on_outputDirButton_clicked" id="EricdocConfigDialog.on_outputDirButton_clicked" ref="eric6.Plugins.DocumentationPlugins.Ericdoc.EricdocConfigDialog.html#EricdocConfigDialog.on_outputDirButton_clicked" />
-      <keyword name="EricdocConfigDialog.on_qtHelpDirButton_clicked" id="EricdocConfigDialog.on_qtHelpDirButton_clicked" ref="eric6.Plugins.DocumentationPlugins.Ericdoc.EricdocConfigDialog.html#EricdocConfigDialog.on_qtHelpDirButton_clicked" />
+      <keyword name="EricdocConfigDialog.on_outputDirPicker_pathSelected" id="EricdocConfigDialog.on_outputDirPicker_pathSelected" ref="eric6.Plugins.DocumentationPlugins.Ericdoc.EricdocConfigDialog.html#EricdocConfigDialog.on_outputDirPicker_pathSelected" />
+      <keyword name="EricdocConfigDialog.on_qtHelpDirPicker_pathSelected" id="EricdocConfigDialog.on_qtHelpDirPicker_pathSelected" ref="eric6.Plugins.DocumentationPlugins.Ericdoc.EricdocConfigDialog.html#EricdocConfigDialog.on_qtHelpDirPicker_pathSelected" />
       <keyword name="EricdocConfigDialog.on_qtHelpFolderEdit_textChanged" id="EricdocConfigDialog.on_qtHelpFolderEdit_textChanged" ref="eric6.Plugins.DocumentationPlugins.Ericdoc.EricdocConfigDialog.html#EricdocConfigDialog.on_qtHelpFolderEdit_textChanged" />
       <keyword name="EricdocConfigDialog.on_qtHelpGroup_toggled" id="EricdocConfigDialog.on_qtHelpGroup_toggled" ref="eric6.Plugins.DocumentationPlugins.Ericdoc.EricdocConfigDialog.html#EricdocConfigDialog.on_qtHelpGroup_toggled" />
       <keyword name="EricdocConfigDialog.on_qtHelpNamespaceEdit_textChanged" id="EricdocConfigDialog.on_qtHelpNamespaceEdit_textChanged" ref="eric6.Plugins.DocumentationPlugins.Ericdoc.EricdocConfigDialog.html#EricdocConfigDialog.on_qtHelpNamespaceEdit_textChanged" />
@@ -4917,8 +4946,7 @@
       <keyword name="FindFileDialog.__stripEol" id="FindFileDialog.__stripEol" ref="eric6.UI.FindFileDialog.html#FindFileDialog.__stripEol" />
       <keyword name="FindFileDialog.on_buttonBox_clicked" id="FindFileDialog.on_buttonBox_clicked" ref="eric6.UI.FindFileDialog.html#FindFileDialog.on_buttonBox_clicked" />
       <keyword name="FindFileDialog.on_dirButton_clicked" id="FindFileDialog.on_dirButton_clicked" ref="eric6.UI.FindFileDialog.html#FindFileDialog.on_dirButton_clicked" />
-      <keyword name="FindFileDialog.on_dirCombo_editTextChanged" id="FindFileDialog.on_dirCombo_editTextChanged" ref="eric6.UI.FindFileDialog.html#FindFileDialog.on_dirCombo_editTextChanged" />
-      <keyword name="FindFileDialog.on_dirSelectButton_clicked" id="FindFileDialog.on_dirSelectButton_clicked" ref="eric6.UI.FindFileDialog.html#FindFileDialog.on_dirSelectButton_clicked" />
+      <keyword name="FindFileDialog.on_dirPicker_editTextChanged" id="FindFileDialog.on_dirPicker_editTextChanged" ref="eric6.UI.FindFileDialog.html#FindFileDialog.on_dirPicker_editTextChanged" />
       <keyword name="FindFileDialog.on_filterCheckBox_clicked" id="FindFileDialog.on_filterCheckBox_clicked" ref="eric6.UI.FindFileDialog.html#FindFileDialog.on_filterCheckBox_clicked" />
       <keyword name="FindFileDialog.on_filterEdit_textEdited" id="FindFileDialog.on_filterEdit_textEdited" ref="eric6.UI.FindFileDialog.html#FindFileDialog.on_filterEdit_textEdited" />
       <keyword name="FindFileDialog.on_findList_itemDoubleClicked" id="FindFileDialog.on_findList_itemDoubleClicked" ref="eric6.UI.FindFileDialog.html#FindFileDialog.on_findList_itemDoubleClicked" />
@@ -4941,9 +4969,8 @@
       <keyword name="FindFileNameDialog.on_fileList_itemActivated" id="FindFileNameDialog.on_fileList_itemActivated" ref="eric6.UI.FindFileNameDialog.html#FindFileNameDialog.on_fileList_itemActivated" />
       <keyword name="FindFileNameDialog.on_fileNameEdit_textChanged" id="FindFileNameDialog.on_fileNameEdit_textChanged" ref="eric6.UI.FindFileNameDialog.html#FindFileNameDialog.on_fileNameEdit_textChanged" />
       <keyword name="FindFileNameDialog.on_projectCheckBox_toggled" id="FindFileNameDialog.on_projectCheckBox_toggled" ref="eric6.UI.FindFileNameDialog.html#FindFileNameDialog.on_projectCheckBox_toggled" />
-      <keyword name="FindFileNameDialog.on_searchDirButton_clicked" id="FindFileNameDialog.on_searchDirButton_clicked" ref="eric6.UI.FindFileNameDialog.html#FindFileNameDialog.on_searchDirButton_clicked" />
       <keyword name="FindFileNameDialog.on_searchDirCheckBox_toggled" id="FindFileNameDialog.on_searchDirCheckBox_toggled" ref="eric6.UI.FindFileNameDialog.html#FindFileNameDialog.on_searchDirCheckBox_toggled" />
-      <keyword name="FindFileNameDialog.on_searchDirEdit_textChanged" id="FindFileNameDialog.on_searchDirEdit_textChanged" ref="eric6.UI.FindFileNameDialog.html#FindFileNameDialog.on_searchDirEdit_textChanged" />
+      <keyword name="FindFileNameDialog.on_searchDirPicker_textChanged" id="FindFileNameDialog.on_searchDirPicker_textChanged" ref="eric6.UI.FindFileNameDialog.html#FindFileNameDialog.on_searchDirPicker_textChanged" />
       <keyword name="FindFileNameDialog.on_syspathCheckBox_toggled" id="FindFileNameDialog.on_syspathCheckBox_toggled" ref="eric6.UI.FindFileNameDialog.html#FindFileNameDialog.on_syspathCheckBox_toggled" />
       <keyword name="FindFileNameDialog.show" id="FindFileNameDialog.show" ref="eric6.UI.FindFileNameDialog.html#FindFileNameDialog.show" />
       <keyword name="FirefoxImporter" id="FirefoxImporter" ref="eric6.Helpviewer.Bookmarks.BookmarksImporters.FirefoxImporter.html#FirefoxImporter" />
@@ -5251,7 +5278,6 @@
       <keyword name="HelpAppearancePage (Module)" id="HelpAppearancePage (Module)" ref="eric6.Preferences.ConfigurationPages.HelpAppearancePage.html" />
       <keyword name="HelpAppearancePage.on_fixedFontButton_clicked" id="HelpAppearancePage.on_fixedFontButton_clicked" ref="eric6.Preferences.ConfigurationPages.HelpAppearancePage.html#HelpAppearancePage.on_fixedFontButton_clicked" />
       <keyword name="HelpAppearancePage.on_standardFontButton_clicked" id="HelpAppearancePage.on_standardFontButton_clicked" ref="eric6.Preferences.ConfigurationPages.HelpAppearancePage.html#HelpAppearancePage.on_standardFontButton_clicked" />
-      <keyword name="HelpAppearancePage.on_styleSheetButton_clicked" id="HelpAppearancePage.on_styleSheetButton_clicked" ref="eric6.Preferences.ConfigurationPages.HelpAppearancePage.html#HelpAppearancePage.on_styleSheetButton_clicked" />
       <keyword name="HelpAppearancePage.save" id="HelpAppearancePage.save" ref="eric6.Preferences.ConfigurationPages.HelpAppearancePage.html#HelpAppearancePage.save" />
       <keyword name="HelpAppearancePage.setMode" id="HelpAppearancePage.setMode" ref="eric6.Preferences.ConfigurationPages.HelpAppearancePage.html#HelpAppearancePage.setMode" />
       <keyword name="HelpBrowser" id="HelpBrowser" ref="eric6.Helpviewer.HelpBrowserWV.html#HelpBrowser" />
@@ -5360,18 +5386,10 @@
       <keyword name="HelpDocumentationPage" id="HelpDocumentationPage" ref="eric6.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage" />
       <keyword name="HelpDocumentationPage (Constructor)" id="HelpDocumentationPage (Constructor)" ref="eric6.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.__init__" />
       <keyword name="HelpDocumentationPage (Module)" id="HelpDocumentationPage (Module)" ref="eric6.Preferences.ConfigurationPages.HelpDocumentationPage.html" />
-      <keyword name="HelpDocumentationPage.on_pyqt4DocDirButton_clicked" id="HelpDocumentationPage.on_pyqt4DocDirButton_clicked" ref="eric6.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.on_pyqt4DocDirButton_clicked" />
-      <keyword name="HelpDocumentationPage.on_pyqt5DocDirButton_clicked" id="HelpDocumentationPage.on_pyqt5DocDirButton_clicked" ref="eric6.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.on_pyqt5DocDirButton_clicked" />
-      <keyword name="HelpDocumentationPage.on_pysideDocDirButton_clicked" id="HelpDocumentationPage.on_pysideDocDirButton_clicked" ref="eric6.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.on_pysideDocDirButton_clicked" />
-      <keyword name="HelpDocumentationPage.on_python2DocDirButton_clicked" id="HelpDocumentationPage.on_python2DocDirButton_clicked" ref="eric6.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.on_python2DocDirButton_clicked" />
-      <keyword name="HelpDocumentationPage.on_pythonDocDirButton_clicked" id="HelpDocumentationPage.on_pythonDocDirButton_clicked" ref="eric6.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.on_pythonDocDirButton_clicked" />
-      <keyword name="HelpDocumentationPage.on_qt4DocDirButton_clicked" id="HelpDocumentationPage.on_qt4DocDirButton_clicked" ref="eric6.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.on_qt4DocDirButton_clicked" />
-      <keyword name="HelpDocumentationPage.on_qt5DocDirButton_clicked" id="HelpDocumentationPage.on_qt5DocDirButton_clicked" ref="eric6.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.on_qt5DocDirButton_clicked" />
       <keyword name="HelpDocumentationPage.save" id="HelpDocumentationPage.save" ref="eric6.Preferences.ConfigurationPages.HelpDocumentationPage.html#HelpDocumentationPage.save" />
       <keyword name="HelpFlashCookieManagerPage" id="HelpFlashCookieManagerPage" ref="eric6.Preferences.ConfigurationPages.HelpFlashCookieManagerPage.html#HelpFlashCookieManagerPage" />
       <keyword name="HelpFlashCookieManagerPage (Constructor)" id="HelpFlashCookieManagerPage (Constructor)" ref="eric6.Preferences.ConfigurationPages.HelpFlashCookieManagerPage.html#HelpFlashCookieManagerPage.__init__" />
       <keyword name="HelpFlashCookieManagerPage (Module)" id="HelpFlashCookieManagerPage (Module)" ref="eric6.Preferences.ConfigurationPages.HelpFlashCookieManagerPage.html" />
-      <keyword name="HelpFlashCookieManagerPage.on_flashDataPathButton_clicked" id="HelpFlashCookieManagerPage.on_flashDataPathButton_clicked" ref="eric6.Preferences.ConfigurationPages.HelpFlashCookieManagerPage.html#HelpFlashCookieManagerPage.on_flashDataPathButton_clicked" />
       <keyword name="HelpFlashCookieManagerPage.save" id="HelpFlashCookieManagerPage.save" ref="eric6.Preferences.ConfigurationPages.HelpFlashCookieManagerPage.html#HelpFlashCookieManagerPage.save" />
       <keyword name="HelpIndexWidget" id="HelpIndexWidget" ref="eric6.Helpviewer.HelpIndexWidget.html#HelpIndexWidget" />
       <keyword name="HelpIndexWidget (Constructor)" id="HelpIndexWidget (Constructor)" ref="eric6.Helpviewer.HelpIndexWidget.html#HelpIndexWidget.__init__" />
@@ -5391,7 +5409,6 @@
       <keyword name="HelpInterfacePage (Constructor)" id="HelpInterfacePage (Constructor)" ref="eric6.Preferences.ConfigurationPages.HelpInterfacePage.html#HelpInterfacePage.__init__" />
       <keyword name="HelpInterfacePage (Module)" id="HelpInterfacePage (Module)" ref="eric6.Preferences.ConfigurationPages.HelpInterfacePage.html" />
       <keyword name="HelpInterfacePage.__populateStyleCombo" id="HelpInterfacePage.__populateStyleCombo" ref="eric6.Preferences.ConfigurationPages.HelpInterfacePage.html#HelpInterfacePage.__populateStyleCombo" />
-      <keyword name="HelpInterfacePage.on_styleSheetButton_clicked" id="HelpInterfacePage.on_styleSheetButton_clicked" ref="eric6.Preferences.ConfigurationPages.HelpInterfacePage.html#HelpInterfacePage.on_styleSheetButton_clicked" />
       <keyword name="HelpInterfacePage.save" id="HelpInterfacePage.save" ref="eric6.Preferences.ConfigurationPages.HelpInterfacePage.html#HelpInterfacePage.save" />
       <keyword name="HelpLanguagesDialog" id="HelpLanguagesDialog" ref="eric6.Helpviewer.HelpLanguagesDialog.html#HelpLanguagesDialog" />
       <keyword name="HelpLanguagesDialog (Constructor)" id="HelpLanguagesDialog (Constructor)" ref="eric6.Helpviewer.HelpLanguagesDialog.html#HelpLanguagesDialog.__init__" />
@@ -5496,10 +5513,6 @@
       <keyword name="HelpViewersPage" id="HelpViewersPage" ref="eric6.Preferences.ConfigurationPages.HelpViewersPage.html#HelpViewersPage" />
       <keyword name="HelpViewersPage (Constructor)" id="HelpViewersPage (Constructor)" ref="eric6.Preferences.ConfigurationPages.HelpViewersPage.html#HelpViewersPage.__init__" />
       <keyword name="HelpViewersPage (Module)" id="HelpViewersPage (Module)" ref="eric6.Preferences.ConfigurationPages.HelpViewersPage.html" />
-      <keyword name="HelpViewersPage.on_chmviewerButton_clicked" id="HelpViewersPage.on_chmviewerButton_clicked" ref="eric6.Preferences.ConfigurationPages.HelpViewersPage.html#HelpViewersPage.on_chmviewerButton_clicked" />
-      <keyword name="HelpViewersPage.on_customViewerSelectionButton_clicked" id="HelpViewersPage.on_customViewerSelectionButton_clicked" ref="eric6.Preferences.ConfigurationPages.HelpViewersPage.html#HelpViewersPage.on_customViewerSelectionButton_clicked" />
-      <keyword name="HelpViewersPage.on_pdfviewerButton_clicked" id="HelpViewersPage.on_pdfviewerButton_clicked" ref="eric6.Preferences.ConfigurationPages.HelpViewersPage.html#HelpViewersPage.on_pdfviewerButton_clicked" />
-      <keyword name="HelpViewersPage.on_webbrowserButton_clicked" id="HelpViewersPage.on_webbrowserButton_clicked" ref="eric6.Preferences.ConfigurationPages.HelpViewersPage.html#HelpViewersPage.on_webbrowserButton_clicked" />
       <keyword name="HelpViewersPage.save" id="HelpViewersPage.save" ref="eric6.Preferences.ConfigurationPages.HelpViewersPage.html#HelpViewersPage.save" />
       <keyword name="HelpVirusTotalPage" id="HelpVirusTotalPage" ref="eric6.Preferences.ConfigurationPages.HelpVirusTotalPage.html#HelpVirusTotalPage" />
       <keyword name="HelpVirusTotalPage (Constructor)" id="HelpVirusTotalPage (Constructor)" ref="eric6.Preferences.ConfigurationPages.HelpVirusTotalPage.html#HelpVirusTotalPage.__init__" />
@@ -5839,8 +5852,8 @@
       <keyword name="HgAddSubrepositoryDialog (Module)" id="HgAddSubrepositoryDialog (Module)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgAddSubrepositoryDialog.html" />
       <keyword name="HgAddSubrepositoryDialog.__updateOk" id="HgAddSubrepositoryDialog.__updateOk" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgAddSubrepositoryDialog.html#HgAddSubrepositoryDialog.__updateOk" />
       <keyword name="HgAddSubrepositoryDialog.getData" id="HgAddSubrepositoryDialog.getData" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgAddSubrepositoryDialog.html#HgAddSubrepositoryDialog.getData" />
-      <keyword name="HgAddSubrepositoryDialog.on_pathButton_clicked" id="HgAddSubrepositoryDialog.on_pathButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgAddSubrepositoryDialog.html#HgAddSubrepositoryDialog.on_pathButton_clicked" />
-      <keyword name="HgAddSubrepositoryDialog.on_pathEdit_textChanged" id="HgAddSubrepositoryDialog.on_pathEdit_textChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgAddSubrepositoryDialog.html#HgAddSubrepositoryDialog.on_pathEdit_textChanged" />
+      <keyword name="HgAddSubrepositoryDialog.on_pathPicker_pathSelected" id="HgAddSubrepositoryDialog.on_pathPicker_pathSelected" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgAddSubrepositoryDialog.html#HgAddSubrepositoryDialog.on_pathPicker_pathSelected" />
+      <keyword name="HgAddSubrepositoryDialog.on_pathPicker_textChanged" id="HgAddSubrepositoryDialog.on_pathPicker_textChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgAddSubrepositoryDialog.html#HgAddSubrepositoryDialog.on_pathPicker_textChanged" />
       <keyword name="HgAddSubrepositoryDialog.on_urlEdit_textChanged" id="HgAddSubrepositoryDialog.on_urlEdit_textChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgAddSubrepositoryDialog.html#HgAddSubrepositoryDialog.on_urlEdit_textChanged" />
       <keyword name="HgAnnotateDialog" id="HgAnnotateDialog" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog.html#HgAnnotateDialog" />
       <keyword name="HgAnnotateDialog (Constructor)" id="HgAnnotateDialog (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgAnnotateDialog.html#HgAnnotateDialog.__init__" />
@@ -5864,8 +5877,7 @@
       <keyword name="HgArchiveDialog (Constructor)" id="HgArchiveDialog (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgArchiveDialog.html#HgArchiveDialog.__init__" />
       <keyword name="HgArchiveDialog (Module)" id="HgArchiveDialog (Module)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgArchiveDialog.html" />
       <keyword name="HgArchiveDialog.getData" id="HgArchiveDialog.getData" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgArchiveDialog.html#HgArchiveDialog.getData" />
-      <keyword name="HgArchiveDialog.on_archiveButton_clicked" id="HgArchiveDialog.on_archiveButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgArchiveDialog.html#HgArchiveDialog.on_archiveButton_clicked" />
-      <keyword name="HgArchiveDialog.on_archiveEdit_textChanged" id="HgArchiveDialog.on_archiveEdit_textChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgArchiveDialog.html#HgArchiveDialog.on_archiveEdit_textChanged" />
+      <keyword name="HgArchiveDialog.on_archivePicker_textChanged" id="HgArchiveDialog.on_archivePicker_textChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgArchiveDialog.html#HgArchiveDialog.on_archivePicker_textChanged" />
       <keyword name="HgArchiveDialog.on_typeComboBox_activated" id="HgArchiveDialog.on_typeComboBox_activated" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgArchiveDialog.html#HgArchiveDialog.on_typeComboBox_activated" />
       <keyword name="HgBackoutDialog" id="HgBackoutDialog" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html#HgBackoutDialog" />
       <keyword name="HgBackoutDialog (Constructor)" id="HgBackoutDialog (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgBackoutDialog.html#HgBackoutDialog.__init__" />
@@ -6034,8 +6046,7 @@
       <keyword name="HgCopyDialog (Constructor)" id="HgCopyDialog (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.html#HgCopyDialog.__init__" />
       <keyword name="HgCopyDialog (Module)" id="HgCopyDialog (Module)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.html" />
       <keyword name="HgCopyDialog.getData" id="HgCopyDialog.getData" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.html#HgCopyDialog.getData" />
-      <keyword name="HgCopyDialog.on_dirButton_clicked" id="HgCopyDialog.on_dirButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.html#HgCopyDialog.on_dirButton_clicked" />
-      <keyword name="HgCopyDialog.on_targetEdit_textChanged" id="HgCopyDialog.on_targetEdit_textChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.html#HgCopyDialog.on_targetEdit_textChanged" />
+      <keyword name="HgCopyDialog.on_targetPicker_textChanged" id="HgCopyDialog.on_targetPicker_textChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgCopyDialog.html#HgCopyDialog.on_targetPicker_textChanged" />
       <keyword name="HgDialog" id="HgDialog" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDialog.html#HgDialog" />
       <keyword name="HgDialog (Constructor)" id="HgDialog (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDialog.html#HgDialog.__init__" />
       <keyword name="HgDialog (Module)" id="HgDialog (Module)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgDialog.html" />
@@ -6087,8 +6098,7 @@
       <keyword name="HgExportDialog.__updateOK" id="HgExportDialog.__updateOK" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgExportDialog.html#HgExportDialog.__updateOK" />
       <keyword name="HgExportDialog.getParameters" id="HgExportDialog.getParameters" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgExportDialog.html#HgExportDialog.getParameters" />
       <keyword name="HgExportDialog.on_changesetsEdit_textChanged" id="HgExportDialog.on_changesetsEdit_textChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgExportDialog.html#HgExportDialog.on_changesetsEdit_textChanged" />
-      <keyword name="HgExportDialog.on_directoryButton_clicked" id="HgExportDialog.on_directoryButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgExportDialog.html#HgExportDialog.on_directoryButton_clicked" />
-      <keyword name="HgExportDialog.on_directoryEdit_textChanged" id="HgExportDialog.on_directoryEdit_textChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgExportDialog.html#HgExportDialog.on_directoryEdit_textChanged" />
+      <keyword name="HgExportDialog.on_directoryPicker_textChanged" id="HgExportDialog.on_directoryPicker_textChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgExportDialog.html#HgExportDialog.on_directoryPicker_textChanged" />
       <keyword name="HgExportDialog.on_patternEdit_textChanged" id="HgExportDialog.on_patternEdit_textChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgExportDialog.html#HgExportDialog.on_patternEdit_textChanged" />
       <keyword name="HgExtension" id="HgExtension" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgExtension.html#HgExtension" />
       <keyword name="HgExtension (Constructor)" id="HgExtension (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgExtension.html#HgExtension.__init__" />
@@ -6166,8 +6176,7 @@
       <keyword name="HgImportDialog (Module)" id="HgImportDialog (Module)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgImportDialog.html" />
       <keyword name="HgImportDialog.__updateOK" id="HgImportDialog.__updateOK" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgImportDialog.html#HgImportDialog.__updateOK" />
       <keyword name="HgImportDialog.getParameters" id="HgImportDialog.getParameters" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgImportDialog.html#HgImportDialog.getParameters" />
-      <keyword name="HgImportDialog.on_patchFileButton_clicked" id="HgImportDialog.on_patchFileButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgImportDialog.html#HgImportDialog.on_patchFileButton_clicked" />
-      <keyword name="HgImportDialog.on_patchFileEdit_textChanged" id="HgImportDialog.on_patchFileEdit_textChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgImportDialog.html#HgImportDialog.on_patchFileEdit_textChanged" />
+      <keyword name="HgImportDialog.on_patchFilePicker_textChanged" id="HgImportDialog.on_patchFilePicker_textChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgImportDialog.html#HgImportDialog.on_patchFilePicker_textChanged" />
       <keyword name="HgLogBrowserDialog" id="HgLogBrowserDialog" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog" />
       <keyword name="HgLogBrowserDialog (Constructor)" id="HgLogBrowserDialog (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html#HgLogBrowserDialog.__init__" />
       <keyword name="HgLogBrowserDialog (Module)" id="HgLogBrowserDialog (Module)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgLogBrowserDialog.html" />
@@ -6284,11 +6293,9 @@
       <keyword name="HgNewProjectOptionsDialog (Constructor)" id="HgNewProjectOptionsDialog (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.__init__" />
       <keyword name="HgNewProjectOptionsDialog (Module)" id="HgNewProjectOptionsDialog (Module)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html" />
       <keyword name="HgNewProjectOptionsDialog.getData" id="HgNewProjectOptionsDialog.getData" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.getData" />
-      <keyword name="HgNewProjectOptionsDialog.on_projectDirButton_clicked" id="HgNewProjectOptionsDialog.on_projectDirButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.on_projectDirButton_clicked" />
       <keyword name="HgNewProjectOptionsDialog.on_protocolCombo_activated" id="HgNewProjectOptionsDialog.on_protocolCombo_activated" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.on_protocolCombo_activated" />
-      <keyword name="HgNewProjectOptionsDialog.on_vcsProjectDirEdit_textChanged" id="HgNewProjectOptionsDialog.on_vcsProjectDirEdit_textChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.on_vcsProjectDirEdit_textChanged" />
-      <keyword name="HgNewProjectOptionsDialog.on_vcsUrlButton_clicked" id="HgNewProjectOptionsDialog.on_vcsUrlButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.on_vcsUrlButton_clicked" />
-      <keyword name="HgNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" id="HgNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" />
+      <keyword name="HgNewProjectOptionsDialog.on_vcsProjectDirPicker_textChanged" id="HgNewProjectOptionsDialog.on_vcsProjectDirPicker_textChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.on_vcsProjectDirPicker_textChanged" />
+      <keyword name="HgNewProjectOptionsDialog.on_vcsUrlPicker_textChanged" id="HgNewProjectOptionsDialog.on_vcsUrlPicker_textChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgNewProjectOptionsDialog.html#HgNewProjectOptionsDialog.on_vcsUrlPicker_textChanged" />
       <keyword name="HgOptionsDialog" id="HgOptionsDialog" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html#HgOptionsDialog" />
       <keyword name="HgOptionsDialog (Constructor)" id="HgOptionsDialog (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html#HgOptionsDialog.__init__" />
       <keyword name="HgOptionsDialog (Module)" id="HgOptionsDialog (Module)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.HgOptionsDialog.html" />
@@ -7018,9 +7025,8 @@
       <keyword name="IconsPage.on_addIconDirectoryButton_clicked" id="IconsPage.on_addIconDirectoryButton_clicked" ref="eric6.Preferences.ConfigurationPages.IconsPage.html#IconsPage.on_addIconDirectoryButton_clicked" />
       <keyword name="IconsPage.on_deleteIconDirectoryButton_clicked" id="IconsPage.on_deleteIconDirectoryButton_clicked" ref="eric6.Preferences.ConfigurationPages.IconsPage.html#IconsPage.on_deleteIconDirectoryButton_clicked" />
       <keyword name="IconsPage.on_downButton_clicked" id="IconsPage.on_downButton_clicked" ref="eric6.Preferences.ConfigurationPages.IconsPage.html#IconsPage.on_downButton_clicked" />
-      <keyword name="IconsPage.on_iconDirectoryButton_clicked" id="IconsPage.on_iconDirectoryButton_clicked" ref="eric6.Preferences.ConfigurationPages.IconsPage.html#IconsPage.on_iconDirectoryButton_clicked" />
-      <keyword name="IconsPage.on_iconDirectoryEdit_textChanged" id="IconsPage.on_iconDirectoryEdit_textChanged" ref="eric6.Preferences.ConfigurationPages.IconsPage.html#IconsPage.on_iconDirectoryEdit_textChanged" />
       <keyword name="IconsPage.on_iconDirectoryList_currentRowChanged" id="IconsPage.on_iconDirectoryList_currentRowChanged" ref="eric6.Preferences.ConfigurationPages.IconsPage.html#IconsPage.on_iconDirectoryList_currentRowChanged" />
+      <keyword name="IconsPage.on_iconDirectoryPicker_textChanged" id="IconsPage.on_iconDirectoryPicker_textChanged" ref="eric6.Preferences.ConfigurationPages.IconsPage.html#IconsPage.on_iconDirectoryPicker_textChanged" />
       <keyword name="IconsPage.on_showIconsButton_clicked" id="IconsPage.on_showIconsButton_clicked" ref="eric6.Preferences.ConfigurationPages.IconsPage.html#IconsPage.on_showIconsButton_clicked" />
       <keyword name="IconsPage.on_upButton_clicked" id="IconsPage.on_upButton_clicked" ref="eric6.Preferences.ConfigurationPages.IconsPage.html#IconsPage.on_upButton_clicked" />
       <keyword name="IconsPage.save" id="IconsPage.save" ref="eric6.Preferences.ConfigurationPages.IconsPage.html#IconsPage.save" />
@@ -7084,7 +7090,6 @@
       <keyword name="InterfacePage.__populateLanguageCombo" id="InterfacePage.__populateLanguageCombo" ref="eric6.Preferences.ConfigurationPages.InterfacePage.html#InterfacePage.__populateLanguageCombo" />
       <keyword name="InterfacePage.__populateStyleCombo" id="InterfacePage.__populateStyleCombo" ref="eric6.Preferences.ConfigurationPages.InterfacePage.html#InterfacePage.__populateStyleCombo" />
       <keyword name="InterfacePage.on_resetLayoutButton_clicked" id="InterfacePage.on_resetLayoutButton_clicked" ref="eric6.Preferences.ConfigurationPages.InterfacePage.html#InterfacePage.on_resetLayoutButton_clicked" />
-      <keyword name="InterfacePage.on_styleSheetButton_clicked" id="InterfacePage.on_styleSheetButton_clicked" ref="eric6.Preferences.ConfigurationPages.InterfacePage.html#InterfacePage.on_styleSheetButton_clicked" />
       <keyword name="InterfacePage.save" id="InterfacePage.save" ref="eric6.Preferences.ConfigurationPages.InterfacePage.html#InterfacePage.save" />
       <keyword name="InvalidISO8859Error" id="InvalidISO8859Error" ref="eric6.E5Network.E5RFC6266.html#InvalidISO8859Error" />
       <keyword name="InvalidPlistException" id="InvalidPlistException" ref="eric6.Utilities.binplistlib.html#InvalidPlistException" />
@@ -7761,8 +7766,7 @@
       <keyword name="LfConvertDataDialog (Constructor)" id="LfConvertDataDialog (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfConvertDataDialog.html#LfConvertDataDialog.__init__" />
       <keyword name="LfConvertDataDialog (Module)" id="LfConvertDataDialog (Module)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfConvertDataDialog.html" />
       <keyword name="LfConvertDataDialog.getData" id="LfConvertDataDialog.getData" ref="eric6.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfConvertDataDialog.html#LfConvertDataDialog.getData" />
-      <keyword name="LfConvertDataDialog.on_newProjectButton_clicked" id="LfConvertDataDialog.on_newProjectButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfConvertDataDialog.html#LfConvertDataDialog.on_newProjectButton_clicked" />
-      <keyword name="LfConvertDataDialog.on_newProjectEdit_textChanged" id="LfConvertDataDialog.on_newProjectEdit_textChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfConvertDataDialog.html#LfConvertDataDialog.on_newProjectEdit_textChanged" />
+      <keyword name="LfConvertDataDialog.on_newProjectPicker_textChanged" id="LfConvertDataDialog.on_newProjectPicker_textChanged" ref="eric6.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfConvertDataDialog.html#LfConvertDataDialog.on_newProjectPicker_textChanged" />
       <keyword name="LfRevisionsInputDialog" id="LfRevisionsInputDialog" ref="eric6.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfRevisionsInputDialog.html#LfRevisionsInputDialog" />
       <keyword name="LfRevisionsInputDialog (Constructor)" id="LfRevisionsInputDialog (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfRevisionsInputDialog.html#LfRevisionsInputDialog.__init__" />
       <keyword name="LfRevisionsInputDialog (Module)" id="LfRevisionsInputDialog (Module)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.LargefilesExtension.LfRevisionsInputDialog.html" />
@@ -8139,7 +8143,6 @@
       <keyword name="MultiProjectPage" id="MultiProjectPage" ref="eric6.Preferences.ConfigurationPages.MultiProjectPage.html#MultiProjectPage" />
       <keyword name="MultiProjectPage (Constructor)" id="MultiProjectPage (Constructor)" ref="eric6.Preferences.ConfigurationPages.MultiProjectPage.html#MultiProjectPage.__init__" />
       <keyword name="MultiProjectPage (Module)" id="MultiProjectPage (Module)" ref="eric6.Preferences.ConfigurationPages.MultiProjectPage.html" />
-      <keyword name="MultiProjectPage.on_workspaceButton_clicked" id="MultiProjectPage.on_workspaceButton_clicked" ref="eric6.Preferences.ConfigurationPages.MultiProjectPage.html#MultiProjectPage.on_workspaceButton_clicked" />
       <keyword name="MultiProjectPage.save" id="MultiProjectPage.save" ref="eric6.Preferences.ConfigurationPages.MultiProjectPage.html#MultiProjectPage.save" />
       <keyword name="MultiProjectReader" id="MultiProjectReader" ref="eric6.E5XML.MultiProjectReader.html#MultiProjectReader" />
       <keyword name="MultiProjectReader (Constructor)" id="MultiProjectReader (Constructor)" ref="eric6.E5XML.MultiProjectReader.html#MultiProjectReader.__init__" />
@@ -8199,7 +8202,6 @@
       <keyword name="NetworkPage (Constructor)" id="NetworkPage (Constructor)" ref="eric6.Preferences.ConfigurationPages.NetworkPage.html#NetworkPage.__init__" />
       <keyword name="NetworkPage (Module)" id="NetworkPage (Module)" ref="eric6.Preferences.ConfigurationPages.NetworkPage.html" />
       <keyword name="NetworkPage.on_clearProxyPasswordsButton_clicked" id="NetworkPage.on_clearProxyPasswordsButton_clicked" ref="eric6.Preferences.ConfigurationPages.NetworkPage.html#NetworkPage.on_clearProxyPasswordsButton_clicked" />
-      <keyword name="NetworkPage.on_downloadDirButton_clicked" id="NetworkPage.on_downloadDirButton_clicked" ref="eric6.Preferences.ConfigurationPages.NetworkPage.html#NetworkPage.on_downloadDirButton_clicked" />
       <keyword name="NetworkPage.on_ftpProxyTypeCombo_currentIndexChanged" id="NetworkPage.on_ftpProxyTypeCombo_currentIndexChanged" ref="eric6.Preferences.ConfigurationPages.NetworkPage.html#NetworkPage.on_ftpProxyTypeCombo_currentIndexChanged" />
       <keyword name="NetworkPage.save" id="NetworkPage.save" ref="eric6.Preferences.ConfigurationPages.NetworkPage.html#NetworkPage.save" />
       <keyword name="NetworkProtocolUnknownErrorReply" id="NetworkProtocolUnknownErrorReply" ref="eric6.Helpviewer.Network.NetworkProtocolUnknownErrorReply.html#NetworkProtocolUnknownErrorReply" />
@@ -8222,8 +8224,7 @@
       <keyword name="NewDialogClassDialog.getData" id="NewDialogClassDialog.getData" ref="eric6.Project.NewDialogClassDialog.html#NewDialogClassDialog.getData" />
       <keyword name="NewDialogClassDialog.on_classnameEdit_textChanged" id="NewDialogClassDialog.on_classnameEdit_textChanged" ref="eric6.Project.NewDialogClassDialog.html#NewDialogClassDialog.on_classnameEdit_textChanged" />
       <keyword name="NewDialogClassDialog.on_filenameEdit_textChanged" id="NewDialogClassDialog.on_filenameEdit_textChanged" ref="eric6.Project.NewDialogClassDialog.html#NewDialogClassDialog.on_filenameEdit_textChanged" />
-      <keyword name="NewDialogClassDialog.on_pathButton_clicked" id="NewDialogClassDialog.on_pathButton_clicked" ref="eric6.Project.NewDialogClassDialog.html#NewDialogClassDialog.on_pathButton_clicked" />
-      <keyword name="NewDialogClassDialog.on_pathnameEdit_textChanged" id="NewDialogClassDialog.on_pathnameEdit_textChanged" ref="eric6.Project.NewDialogClassDialog.html#NewDialogClassDialog.on_pathnameEdit_textChanged" />
+      <keyword name="NewDialogClassDialog.on_pathnamePicker_textChanged" id="NewDialogClassDialog.on_pathnamePicker_textChanged" ref="eric6.Project.NewDialogClassDialog.html#NewDialogClassDialog.on_pathnamePicker_textChanged" />
       <keyword name="NewPythonPackageDialog" id="NewPythonPackageDialog" ref="eric6.Project.NewPythonPackageDialog.html#NewPythonPackageDialog" />
       <keyword name="NewPythonPackageDialog (Constructor)" id="NewPythonPackageDialog (Constructor)" ref="eric6.Project.NewPythonPackageDialog.html#NewPythonPackageDialog.__init__" />
       <keyword name="NewPythonPackageDialog (Module)" id="NewPythonPackageDialog (Module)" ref="eric6.Project.NewPythonPackageDialog.html" />
@@ -8748,7 +8749,6 @@
       <keyword name="PluginManagerPage" id="PluginManagerPage" ref="eric6.Preferences.ConfigurationPages.PluginManagerPage.html#PluginManagerPage" />
       <keyword name="PluginManagerPage (Constructor)" id="PluginManagerPage (Constructor)" ref="eric6.Preferences.ConfigurationPages.PluginManagerPage.html#PluginManagerPage.__init__" />
       <keyword name="PluginManagerPage (Module)" id="PluginManagerPage (Module)" ref="eric6.Preferences.ConfigurationPages.PluginManagerPage.html" />
-      <keyword name="PluginManagerPage.on_downloadDirButton_clicked" id="PluginManagerPage.on_downloadDirButton_clicked" ref="eric6.Preferences.ConfigurationPages.PluginManagerPage.html#PluginManagerPage.on_downloadDirButton_clicked" />
       <keyword name="PluginManagerPage.on_repositoryUrlEditButton_toggled" id="PluginManagerPage.on_repositoryUrlEditButton_toggled" ref="eric6.Preferences.ConfigurationPages.PluginManagerPage.html#PluginManagerPage.on_repositoryUrlEditButton_toggled" />
       <keyword name="PluginManagerPage.save" id="PluginManagerPage.save" ref="eric6.Preferences.ConfigurationPages.PluginManagerPage.html#PluginManagerPage.save" />
       <keyword name="PluginModuleFormatError" id="PluginModuleFormatError" ref="eric6.PluginManager.PluginExceptions.html#PluginModuleFormatError" />
@@ -9417,10 +9417,10 @@
       <keyword name="PropertiesDialog (Module)" id="PropertiesDialog (Module)" ref="eric6.Project.PropertiesDialog.html" />
       <keyword name="PropertiesDialog.getPPath" id="PropertiesDialog.getPPath" ref="eric6.Project.PropertiesDialog.html#PropertiesDialog.getPPath" />
       <keyword name="PropertiesDialog.getProjectType" id="PropertiesDialog.getProjectType" ref="eric6.Project.PropertiesDialog.html#PropertiesDialog.getProjectType" />
-      <keyword name="PropertiesDialog.on_dirButton_clicked" id="PropertiesDialog.on_dirButton_clicked" ref="eric6.Project.PropertiesDialog.html#PropertiesDialog.on_dirButton_clicked" />
-      <keyword name="PropertiesDialog.on_dirEdit_textChanged" id="PropertiesDialog.on_dirEdit_textChanged" ref="eric6.Project.PropertiesDialog.html#PropertiesDialog.on_dirEdit_textChanged" />
+      <keyword name="PropertiesDialog.on_dirPicker_textChanged" id="PropertiesDialog.on_dirPicker_textChanged" ref="eric6.Project.PropertiesDialog.html#PropertiesDialog.on_dirPicker_textChanged" />
       <keyword name="PropertiesDialog.on_languageComboBox_currentIndexChanged" id="PropertiesDialog.on_languageComboBox_currentIndexChanged" ref="eric6.Project.PropertiesDialog.html#PropertiesDialog.on_languageComboBox_currentIndexChanged" />
-      <keyword name="PropertiesDialog.on_mainscriptButton_clicked" id="PropertiesDialog.on_mainscriptButton_clicked" ref="eric6.Project.PropertiesDialog.html#PropertiesDialog.on_mainscriptButton_clicked" />
+      <keyword name="PropertiesDialog.on_mainscriptPicker_aboutToShowPathPickerDialog" id="PropertiesDialog.on_mainscriptPicker_aboutToShowPathPickerDialog" ref="eric6.Project.PropertiesDialog.html#PropertiesDialog.on_mainscriptPicker_aboutToShowPathPickerDialog" />
+      <keyword name="PropertiesDialog.on_mainscriptPicker_pathSelected" id="PropertiesDialog.on_mainscriptPicker_pathSelected" ref="eric6.Project.PropertiesDialog.html#PropertiesDialog.on_mainscriptPicker_pathSelected" />
       <keyword name="PropertiesDialog.on_spellPropertiesButton_clicked" id="PropertiesDialog.on_spellPropertiesButton_clicked" ref="eric6.Project.PropertiesDialog.html#PropertiesDialog.on_spellPropertiesButton_clicked" />
       <keyword name="PropertiesDialog.on_transPropertiesButton_clicked" id="PropertiesDialog.on_transPropertiesButton_clicked" ref="eric6.Project.PropertiesDialog.html#PropertiesDialog.on_transPropertiesButton_clicked" />
       <keyword name="PropertiesDialog.on_vcsInfoButton_clicked" id="PropertiesDialog.on_vcsInfoButton_clicked" ref="eric6.Project.PropertiesDialog.html#PropertiesDialog.on_vcsInfoButton_clicked" />
@@ -9883,7 +9883,6 @@
       <keyword name="QtPage.__updateQt4Sample" id="QtPage.__updateQt4Sample" ref="eric6.Preferences.ConfigurationPages.QtPage.html#QtPage.__updateQt4Sample" />
       <keyword name="QtPage.on_qt4PostfixEdit_textChanged" id="QtPage.on_qt4PostfixEdit_textChanged" ref="eric6.Preferences.ConfigurationPages.QtPage.html#QtPage.on_qt4PostfixEdit_textChanged" />
       <keyword name="QtPage.on_qt4PrefixEdit_textChanged" id="QtPage.on_qt4PrefixEdit_textChanged" ref="eric6.Preferences.ConfigurationPages.QtPage.html#QtPage.on_qt4PrefixEdit_textChanged" />
-      <keyword name="QtPage.on_qt4TransButton_clicked" id="QtPage.on_qt4TransButton_clicked" ref="eric6.Preferences.ConfigurationPages.QtPage.html#QtPage.on_qt4TransButton_clicked" />
       <keyword name="QtPage.save" id="QtPage.save" ref="eric6.Preferences.ConfigurationPages.QtPage.html#QtPage.save" />
       <keyword name="QtTestResult" id="QtTestResult" ref="eric6.PyUnit.UnittestDialog.html#QtTestResult" />
       <keyword name="QtTestResult (Constructor)" id="QtTestResult (Constructor)" ref="eric6.PyUnit.UnittestDialog.html#QtTestResult.__init__" />
@@ -10524,8 +10523,6 @@
       <keyword name="SpellingPropertiesDialog (Constructor)" id="SpellingPropertiesDialog (Constructor)" ref="eric6.Project.SpellingPropertiesDialog.html#SpellingPropertiesDialog.__init__" />
       <keyword name="SpellingPropertiesDialog (Module)" id="SpellingPropertiesDialog (Module)" ref="eric6.Project.SpellingPropertiesDialog.html" />
       <keyword name="SpellingPropertiesDialog.initDialog" id="SpellingPropertiesDialog.initDialog" ref="eric6.Project.SpellingPropertiesDialog.html#SpellingPropertiesDialog.initDialog" />
-      <keyword name="SpellingPropertiesDialog.on_pelButton_clicked" id="SpellingPropertiesDialog.on_pelButton_clicked" ref="eric6.Project.SpellingPropertiesDialog.html#SpellingPropertiesDialog.on_pelButton_clicked" />
-      <keyword name="SpellingPropertiesDialog.on_pwlButton_clicked" id="SpellingPropertiesDialog.on_pwlButton_clicked" ref="eric6.Project.SpellingPropertiesDialog.html#SpellingPropertiesDialog.on_pwlButton_clicked" />
       <keyword name="SpellingPropertiesDialog.storeData" id="SpellingPropertiesDialog.storeData" ref="eric6.Project.SpellingPropertiesDialog.html#SpellingPropertiesDialog.storeData" />
       <keyword name="SplashScreen" id="SplashScreen" ref="eric6.UI.SplashScreen.html#SplashScreen" />
       <keyword name="SplashScreen (Constructor)" id="SplashScreen (Constructor)" ref="eric6.UI.SplashScreen.html#SplashScreen.__init__" />
@@ -10565,8 +10562,7 @@
       <keyword name="SqlConnectionDialog (Module)" id="SqlConnectionDialog (Module)" ref="eric6.SqlBrowser.SqlConnectionDialog.html" />
       <keyword name="SqlConnectionDialog.__updateDialog" id="SqlConnectionDialog.__updateDialog" ref="eric6.SqlBrowser.SqlConnectionDialog.html#SqlConnectionDialog.__updateDialog" />
       <keyword name="SqlConnectionDialog.getData" id="SqlConnectionDialog.getData" ref="eric6.SqlBrowser.SqlConnectionDialog.html#SqlConnectionDialog.getData" />
-      <keyword name="SqlConnectionDialog.on_databaseEdit_textChanged" id="SqlConnectionDialog.on_databaseEdit_textChanged" ref="eric6.SqlBrowser.SqlConnectionDialog.html#SqlConnectionDialog.on_databaseEdit_textChanged" />
-      <keyword name="SqlConnectionDialog.on_databaseFileButton_clicked" id="SqlConnectionDialog.on_databaseFileButton_clicked" ref="eric6.SqlBrowser.SqlConnectionDialog.html#SqlConnectionDialog.on_databaseFileButton_clicked" />
+      <keyword name="SqlConnectionDialog.on_databasePicker_textChanged" id="SqlConnectionDialog.on_databasePicker_textChanged" ref="eric6.SqlBrowser.SqlConnectionDialog.html#SqlConnectionDialog.on_databasePicker_textChanged" />
       <keyword name="SqlConnectionDialog.on_driverCombo_activated" id="SqlConnectionDialog.on_driverCombo_activated" ref="eric6.SqlBrowser.SqlConnectionDialog.html#SqlConnectionDialog.on_driverCombo_activated" />
       <keyword name="SqlConnectionWidget" id="SqlConnectionWidget" ref="eric6.SqlBrowser.SqlConnectionWidget.html#SqlConnectionWidget" />
       <keyword name="SqlConnectionWidget (Constructor)" id="SqlConnectionWidget (Constructor)" ref="eric6.SqlBrowser.SqlConnectionWidget.html#SqlConnectionWidget.__init__" />
@@ -10619,7 +10615,6 @@
       <keyword name="StartDialog.getProfilingData" id="StartDialog.getProfilingData" ref="eric6.Debugger.StartDialog.html#StartDialog.getProfilingData" />
       <keyword name="StartDialog.getRunData" id="StartDialog.getRunData" ref="eric6.Debugger.StartDialog.html#StartDialog.getRunData" />
       <keyword name="StartDialog.on_buttonBox_clicked" id="StartDialog.on_buttonBox_clicked" ref="eric6.Debugger.StartDialog.html#StartDialog.on_buttonBox_clicked" />
-      <keyword name="StartDialog.on_dirButton_clicked" id="StartDialog.on_dirButton_clicked" ref="eric6.Debugger.StartDialog.html#StartDialog.on_dirButton_clicked" />
       <keyword name="StartDialog.on_modFuncCombo_editTextChanged" id="StartDialog.on_modFuncCombo_editTextChanged" ref="eric6.Debugger.StartDialog.html#StartDialog.on_modFuncCombo_editTextChanged" />
       <keyword name="Startup (Module)" id="Startup (Module)" ref="eric6.Toolbox.Startup.html" />
       <keyword name="StatusMonitorLed" id="StatusMonitorLed" ref="eric6.VCS.StatusMonitorLed.html#StatusMonitorLed" />
@@ -10868,8 +10863,6 @@
       <keyword name="SvnCommandDialog.getData" id="SvnCommandDialog.getData" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnCommandDialog.html#SvnCommandDialog.getData" />
       <keyword name="SvnCommandDialog.on_commandCombo_editTextChanged" id="SvnCommandDialog.on_commandCombo_editTextChanged" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnCommandDialog.html#SvnCommandDialog.on_commandCombo_editTextChanged" />
       <keyword name="SvnCommandDialog.on_commandCombo_editTextChanged" id="SvnCommandDialog.on_commandCombo_editTextChanged" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnCommandDialog.html#SvnCommandDialog.on_commandCombo_editTextChanged" />
-      <keyword name="SvnCommandDialog.on_dirButton_clicked" id="SvnCommandDialog.on_dirButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnCommandDialog.html#SvnCommandDialog.on_dirButton_clicked" />
-      <keyword name="SvnCommandDialog.on_dirButton_clicked" id="SvnCommandDialog.on_dirButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnCommandDialog.html#SvnCommandDialog.on_dirButton_clicked" />
       <keyword name="SvnCommitDialog" id="SvnCommitDialog" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnCommitDialog.html#SvnCommitDialog" />
       <keyword name="SvnCommitDialog" id="SvnCommitDialog" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnCommitDialog.html#SvnCommitDialog" />
       <keyword name="SvnCommitDialog (Constructor)" id="SvnCommitDialog (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnCommitDialog.html#SvnCommitDialog.__init__" />
@@ -10901,10 +10894,8 @@
       <keyword name="SvnCopyDialog (Module)" id="SvnCopyDialog (Module)" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnCopyDialog.html" />
       <keyword name="SvnCopyDialog.getData" id="SvnCopyDialog.getData" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnCopyDialog.html#SvnCopyDialog.getData" />
       <keyword name="SvnCopyDialog.getData" id="SvnCopyDialog.getData" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnCopyDialog.html#SvnCopyDialog.getData" />
-      <keyword name="SvnCopyDialog.on_dirButton_clicked" id="SvnCopyDialog.on_dirButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnCopyDialog.html#SvnCopyDialog.on_dirButton_clicked" />
-      <keyword name="SvnCopyDialog.on_dirButton_clicked" id="SvnCopyDialog.on_dirButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnCopyDialog.html#SvnCopyDialog.on_dirButton_clicked" />
-      <keyword name="SvnCopyDialog.on_targetEdit_textChanged" id="SvnCopyDialog.on_targetEdit_textChanged" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnCopyDialog.html#SvnCopyDialog.on_targetEdit_textChanged" />
-      <keyword name="SvnCopyDialog.on_targetEdit_textChanged" id="SvnCopyDialog.on_targetEdit_textChanged" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnCopyDialog.html#SvnCopyDialog.on_targetEdit_textChanged" />
+      <keyword name="SvnCopyDialog.on_targetPicker_textChanged" id="SvnCopyDialog.on_targetPicker_textChanged" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnCopyDialog.html#SvnCopyDialog.on_targetPicker_textChanged" />
+      <keyword name="SvnCopyDialog.on_targetPicker_textChanged" id="SvnCopyDialog.on_targetPicker_textChanged" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnCopyDialog.html#SvnCopyDialog.on_targetPicker_textChanged" />
       <keyword name="SvnDialog" id="SvnDialog" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnDialog.html#SvnDialog" />
       <keyword name="SvnDialog" id="SvnDialog" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnDialog.html#SvnDialog" />
       <keyword name="SvnDialog (Constructor)" id="SvnDialog (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnDialog.html#SvnDialog.__init__" />
@@ -11103,16 +11094,14 @@
       <keyword name="SvnNewProjectOptionsDialog.getData" id="SvnNewProjectOptionsDialog.getData" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.getData" />
       <keyword name="SvnNewProjectOptionsDialog.on_layoutCheckBox_toggled" id="SvnNewProjectOptionsDialog.on_layoutCheckBox_toggled" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_layoutCheckBox_toggled" />
       <keyword name="SvnNewProjectOptionsDialog.on_layoutCheckBox_toggled" id="SvnNewProjectOptionsDialog.on_layoutCheckBox_toggled" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_layoutCheckBox_toggled" />
-      <keyword name="SvnNewProjectOptionsDialog.on_projectDirButton_clicked" id="SvnNewProjectOptionsDialog.on_projectDirButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_projectDirButton_clicked" />
-      <keyword name="SvnNewProjectOptionsDialog.on_projectDirButton_clicked" id="SvnNewProjectOptionsDialog.on_projectDirButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_projectDirButton_clicked" />
       <keyword name="SvnNewProjectOptionsDialog.on_protocolCombo_activated" id="SvnNewProjectOptionsDialog.on_protocolCombo_activated" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_protocolCombo_activated" />
       <keyword name="SvnNewProjectOptionsDialog.on_protocolCombo_activated" id="SvnNewProjectOptionsDialog.on_protocolCombo_activated" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_protocolCombo_activated" />
-      <keyword name="SvnNewProjectOptionsDialog.on_vcsProjectDirEdit_textChanged" id="SvnNewProjectOptionsDialog.on_vcsProjectDirEdit_textChanged" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsProjectDirEdit_textChanged" />
-      <keyword name="SvnNewProjectOptionsDialog.on_vcsProjectDirEdit_textChanged" id="SvnNewProjectOptionsDialog.on_vcsProjectDirEdit_textChanged" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsProjectDirEdit_textChanged" />
-      <keyword name="SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" id="SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" />
-      <keyword name="SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" id="SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsUrlButton_clicked" />
-      <keyword name="SvnNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" id="SvnNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" />
-      <keyword name="SvnNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" id="SvnNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsUrlEdit_textChanged" />
+      <keyword name="SvnNewProjectOptionsDialog.on_vcsProjectDirPicker_textChanged" id="SvnNewProjectOptionsDialog.on_vcsProjectDirPicker_textChanged" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsProjectDirPicker_textChanged" />
+      <keyword name="SvnNewProjectOptionsDialog.on_vcsProjectDirPicker_textChanged" id="SvnNewProjectOptionsDialog.on_vcsProjectDirPicker_textChanged" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsProjectDirPicker_textChanged" />
+      <keyword name="SvnNewProjectOptionsDialog.on_vcsUrlPicker_pickerButtonClicked" id="SvnNewProjectOptionsDialog.on_vcsUrlPicker_pickerButtonClicked" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsUrlPicker_pickerButtonClicked" />
+      <keyword name="SvnNewProjectOptionsDialog.on_vcsUrlPicker_pickerButtonClicked" id="SvnNewProjectOptionsDialog.on_vcsUrlPicker_pickerButtonClicked" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsUrlPicker_pickerButtonClicked" />
+      <keyword name="SvnNewProjectOptionsDialog.on_vcsUrlPicker_textChanged" id="SvnNewProjectOptionsDialog.on_vcsUrlPicker_textChanged" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsUrlPicker_textChanged" />
+      <keyword name="SvnNewProjectOptionsDialog.on_vcsUrlPicker_textChanged" id="SvnNewProjectOptionsDialog.on_vcsUrlPicker_textChanged" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnNewProjectOptionsDialog.html#SvnNewProjectOptionsDialog.on_vcsUrlPicker_textChanged" />
       <keyword name="SvnOptionsDialog" id="SvnOptionsDialog" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnOptionsDialog.html#SvnOptionsDialog" />
       <keyword name="SvnOptionsDialog" id="SvnOptionsDialog" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnOptionsDialog.html#SvnOptionsDialog" />
       <keyword name="SvnOptionsDialog (Constructor)" id="SvnOptionsDialog (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnOptionsDialog.html#SvnOptionsDialog.__init__" />
@@ -11123,10 +11112,10 @@
       <keyword name="SvnOptionsDialog.getData" id="SvnOptionsDialog.getData" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnOptionsDialog.html#SvnOptionsDialog.getData" />
       <keyword name="SvnOptionsDialog.on_protocolCombo_activated" id="SvnOptionsDialog.on_protocolCombo_activated" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnOptionsDialog.html#SvnOptionsDialog.on_protocolCombo_activated" />
       <keyword name="SvnOptionsDialog.on_protocolCombo_activated" id="SvnOptionsDialog.on_protocolCombo_activated" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnOptionsDialog.html#SvnOptionsDialog.on_protocolCombo_activated" />
-      <keyword name="SvnOptionsDialog.on_vcsUrlButton_clicked" id="SvnOptionsDialog.on_vcsUrlButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnOptionsDialog.html#SvnOptionsDialog.on_vcsUrlButton_clicked" />
-      <keyword name="SvnOptionsDialog.on_vcsUrlButton_clicked" id="SvnOptionsDialog.on_vcsUrlButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnOptionsDialog.html#SvnOptionsDialog.on_vcsUrlButton_clicked" />
-      <keyword name="SvnOptionsDialog.on_vcsUrlEdit_textChanged" id="SvnOptionsDialog.on_vcsUrlEdit_textChanged" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnOptionsDialog.html#SvnOptionsDialog.on_vcsUrlEdit_textChanged" />
-      <keyword name="SvnOptionsDialog.on_vcsUrlEdit_textChanged" id="SvnOptionsDialog.on_vcsUrlEdit_textChanged" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnOptionsDialog.html#SvnOptionsDialog.on_vcsUrlEdit_textChanged" />
+      <keyword name="SvnOptionsDialog.on_vcsUrlPicker_pickerButtonClicked" id="SvnOptionsDialog.on_vcsUrlPicker_pickerButtonClicked" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnOptionsDialog.html#SvnOptionsDialog.on_vcsUrlPicker_pickerButtonClicked" />
+      <keyword name="SvnOptionsDialog.on_vcsUrlPicker_pickerButtonClicked" id="SvnOptionsDialog.on_vcsUrlPicker_pickerButtonClicked" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnOptionsDialog.html#SvnOptionsDialog.on_vcsUrlPicker_pickerButtonClicked" />
+      <keyword name="SvnOptionsDialog.on_vcsUrlPicker_textChanged" id="SvnOptionsDialog.on_vcsUrlPicker_textChanged" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnOptionsDialog.html#SvnOptionsDialog.on_vcsUrlPicker_textChanged" />
+      <keyword name="SvnOptionsDialog.on_vcsUrlPicker_textChanged" id="SvnOptionsDialog.on_vcsUrlPicker_textChanged" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnOptionsDialog.html#SvnOptionsDialog.on_vcsUrlPicker_textChanged" />
       <keyword name="SvnProjectBrowserHelper" id="SvnProjectBrowserHelper" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper" />
       <keyword name="SvnProjectBrowserHelper" id="SvnProjectBrowserHelper" ref="eric6.Plugins.VcsPlugins.vcsSubversion.ProjectBrowserHelper.html#SvnProjectBrowserHelper" />
       <keyword name="SvnProjectBrowserHelper (Constructor)" id="SvnProjectBrowserHelper (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsPySvn.ProjectBrowserHelper.html#SvnProjectBrowserHelper.__init__" />
@@ -11246,7 +11235,6 @@
       <keyword name="SvnPropSetDialog (Module)" id="SvnPropSetDialog (Module)" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnPropSetDialog.html" />
       <keyword name="SvnPropSetDialog.getData" id="SvnPropSetDialog.getData" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnPropSetDialog.html#SvnPropSetDialog.getData" />
       <keyword name="SvnPropSetDialog.getData" id="SvnPropSetDialog.getData" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnPropSetDialog.html#SvnPropSetDialog.getData" />
-      <keyword name="SvnPropSetDialog.on_fileButton_clicked" id="SvnPropSetDialog.on_fileButton_clicked" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnPropSetDialog.html#SvnPropSetDialog.on_fileButton_clicked" />
       <keyword name="SvnRelocateDialog" id="SvnRelocateDialog" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnRelocateDialog.html#SvnRelocateDialog" />
       <keyword name="SvnRelocateDialog" id="SvnRelocateDialog" ref="eric6.Plugins.VcsPlugins.vcsSubversion.SvnRelocateDialog.html#SvnRelocateDialog" />
       <keyword name="SvnRelocateDialog (Constructor)" id="SvnRelocateDialog (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsPySvn.SvnRelocateDialog.html#SvnRelocateDialog.__init__" />
@@ -11521,7 +11509,6 @@
       <keyword name="SyncDirectorySettingsPage (Module)" id="SyncDirectorySettingsPage (Module)" ref="eric6.Helpviewer.Sync.SyncDirectorySettingsPage.html" />
       <keyword name="SyncDirectorySettingsPage.isComplete" id="SyncDirectorySettingsPage.isComplete" ref="eric6.Helpviewer.Sync.SyncDirectorySettingsPage.html#SyncDirectorySettingsPage.isComplete" />
       <keyword name="SyncDirectorySettingsPage.nextId" id="SyncDirectorySettingsPage.nextId" ref="eric6.Helpviewer.Sync.SyncDirectorySettingsPage.html#SyncDirectorySettingsPage.nextId" />
-      <keyword name="SyncDirectorySettingsPage.on_directoryButton_clicked" id="SyncDirectorySettingsPage.on_directoryButton_clicked" ref="eric6.Helpviewer.Sync.SyncDirectorySettingsPage.html#SyncDirectorySettingsPage.on_directoryButton_clicked" />
       <keyword name="SyncEncryptionPage" id="SyncEncryptionPage" ref="eric6.Helpviewer.Sync.SyncEncryptionPage.html#SyncEncryptionPage" />
       <keyword name="SyncEncryptionPage (Constructor)" id="SyncEncryptionPage (Constructor)" ref="eric6.Helpviewer.Sync.SyncEncryptionPage.html#SyncEncryptionPage.__init__" />
       <keyword name="SyncEncryptionPage (Module)" id="SyncEncryptionPage (Module)" ref="eric6.Helpviewer.Sync.SyncEncryptionPage.html" />
@@ -11973,10 +11960,9 @@
       <keyword name="ToolConfigurationDialog.on_changeButton_clicked" id="ToolConfigurationDialog.on_changeButton_clicked" ref="eric6.Preferences.ToolConfigurationDialog.html#ToolConfigurationDialog.on_changeButton_clicked" />
       <keyword name="ToolConfigurationDialog.on_deleteButton_clicked" id="ToolConfigurationDialog.on_deleteButton_clicked" ref="eric6.Preferences.ToolConfigurationDialog.html#ToolConfigurationDialog.on_deleteButton_clicked" />
       <keyword name="ToolConfigurationDialog.on_downButton_clicked" id="ToolConfigurationDialog.on_downButton_clicked" ref="eric6.Preferences.ToolConfigurationDialog.html#ToolConfigurationDialog.on_downButton_clicked" />
-      <keyword name="ToolConfigurationDialog.on_executableButton_clicked" id="ToolConfigurationDialog.on_executableButton_clicked" ref="eric6.Preferences.ToolConfigurationDialog.html#ToolConfigurationDialog.on_executableButton_clicked" />
-      <keyword name="ToolConfigurationDialog.on_executableEdit_textChanged" id="ToolConfigurationDialog.on_executableEdit_textChanged" ref="eric6.Preferences.ToolConfigurationDialog.html#ToolConfigurationDialog.on_executableEdit_textChanged" />
-      <keyword name="ToolConfigurationDialog.on_iconButton_clicked" id="ToolConfigurationDialog.on_iconButton_clicked" ref="eric6.Preferences.ToolConfigurationDialog.html#ToolConfigurationDialog.on_iconButton_clicked" />
-      <keyword name="ToolConfigurationDialog.on_iconEdit_textChanged" id="ToolConfigurationDialog.on_iconEdit_textChanged" ref="eric6.Preferences.ToolConfigurationDialog.html#ToolConfigurationDialog.on_iconEdit_textChanged" />
+      <keyword name="ToolConfigurationDialog.on_executablePicker_pathSelected" id="ToolConfigurationDialog.on_executablePicker_pathSelected" ref="eric6.Preferences.ToolConfigurationDialog.html#ToolConfigurationDialog.on_executablePicker_pathSelected" />
+      <keyword name="ToolConfigurationDialog.on_executablePicker_textChanged" id="ToolConfigurationDialog.on_executablePicker_textChanged" ref="eric6.Preferences.ToolConfigurationDialog.html#ToolConfigurationDialog.on_executablePicker_textChanged" />
+      <keyword name="ToolConfigurationDialog.on_iconPicker_textChanged" id="ToolConfigurationDialog.on_iconPicker_textChanged" ref="eric6.Preferences.ToolConfigurationDialog.html#ToolConfigurationDialog.on_iconPicker_textChanged" />
       <keyword name="ToolConfigurationDialog.on_menuEdit_textChanged" id="ToolConfigurationDialog.on_menuEdit_textChanged" ref="eric6.Preferences.ToolConfigurationDialog.html#ToolConfigurationDialog.on_menuEdit_textChanged" />
       <keyword name="ToolConfigurationDialog.on_newButton_clicked" id="ToolConfigurationDialog.on_newButton_clicked" ref="eric6.Preferences.ToolConfigurationDialog.html#ToolConfigurationDialog.on_newButton_clicked" />
       <keyword name="ToolConfigurationDialog.on_redirectCombo_currentIndexChanged" id="ToolConfigurationDialog.on_redirectCombo_currentIndexChanged" ref="eric6.Preferences.ToolConfigurationDialog.html#ToolConfigurationDialog.on_redirectCombo_currentIndexChanged" />
@@ -12010,9 +11996,9 @@
       <keyword name="TranslationPropertiesDialog.on_exceptFileButton_clicked" id="TranslationPropertiesDialog.on_exceptFileButton_clicked" ref="eric6.Project.TranslationPropertiesDialog.html#TranslationPropertiesDialog.on_exceptFileButton_clicked" />
       <keyword name="TranslationPropertiesDialog.on_exceptionEdit_textChanged" id="TranslationPropertiesDialog.on_exceptionEdit_textChanged" ref="eric6.Project.TranslationPropertiesDialog.html#TranslationPropertiesDialog.on_exceptionEdit_textChanged" />
       <keyword name="TranslationPropertiesDialog.on_exceptionsList_currentRowChanged" id="TranslationPropertiesDialog.on_exceptionsList_currentRowChanged" ref="eric6.Project.TranslationPropertiesDialog.html#TranslationPropertiesDialog.on_exceptionsList_currentRowChanged" />
-      <keyword name="TranslationPropertiesDialog.on_transBinPathButton_clicked" id="TranslationPropertiesDialog.on_transBinPathButton_clicked" ref="eric6.Project.TranslationPropertiesDialog.html#TranslationPropertiesDialog.on_transBinPathButton_clicked" />
-      <keyword name="TranslationPropertiesDialog.on_transPatternButton_clicked" id="TranslationPropertiesDialog.on_transPatternButton_clicked" ref="eric6.Project.TranslationPropertiesDialog.html#TranslationPropertiesDialog.on_transPatternButton_clicked" />
-      <keyword name="TranslationPropertiesDialog.on_transPatternEdit_textChanged" id="TranslationPropertiesDialog.on_transPatternEdit_textChanged" ref="eric6.Project.TranslationPropertiesDialog.html#TranslationPropertiesDialog.on_transPatternEdit_textChanged" />
+      <keyword name="TranslationPropertiesDialog.on_transBinPathPicker_pathSelected" id="TranslationPropertiesDialog.on_transBinPathPicker_pathSelected" ref="eric6.Project.TranslationPropertiesDialog.html#TranslationPropertiesDialog.on_transBinPathPicker_pathSelected" />
+      <keyword name="TranslationPropertiesDialog.on_transPatternPicker_pathSelected" id="TranslationPropertiesDialog.on_transPatternPicker_pathSelected" ref="eric6.Project.TranslationPropertiesDialog.html#TranslationPropertiesDialog.on_transPatternPicker_pathSelected" />
+      <keyword name="TranslationPropertiesDialog.on_transPatternPicker_textChanged" id="TranslationPropertiesDialog.on_transPatternPicker_textChanged" ref="eric6.Project.TranslationPropertiesDialog.html#TranslationPropertiesDialog.on_transPatternPicker_textChanged" />
       <keyword name="TranslationPropertiesDialog.storeData" id="TranslationPropertiesDialog.storeData" ref="eric6.Project.TranslationPropertiesDialog.html#TranslationPropertiesDialog.storeData" />
       <keyword name="TranslationsDict" id="TranslationsDict" ref="eric6.Tools.TRPreviewer.html#TranslationsDict" />
       <keyword name="TranslationsDict (Constructor)" id="TranslationsDict (Constructor)" ref="eric6.Tools.TRPreviewer.html#TranslationsDict.__init__" />
@@ -12220,10 +12206,11 @@
       <keyword name="UnittestDialog.on_buttonBox_clicked" id="UnittestDialog.on_buttonBox_clicked" ref="eric6.PyUnit.UnittestDialog.html#UnittestDialog.on_buttonBox_clicked" />
       <keyword name="UnittestDialog.on_errorsListWidget_currentTextChanged" id="UnittestDialog.on_errorsListWidget_currentTextChanged" ref="eric6.PyUnit.UnittestDialog.html#UnittestDialog.on_errorsListWidget_currentTextChanged" />
       <keyword name="UnittestDialog.on_errorsListWidget_itemDoubleClicked" id="UnittestDialog.on_errorsListWidget_itemDoubleClicked" ref="eric6.PyUnit.UnittestDialog.html#UnittestDialog.on_errorsListWidget_itemDoubleClicked" />
-      <keyword name="UnittestDialog.on_fileDialogButton_clicked" id="UnittestDialog.on_fileDialogButton_clicked" ref="eric6.PyUnit.UnittestDialog.html#UnittestDialog.on_fileDialogButton_clicked" />
       <keyword name="UnittestDialog.on_startButton_clicked" id="UnittestDialog.on_startButton_clicked" ref="eric6.PyUnit.UnittestDialog.html#UnittestDialog.on_startButton_clicked" />
       <keyword name="UnittestDialog.on_stopButton_clicked" id="UnittestDialog.on_stopButton_clicked" ref="eric6.PyUnit.UnittestDialog.html#UnittestDialog.on_stopButton_clicked" />
-      <keyword name="UnittestDialog.on_testsuiteComboBox_editTextChanged" id="UnittestDialog.on_testsuiteComboBox_editTextChanged" ref="eric6.PyUnit.UnittestDialog.html#UnittestDialog.on_testsuiteComboBox_editTextChanged" />
+      <keyword name="UnittestDialog.on_testsuitePicker_aboutToShowPathPickerDialog" id="UnittestDialog.on_testsuitePicker_aboutToShowPathPickerDialog" ref="eric6.PyUnit.UnittestDialog.html#UnittestDialog.on_testsuitePicker_aboutToShowPathPickerDialog" />
+      <keyword name="UnittestDialog.on_testsuitePicker_editTextChanged" id="UnittestDialog.on_testsuitePicker_editTextChanged" ref="eric6.PyUnit.UnittestDialog.html#UnittestDialog.on_testsuitePicker_editTextChanged" />
+      <keyword name="UnittestDialog.on_testsuitePicker_pathSelected" id="UnittestDialog.on_testsuitePicker_pathSelected" ref="eric6.PyUnit.UnittestDialog.html#UnittestDialog.on_testsuitePicker_pathSelected" />
       <keyword name="UnittestDialog.testErrored" id="UnittestDialog.testErrored" ref="eric6.PyUnit.UnittestDialog.html#UnittestDialog.testErrored" />
       <keyword name="UnittestDialog.testFailed" id="UnittestDialog.testFailed" ref="eric6.PyUnit.UnittestDialog.html#UnittestDialog.testFailed" />
       <keyword name="UnittestDialog.testFailedExpected" id="UnittestDialog.testFailedExpected" ref="eric6.PyUnit.UnittestDialog.html#UnittestDialog.testFailedExpected" />

@@ -146,6 +146,7 @@ E5ClearableLineEdit E5LineEdit
 E5ClickableLabel QLabel
 E5ClickableLed E5Led
 E5ComboBox QComboBox
+E5ComboPathPicker QWidget
 E5DirCompleter QCompleter
 E5DnDTabBar E5WheelTabBar
 E5ErrorMessage QErrorMessage

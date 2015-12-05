@@ -75,13 +75,16 @@ QDialog, Ui_EricapiConfigDialog
 <td><a href="#EricapiConfigDialog.on_deleteButton_clicked">on_deleteButton_clicked</a></td>
 <td>Private slot to delete the currently selected directory of the listbox.</td>
 </tr><tr>
-<td><a href="#EricapiConfigDialog.on_ignoreDirButton_clicked">on_ignoreDirButton_clicked</a></td>
-<td>Private slot to select a directory to be ignored.</td>
+<td><a href="#EricapiConfigDialog.on_ignoreDirPicker_pathSelected">on_ignoreDirPicker_pathSelected</a></td>
+<td>Private slot handling the selection of a directory to be ignored.</td>
 </tr><tr>
-<td><a href="#EricapiConfigDialog.on_outputFileButton_clicked">on_outputFileButton_clicked</a></td>
-<td>Private slot to select the output file.</td>
+<td><a href="#EricapiConfigDialog.on_outputFilePicker_aboutToShowPathPickerDialog">on_outputFilePicker_aboutToShowPathPickerDialog</a></td>
+<td>Private slot called before the file selection dialog is shown.</td>
 </tr><tr>
-<td><a href="#EricapiConfigDialog.on_outputFileEdit_textChanged">on_outputFileEdit_textChanged</a></td>
+<td><a href="#EricapiConfigDialog.on_outputFilePicker_pathSelected">on_outputFilePicker_pathSelected</a></td>
+<td>Private slot handling the selection of an output file.</td>
+</tr><tr>
+<td><a href="#EricapiConfigDialog.on_outputFilePicker_textChanged">on_outputFilePicker_textChanged</a></td>
 <td>Private slot to enable/disable the "OK" button.</td>
 </tr>
 </table>
@@ -150,25 +153,34 @@ a tuple of the commandline parameters and non default
 <b>on_deleteButton_clicked</b>(<i></i>)
 <p>
         Private slot to delete the currently selected directory of the listbox.
-</p><a NAME="EricapiConfigDialog.on_ignoreDirButton_clicked" ID="EricapiConfigDialog.on_ignoreDirButton_clicked"></a>
-<h4>EricapiConfigDialog.on_ignoreDirButton_clicked</h4>
-<b>on_ignoreDirButton_clicked</b>(<i></i>)
+</p><a NAME="EricapiConfigDialog.on_ignoreDirPicker_pathSelected" ID="EricapiConfigDialog.on_ignoreDirPicker_pathSelected"></a>
+<h4>EricapiConfigDialog.on_ignoreDirPicker_pathSelected</h4>
+<b>on_ignoreDirPicker_pathSelected</b>(<i>path</i>)
 <p>
-        Private slot to select a directory to be ignored.
-</p><p>
-        It displays a directory selection dialog to
-        select a directory to be ignored.
-</p><a NAME="EricapiConfigDialog.on_outputFileButton_clicked" ID="EricapiConfigDialog.on_outputFileButton_clicked"></a>
-<h4>EricapiConfigDialog.on_outputFileButton_clicked</h4>
-<b>on_outputFileButton_clicked</b>(<i></i>)
+        Private slot handling the selection of a directory to be ignored.
+</p><dl>
+<dt><i>path</i> (str)</dt>
+<dd>
+path of the directory to be ignored
+</dd>
+</dl><a NAME="EricapiConfigDialog.on_outputFilePicker_aboutToShowPathPickerDialog" ID="EricapiConfigDialog.on_outputFilePicker_aboutToShowPathPickerDialog"></a>
+<h4>EricapiConfigDialog.on_outputFilePicker_aboutToShowPathPickerDialog</h4>
+<b>on_outputFilePicker_aboutToShowPathPickerDialog</b>(<i></i>)
 <p>
-        Private slot to select the output file.
-</p><p>
-        It displays a file selection dialog to
-        select the file the api is written to.
-</p><a NAME="EricapiConfigDialog.on_outputFileEdit_textChanged" ID="EricapiConfigDialog.on_outputFileEdit_textChanged"></a>
-<h4>EricapiConfigDialog.on_outputFileEdit_textChanged</h4>
-<b>on_outputFileEdit_textChanged</b>(<i>filename</i>)
+        Private slot called before the file selection dialog is shown.
+</p><a NAME="EricapiConfigDialog.on_outputFilePicker_pathSelected" ID="EricapiConfigDialog.on_outputFilePicker_pathSelected"></a>
+<h4>EricapiConfigDialog.on_outputFilePicker_pathSelected</h4>
+<b>on_outputFilePicker_pathSelected</b>(<i>path</i>)
+<p>
+        Private slot handling the selection of an output file.
+</p><dl>
+<dt><i>path</i> (str)</dt>
+<dd>
+path of the output file
+</dd>
+</dl><a NAME="EricapiConfigDialog.on_outputFilePicker_textChanged" ID="EricapiConfigDialog.on_outputFilePicker_textChanged"></a>
+<h4>EricapiConfigDialog.on_outputFilePicker_textChanged</h4>
+<b>on_outputFilePicker_textChanged</b>(<i>filename</i>)
 <p>
         Private slot to enable/disable the "OK" button.
 </p><dl>

@@ -66,10 +66,10 @@ QDialog, Ui_HgAddSubrepositoryDialog
 <td><a href="#HgAddSubrepositoryDialog.getData">getData</a></td>
 <td>Public method to get the data.</td>
 </tr><tr>
-<td><a href="#HgAddSubrepositoryDialog.on_pathButton_clicked">on_pathButton_clicked</a></td>
-<td>Private slot to handle the path selection via a directory selection dialog.</td>
+<td><a href="#HgAddSubrepositoryDialog.on_pathPicker_pathSelected">on_pathPicker_pathSelected</a></td>
+<td>Private slot handling the selection of a subrepository path.</td>
 </tr><tr>
-<td><a href="#HgAddSubrepositoryDialog.on_pathEdit_textChanged">on_pathEdit_textChanged</a></td>
+<td><a href="#HgAddSubrepositoryDialog.on_pathPicker_textChanged">on_pathPicker_textChanged</a></td>
 <td>Private slot to handle the update of the path.</td>
 </tr><tr>
 <td><a href="#HgAddSubrepositoryDialog.on_urlEdit_textChanged">on_urlEdit_textChanged</a></td>
@@ -110,15 +110,19 @@ tuple containing the relative path within the project, the
             sub-repository type and the sub-repository URL (string, string,
             string)
 </dd>
-</dl><a NAME="HgAddSubrepositoryDialog.on_pathButton_clicked" ID="HgAddSubrepositoryDialog.on_pathButton_clicked"></a>
-<h4>HgAddSubrepositoryDialog.on_pathButton_clicked</h4>
-<b>on_pathButton_clicked</b>(<i></i>)
+</dl><a NAME="HgAddSubrepositoryDialog.on_pathPicker_pathSelected" ID="HgAddSubrepositoryDialog.on_pathPicker_pathSelected"></a>
+<h4>HgAddSubrepositoryDialog.on_pathPicker_pathSelected</h4>
+<b>on_pathPicker_pathSelected</b>(<i>path</i>)
 <p>
-        Private slot to handle the path selection via a directory selection
-        dialog.
-</p><a NAME="HgAddSubrepositoryDialog.on_pathEdit_textChanged" ID="HgAddSubrepositoryDialog.on_pathEdit_textChanged"></a>
-<h4>HgAddSubrepositoryDialog.on_pathEdit_textChanged</h4>
-<b>on_pathEdit_textChanged</b>(<i>p0</i>)
+        Private slot handling the selection of a subrepository path.
+</p><dl>
+<dt><i>path</i> (str)</dt>
+<dd>
+path of the subrepository
+</dd>
+</dl><a NAME="HgAddSubrepositoryDialog.on_pathPicker_textChanged" ID="HgAddSubrepositoryDialog.on_pathPicker_textChanged"></a>
+<h4>HgAddSubrepositoryDialog.on_pathPicker_textChanged</h4>
+<b>on_pathPicker_textChanged</b>(<i>p0</i>)
 <p>
         Private slot to handle the update of the path.
 </p><dl>

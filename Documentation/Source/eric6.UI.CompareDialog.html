@@ -86,9 +86,6 @@ QWidget, Ui_CompareDialog
 <td><a href="#CompareDialog.__scrollBarMoved">__scrollBarMoved</a></td>
 <td>Private slot to enable the buttons and set the current diff position depending on scrollbar position.</td>
 </tr><tr>
-<td><a href="#CompareDialog.__selectFile">__selectFile</a></td>
-<td>Private slot to display a file selection dialog.</td>
-</tr><tr>
 <td><a href="#CompareDialog.compare">compare</a></td>
 <td>Public method to compare two lists of text.</td>
 </tr><tr>
@@ -100,12 +97,6 @@ QWidget, Ui_CompareDialog
 </tr><tr>
 <td><a href="#CompareDialog.on_downButton_clicked">on_downButton_clicked</a></td>
 <td>Private slot to go to the next difference.</td>
-</tr><tr>
-<td><a href="#CompareDialog.on_file1Button_clicked">on_file1Button_clicked</a></td>
-<td>Private slot to handle the file 1 file selection button press.</td>
-</tr><tr>
-<td><a href="#CompareDialog.on_file2Button_clicked">on_file2Button_clicked</a></td>
-<td>Private slot to handle the file 2 file selection button press.</td>
 </tr><tr>
 <td><a href="#CompareDialog.on_firstButton_clicked">on_firstButton_clicked</a></td>
 <td>Private slot to go to the first difference.</td>
@@ -197,17 +188,6 @@ text to compare (list of strings)
 <dd>
 scrollbar position (integer)
 </dd>
-</dl><a NAME="CompareDialog.__selectFile" ID="CompareDialog.__selectFile"></a>
-<h4>CompareDialog.__selectFile</h4>
-<b>__selectFile</b>(<i>lineEdit</i>)
-<p>
-        Private slot to display a file selection dialog.
-</p><dl>
-<dt><i>lineEdit</i></dt>
-<dd>
-field for the display of the selected filename
-                (QLineEdit)
-</dd>
 </dl><a NAME="CompareDialog.compare" ID="CompareDialog.compare"></a>
 <h4>CompareDialog.compare</h4>
 <b>compare</b>(<i>lines1, lines2, name1="", name2=""</i>)
@@ -247,16 +227,6 @@ button that was clicked (QAbstractButton)
 <b>on_downButton_clicked</b>(<i></i>)
 <p>
         Private slot to go to the next difference.
-</p><a NAME="CompareDialog.on_file1Button_clicked" ID="CompareDialog.on_file1Button_clicked"></a>
-<h4>CompareDialog.on_file1Button_clicked</h4>
-<b>on_file1Button_clicked</b>(<i></i>)
-<p>
-        Private slot to handle the file 1 file selection button press.
-</p><a NAME="CompareDialog.on_file2Button_clicked" ID="CompareDialog.on_file2Button_clicked"></a>
-<h4>CompareDialog.on_file2Button_clicked</h4>
-<b>on_file2Button_clicked</b>(<i></i>)
-<p>
-        Private slot to handle the file 2 file selection button press.
 </p><a NAME="CompareDialog.on_firstButton_clicked" ID="CompareDialog.on_firstButton_clicked"></a>
 <h4>CompareDialog.on_firstButton_clicked</h4>
 <b>on_firstButton_clicked</b>(<i></i>)

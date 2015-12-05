@@ -239,7 +239,7 @@ QWidget, Ui_UnittestDialog
 <td>Public method to check, if there are failed tests from the last run.</td>
 </tr><tr>
 <td><a href="#UnittestDialog.insertProg">insertProg</a></td>
-<td>Public slot to insert the filename prog into the testsuiteComboBox object.</td>
+<td>Public slot to insert the filename prog into the testsuitePicker object.</td>
 </tr><tr>
 <td><a href="#UnittestDialog.insertTestName">insertTestName</a></td>
 <td>Public slot to insert a test name into the testComboBox object.</td>
@@ -256,17 +256,20 @@ QWidget, Ui_UnittestDialog
 <td><a href="#UnittestDialog.on_errorsListWidget_itemDoubleClicked">on_errorsListWidget_itemDoubleClicked</a></td>
 <td>Private slot called by doubleclicking an errorlist entry.</td>
 </tr><tr>
-<td><a href="#UnittestDialog.on_fileDialogButton_clicked">on_fileDialogButton_clicked</a></td>
-<td>Private slot to open a file dialog.</td>
-</tr><tr>
 <td><a href="#UnittestDialog.on_startButton_clicked">on_startButton_clicked</a></td>
 <td>Private slot to start the test.</td>
 </tr><tr>
 <td><a href="#UnittestDialog.on_stopButton_clicked">on_stopButton_clicked</a></td>
 <td>Private slot to stop the test.</td>
 </tr><tr>
-<td><a href="#UnittestDialog.on_testsuiteComboBox_editTextChanged">on_testsuiteComboBox_editTextChanged</a></td>
+<td><a href="#UnittestDialog.on_testsuitePicker_aboutToShowPathPickerDialog">on_testsuitePicker_aboutToShowPathPickerDialog</a></td>
+<td>Private slot called before the test suite selection dialog is shown.</td>
+</tr><tr>
+<td><a href="#UnittestDialog.on_testsuitePicker_editTextChanged">on_testsuitePicker_editTextChanged</a></td>
 <td>Private slot to handle changes of the test file name.</td>
+</tr><tr>
+<td><a href="#UnittestDialog.on_testsuitePicker_pathSelected">on_testsuitePicker_pathSelected</a></td>
+<td>Private slot called after a test suite has been selected.</td>
 </tr><tr>
 <td><a href="#UnittestDialog.testErrored">testErrored</a></td>
 <td>Public method called if a test errors.</td>
@@ -379,7 +382,7 @@ flag indicating the presence of failed tests (boolean)
 <h4>UnittestDialog.insertProg</h4>
 <b>insertProg</b>(<i>prog</i>)
 <p>
-        Public slot to insert the filename prog into the testsuiteComboBox
+        Public slot to insert the filename prog into the testsuitePicker
         object.
 </p><dl>
 <dt><i>prog</i></dt>
@@ -441,12 +444,7 @@ current text (string)
 <dd>
 the listbox item that was double clicked
 </dd>
-</dl><a NAME="UnittestDialog.on_fileDialogButton_clicked" ID="UnittestDialog.on_fileDialogButton_clicked"></a>
-<h4>UnittestDialog.on_fileDialogButton_clicked</h4>
-<b>on_fileDialogButton_clicked</b>(<i></i>)
-<p>
-        Private slot to open a file dialog.
-</p><a NAME="UnittestDialog.on_startButton_clicked" ID="UnittestDialog.on_startButton_clicked"></a>
+</dl><a NAME="UnittestDialog.on_startButton_clicked" ID="UnittestDialog.on_startButton_clicked"></a>
 <h4>UnittestDialog.on_startButton_clicked</h4>
 <b>on_startButton_clicked</b>(<i>failedOnly=False</i>)
 <p>
@@ -461,15 +459,30 @@ flag indicating to run only failed tests (boolean)
 <b>on_stopButton_clicked</b>(<i></i>)
 <p>
         Private slot to stop the test.
-</p><a NAME="UnittestDialog.on_testsuiteComboBox_editTextChanged" ID="UnittestDialog.on_testsuiteComboBox_editTextChanged"></a>
-<h4>UnittestDialog.on_testsuiteComboBox_editTextChanged</h4>
-<b>on_testsuiteComboBox_editTextChanged</b>(<i>txt</i>)
+</p><a NAME="UnittestDialog.on_testsuitePicker_aboutToShowPathPickerDialog" ID="UnittestDialog.on_testsuitePicker_aboutToShowPathPickerDialog"></a>
+<h4>UnittestDialog.on_testsuitePicker_aboutToShowPathPickerDialog</h4>
+<b>on_testsuitePicker_aboutToShowPathPickerDialog</b>(<i></i>)
+<p>
+        Private slot called before the test suite selection dialog is shown.
+</p><a NAME="UnittestDialog.on_testsuitePicker_editTextChanged" ID="UnittestDialog.on_testsuitePicker_editTextChanged"></a>
+<h4>UnittestDialog.on_testsuitePicker_editTextChanged</h4>
+<b>on_testsuitePicker_editTextChanged</b>(<i>txt</i>)
 <p>
         Private slot to handle changes of the test file name.
 </p><dl>
 <dt><i>txt</i></dt>
 <dd>
 name of the test file (string)
+</dd>
+</dl><a NAME="UnittestDialog.on_testsuitePicker_pathSelected" ID="UnittestDialog.on_testsuitePicker_pathSelected"></a>
+<h4>UnittestDialog.on_testsuitePicker_pathSelected</h4>
+<b>on_testsuitePicker_pathSelected</b>(<i>suite</i>)
+<p>
+        Private slot called after a test suite has been selected.
+</p><dl>
+<dt><i>suite</i> (str)</dt>
+<dd>
+file name of the test suite
 </dd>
 </dl><a NAME="UnittestDialog.testErrored" ID="UnittestDialog.testErrored"></a>
 <h4>UnittestDialog.testErrored</h4>
