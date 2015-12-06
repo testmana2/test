@@ -833,10 +833,6 @@ class Prefs(object):
         "HomePage": "eric:home",
         "HistoryLimit": 30,
         "DefaultScheme": "file://",
-        "AdBlockEnabled": False,
-        "AdBlockSubscriptions": [],
-        "AdBlockUpdatePeriod": 1,
-        "AdBlockExceptions": [],
         "OfflineStorageDatabaseQuota": 50,     # 50 MB
         "UserAgent": "",
         "ShowPreview": True,
@@ -845,15 +841,24 @@ class Prefs(object):
         "DownloadManagerPosition": QPoint(),
         "DownloadManagerDownloads": [],
         "AccessKeysEnabled": True,
-        "VirusTotalEnabled": False,
-        "VirusTotalServiceKey": "",
-        "VirusTotalSecure": True,
         "SearchLanguage": QLocale().language(),
         "DoNotTrack": False,
         "SendReferer": True,
         "SendRefererWhitelist": ["qt-apps.org", "kde-apps.org"],
         "NoCacheHosts": ["qt-project.org"],
         "RssFeeds": [],
+        "WarnOnMultipleClose": True,
+        "ZoomValuesDB": "{}",       # empty JSON dictionary
+        # VirusTotal
+        "VirusTotalEnabled": False,
+        "VirusTotalServiceKey": "",
+        "VirusTotalSecure": True,
+        # AdBlock
+        "AdBlockEnabled": False,
+        "AdBlockSubscriptions": [],
+        "AdBlockUpdatePeriod": 1,
+        "AdBlockExceptions": [],
+        # Sync
         "SyncEnabled": False,
         "SyncBookmarks": True,
         "SyncHistory": True,
@@ -872,9 +877,10 @@ class Prefs(object):
         "SyncFtpPort": 21,
         "SyncFtpIdleTimeout": 30,
         "SyncDirectoryPath": "",
-        "WarnOnMultipleClose": True,
+        # Click-to-Flash
         "ClickToFlashEnabled": False,
         "ClickToFlashWhitelist": [],
+        # PIM
         "PimFullName": "",
         "PimFirstName": "",
         "PimLastName": "",
@@ -891,6 +897,7 @@ class Prefs(object):
         "PimSpecial2": "",
         "PimSpecial3": "",
         "PimSpecial4": "",
+        # Grease Monkey
         "GreaseMonkeyDisabledScripts": [],
         # Flash Cookie Manager
         "FlashCookiesDeleteOnStartExit": False,

@@ -2701,7 +2701,7 @@ eric6.Helpviewer.HelpBrowserWV.HelpBrowser.reload?4()
 eric6.Helpviewer.HelpBrowserWV.HelpBrowser.saveAs?4()
 eric6.Helpviewer.HelpBrowserWV.HelpBrowser.search?7
 eric6.Helpviewer.HelpBrowserWV.HelpBrowser.setSource?4(name, requestData=None)
-eric6.Helpviewer.HelpBrowserWV.HelpBrowser.setZoomValue?4(value)
+eric6.Helpviewer.HelpBrowserWV.HelpBrowser.setZoomValue?4(value, saveValue=True)
 eric6.Helpviewer.HelpBrowserWV.HelpBrowser.source?4()
 eric6.Helpviewer.HelpBrowserWV.HelpBrowser.sourceChanged?7
 eric6.Helpviewer.HelpBrowserWV.HelpBrowser.wheelEvent?4(evt)
@@ -2846,6 +2846,7 @@ eric6.Helpviewer.HelpWindow.HelpWindow._personalInformationManager?8
 eric6.Helpviewer.HelpWindow.HelpWindow._speedDial?8
 eric6.Helpviewer.HelpWindow.HelpWindow._syncManager?8
 eric6.Helpviewer.HelpWindow.HelpWindow._userAgentsManager?8
+eric6.Helpviewer.HelpWindow.HelpWindow._zoomManager?8
 eric6.Helpviewer.HelpWindow.HelpWindow.adBlockIcon?4()
 eric6.Helpviewer.HelpWindow.HelpWindow.adBlockManager?4()
 eric6.Helpviewer.HelpWindow.HelpWindow.bookmarkAll?4()
@@ -2905,6 +2906,7 @@ eric6.Helpviewer.HelpWindow.HelpWindow.speedDial?4()
 eric6.Helpviewer.HelpWindow.HelpWindow.syncManager?4()
 eric6.Helpviewer.HelpWindow.HelpWindow.useQtHelp?7
 eric6.Helpviewer.HelpWindow.HelpWindow.userAgentsManager?4()
+eric6.Helpviewer.HelpWindow.HelpWindow.zoomManager?4()
 eric6.Helpviewer.HelpWindow.HelpWindow.zoomTextOnlyChanged?7
 eric6.Helpviewer.HelpWindow.HelpWindow?1(home, path, parent, name, fromEric=False, initShortcutsOnly=False, searchWord=None)
 eric6.Helpviewer.History.HistoryCompleter.HistoryCompleter.pathFromIndex?4(idx)
@@ -3522,6 +3524,25 @@ eric6.Helpviewer.WebPlugins.WebPluginInterface.WebPluginInterface.configure?4()
 eric6.Helpviewer.WebPlugins.WebPluginInterface.WebPluginInterface.create?4(mimeType, url, argumentNames, argumentValues)
 eric6.Helpviewer.WebPlugins.WebPluginInterface.WebPluginInterface.isAnonymous?4()
 eric6.Helpviewer.WebPlugins.WebPluginInterface.WebPluginInterface.metaPlugin?4()
+eric6.Helpviewer.ZoomManager.ZoomManager.ZoomManager.allSiteNames?4()
+eric6.Helpviewer.ZoomManager.ZoomManager.ZoomManager.changed?7
+eric6.Helpviewer.ZoomManager.ZoomManager.ZoomManager.clear?4()
+eric6.Helpviewer.ZoomManager.ZoomManager.ZoomManager.close?4()
+eric6.Helpviewer.ZoomManager.ZoomManager.ZoomManager.load?4()
+eric6.Helpviewer.ZoomManager.ZoomManager.ZoomManager.removeZoomValue?4(site)
+eric6.Helpviewer.ZoomManager.ZoomManager.ZoomManager.save?4()
+eric6.Helpviewer.ZoomManager.ZoomManager.ZoomManager.setZoomValue?4(url, zoomValue)
+eric6.Helpviewer.ZoomManager.ZoomManager.ZoomManager.siteInfo?4(site)
+eric6.Helpviewer.ZoomManager.ZoomManager.ZoomManager.sitesCount?4()
+eric6.Helpviewer.ZoomManager.ZoomManager.ZoomManager.zoomValue?4(url)
+eric6.Helpviewer.ZoomManager.ZoomManager.ZoomManager?1(parent=None)
+eric6.Helpviewer.ZoomManager.ZoomValuesDialog.ZoomValuesDialog?1(parent=None)
+eric6.Helpviewer.ZoomManager.ZoomValuesModel.ZoomValuesModel.columnCount?4(parent=QModelIndex())
+eric6.Helpviewer.ZoomManager.ZoomValuesModel.ZoomValuesModel.data?4(index, role)
+eric6.Helpviewer.ZoomManager.ZoomValuesModel.ZoomValuesModel.headerData?4(section, orientation, role=Qt.DisplayRole)
+eric6.Helpviewer.ZoomManager.ZoomValuesModel.ZoomValuesModel.removeRows?4(row, count, parent=QModelIndex())
+eric6.Helpviewer.ZoomManager.ZoomValuesModel.ZoomValuesModel.rowCount?4(parent=QModelIndex())
+eric6.Helpviewer.ZoomManager.ZoomValuesModel.ZoomValuesModel?1(manager, parent=None)
 eric6.IconEditor.IconEditorGrid.IconEditCommand.redo?4()
 eric6.IconEditor.IconEditorGrid.IconEditCommand.setAfterImage?4(image)
 eric6.IconEditor.IconEditorGrid.IconEditCommand.undo?4()

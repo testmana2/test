@@ -36,8 +36,9 @@ class HelpClearPrivateDataDialog(QDialog, Ui_HelpClearPrivateDataDialog):
         
         @return tuple with flags indicating which data to clear
             (browsing history, search history, favicons, disk cache, cookies,
-            passwords, web databases, downloads, flash) and the selected
-            history period in milliseconds (tuple of booleans and integer)
+            passwords, web databases, downloads, flash, zoom values) and the
+            selected history period in milliseconds (tuple of booleans and
+            integer)
         """
         index = self.historyCombo.currentIndex()
         if index == 0:
@@ -65,4 +66,5 @@ class HelpClearPrivateDataDialog(QDialog, Ui_HelpClearPrivateDataDialog):
                 self.databasesCheckBox.isChecked(),
                 self.downloadsCheckBox.isChecked(),
                 self.flashCookiesCheckBox.isChecked(),
+                self.zoomCheckBox.isChecked(),
                 historyPeriod)

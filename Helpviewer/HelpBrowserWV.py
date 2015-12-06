@@ -686,7 +686,8 @@ class HelpWebPage(QWebPage):
             return
         
         if 'zoom' in data:
-            frame.page().view().setZoomValue(int(data['zoom'] * 100))
+            frame.page().view().setZoomValue(int(data['zoom'] * 100),
+                                             saveValue=False)
         
         if 'scrollPos' in data and frame.scrollPosition() == QPoint(0, 0):
             frame.setScrollPosition(data['scrollPos'])
@@ -1056,17 +1057,24 @@ class HelpBrowser(QWebView):
         """
         self.setZoomValue(self.__currentZoom)
     
-    def setZoomValue(self, value):
+    def setZoomValue(self, value, saveValue=True):
         """
         Public method to set the zoom value.
         
         @param value zoom value (integer)
+        @keyparam saveValue flag indicating to save the zoom value with the
+            zoom manager
+        @type bool
         """
         if value != self.zoomValue():
             try:
                 self.setZoomFactor(value / 100.0)
             except AttributeError:
                 self.setTextSizeMultiplier(value / 100.0)
+            self.__currentZoom = value
+            if saveValue:
+                Helpviewer.HelpWindow.HelpWindow.zoomManager().setZoomValue(
+                    self.url(), value)
             self.zoomValueChanged.emit(value)
     
     def zoomValue(self):
@@ -1997,6 +2005,10 @@ class HelpBrowser(QWebView):
             # this is a hack to make the ClickToFlash button appear
             self.zoomIn()
             self.zoomOut()
+        
+        zoomValue = Helpviewer.HelpWindow.HelpWindow.zoomManager()\
+            .zoomValue(self.url())
+        self.setZoomValue(zoomValue)
         
         if ok:
             self.mw.adBlockManager().page().hideBlockedPageEntries(self.page())

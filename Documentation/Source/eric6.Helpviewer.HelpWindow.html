@@ -58,7 +58,7 @@ emitted after the zoom text only setting
 E5MainWindow
 <h3>Class Attributes</h3>
 <table>
-<tr><td>_adblockManager</td></tr><tr><td>_bookmarksManager</td></tr><tr><td>_cookieJar</td></tr><tr><td>_downloadManager</td></tr><tr><td>_featurePermissionManager</td></tr><tr><td>_feedsManager</td></tr><tr><td>_flashCookieManager</td></tr><tr><td>_fromEric</td></tr><tr><td>_greaseMonkeyManager</td></tr><tr><td>_helpEngine</td></tr><tr><td>_historyManager</td></tr><tr><td>_networkAccessManager</td></tr><tr><td>_notification</td></tr><tr><td>_passwordManager</td></tr><tr><td>_personalInformationManager</td></tr><tr><td>_speedDial</td></tr><tr><td>_syncManager</td></tr><tr><td>_userAgentsManager</td></tr><tr><td>helpwindows</td></tr><tr><td>maxMenuFilePathLen</td></tr><tr><td>useQtHelp</td></tr>
+<tr><td>_adblockManager</td></tr><tr><td>_bookmarksManager</td></tr><tr><td>_cookieJar</td></tr><tr><td>_downloadManager</td></tr><tr><td>_featurePermissionManager</td></tr><tr><td>_feedsManager</td></tr><tr><td>_flashCookieManager</td></tr><tr><td>_fromEric</td></tr><tr><td>_greaseMonkeyManager</td></tr><tr><td>_helpEngine</td></tr><tr><td>_historyManager</td></tr><tr><td>_networkAccessManager</td></tr><tr><td>_notification</td></tr><tr><td>_passwordManager</td></tr><tr><td>_personalInformationManager</td></tr><tr><td>_speedDial</td></tr><tr><td>_syncManager</td></tr><tr><td>_userAgentsManager</td></tr><tr><td>_zoomManager</td></tr><tr><td>helpwindows</td></tr><tr><td>maxMenuFilePathLen</td></tr><tr><td>useQtHelp</td></tr>
 </table>
 <h3>Class Methods</h3>
 <table>
@@ -128,6 +128,9 @@ E5MainWindow
 </tr><tr>
 <td><a href="#HelpWindow.userAgentsManager">userAgentsManager</a></td>
 <td>Class method to get a reference to the user agents manager.</td>
+</tr><tr>
+<td><a href="#HelpWindow.zoomManager">zoomManager</a></td>
+<td>Class method to get a reference to the zoom values manager.</td>
 </tr>
 </table>
 <h3>Methods</h3>
@@ -382,6 +385,9 @@ E5MainWindow
 <td><a href="#HelpWindow.__showUserAgentsDialog">__showUserAgentsDialog</a></td>
 <td>Private slot to show the user agents management dialog.</td>
 </tr><tr>
+<td><a href="#HelpWindow.__showZoomValuesDialog">__showZoomValuesDialog</a></td>
+<td>Private slot to show the zoom values management dialog.</td>
+</tr><tr>
 <td><a href="#HelpWindow.__stopLoading">__stopLoading</a></td>
 <td>Private slot called to handle loading of the current page.</td>
 </tr><tr>
@@ -616,7 +622,7 @@ reference to the RSS feeds manager (FeedsManager)
 </p><dl>
 <dt>Returns:</dt>
 <dd>
-reference to the feature permission manager
+reference to the flash cookies manager
 </dd>
 </dl><dl>
 <dt>Return Type:</dt>
@@ -784,6 +790,21 @@ reference to the data synchronization manager (SyncManager)
 <dt>Returns:</dt>
 <dd>
 reference to the user agents manager (UserAgentManager)
+</dd>
+</dl><a NAME="HelpWindow.zoomManager" ID="HelpWindow.zoomManager"></a>
+<h4>HelpWindow.zoomManager (class method)</h4>
+<b>zoomManager</b>(<i></i>)
+<p>
+        Class method to get a reference to the zoom values manager.
+</p><dl>
+<dt>Returns:</dt>
+<dd>
+reference to the zoom values manager
+</dd>
+</dl><dl>
+<dt>Return Type:</dt>
+<dd>
+ZoomManager
 </dd>
 </dl><a NAME="HelpWindow.__init__" ID="HelpWindow.__init__"></a>
 <h4>HelpWindow (Constructor)</h4>
@@ -1315,6 +1336,11 @@ message to be shown (string)
 <b>__showUserAgentsDialog</b>(<i></i>)
 <p>
         Private slot to show the user agents management dialog.
+</p><a NAME="HelpWindow.__showZoomValuesDialog" ID="HelpWindow.__showZoomValuesDialog"></a>
+<h4>HelpWindow.__showZoomValuesDialog</h4>
+<b>__showZoomValuesDialog</b>(<i></i>)
+<p>
+        Private slot to show the zoom values management dialog.
 </p><a NAME="HelpWindow.__stopLoading" ID="HelpWindow.__stopLoading"></a>
 <h4>HelpWindow.__stopLoading</h4>
 <b>__stopLoading</b>(<i></i>)

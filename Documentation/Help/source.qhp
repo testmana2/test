@@ -403,6 +403,11 @@
               <section title="eric6.Helpviewer.WebPlugins.WebPluginFactory" ref="eric6.Helpviewer.WebPlugins.WebPluginFactory.html" />
               <section title="eric6.Helpviewer.WebPlugins.WebPluginInterface" ref="eric6.Helpviewer.WebPlugins.WebPluginInterface.html" />
             </section>
+            <section title="eric6.Helpviewer.ZoomManager" ref="index-eric6.Helpviewer.ZoomManager.html">
+              <section title="eric6.Helpviewer.ZoomManager.ZoomManager" ref="eric6.Helpviewer.ZoomManager.ZoomManager.html" />
+              <section title="eric6.Helpviewer.ZoomManager.ZoomValuesDialog" ref="eric6.Helpviewer.ZoomManager.ZoomValuesDialog.html" />
+              <section title="eric6.Helpviewer.ZoomManager.ZoomValuesModel" ref="eric6.Helpviewer.ZoomManager.ZoomValuesModel.html" />
+            </section>
             <section title="eric6.Helpviewer.data" ref="index-eric6.Helpviewer.data.html">
             </section>
             <section title="eric6.Helpviewer.ClosedTabsManager" ref="eric6.Helpviewer.ClosedTabsManager.html" />
@@ -5662,6 +5667,7 @@
       <keyword name="HelpWindow.__showSyncDialog" id="HelpWindow.__showSyncDialog" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__showSyncDialog" />
       <keyword name="HelpWindow.__showTocWindow" id="HelpWindow.__showTocWindow" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__showTocWindow" />
       <keyword name="HelpWindow.__showUserAgentsDialog" id="HelpWindow.__showUserAgentsDialog" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__showUserAgentsDialog" />
+      <keyword name="HelpWindow.__showZoomValuesDialog" id="HelpWindow.__showZoomValuesDialog" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__showZoomValuesDialog" />
       <keyword name="HelpWindow.__stopLoading" id="HelpWindow.__stopLoading" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__stopLoading" />
       <keyword name="HelpWindow.__switchTab" id="HelpWindow.__switchTab" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__switchTab" />
       <keyword name="HelpWindow.__syncTOC" id="HelpWindow.__syncTOC" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.__syncTOC" />
@@ -5735,6 +5741,7 @@
       <keyword name="HelpWindow.speedDial" id="HelpWindow.speedDial" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.speedDial" />
       <keyword name="HelpWindow.syncManager" id="HelpWindow.syncManager" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.syncManager" />
       <keyword name="HelpWindow.userAgentsManager" id="HelpWindow.userAgentsManager" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.userAgentsManager" />
+      <keyword name="HelpWindow.zoomManager" id="HelpWindow.zoomManager" ref="eric6.Helpviewer.HelpWindow.html#HelpWindow.zoomManager" />
       <keyword name="Helpviewer (Package)" id="Helpviewer (Package)" ref="index-eric6.Helpviewer.html" />
       <keyword name="Hg" id="Hg" ref="eric6.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg" />
       <keyword name="Hg (Constructor)" id="Hg (Constructor)" ref="eric6.Plugins.VcsPlugins.vcsMercurial.hg.html#Hg.__init__" />
@@ -13211,6 +13218,34 @@
       <keyword name="ZoomDialog (Constructor)" id="ZoomDialog (Constructor)" ref="eric6.QScintilla.ZoomDialog.html#ZoomDialog.__init__" />
       <keyword name="ZoomDialog (Module)" id="ZoomDialog (Module)" ref="eric6.QScintilla.ZoomDialog.html" />
       <keyword name="ZoomDialog.getZoomSize" id="ZoomDialog.getZoomSize" ref="eric6.QScintilla.ZoomDialog.html#ZoomDialog.getZoomSize" />
+      <keyword name="ZoomManager" id="ZoomManager" ref="eric6.Helpviewer.ZoomManager.ZoomManager.html#ZoomManager" />
+      <keyword name="ZoomManager (Constructor)" id="ZoomManager (Constructor)" ref="eric6.Helpviewer.ZoomManager.ZoomManager.html#ZoomManager.__init__" />
+      <keyword name="ZoomManager (Module)" id="ZoomManager (Module)" ref="eric6.Helpviewer.ZoomManager.ZoomManager.html" />
+      <keyword name="ZoomManager (Package)" id="ZoomManager (Package)" ref="index-eric6.Helpviewer.ZoomManager.html" />
+      <keyword name="ZoomManager.__keyFromUrl" id="ZoomManager.__keyFromUrl" ref="eric6.Helpviewer.ZoomManager.ZoomManager.html#ZoomManager.__keyFromUrl" />
+      <keyword name="ZoomManager.allSiteNames" id="ZoomManager.allSiteNames" ref="eric6.Helpviewer.ZoomManager.ZoomManager.html#ZoomManager.allSiteNames" />
+      <keyword name="ZoomManager.clear" id="ZoomManager.clear" ref="eric6.Helpviewer.ZoomManager.ZoomManager.html#ZoomManager.clear" />
+      <keyword name="ZoomManager.close" id="ZoomManager.close" ref="eric6.Helpviewer.ZoomManager.ZoomManager.html#ZoomManager.close" />
+      <keyword name="ZoomManager.load" id="ZoomManager.load" ref="eric6.Helpviewer.ZoomManager.ZoomManager.html#ZoomManager.load" />
+      <keyword name="ZoomManager.removeZoomValue" id="ZoomManager.removeZoomValue" ref="eric6.Helpviewer.ZoomManager.ZoomManager.html#ZoomManager.removeZoomValue" />
+      <keyword name="ZoomManager.save" id="ZoomManager.save" ref="eric6.Helpviewer.ZoomManager.ZoomManager.html#ZoomManager.save" />
+      <keyword name="ZoomManager.setZoomValue" id="ZoomManager.setZoomValue" ref="eric6.Helpviewer.ZoomManager.ZoomManager.html#ZoomManager.setZoomValue" />
+      <keyword name="ZoomManager.siteInfo" id="ZoomManager.siteInfo" ref="eric6.Helpviewer.ZoomManager.ZoomManager.html#ZoomManager.siteInfo" />
+      <keyword name="ZoomManager.sitesCount" id="ZoomManager.sitesCount" ref="eric6.Helpviewer.ZoomManager.ZoomManager.html#ZoomManager.sitesCount" />
+      <keyword name="ZoomManager.zoomValue" id="ZoomManager.zoomValue" ref="eric6.Helpviewer.ZoomManager.ZoomManager.html#ZoomManager.zoomValue" />
+      <keyword name="ZoomValuesDialog" id="ZoomValuesDialog" ref="eric6.Helpviewer.ZoomManager.ZoomValuesDialog.html#ZoomValuesDialog" />
+      <keyword name="ZoomValuesDialog (Constructor)" id="ZoomValuesDialog (Constructor)" ref="eric6.Helpviewer.ZoomManager.ZoomValuesDialog.html#ZoomValuesDialog.__init__" />
+      <keyword name="ZoomValuesDialog (Module)" id="ZoomValuesDialog (Module)" ref="eric6.Helpviewer.ZoomManager.ZoomValuesDialog.html" />
+      <keyword name="ZoomValuesDialog.__calculateHeaderSizes" id="ZoomValuesDialog.__calculateHeaderSizes" ref="eric6.Helpviewer.ZoomManager.ZoomValuesDialog.html#ZoomValuesDialog.__calculateHeaderSizes" />
+      <keyword name="ZoomValuesModel" id="ZoomValuesModel" ref="eric6.Helpviewer.ZoomManager.ZoomValuesModel.html#ZoomValuesModel" />
+      <keyword name="ZoomValuesModel (Constructor)" id="ZoomValuesModel (Constructor)" ref="eric6.Helpviewer.ZoomManager.ZoomValuesModel.html#ZoomValuesModel.__init__" />
+      <keyword name="ZoomValuesModel (Module)" id="ZoomValuesModel (Module)" ref="eric6.Helpviewer.ZoomManager.ZoomValuesModel.html" />
+      <keyword name="ZoomValuesModel.__zoomValuesChanged" id="ZoomValuesModel.__zoomValuesChanged" ref="eric6.Helpviewer.ZoomManager.ZoomValuesModel.html#ZoomValuesModel.__zoomValuesChanged" />
+      <keyword name="ZoomValuesModel.columnCount" id="ZoomValuesModel.columnCount" ref="eric6.Helpviewer.ZoomManager.ZoomValuesModel.html#ZoomValuesModel.columnCount" />
+      <keyword name="ZoomValuesModel.data" id="ZoomValuesModel.data" ref="eric6.Helpviewer.ZoomManager.ZoomValuesModel.html#ZoomValuesModel.data" />
+      <keyword name="ZoomValuesModel.headerData" id="ZoomValuesModel.headerData" ref="eric6.Helpviewer.ZoomManager.ZoomValuesModel.html#ZoomValuesModel.headerData" />
+      <keyword name="ZoomValuesModel.removeRows" id="ZoomValuesModel.removeRows" ref="eric6.Helpviewer.ZoomManager.ZoomValuesModel.html#ZoomValuesModel.removeRows" />
+      <keyword name="ZoomValuesModel.rowCount" id="ZoomValuesModel.rowCount" ref="eric6.Helpviewer.ZoomManager.ZoomValuesModel.html#ZoomValuesModel.rowCount" />
       <keyword name="_ClbrBase" id="_ClbrBase" ref="eric6.Utilities.ClassBrowsers.ClbrBaseClasses.html#_ClbrBase" />
       <keyword name="_ClbrBase (Constructor)" id="_ClbrBase (Constructor)" ref="eric6.Utilities.ClassBrowsers.ClbrBaseClasses.html#_ClbrBase.__init__" />
       <keyword name="_ClbrBase.setEndLine" id="_ClbrBase.setEndLine" ref="eric6.Utilities.ClassBrowsers.ClbrBaseClasses.html#_ClbrBase.setEndLine" />
@@ -14237,6 +14272,9 @@
       <file>eric6.Helpviewer.WebPlugins.ClickToFlash.ClickToFlashWhitelistDialog.html</file>
       <file>eric6.Helpviewer.WebPlugins.WebPluginFactory.html</file>
       <file>eric6.Helpviewer.WebPlugins.WebPluginInterface.html</file>
+      <file>eric6.Helpviewer.ZoomManager.ZoomManager.html</file>
+      <file>eric6.Helpviewer.ZoomManager.ZoomValuesDialog.html</file>
+      <file>eric6.Helpviewer.ZoomManager.ZoomValuesModel.html</file>
       <file>eric6.IconEditor.IconEditorGrid.html</file>
       <file>eric6.IconEditor.IconEditorPalette.html</file>
       <file>eric6.IconEditor.IconEditorWindow.html</file>
@@ -14789,6 +14827,7 @@
       <file>index-eric6.Helpviewer.VirusTotal.html</file>
       <file>index-eric6.Helpviewer.WebPlugins.ClickToFlash.html</file>
       <file>index-eric6.Helpviewer.WebPlugins.html</file>
+      <file>index-eric6.Helpviewer.ZoomManager.html</file>
       <file>index-eric6.Helpviewer.data.html</file>
       <file>index-eric6.Helpviewer.html</file>
       <file>index-eric6.IconEditor.cursors.html</file>

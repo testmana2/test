@@ -814,4 +814,7 @@ XbelReader QXmlStreamReader
 XbelWriter QXmlStreamWriter
 XmlEntityResolver QXmlStreamEntityResolver
 ZoomDialog QDialog Ui_ZoomDialog
+ZoomManager QObject
+ZoomValuesDialog QDialog Ui_ZoomValuesDialog
+ZoomValuesModel QAbstractTableModel
 _StrikeThroughExtension markdown.Extension

@@ -90,6 +90,7 @@ class HelpWindow(E5MainWindow):
     _notification = None
     _featurePermissionManager = None
     _flashCookieManager = None
+    _zoomManager = None
     
     def __init__(self, home, path, parent, name, fromEric=False,
                  initShortcutsOnly=False, searchWord=None):
@@ -1559,6 +1560,22 @@ class HelpWindow(E5MainWindow):
                 self.__showSyncDialog)
         self.__actions.append(self.synchronizationAct)
         
+        self.zoomValuesAct = E5Action(
+            self.tr('Manage Saved Zoom Values'),
+            UI.PixmapCache.getIcon("zoomReset.png"),
+            self.tr('Manage Saved Zoom Values...'),
+            0, 0,
+            self, 'help_manage_zoom_values')
+        self.zoomValuesAct.setStatusTip(self.tr(
+            'Manage the saved zoom values'))
+        self.zoomValuesAct.setWhatsThis(self.tr(
+            """<b>Manage Saved Zoom Values...</b>"""
+            """<p>Opens a dialog to manage the saved zoom values.</p>"""
+        ))
+        if not self.initShortcutsOnly:
+            self.zoomValuesAct.triggered.connect(self.__showZoomValuesDialog)
+        self.__actions.append(self.zoomValuesAct)
+        
         self.backAct.setEnabled(False)
         self.forwardAct.setEnabled(False)
         
@@ -1682,6 +1699,8 @@ class HelpWindow(E5MainWindow):
         menu.addAction(self.passwordsAct)
         if SSL_AVAILABLE:
             menu.addAction(self.certificatesAct)
+        menu.addSeparator()
+        menu.addAction(self.zoomValuesAct)
         menu.addSeparator()
         menu.addAction(self.adblockAct)
         menu.addAction(self.flashblockAct)
@@ -3000,8 +3019,8 @@ class HelpWindow(E5MainWindow):
             # browsing history, search history, favicons, disk cache, cookies,
             # passwords, web databases, downloads, Flash cookies
             (history, searches, favicons, cache, cookies,
-             passwords, databases, downloads, flashCookies, historyPeriod) = \
-                dlg.getData()
+             passwords, databases, downloads, flashCookies, zoomValues,
+             historyPeriod) = dlg.getData()
             if history:
                 self.historyManager().clear(historyPeriod)
                 self.tabWidget.clearClosedTabsList()
@@ -3041,6 +3060,8 @@ class HelpWindow(E5MainWindow):
                     "http://www.macromedia.com/support/documentation/"
                     "{0}/flashplayer/help/settings_manager07.html".format(
                         langCode))
+            if zoomValues:
+                self.zoomManager().clear()
         
     def __showEnginesConfigurationDialog(self):
         """
@@ -3108,6 +3129,15 @@ class HelpWindow(E5MainWindow):
         Private slot to show the feature permission dialog.
         """
         self.featurePermissionManager().showFeaturePermissionsDialog()
+        
+    def __showZoomValuesDialog(self):
+        """
+        Private slot to show the zoom values management dialog.
+        """
+        from .ZoomManager.ZoomValuesDialog import ZoomValuesDialog
+        
+        dlg = ZoomValuesDialog(self)
+        dlg.exec_()
         
     def __showNetworkMonitor(self):
         """
@@ -3337,7 +3367,7 @@ class HelpWindow(E5MainWindow):
         """
         Class method to get a reference to the flash cookies manager.
         
-        @return reference to the feature permission manager
+        @return reference to the flash cookies manager
         @rtype FlashCookieManager
         """
         if cls._flashCookieManager is None:
@@ -3346,6 +3376,20 @@ class HelpWindow(E5MainWindow):
             cls._flashCookieManager = FlashCookieManager()
         
         return cls._flashCookieManager
+        
+    @classmethod
+    def zoomManager(cls):
+        """
+        Class method to get a reference to the zoom values manager.
+        
+        @return reference to the zoom values manager
+        @rtype ZoomManager
+        """
+        if cls._zoomManager is None:
+            from .ZoomManager.ZoomManager import ZoomManager
+            cls._zoomManager = ZoomManager()
+        
+        return cls._zoomManager
         
     @classmethod
     def mainWindow(cls):

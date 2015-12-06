@@ -8,6 +8,9 @@ Version 6.2.0:
   -- Ruby Debugger:
      --- removed the Ruby debugger (the interface doesn't work with recent
          Ruby versions anymore)
+- Web Browser
+  -- added capability to remember the zoom values for each site (incl. a
+     dialog to manage these)
 
 Version 6.1.0:
 - bug fixes
